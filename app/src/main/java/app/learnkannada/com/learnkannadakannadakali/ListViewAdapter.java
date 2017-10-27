@@ -82,32 +82,55 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         holder.testText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
-                mediaPlayer = new MediaPlayer();
-
-                storageReference = FirebaseStorage.getInstance().getReference().child("Categories").child(mCategory)
-                        .child(values.get(position).toLowerCase()+".mp3");
-                storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        downloadUri = uri;
-                        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                        try {
-                            mediaPlayer.setDataSource(downloadUri.toString());
-                            mediaPlayer.prepare();
-                            mediaPlayer.start();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(context,"Resource not found",Toast.LENGTH_SHORT).show();
-                    }
-                });
+                try {
+                    playOffline(position);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                //playOnline(position);
             }
         });
+    }
+
+    private void playOffline(int position) throws IOException {
+       // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
+        mediaPlayer = new MediaPlayer();
+        Integer id=context.getResources().getIdentifier(values.get(position).toLowerCase(),"raw",context.getPackageName());
+        mediaPlayer = MediaPlayer.create(context,id);
+        playMusic();
+    }
+
+    private void playOnline(int position) {
+        Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
+        mediaPlayer = new MediaPlayer();
+
+        storageReference = FirebaseStorage.getInstance().getReference().child("Categories").child(mCategory)
+                .child(values.get(position).toLowerCase()+".mp3");
+        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                downloadUri = uri;
+                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                try {
+                    mediaPlayer.setDataSource(downloadUri.toString());
+                    playMusic();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(context,"Resource not found",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void playMusic() throws IOException {
+        if(mediaPlayer!=null) {
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        }
     }
 
     @Override
