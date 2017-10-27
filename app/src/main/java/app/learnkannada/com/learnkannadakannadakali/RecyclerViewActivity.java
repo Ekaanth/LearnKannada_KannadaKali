@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.google.firebase.storage.StorageReference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +29,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
         List<String> input = new ArrayList<>();
         
         Intent intent = getIntent();
-        String key = intent.getStringExtra("category");
+        String category = intent.getStringExtra("category");
         String listValues[] = new String[0];
-        switch(key) {
+        switch(category) {
             case "enquiry":
                 listValues = new String[]{"I", "You", "He", "She"};
                 break;
@@ -44,7 +46,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         for(int i=0; i<listValues.length; i++)
             input.add(listValues[i]);
 
-        adapter = new ListViewAdapter(getApplicationContext(),input);
+        adapter = new ListViewAdapter(getApplicationContext(),input, category);
         recyclerView.setAdapter(adapter);
     }
 }

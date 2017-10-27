@@ -1,17 +1,15 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.support.annotation.RawRes;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.google.firebase.storage.StorageReference;
 
-import java.lang.reflect.Field;
 import java.util.List;
 
 /**
@@ -22,8 +20,13 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     private List<String> values;
     private Context context;
+    private String mCategory;
 
     private MediaPlayer mediaPlayer;
+    private Uri downloadUri;
+
+    //Firebase details
+    private StorageReference storageReference;
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -48,9 +51,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListViewAdapter(Context mContext, List<String> myDataset) {
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category) {
         context = mContext;
         values = myDataset;
+        mCategory = category;
     }
 
 
@@ -69,14 +73,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         holder.testText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context,values.get(position),Toast.LENGTH_LONG).show();
-                mediaPlayer = new MediaPlayer();
-                Integer integer = context.getResources().getIdentifier(values.get(position).toLowerCase(),"raw",context.getPackageName());
-                mediaPlayer = MediaPlayer.create(context,integer);
-                if(mediaPlayer!=null)
-                    mediaPlayer.start();
-                else
-                    Toast.makeText(context,"ERROR!",Toast.LENGTH_LONG).show();
+
+
             }
         });
     }
