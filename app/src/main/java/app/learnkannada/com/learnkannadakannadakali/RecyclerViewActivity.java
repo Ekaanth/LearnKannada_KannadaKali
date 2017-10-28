@@ -38,6 +38,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
             case "numbers":
                 listValues = new String[]{"One", "Two", "Three", "Four","Five","Six","Seven","Eight","Nine","Ten"};
                 break;
+            case "beginner":
+                listValues = new String []{"I","You","He","She","We","They","My","Mine","Our","Your","Ours","Yours (Singular)","Yours (Plural)","This","That"};
+                break;
             default:
                 listValues = new String[]{"Yes","No"};
                 break;
