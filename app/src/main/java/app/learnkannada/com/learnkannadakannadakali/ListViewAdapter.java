@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -82,12 +83,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         holder.testText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
+                /*try {
                     playOffline(position);
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
-                //playOnline(position);
+                }*/
+                playOnline(position);
             }
         });
     }
@@ -97,7 +98,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         mediaPlayer = new MediaPlayer();
         Integer id=context.getResources().getIdentifier(values.get(position).toLowerCase(),"raw",context.getPackageName());
         mediaPlayer = MediaPlayer.create(context,id);
-        playMusic();
+        mediaPlayer.start();
     }
 
     private void playOnline(int position) {
@@ -113,7 +114,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 try {
                     mediaPlayer.setDataSource(downloadUri.toString());
-                    playMusic();
+                    mediaPlayer.prepare();
+                    mediaPlayer.start();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -124,13 +126,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 Toast.makeText(context,"Resource not found",Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    private void playMusic() throws IOException {
-        if(mediaPlayer!=null) {
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-        }
     }
 
     @Override
