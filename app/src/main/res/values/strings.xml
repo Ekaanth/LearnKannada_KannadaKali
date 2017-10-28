@@ -1,4 +1,79 @@
 <resources>
     <string name="app_name">Learn Kannada (Kannada Kali)</string>
     <string name="action_settings">Settings</string>
+
+    <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="seven">Seven</string>
+    <string name="eight">Eight</string>
+    <string name="nine">Nine</string>
+    <string name="ten">Ten</string>
+    <string name="hundred">Hundred</string>
+    <string name="thousand">Thousand</string>
+    <string name="lakh">Lakh</string>
+    <string name="crore">Crore</string>
+    <!-- *******************************Category Numbers (ENGLISH) ENDS here *******************************-->
+
+    <!-- *******************************Category Numbers (KANNADA) STARTS here *******************************-->
+    <string name="kone">ondu - ಒಂದು</string>
+    <string name="ktwo">eradu</string>
+    <string name="kthree">mooru</string>
+    <string name="kfour">nalku</string>
+    <string name="kfive">aidu</string>
+    <string name="ksix">aaru</string>
+    <string name="kseven">Elu</string>
+    <string name="keight">enTu</string>
+    <string name="knine">ombattu</string>
+    <string name="kten">hattu</string>
+    <string name="khundred">nooru</string>
+    <string name="kthousand">saavira</string>
+    <string name="klakh">laksha</string>
+    <string name="kcrore">kOTi</string>
+    <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
+
+
+    <!-- *******************************Category Beginner (ENGLISH) STARTS here *******************************-->
+    <string name="i">I</string>
+    <string name="you">You</string>
+    <string name="he">He</string>
+    <string name="she">She</string>
+    <string name="we">We</string>
+    <string name="they">They</string>
+    <string name="my">My</string>
+    <string name="mine">Mine</string>
+    <string name="our">Our</string>
+    <string name="your">Your</string>
+    <string name="ours">Ours</string>
+    <string name="yours_Singular">Yours (Singular)</string>
+    <string name="yours_Plural">Yours (Plural)</string>
+    <string name="this_">This</string>
+    <string name="that">That</string>
+    <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
+
+
+    <!-- *******************************Category Beginner (KANNADA) STARTS here *******************************-->
+    <string name="ki">naanu</string>
+    <string name="kyou">neenu</string>
+    <string name="khe">avanu</string>
+    <string name="kshe">avaLu</string>
+    <string name="kwe">naavu</string>
+    <string name="kthey">avaru</string>
+    <string name="kmy">nanna</string>
+    <string name="kmine">nannadu</string>
+    <string name="kour">namma</string>
+    <string name="kyour">nimma</string>
+    <string name="kours">namma</string>
+    <string name="kyours_Singular">ninnadu</string>
+    <string name="kyours_Plural">nimmadu</string>
+    <string name="kthis_">idu</string>
+    <string name="kthat">adu</string>
+    <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
+
+
+
 </resources>

@@ -9,7 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
@@ -27,29 +29,45 @@ public class RecyclerViewActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
+        List<String> kanInput = new ArrayList<>();
         
         Intent intent = getIntent();
         String category = intent.getStringExtra("category");
-        String listValues[] = new String[0];
+        int listValues[] = new int[0];
+        int listValuesInKan[] = new int[0];
         switch(category) {
             case "enquiry":
-                listValues = new String[]{"I", "You", "He", "She"};
+                //listValues = new String[]{"I", "You", "He", "She"};
+                //listValuesInKan = new String[] {"naanu","neenu","avanu","ivaLu"};
                 break;
             case "numbers":
-                listValues = new String[]{"One", "Two", "Three", "Four","Five","Six","Seven","Eight","Nine","Ten"};
+                listValues = new int[]{R.string.one, R.string.two, R.string.three,
+                            R.string.four, R.string.five, R.string.six, R.string.seven,
+                            R.string.eight, R.string.nine, R.string.ten};
+                listValuesInKan = new int[]{R.string.kone, R.string.ktwo, R.string.kthree,
+                        R.string.kfour, R.string.kfive, R.string.ksix, R.string.kseven,
+                        R.string.keight, R.string.knine, R.string.kten};
                 break;
             case "beginner":
-                listValues = new String []{"I","You","He","She","We","They","My","Mine","Our","Your","Ours","Yours (Singular)","Yours (Plural)","This","That"};
+                listValues = new int []{R.string.i,R.string.you,R.string.he,R.string.she
+                        ,R.string.we,R.string.they,R.string.my,R.string.mine,R.string.our,R.string.your,
+                        R.string.ours,R.string.yours_Singular,R.string.yours_Plural,R.string.this_,R.string.that};
+                listValuesInKan = new int []{R.string.ki,R.string.kyou,R.string.khe,R.string.kshe
+                        ,R.string.kwe,R.string.kthey,R.string.kmy,R.string.kmine,R.string.kour,R.string.kyour,
+                        R.string.kours,R.string.kyours_Singular,R.string.kyours_Plural,R.string.kthis_,R.string.kthat};
                 break;
             default:
-                listValues = new String[]{"Yes","No"};
+                //listValues = new String[]{"Yes","No"};
                 break;
         }
-        
-        for(int i=0; i<listValues.length; i++)
-            input.add(listValues[i]);
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, category);
+        for(int i=0; i<listValues.length; i++)
+        {
+            input.add(getResources().getString(listValues[i]));
+            kanInput.add(getResources().getString(listValuesInKan[i]));
+        }
+
+        adapter = new ListViewAdapter(getApplicationContext(),input, category, kanInput);
         recyclerView.setAdapter(adapter);
     }
 }

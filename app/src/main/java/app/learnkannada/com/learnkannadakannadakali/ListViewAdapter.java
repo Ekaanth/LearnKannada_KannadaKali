@@ -28,7 +28,7 @@ import java.util.List;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
 
-    private List<String> values;
+    private List<String> values, kanValues;
     private Context context;
     private String mCategory;
 
@@ -40,13 +40,15 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView testText;
+        public TextView textInEng, textInKan;
         public View layout;
 
         public ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            testText = (TextView) layout.findViewById(R.id.textID);
+            textInEng = (TextView) layout.findViewById(R.id.textID);
+            textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+
         }
     }
 
@@ -61,10 +63,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListViewAdapter(Context mContext, List<String> myDataset, String category) {
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;
         mCategory = category;
+        kanValues = kanInput;
     }
 
 
@@ -79,8 +82,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final String name = values.get(position);
-        holder.testText.setText(name);
-        holder.testText.setOnClickListener(new View.OnClickListener() {
+        holder.textInEng.setText(name);
+        holder.textInKan.setText(kanValues.get(position));
+        holder.textInEng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*try {
