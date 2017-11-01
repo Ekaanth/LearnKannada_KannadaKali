@@ -86,7 +86,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String name = values.get(position);
         holder.textInEng.setText(name);
         holder.textInKan.setText(kanValues.get(position));
-        holder.textInEng.setOnClickListener(new View.OnClickListener() {
+        holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*try {
