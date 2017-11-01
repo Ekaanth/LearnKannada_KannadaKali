@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "411372513569",
+    "firebase_url": "https://learnkannada-kannadakali.firebaseio.com",
+    "project_id": "learnkannada-kannadakali",
+    "storage_bucket": "learnkannada-kannadakali.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411372513569:android:576bc38d2020197f",
+        "android_client_info": {
+          "package_name": "app.learnkannada.com.learnkannadakannadakali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411372513569-3h854c0lpre7hu8vblh0oe99dm6omec2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.learnkannada.com.learnkannadakannadakali",
+            "certificate_hash": "0cccb77b2b7421d427b4776fad6a2324858aec3d"
+          }
+        },
+        {
+          "client_id": "411372513569-t8q2c49jfs9auif19rn1t1cfj9cl0qlo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.learnkannada.com.learnkannadakannadakali",
+            "certificate_hash": "4845fa82e7ce2f218b97ffdaf091acf2e2581f6c"
+          }
+        },
+        {
+          "client_id": "411372513569-1hcf428tlcre1392tmc0g3fn3vp69otn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHlXh3iKva4pJEk6KIj3npDvnJN46oi4E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411372513569-1hcf428tlcre1392tmc0g3fn3vp69otn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
