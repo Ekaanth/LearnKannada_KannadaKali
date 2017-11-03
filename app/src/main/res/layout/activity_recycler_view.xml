@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
     tools:context="app.learnkannada.com.learnkannadakannadakali.RecyclerViewActivity">
 
     <SearchView
         android:id="@+id/searchViewID"
         android:layout_width="match_parent"
         android:queryHint="Start typing..."
+        android:background="#e6e0e0"
         android:layout_height="wrap_content">
 
     </SearchView>

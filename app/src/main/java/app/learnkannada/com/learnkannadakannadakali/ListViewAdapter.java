@@ -75,8 +75,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View v = inflater.inflate(R.layout.row_layout, parent, false);
+        View v;
+        if(mCategory.equals("numbers")) {
+            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+            v = inflater.inflate(R.layout.row_layout_image, parent, false);
+        }
+        else
+        {
+            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+            v = inflater.inflate(R.layout.row_layout, parent, false);
+        }
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
