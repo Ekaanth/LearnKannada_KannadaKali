@@ -29,7 +29,7 @@ public class Homepage extends AppCompatActivity {
         conversations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            //this is waste comment!
             }
         });
     }
