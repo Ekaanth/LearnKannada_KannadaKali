@@ -3,37 +3,33 @@
     <string name="action_settings">Settings</string>
 
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="ten">Ten</string>
-    <string name="hundred">Hundred</string>
-    <string name="thousand">Thousand</string>
-    <string name="lakh">Lakh</string>
-    <string name="crore">Crore</string>
+    <string-array name="eNumbers_array">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+    </string-array>
     <!-- *******************************Category Numbers (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Numbers (KANNADA) STARTS here *******************************-->
-    <string name="kone">ondu - ಒಂದು</string>
-    <string name="ktwo">eradu</string>
-    <string name="kthree">mooru</string>
-    <string name="kfour">nalku</string>
-    <string name="kfive">aidu</string>
-    <string name="ksix">aaru</string>
-    <string name="kseven">Elu</string>
-    <string name="keight">enTu</string>
-    <string name="knine">ombattu</string>
-    <string name="kten">hattu</string>
-    <string name="khundred">nooru</string>
-    <string name="kthousand">saavira</string>
-    <string name="klakh">laksha</string>
-    <string name="kcrore">kOTi</string>
+    <string-array name="kNumbers_array">
+        <item>ondu</item>
+        <item>eradu</item>
+        <item>mooru</item>
+        <item>naalku</item>
+        <item>aidu</item>
+        <item>aaru</item>
+        <item>Elu</item>
+        <item>enTu</item>
+        <item>ombattu</item>
+        <item>hattu</item>
+    </string-array>
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
 
 
