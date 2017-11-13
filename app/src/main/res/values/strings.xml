@@ -70,5 +70,23 @@
     <string name="kthat">adu</string>
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
+    <string-array name="days_array">
+        <item>Day 1</item>
+        <item>Day 2</item>
+        <item>Day 3</item>
+        <item>Day 4</item>
+        <item>Day 5</item>
+        <item>Day 6</item>
+        <item>Day 7</item>
+        <item>Day 8</item>
+        <item>Day 9</item>
+        <item>Day 10</item>
+    </string-array>
+
+    <string-array name="day_1">
+        <item>Stage 1</item>
+        <item>Stage 2</item>
+        <item>Stage 3</item>
+    </string-array>
 
 </resources>
