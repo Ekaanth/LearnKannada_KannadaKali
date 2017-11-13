@@ -11,18 +11,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerViewActivity" />
-        <activity android:name=".Homepage"/>
-        <activity android:name=".SplashScreen_Activity" >
+        <activity android:name=".Homepage" />
+        <activity android:name=".SplashScreen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ChooseCourseActivity" />
-        <activity android:name=".CourseHomePageActivity" />
         <activity android:name=".DayActivity" />
         <activity android:name=".StagesActivity" />
-        <activity android:name=".ExampleActivity"></activity>
+        <activity android:name=".ExampleActivity" />
+        <activity android:name=".CourseHomeActivity"></activity>
     </application>
 
 </manifest>
