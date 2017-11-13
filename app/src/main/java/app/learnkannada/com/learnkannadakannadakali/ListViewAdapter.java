@@ -97,12 +97,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*try {
+                try {
                     playOffline(position);
                 } catch (IOException e) {
                     e.printStackTrace();
-                }*/
-                playOnline(position);
+                }
+                //playOnline(position);
             }
         });
     }
