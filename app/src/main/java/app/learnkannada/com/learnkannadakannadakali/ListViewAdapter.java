@@ -2,6 +2,7 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -75,7 +76,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
-        if(mCategory.equals("daysCourse")) {
+        if(mCategory.equals("daysCourse")||mCategory.equals("stageCourse")) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             v = inflater.inflate(R.layout.row_layout_course, parent, false);
         }
@@ -96,18 +97,41 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final String name = values.get(position);
         holder.textInEng.setText(name);
-        holder.textInKan.setText(kanValues.get(position));
-        holder.layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    playOffline(position);
-                } catch (IOException e) {
-                    e.printStackTrace();
+        if(!mCategory.equals("daysCourse")&& !mCategory.equals("stageCourse")) {
+            holder.textInKan.setText(kanValues.get(position));
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        playOffline(position);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    //playOnline(position);
                 }
-                //playOnline(position);
-            }
-        });
+            });
+        }
+        else if(mCategory.equals("daysCourse")) {
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, DayActivity.class);
+                    i.putExtra("position", name);
+                    context.startActivity(i);
+                }
+            });
+        }
+        else if(mCategory.equals("stageCourse")) {
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, StagesActivity.class);
+                    i.putExtra("position", name);
+                    context.startActivity(i);
+                }
+            });
+        }
+
     }
 
     private void playOffline(int position) throws IOException {
@@ -118,7 +142,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         mediaPlayer.start();
     }
 
-    private void playOnline(int position) {
+    /*private void playOnline(int position) {
         Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
 
@@ -143,7 +167,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 Toast.makeText(context,"Resource not found",Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
 
     @Override
     public int getItemCount() {

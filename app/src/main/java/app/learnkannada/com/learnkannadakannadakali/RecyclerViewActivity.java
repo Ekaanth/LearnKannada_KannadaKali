@@ -34,41 +34,20 @@ public class RecyclerViewActivity extends AppCompatActivity {
         
         Intent intent = getIntent();
         String category = intent.getStringExtra("category");
-        String fromWhere = intent.getStringExtra("from");
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
-        /*int listValues[] = new int[0];
-        int listValuesInKan[] = new int[0];*/
-        if(fromWhere.equals("flexi"))
-        {
             switch(category) {
                 case "enquiry":
-                    //listValues = new String[]{"I", "You", "He", "She"};
-                    //listValuesInKan = new String[] {"naanu","neenu","avanu","ivaLu"};
                     break;
                 case "numbers":
                     listValues = res.getStringArray(R.array.eNumbers_array);
                     listValuesInKan = res.getStringArray(R.array.kNumbers_array);
                     break;
                 case "beginner":
-
-                /*listValues = new int []{R.string.i,R.string.you,R.string.he,R.string.she
-                        ,R.string.we,R.string.they,R.string.my,R.string.mine,R.string.our,R.string.your,
-                        R.string.ours,R.string.yours_Singular,R.string.yours_Plural,R.string.this_,R.string.that};
-                listValuesInKan = new int []{R.string.ki,R.string.kyou,R.string.khe,R.string.kshe
-                        ,R.string.kwe,R.string.kthey,R.string.kmy,R.string.kmine,R.string.kour,R.string.kyour,
-                        R.string.kours,R.string.kyours_Singular,R.string.kyours_Plural,R.string.kthis_,R.string.kthat};*/
                     break;
                 default:
-                    //listValues = new String[]{"Yes","No"};
                     break;
             }
-        }
-        else
-        {
-            listValues = new String[] {"Day_1 ", "Day_2"};
-            listValuesInKan = new String[] {"Dina_1 ", "Dina_2"};
-        }
 
         for(int i=0; i<listValues.length; i++)
         {
