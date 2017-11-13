@@ -21,7 +21,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
         dayCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseCourseActivity.this,CourseHomePageActivity.class));
+                Intent intent = new Intent(ChooseCourseActivity.this,RecyclerViewActivity.class);
+                intent.putExtra("category","dayCours");
+                intent.putExtra("from","dayCourse");
+                startActivity(intent);
             }
         });
 

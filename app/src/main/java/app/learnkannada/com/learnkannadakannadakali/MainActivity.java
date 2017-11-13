@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 i.putExtra("category","enquiry");
+                i.putExtra("from","flexi");
                 startActivity(i);
             }
         });
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                i.putExtra("from","flexi");
                 i.putExtra("category","numbers");
                 startActivity(i);
             }

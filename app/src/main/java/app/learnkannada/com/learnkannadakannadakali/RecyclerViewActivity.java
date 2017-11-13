@@ -1,6 +1,7 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,38 +34,46 @@ public class RecyclerViewActivity extends AppCompatActivity {
         
         Intent intent = getIntent();
         String category = intent.getStringExtra("category");
-        int listValues[] = new int[0];
-        int listValuesInKan[] = new int[0];
-        switch(category) {
-            case "enquiry":
-                //listValues = new String[]{"I", "You", "He", "She"};
-                //listValuesInKan = new String[] {"naanu","neenu","avanu","ivaLu"};
-                break;
-            case "numbers":
-                listValues = new int[]{R.string.one, R.string.two, R.string.three,
-                            R.string.four, R.string.five, R.string.six, R.string.seven,
-                            R.string.eight, R.string.nine, R.string.ten};
-                listValuesInKan = new int[]{R.string.kone, R.string.ktwo, R.string.kthree,
-                        R.string.kfour, R.string.kfive, R.string.ksix, R.string.kseven,
-                        R.string.keight, R.string.knine, R.string.kten};
-                break;
-            case "beginner":
-                listValues = new int []{R.string.i,R.string.you,R.string.he,R.string.she
+        String fromWhere = intent.getStringExtra("from");
+        Resources res = getResources();
+        String[] listValues = null, listValuesInKan = null;
+        /*int listValues[] = new int[0];
+        int listValuesInKan[] = new int[0];*/
+        if(fromWhere.equals("flexi"))
+        {
+            switch(category) {
+                case "enquiry":
+                    //listValues = new String[]{"I", "You", "He", "She"};
+                    //listValuesInKan = new String[] {"naanu","neenu","avanu","ivaLu"};
+                    break;
+                case "numbers":
+                    listValues = res.getStringArray(R.array.eNumbers_array);
+                    listValuesInKan = res.getStringArray(R.array.kNumbers_array);
+                    break;
+                case "beginner":
+
+                /*listValues = new int []{R.string.i,R.string.you,R.string.he,R.string.she
                         ,R.string.we,R.string.they,R.string.my,R.string.mine,R.string.our,R.string.your,
                         R.string.ours,R.string.yours_Singular,R.string.yours_Plural,R.string.this_,R.string.that};
                 listValuesInKan = new int []{R.string.ki,R.string.kyou,R.string.khe,R.string.kshe
                         ,R.string.kwe,R.string.kthey,R.string.kmy,R.string.kmine,R.string.kour,R.string.kyour,
-                        R.string.kours,R.string.kyours_Singular,R.string.kyours_Plural,R.string.kthis_,R.string.kthat};
-                break;
-            default:
-                //listValues = new String[]{"Yes","No"};
-                break;
+                        R.string.kours,R.string.kyours_Singular,R.string.kyours_Plural,R.string.kthis_,R.string.kthat};*/
+                    break;
+                default:
+                    //listValues = new String[]{"Yes","No"};
+                    break;
+            }
+        }
+        else
+        {
+            listValues = new String[] {"Day_1 ", "Day_2"};
+            listValuesInKan = new String[] {"Dina_1 ", "Dina_2"};
         }
 
         for(int i=0; i<listValues.length; i++)
         {
-            input.add(getResources().getString(listValues[i]));
-            kanInput.add(getResources().getString(listValuesInKan[i]));
+            input.add(listValues[i]);
+            kanInput.add(listValuesInKan[i]);
         }
 
         adapter = new ListViewAdapter(getApplicationContext(),input, category, kanInput);

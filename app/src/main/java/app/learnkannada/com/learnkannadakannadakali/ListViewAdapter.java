@@ -72,18 +72,21 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         kanValues = kanInput;
     }
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
-        if(mCategory.equals("numbers")) {
+        if(mCategory.equals("daysCourse")) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            v = inflater.inflate(R.layout.row_layout_image, parent, false);
+            v = inflater.inflate(R.layout.row_layout_course, parent, false);
         }
-        else
-        {
-            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            v = inflater.inflate(R.layout.row_layout, parent, false);
+        else {
+            if (mCategory.equals("numbers")) {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_image, parent, false);
+            } else {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout, parent, false);
+            }
         }
         ViewHolder vh = new ViewHolder(v);
         return vh;
