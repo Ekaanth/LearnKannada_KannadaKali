@@ -7,15 +7,6 @@
     android:background="@color/yellow"
     tools:context="app.learnkannada.com.learnkannadakannadakali.RecyclerViewActivity">
 
-    <SearchView
-        android:id="@+id/searchViewID"
-        android:layout_width="match_parent"
-        android:queryHint="Start typing..."
-        android:background="#e6e0e0"
-        android:layout_height="wrap_content">
-
-    </SearchView>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewID"
         android:layout_below="@+id/searchViewID"
