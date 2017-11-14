@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,15 +24,16 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by vaam on 24-10-2017.
  */
 
-public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
+public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
-    private List<String> values, kanValues;
+    private List<String> values, kanValues, mFilteredList;
     private Context context;
     private String mCategory;
 
@@ -56,12 +59,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     public void add(int position, String item) {
-        values.add(position, item);
+        mFilteredList.add(position, item);
         notifyItemInserted(position);
     }
 
     public void remove(int position) {
-        values.remove(position);
+        mFilteredList.remove(position);
         notifyItemRemoved(position);
     }
 
@@ -69,6 +72,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;
+        mFilteredList = myDataset;
         mCategory = category;
         kanValues = kanInput;
     }
@@ -95,7 +99,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        final String name = values.get(position);
+        final String name = mFilteredList.get(position);
         holder.textInEng.setText(name);
         if(!mCategory.equals("daysCourse")&& !mCategory.equals("stageCourse")) {
             holder.textInKan.setText(kanValues.get(position));
@@ -137,7 +141,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     private void playOffline(int position) throws IOException {
        // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
-        Integer id=context.getResources().getIdentifier(values.get(position).toLowerCase(),"raw",context.getPackageName());
+        Integer id=context.getResources().getIdentifier(mFilteredList.get(position).toLowerCase(),"raw",context.getPackageName());
         mediaPlayer = MediaPlayer.create(context,id);
         mediaPlayer.start();
     }
@@ -171,6 +175,40 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return values.size();
+        return mFilteredList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+
+                String charString = constraint.toString();
+
+                if (charString.isEmpty()) {
+                    mFilteredList = values;
+                } else {
+
+                    ArrayList<String> filteredList = new ArrayList<>();
+
+                    for (String tempString : values) {
+                        if (tempString.toLowerCase().contains(charString))
+                            filteredList.add(tempString);
+                    }
+                    mFilteredList = filteredList;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mFilteredList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                mFilteredList = (ArrayList<String>) results.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 }
