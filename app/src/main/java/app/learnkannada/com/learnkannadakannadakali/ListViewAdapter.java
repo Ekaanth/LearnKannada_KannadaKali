@@ -132,7 +132,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 public void onClick(View v) {
                     Intent i = new Intent(context, DayActivity.class);
                     i.putExtra("position", name);
-                    context.startActivity(i);
+                    v.getContext().startActivity(i);
                 }
             });
         }
