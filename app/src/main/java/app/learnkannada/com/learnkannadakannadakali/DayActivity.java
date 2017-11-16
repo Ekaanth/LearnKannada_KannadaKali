@@ -32,19 +32,20 @@ public class DayActivity extends AppCompatActivity {
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
 
-        String listValues[]=null;
+        String[] listValues = null, listValuesInKan = null;
 
         Resources res = getResources();
 
-        listValues = res.getStringArray(R.array.day_1);
+        listValues = res.getStringArray(R.array.biginnerEng_array);
+        listValuesInKan = res.getStringArray(R.array.biginnerKan_array);
 
 
-        for (String listValue : listValues) {
-            input.add(listValue);
-            kanInput.add("Dummy");
+        for (int i = 0; i < listValues.length; i++) {
+            input.add(listValues[i]);
+            kanInput.add(listValuesInKan[i]);
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, "stageCourse", kanInput);
+        adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
         recyclerView.setAdapter(adapter);
 
     }

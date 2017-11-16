@@ -47,7 +47,7 @@ public class CourseHomeActivity extends AppCompatActivity {
             kanInput.add("Dummy");
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, "daysCourse", kanInput);
+        adapter = new ListViewAdapter(getApplicationContext(),input, "homeCourse", kanInput);
         recyclerView.setAdapter(adapter);
 
     }
