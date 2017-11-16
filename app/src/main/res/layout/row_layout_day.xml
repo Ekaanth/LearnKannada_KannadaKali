@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="0.9"
+                android:layout_width="wrap_content"
+                android:paddingLeft="7dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textID"
+                    android:text="Test Text"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textInKanID"
+                    android:text="description"
+                    android:paddingTop="3dp"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/exampleButtonID"
+                    android:layout_height="wrap_content"
+                    android:text="Example"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/dayImageID"
+                android:src="@drawable/ic_volume_up_black_48dp_2x"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

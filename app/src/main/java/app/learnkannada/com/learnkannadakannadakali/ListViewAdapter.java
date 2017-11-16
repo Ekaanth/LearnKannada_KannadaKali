@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
@@ -47,6 +48,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
         public TextView textInEng, textInKan;
         public ImageView imageView;
+        public Button exampleButton;
         public View layout;
 
         public ViewHolder(View itemView) {
@@ -54,7 +56,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             layout = itemView;
             textInEng = (TextView) layout.findViewById(R.id.textID);
             textInKan = (TextView) layout.findViewById(R.id.textInKanID);
-
+            if(mCategory.equals("dayCourse"))
+                exampleButton = (Button)layout.findViewById(R.id.exampleButtonID);
+                imageView = (ImageView)layout.findViewById(R.id.dayImageID);
         }
     }
 
@@ -80,7 +84,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
-        if(mCategory.equals("daysCourse")||mCategory.equals("stageCourse")) {
+        if(mCategory.equals("dayCourse")) {
+            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+            v = inflater.inflate(R.layout.row_layout_day, parent, false);
+        }
+        else if(mCategory.equals("homeCourse")){
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             v = inflater.inflate(R.layout.row_layout_course, parent, false);
         }
@@ -101,8 +109,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final String name = mFilteredList.get(position);
         holder.textInEng.setText(name);
-        if(!mCategory.equals("daysCourse")&& !mCategory.equals("stageCourse")) {
+        if(!mCategory.equals("homeCourse"))
             holder.textInKan.setText(kanValues.get(position));
+
+        //onClickListener code begins
+        if(!mCategory.equals("dayCourse")&& !mCategory.equals("homeCourse")) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -115,7 +126,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 }
             });
         }
-        else if(mCategory.equals("daysCourse")) {
+        else if(mCategory.equals("homeCourse")) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -125,11 +136,22 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 }
             });
         }
-        else if(mCategory.equals("stageCourse")) {
-            holder.layout.setOnClickListener(new View.OnClickListener() {
+        else if(mCategory.equals("dayCourse")) {
+            holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context, StagesActivity.class);
+                    try {
+                        playOffline(position);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            holder.exampleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, ExampleActivity.class);
                     i.putExtra("position", name);
                     context.startActivity(i);
                 }

@@ -50,6 +50,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 listValuesInKan = res.getStringArray(R.array.kNumbers_array);
                 break;
             case "beginner":
+                listValues = res.getStringArray(R.array.biginnerEng_array);
+                listValuesInKan = res.getStringArray(R.array.biginnerKan_array);
                 break;
             default:
                 break;
