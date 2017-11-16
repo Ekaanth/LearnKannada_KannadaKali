@@ -21,7 +21,6 @@
         </activity>
         <activity android:name=".ChooseCourseActivity" />
         <activity android:name=".DayActivity" />
-        <activity android:name=".StagesActivity" />
         <activity android:name=".ExampleActivity" />
         <activity android:name=".CourseHomeActivity"></activity>
     </application>

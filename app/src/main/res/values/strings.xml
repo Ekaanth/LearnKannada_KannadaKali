@@ -34,40 +34,44 @@
 
 
     <!-- *******************************Category Beginner (ENGLISH) STARTS here *******************************-->
-    <string name="i">I</string>
-    <string name="you">You</string>
-    <string name="he">He</string>
-    <string name="she">She</string>
-    <string name="we">We</string>
-    <string name="they">They</string>
-    <string name="my">My</string>
-    <string name="mine">Mine</string>
-    <string name="our">Our</string>
-    <string name="your">Your</string>
-    <string name="ours">Ours</string>
-    <string name="yours_Singular">Yours (Singular)</string>
-    <string name="yours_Plural">Yours (Plural)</string>
-    <string name="this_">This</string>
-    <string name="that">That</string>
+    <string-array name="biginnerEng_array">
+        <item>I</item>
+        <item>We</item>
+        <item>You</item>
+        <item>You (Plural)</item>
+        <item>He</item>
+        <item>She</item>
+        <item>They</item>
+        <item>My</item>
+        <item>Mine</item>
+        <item>Our</item>
+        <item>Your</item>
+        <item>Yours (Singular)</item>
+        <item>Yours (Plural)</item>
+        <item>This</item>
+        <item>That</item>
+    </string-array>
     <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
 
 
     <!-- *******************************Category Beginner (KANNADA) STARTS here *******************************-->
-    <string name="ki">naanu</string>
-    <string name="kyou">neenu</string>
-    <string name="khe">avanu</string>
-    <string name="kshe">avaLu</string>
-    <string name="kwe">naavu</string>
-    <string name="kthey">avaru</string>
-    <string name="kmy">nanna</string>
-    <string name="kmine">nannadu</string>
-    <string name="kour">namma</string>
-    <string name="kyour">nimma</string>
-    <string name="kours">namma</string>
-    <string name="kyours_Singular">ninnadu</string>
-    <string name="kyours_Plural">nimmadu</string>
-    <string name="kthis_">idu</string>
-    <string name="kthat">adu</string>
+    <string-array name="biginnerKan_array">
+        <item>naanu</item>
+        <item>naavu</item>
+        <item>neenu</item>
+        <item>neevu</item>
+        <item>avanu</item>
+        <item>avaLu</item>
+        <item>avaru</item>
+        <item>nanna</item>
+        <item>nannadu</item>
+        <item>namma</item>
+        <item>nimma</item>
+        <item>ninnadu</item>
+        <item>nimmadu</item>
+        <item>idu</item>
+        <item>adu</item>
+    </string-array>
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
     <string-array name="days_array">
@@ -81,12 +85,6 @@
         <item>Day 8</item>
         <item>Day 9</item>
         <item>Day 10</item>
-    </string-array>
-
-    <string-array name="day_1">
-        <item>Stage 1</item>
-        <item>Stage 2</item>
-        <item>Stage 3</item>
     </string-array>
 
 </resources>
