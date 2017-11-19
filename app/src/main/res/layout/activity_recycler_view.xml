@@ -8,6 +8,7 @@
     tools:context="app.learnkannada.com.learnkannadakannadakali.RecyclerViewActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="2dp"
         android:id="@+id/recyclerViewID"
         android:layout_below="@+id/searchViewID"
         android:layout_width="match_parent"

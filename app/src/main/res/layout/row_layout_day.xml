@@ -20,13 +20,14 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="0.9"
-                android:layout_width="wrap_content"
-                android:paddingLeft="7dp"
+                android:layout_width="0dp"
+                android:paddingStart="7dp"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textID"
-                    android:text="Test Text"
+                    android:text="@string/test"
+                    android:layout_marginStart="2dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -34,7 +35,8 @@
 
                 <TextView
                     android:id="@+id/textInKanID"
-                    android:text="description"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/description"
                     android:paddingTop="3dp"
                     android:textSize="17sp"
                     android:layout_width="wrap_content"
@@ -44,7 +46,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/exampleButtonID"
                     android:layout_height="wrap_content"
-                    android:text="Example"/>
+                    android:text="@string/Example"/>
 
             </LinearLayout>
 

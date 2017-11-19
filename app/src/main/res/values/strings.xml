@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Learn Kannada (Kannada Kali)</string>
     <string name="action_settings">Settings</string>
+    <string name="welcomeNote">Welcome to Kannada Kali</string>
+    <string name="test">Test Text</string>
 
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
     <string-array name="eNumbers_array">
@@ -86,5 +88,88 @@
         <item>Day 9</item>
         <item>Day 10</item>
     </string-array>
+
+
+    <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="day1_content">
+        <item>I</item>
+        <item>We</item>
+        <item>My</item>
+        <item>Our</item>
+        <item>For Me</item>
+        <item>For Us</item>
+        <item>Mine</item>
+        <item>Ours</item>
+        <item>You(Singular)</item>
+        <item>You(Plural)</item>
+        <item>Your(Singular)</item>
+        <item>Your(Plural)</item>
+        <item>For You(Singular)</item>
+        <item>For You(Plural)</item>
+        <item>Yours(Singular)</item>
+        <item>Yours(Plural)</item>
+    </string-array>
+    <!-- *******************************Day 1 content (ENGLISH) ENDS here *******************************-->
+
+    <!-- *******************************Day 1 content (KANNADA) STARTS here *******************************-->
+    <string-array name="day1_content_kannada">
+        <item>naanu</item>
+        <item>naavu</item>
+        <item>nanna</item>
+        <item>namma</item>
+        <item>nanage</item>
+        <item>namage</item>
+        <item>nanna</item>
+        <item>namma</item>
+        <item>neenu</item>
+        <item>neevu</item>
+        <item>ninna</item>
+        <item>nimma</item>
+        <item>ninage</item>
+        <item>nimage</item>
+        <item>ninnadu</item>
+        <item>nimmadu</item>
+    </string-array>
+    <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts here *******************************-->
+    <string name="I_ex_inEng">I am Varun</string>
+    <string name="I_ex_inKan">NAANU Varun</string>
+    <string name="We_ex_inEng">WE are Indians</string>
+    <string name="We_ex_inKan">NAAVU bhaaratheeyaru</string>
+    <string name="My_ex_inEng">MY name is Rohith</string>
+    <string name="My_ex_inKan">NANNA hesaru Rohith</string>
+    <string name="Our_ex_inEng">OUR country is India</string>
+    <string name="Our_ex_inKan">NAMMA desha bhaaratha</string>
+    <string name="For_Me_ex_inEng">This is FOR ME</string>
+    <string name="For_Me_ex_inKan">idu NANAGE</string>
+    <string name="For_Us_ex_inEng">This is FOR US</string>
+    <string name="For_Us_ex_inKan">idu NAMAGE</string>
+    <string name="Mine_ex_inEng">This pen is MINE</string>
+    <string name="Mine_ex_inKan">ee pen NANNADU</string>
+    <string name="Ours_ex_inEng">This place is OURS</string>
+    <string name="Ours_ex_inKan">ee jaaga NAMMADU</string>
+    <string name="You_Singular_ex_inEng">YOU are my friend</string>
+    <string name="You_Singular_ex_inKan">NEENU nanna gelaya</string>
+    <string name="You_Plural_ex_inEng">YOU are my teacher</string>
+    <string name="You_Plural_ex_inKan">NEEVU nanna guru</string>
+    <string name="Your_Singular_ex_inEng">This is YOUR book</string>
+    <string name="Your_Singular_ex_inKan">idu NINNA pusthaka</string>
+    <string name="Your_Plural_ex_inEng">This is YOUR book</string>
+    <string name="Your_Plural_ex_inKan">idu NIMMA pusthaka</string>
+    <string name="For_You_Singular_ex_inEng">This book is FOR YOU</string>
+    <string name="For_You_Singular_ex_inKan">ee pusthaka NINAGE</string>
+    <string name="For_You_Plural_ex_inEng">This book is FOR YOU</string>
+    <string name="For_You_Plural_ex_inKan">ee pusthaka NIMAGE</string>
+    <string name="Yours_Singular_ex_inEng">This phone is YOURS</string>
+    <string name="Yours_Singular_ex_inKan">ee phone NINNADU</string>
+    <string name="Yours_Plural_ex_inEng">This place is YOURS</string>
+    <string name="Yours_Plural_ex_inKan">ee jaaga NIMMADU</string>
+
+
+    <string name="eng">Eng:</string>
+    <string name="kan">Kan:</string>
+    <string name="description">Description</string>
+    <string name="Example">Example</string>
 
 </resources>
