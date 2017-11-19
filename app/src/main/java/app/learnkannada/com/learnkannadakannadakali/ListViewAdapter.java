@@ -34,12 +34,14 @@ import java.util.List;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
-    private List<String> values, kanValues, mFilteredList;
+    private List<String> values, kanValues, mFilteredList, mFilteredKanList;
     private Context context;
     private String mCategory;
 
     private MediaPlayer mediaPlayer;
     private Uri downloadUri;
+
+    private Button exampleButton;
 
     //Firebase details
     private StorageReference storageReference;
@@ -76,6 +78,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;
+        mFilteredKanList = kanInput;
         mFilteredList = myDataset;
         mCategory = category;
         kanValues = kanInput;
@@ -108,9 +111,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final String name = mFilteredList.get(position);
+        final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
         if(!mCategory.equals("homeCourse"))
-            holder.textInKan.setText(kanValues.get(position));
+            holder.textInKan.setText(mFilteredKanList.get(position));
 
         //onClickListener code begins
         if(!mCategory.equals("dayCourse")&& !mCategory.equals("homeCourse")) {
@@ -130,21 +134,24 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //Toast.makeText(context,name,Toast.LENGTH_LONG).show();
                     Intent i = new Intent(context, DayActivity.class);
                     i.putExtra("position", name);
+
                     v.getContext().startActivity(i);
                 }
             });
         }
         else if(mCategory.equals("dayCourse")) {
-            holder.imageView.setOnClickListener(new View.OnClickListener() {
+            holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    try {
+                    Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
+                    /*try {
                         playOffline(position);
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }
+                    }*/
                 }
             });
 
@@ -152,8 +159,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(context, ExampleActivity.class);
-                    i.putExtra("position", name);
-                    context.startActivity(i);
+                    i.putExtra("name", name);
+                    i.putExtra("kName",kName);
+                    v.getContext().startActivity(i);
                 }
             });
         }
@@ -211,15 +219,28 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
                 if (charString.isEmpty()) {
                     mFilteredList = values;
+                    mFilteredKanList = kanValues;
                 } else {
 
-                    ArrayList<String> filteredList = new ArrayList<>();
+                    ArrayList<String> engFilteredList = new ArrayList<>();
+                    ArrayList<String> kanFilteredList = new ArrayList<>();
 
-                    for (String tempString : values) {
+                    for(int a=0; a<values.size(); a++)
+                    {
+                        String engString = values.get(a);
+                        String kanString = kanValues.get(a);
+                        if(engString.toLowerCase().contains(charString) || kanString.toLowerCase().contains(charString))
+                        {
+                            engFilteredList.add(engString);
+                            kanFilteredList.add(kanString);
+                        }
+                    }
+                   /* for (String tempString : values) {
                         if (tempString.toLowerCase().contains(charString))
                             filteredList.add(tempString);
-                    }
-                    mFilteredList = filteredList;
+                    }*/
+                    mFilteredList = engFilteredList;
+                    mFilteredKanList = kanFilteredList;
                 }
                 FilterResults filterResults = new FilterResults();
                 filterResults.values = mFilteredList;
