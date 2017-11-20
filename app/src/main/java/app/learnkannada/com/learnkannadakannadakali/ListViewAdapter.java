@@ -48,7 +48,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView textInEng, textInKan;
+        public TextView textInEng, textInKan, size;
         public ImageView imageView;
         public Button exampleButton;
         public View layout;
@@ -58,6 +58,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             layout = itemView;
             textInEng = (TextView) layout.findViewById(R.id.textID);
             textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+            if(mCategory.equals("homeCourse"))
+                size = (TextView) layout.findViewById(R.id.sizeID);
             if(mCategory.equals("dayCourse"))
                 exampleButton = (Button)layout.findViewById(R.id.exampleButtonID);
                 imageView = (ImageView)layout.findViewById(R.id.dayImageID);
@@ -113,9 +115,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String name = mFilteredList.get(position);
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
-        if(!mCategory.equals("homeCourse"))
+        if(!mCategory.equals("homeCourse")) {
             holder.textInKan.setText(mFilteredKanList.get(position));
-
+        }
         //onClickListener code begins
         if(!mCategory.equals("dayCourse")&& !mCategory.equals("homeCourse")) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -131,13 +133,19 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         else if(mCategory.equals("homeCourse")) {
+//            if(name.equals("Day 1")) {
+//                String mname = name.replaceAll(" ", "") + "_content";
+//                int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"int",context.getPackageName())).length;
+//                holder.size.setText( n + " words");
+//            }
+
+            holder.size.setText("10" + " words");
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Toast.makeText(context,name,Toast.LENGTH_LONG).show();
                     Intent i = new Intent(context, DayActivity.class);
                     i.putExtra("position", name);
-
                     v.getContext().startActivity(i);
                 }
             });

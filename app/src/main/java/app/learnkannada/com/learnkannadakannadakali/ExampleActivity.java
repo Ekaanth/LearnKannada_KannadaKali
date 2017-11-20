@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ExampleActivity extends AppCompatActivity {
 
-    private TextView exampleEng, exampleKan, wordInEng, wordInKan;
+    private TextView example, wordInEng, wordInKan;
     private ImageView speaker;
 
     private MediaPlayer mediaPlayer;
@@ -24,8 +24,8 @@ public class ExampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example);
 
-        exampleEng = (TextView) findViewById(R.id.exampleInEngID);
-        exampleKan = (TextView) findViewById(R.id.exampleInKanID);
+        example = (TextView) findViewById(R.id.exampleText);
+        //exampleKan = (TextView) findViewById(R.id.exampleInKanID);
         wordInEng = (TextView) findViewById(R.id.wordInEngID);
         wordInKan = (TextView) findViewById(R.id.wordInKanID);
 
@@ -42,17 +42,17 @@ public class ExampleActivity extends AppCompatActivity {
         //replacing whitespaces with "_" and saving it as nameInEng and nameInKan
         //RULE: STRINGS.XML SHOULD HAVE THE VALUES IN THE SAME FORMAT
         //Ex: Value = "For Me" --> String.xml = "For_Me_ex_inEng/inKan
-        String nameInEng = name.replaceAll(" ", "_")
+        String exampleText = name.replaceAll(" ", "_")
+                .replaceAll("\\(","_").replaceAll("\\)","")+ "_ex";
+                //.replaceAll("\\)","")+ "_ex_inEng";
+        /*final String nameInKan = name.replaceAll(" ","_")
                 .replaceAll("\\(","_")
-                .replaceAll("\\)","")+ "_ex_inEng";
-        final String nameInKan = name.replaceAll(" ","_")
-                .replaceAll("\\(","_")
-                .replaceAll("\\)","")+ "_ex_inKan";
+                .replaceAll("\\)","")+ "_ex_inKan";*/
 
-        Toast.makeText(getApplicationContext(),nameInEng + nameInKan, Toast.LENGTH_LONG).show();
+        /*Toast.makeText(getApplicationContext(),nameInEng + nameInKan, Toast.LENGTH_LONG).show();*/
 
-        exampleEng.setText(getResources().getIdentifier(nameInEng,"string",getPackageName()));
-        exampleKan.setText(getResources().getIdentifier(nameInKan,"string",getPackageName()));
+        example.setText(getResources().getIdentifier(exampleText,"string",getPackageName()));
+        //exampleKan.setText(getResources().getIdentifier(nameInKan,"string",getPackageName()));
 
         //spokenWord to keep the name of relevant mp3 file
         //RULE: mp3 file must be saved in the same format

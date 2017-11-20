@@ -45,8 +45,8 @@ public class DayActivity extends AppCompatActivity {
         switch(day)
         {
             case "Day 1": {
-                listValues = res.getStringArray(R.array.day1_content);
-                listValuesInKan = res.getStringArray(R.array.day1_content_kannada);
+                listValues = res.getStringArray(R.array.Day1_content);
+                listValuesInKan = res.getStringArray(R.array.Day1_content_kannada);
                 break;
             }
             default:
