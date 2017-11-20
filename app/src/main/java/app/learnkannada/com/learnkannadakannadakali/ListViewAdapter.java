@@ -133,13 +133,13 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         else if(mCategory.equals("homeCourse")) {
-//            if(name.equals("Day 1")) {
-//                String mname = name.replaceAll(" ", "") + "_content";
-//                int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"int",context.getPackageName())).length;
-//                holder.size.setText( n + " words");
-//            }
+            if(name.equals("Day 1")) {
+                String mname = name.replaceAll(" ", "") + "_content";
+                int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"array",context.getPackageName())).length;
+                holder.size.setText( n + " words");
+            }
 
-            holder.size.setText("10" + " words");
+            //holder.size.setText("10" + " words");
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
