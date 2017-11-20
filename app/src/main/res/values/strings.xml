@@ -91,7 +91,7 @@
 
 
     <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->
-    <string-array name="day1_content">
+    <string-array name="Day1_content">
         <item>I</item>
         <item>We</item>
         <item>My</item>
@@ -112,7 +112,7 @@
     <!-- *******************************Day 1 content (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Day 1 content (KANNADA) STARTS here *******************************-->
-    <string-array name="day1_content_kannada">
+    <string-array name="Day1_content_kannada">
         <item>naanu</item>
         <item>naavu</item>
         <item>nanna</item>
@@ -132,44 +132,29 @@
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts here *******************************-->
-    <string name="I_ex_inEng">I am Varun</string>
-    <string name="I_ex_inKan">NAANU Varun</string>
-    <string name="We_ex_inEng">WE are Indians</string>
-    <string name="We_ex_inKan">NAAVU bhaaratheeyaru</string>
-    <string name="My_ex_inEng">MY name is Rohith</string>
-    <string name="My_ex_inKan">NANNA hesaru Rohith</string>
-    <string name="Our_ex_inEng">OUR country is India</string>
-    <string name="Our_ex_inKan">NAMMA desha bhaaratha</string>
-    <string name="For_Me_ex_inEng">This is FOR ME</string>
-    <string name="For_Me_ex_inKan">idu NANAGE</string>
-    <string name="For_Us_ex_inEng">This is FOR US</string>
-    <string name="For_Us_ex_inKan">idu NAMAGE</string>
-    <string name="Mine_ex_inEng">This pen is MINE</string>
-    <string name="Mine_ex_inKan">ee pen NANNADU</string>
-    <string name="Ours_ex_inEng">This place is OURS</string>
-    <string name="Ours_ex_inKan">ee jaaga NAMMADU</string>
-    <string name="You_Singular_ex_inEng">YOU are my friend</string>
-    <string name="You_Singular_ex_inKan">NEENU nanna gelaya</string>
-    <string name="You_Plural_ex_inEng">YOU are my teacher</string>
-    <string name="You_Plural_ex_inKan">NEEVU nanna guru</string>
-    <string name="Your_Singular_ex_inEng">This is YOUR book</string>
-    <string name="Your_Singular_ex_inKan">idu NINNA pusthaka</string>
-    <string name="Your_Plural_ex_inEng">This is YOUR book</string>
-    <string name="Your_Plural_ex_inKan">idu NIMMA pusthaka</string>
-    <string name="For_You_Singular_ex_inEng">This book is FOR YOU</string>
-    <string name="For_You_Singular_ex_inKan">ee pusthaka NINAGE</string>
-    <string name="For_You_Plural_ex_inEng">This book is FOR YOU</string>
-    <string name="For_You_Plural_ex_inKan">ee pusthaka NIMAGE</string>
-    <string name="Yours_Singular_ex_inEng">This phone is YOURS</string>
-    <string name="Yours_Singular_ex_inKan">ee phone NINNADU</string>
-    <string name="Yours_Plural_ex_inEng">This place is YOURS</string>
-    <string name="Yours_Plural_ex_inKan">ee jaaga NIMMADU</string>
+    <!-- *******************************Examples Texts for Day 1 starts here *******************************-->
 
+    <string name="I_ex"><b><u>Eng</u> : I am Varun.</b>\n<b><u>Kan</u> : Naanu Varun.</b></string>
+    <string name="We_ex"><b><u>Eng</u> : WE are Indians.\n<u>Kan</u> : NAAVU bhaaratheeyaru.</b></string>
+    <string name="My_ex"><b><u>Eng</u> : MY name is Rohith.\n<u>Kan</u> : NANNA hesaru Rohith.</b></string>
+    <string name="Our_ex"><b><u>Eng</u> : OUR country is India.\n<u>Kan</u> : NANNA hesaru Rohith.</b></string>
+    <string name="For_Us_ex"><b><u>Eng</u> : This is FOR US.\n<u>Kan</u> : idu NAMAGE.</b></string>
+    <string name="For_Me_ex"><b><u>Eng</u> : This is FOR ME.\n<u>Kan</u> : idu NANAGE.</b></string>
+    <string name="Mine_ex"><b><u>Eng</u> : This pen is MINE.\n<u>Kan</u> : ee pen NANNADU.</b></string>
+    <string name="Ours_ex"><b><u>Eng</u> : This place is OURS.\n<u>Kan</u> : ee jaaga NAMMADU.</b></string>
+    <string name="You_Singular_ex"><b><u>Eng</u> : YOU are my friend.\n<u>Kan</u> : NEENU nanna gelaya.</b></string>
+    <string name="You_Plural_ex"><b><u>Eng</u> : YOU are my teacher.\n<u>Kan</u> : NEEVU nanna guru.</b></string>
+    <string name="Your_Singular_ex"><b><u>Eng</u> : This is YOUR book.\n<u>Kan</u> : idu NINNA pusthaka.</b></string>
+    <string name="Your_Plural_ex"><b><u>Eng</u> : These are YOUR books.\n<u>Kan</u> : ivu NIMMA pusthakagalu.</b></string>
+    <string name="For_You_Singular_ex"><b><u>Eng</u> : This book is FOR YOU.\n<u>Kan</u> : ee pusthaka NINAGE.</b></string>
+    <string name="For_You_Plural_ex"><b><u>Eng</u> : These books are FOR YOU.\n<u>Kan</u> : ee pusthakagalu NIMAGE.</b></string>
+    <string name="Yours_Singular_ex"><b><u>Eng</u> : This phone is YOURS.\n<u>Kan</u> : ee phone NINNADU.</b></string>
+    <string name="Yours_Plural_ex"><b><u>Eng</u> : This place is YOURS.\n<u>Kan</u> : ee jaaga NIMMADU.</b></string>
 
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>
     <string name="description">Description</string>
     <string name="Example">Example</string>
+    <!-- *******************************Examples Texts for Day 1 ends here *******************************-->
 
 </resources>
