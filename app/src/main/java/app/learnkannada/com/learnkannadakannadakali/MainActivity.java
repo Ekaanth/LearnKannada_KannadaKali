@@ -3,51 +3,42 @@ package app.learnkannada.com.learnkannadakannadakali;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView beginner, enquiry, numbers;
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private ListViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_course_home);
 
-        beginner = (ImageView) findViewById(R.id.beginnerID);
-        enquiry = (ImageView) findViewById(R.id.enquiryID);
-        numbers = (ImageView) findViewById(R.id.numbersID);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
-        beginner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
-                i.putExtra("category","beginner");
-                startActivity(i);
-            }
-        });
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        List<String> input = new ArrayList<>();
+        List<String> kanInput = new ArrayList<>();
 
-        enquiry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
-                i.putExtra("category","enquiry");
-                i.putExtra("from","flexi");
-                startActivity(i);
-            }
-        });
+        String[] listValues = getResources().getStringArray(R.array.flexi_words_array);
 
-        numbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
-                i.putExtra("from","flexi");
-                i.putExtra("category","numbers");
-                startActivity(i);
-            }
-        });
+        for (String listValue : listValues) {
+            input.add(listValue);
+            kanInput.add("Dummy");
+        }
+        adapter = new ListViewAdapter(getApplicationContext(),input, "flexiWords", kanInput);
+        recyclerView.setAdapter(adapter);
+
     }
 
     private void longToast(String s) {

@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView textInEng, textInKan, size;
-        public ImageView imageView;
+        public ImageView imageView1, imageView2;
         public Button exampleButton;
         public View layout;
 
@@ -62,7 +63,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 size = (TextView) layout.findViewById(R.id.sizeID);
             if(mCategory.equals("dayCourse"))
                 exampleButton = (Button)layout.findViewById(R.id.exampleButtonID);
-                imageView = (ImageView)layout.findViewById(R.id.dayImageID);
+            if(mCategory.equals("flexiWords")) {
+                imageView1 = (ImageView) layout.findViewById(R.id.imageID);
+                imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
+            }
         }
     }
 
@@ -98,7 +102,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             v = inflater.inflate(R.layout.row_layout_course, parent, false);
         }
         else {
-            if (mCategory.equals("numbers")) {
+            if (mCategory.equals("numbers")|| mCategory.equals("flexiWords")) {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_image, parent, false);
             } else {
@@ -115,11 +119,30 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String name = mFilteredList.get(position);
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
+
+        if(mCategory.equals("flexiWords")) {
+            holder.textInKan.setVisibility(View.INVISIBLE);
+            String imageName = name.toLowerCase();
+            holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName,"drawable",context.getPackageName()));
+            holder.imageView2.setVisibility(View.INVISIBLE);
+            holder.textInEng.setPaddingRelative(20,60,0,0);
+
+            //setOnClickListener code starts here for flexi course->Words
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, RecyclerViewActivity.class);
+                    i.putExtra("from","flexi");
+                    i.putExtra("category",name.toLowerCase());
+                    v.getContext().startActivity(i);
+                }
+            });
+        }
         if(!mCategory.equals("homeCourse")) {
             holder.textInKan.setText(mFilteredKanList.get(position));
         }
         //onClickListener code begins
-        if(!mCategory.equals("dayCourse")&& !mCategory.equals("homeCourse")) {
+        if(!mCategory.equals("dayCourse")&& !mCategory.equals("homeCourse") && !mCategory.equals("flexiWords")) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

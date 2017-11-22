@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="app.learnkannada.com.learnkannadakannadakali.ChooseCourseActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/dayCourseID"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="10 Days Course"/>
+    <Button
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/dayCourseID"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="10 Days Course"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/comfortCourseID"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Flexi Course"/>
+    <Button
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/comfortCourseID"
+        android:text="Flexi Course"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
 
-    </LinearLayout>
+</LinearLayout>
 
 </RelativeLayout>

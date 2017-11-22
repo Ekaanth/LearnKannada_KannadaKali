@@ -4,6 +4,13 @@
     <string name="welcomeNote">Welcome to Kannada Kali</string>
     <string name="test">Test Text</string>
 
+    <!-- *******************************Flexi course menu STARTS here *******************************-->
+    <string-array name="flexi_words_array">
+        <item >Beginner</item>
+        <item >Enquiry</item>
+        <item >Numbers</item>
+    </string-array>
+    <!-- *******************************flexi Course menu ends here *******************************-->
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
     <string-array name="eNumbers_array">
         <item>One</item>
