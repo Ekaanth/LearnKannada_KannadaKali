@@ -156,7 +156,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         else if(mCategory.equals("homeCourse")) {
-            if(name.equals("Day 1") || name.equals("Day 2") || name.equals("Day 3") || name.equals("Day 4")) {
+            if(name.equals("Day 1") || name.equals("Day 2") || name.equals("Day 3") || name.equals("Day 4")
+                || name.equals("Day 5")) {
                 String mname = name.replaceAll(" ", "") + "_content";
                 int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"array",context.getPackageName())).length;
                 holder.size.setText( n + " words");

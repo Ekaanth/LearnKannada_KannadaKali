@@ -281,7 +281,7 @@
         <item>dina or hagalu</item>
         <item>raathri</item>
     </string-array>
-    <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
+    <!-- *******************************Day 3 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 3 STARTS here *******************************-->
     <!-- TAG = GREETINGS -->
@@ -306,7 +306,7 @@
     <string name="Day_Before_Yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
     <string name="Day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
     <string name="Night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie_ge hogutta iddeeni</b></string>
-    <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
+    <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day4_content">
@@ -360,7 +360,7 @@
         <item>haudu or illa</item>
         <item>sari or thappu</item>
     </string-array>
-    <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
+    <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 4 STARTS here *******************************-->
     <string name="will_eat_ex"><b><u>Eng</u> : I WILL EAT fruits</b>\n<b><u>Kan</u> : naanu haNNugaLu THINTHINI (Fruit - haNNu)</b></string>
@@ -387,11 +387,93 @@
         <u>Kan</u> : neenu bhaaratheeyana? HAUDU, neenu adige bhaTTana? ILLA</b></string>
     <string name="True_or_False_ex"><b><u>Eng</u> : That is TRUE, This is FALSE</b>\n<b>
         <u>Kan</u> : adu SARI, idu THAPPU</b></string>
-    <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
+    <!-- *******************************Examples Texts for Day 4 ENDS here *******************************-->
+
+    <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day5_content">
+        <item>Beautiful</item>
+        <item>Good</item>
+        <item>Bad</item>
+        <item>Big</item>
+        <item>Small</item>
+        <item>Long</item>
+        <item>Short</item>
+        <item>Wide</item>
+        <item>New</item>
+        <item>Old</item>
+        <item>Elder</item>
+        <item>Younger</item>
+        <item>Very</item>
+        <item>Thick</item>
+        <item>Thin</item>
+        <item>Listen</item>
+        <item>Read</item>
+        <item>Write</item>
+        <item>Talk</item>
+        <item>Enough</item>
+        <item>Stop</item>
+        <item>Start</item>
+        <item>First</item>
+        <item>Last</item>
+    </string-array>
+    <!-- *******************************Day 5 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 5 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day5_content_kannada">
+        <item>sundara</item>
+        <item>oLLe</item>
+        <item>keTTa</item>
+        <item>doDDa</item>
+        <item>saNNa</item>
+        <item>udda</item>
+        <item>chikka/giDDa</item>
+        <item>agala</item>
+        <item>hosa</item>
+        <item>haLe</item>
+        <item>hiriya</item>
+        <item>kiriya</item>
+        <item>thumba</item>
+        <item>dappa</item>
+        <item>theLLa</item>
+        <item>keLu</item>
+        <item>Odu</item>
+        <item>bari</item>
+        <item>maathu</item>
+        <item>saaku</item>
+        <item>nillu</item>
+        <item>shuru</item>        <item>modalu</item>        <item>kone</item>
+    </string-array>
+    <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts for Day 5 STARTS here *******************************-->
+    <string name="Beautiful_ex"><b><u>Eng</u> : You look very BEAUTIFUL</b>\n<b><u>Kan</u> : neevu thumba SUNDARAvaagi kaaNutha ideera</b></string>
+    <string name="Good_ex"><b><u>Eng</u> : He is very GOOD man</b>\n<b><u>Kan</u> : avanu thumba OLLE manushya</b></string>
+    <string name="Bad_ex"><b><u>Eng</u> : He is a BAD boy</b>\n<b><u>Kan</u> : avanu obba KETTA huduga</b></string>
+    <string name="Big_ex"><b><u>Eng</u> : This place is very BIG</b>\n<b><u>Kan</u> : idu thumba DODDA ooru/jaaga</b></string>
+    <string name="Small_ex"><b><u>Eng</u> : This room is very SMALL</b>\n<b><u>Kan</u> : idu thumba SANNA room</b></string>
+    <string name="Long_ex"><b><u>Eng</u> : This stick is very LONG</b>\n<b><u>Kan</u> : ee kOlu(stick) thumba UDDA ide</b></string>
+    <string name="Short_ex"><b><u>Eng</u> : She is a short girl / This is a short stick</b>\n<b><u>Kan</u> : avaLu giDDa hudugi / idu chikka kOlu</b></string>
+    <string name="Wide_ex"><b><u>Eng</u> : This site is very Wide</b>\n<b><u>Kan</u> : ee site thumba AGALA ide</b></string>
+    <string name="New_ex"><b><u>Eng</u> : This is my NEW car</b>\n<b><u>Kan</u> : idu nanna HOSA car</b></string>
+    <string name="Old_ex"><b><u>Eng</u> : That is my OLD house</b>\n<b><u>Kan</u> : adu nanna HALE mane</b></string>
+    <string name="Elder_ex"><b><u>Eng</u> : He is ELDER to me</b>\n<b><u>Kan</u> : avanu nanage HIRIYAru</b></string>
+    <string name="Younger_ex"><b><u>Eng</u> : She is YOUNGER to me</b>\n<b><u>Kan</u> : avaLu nanage KIRIYAlu</b></string>
+    <string name="Very_ex"><b><u>Eng</u> : I like it VERY much</b>\n<b><u>Kan</u> : nanage idu THUMBA ishTa</b></string>
+    <string name="Thick_ex"><b><u>Eng</u> : This cloth is very THICK</b>\n<b><u>Kan</u> : ee baTTe(cloth) thumba DAPPA ide</b></string>
+    <string name="Thin_ex"><b><u>Eng</u> : This paper is very THIN</b>\n<b><u>Kan</u> : ee paper thumba THELLAgide</b></string>
+    <string name="Listen_ex"><b><u>Eng</u> : please LISTEN to my words</b>\n<b><u>Kan</u> : dayaviTTU nanna maathu KELU</b></string>
+    <string name="Read_ex"><b><u>Eng</u> : Can you READ this message?</b>\n<b><u>Kan</u> : neevu ee message Odutheera?</b></string>
+    <string name="Write_ex"><b><u>Eng</u> : I am WRITING</b>\n<b><u>Kan</u> : naanu BARIyuttha idini</b></string>
+    <string name="Talk_ex"><b><u>Eng</u> : Can we TALK for 2 minutes?</b>\n<b><u>Kan</u> : naavu 2 nimisha(minutes) MAATHU aadabahuda?</b></string>
+    <string name="Enough_ex"><b><u>Eng</u> : Enough doing this work</b>\n<b><u>Kan</u> : ee kelasa madiddu SAAKU</b></string>
+    <string name="Stop_ex"><b><u>Eng</u> : STOP talking</b>\n<b><u>Kan</u> : maathu NILLISI (Talk - Nillu)</b></string>
+    <string name="Start_ex"><b><u>Eng</u> : I will START writing</b>\n<b><u>Kan</u> : naanu bareyalu SHURU maduthEne</b></string>
+    <string name="First_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
+    <string name="Last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
+    <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
+
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>
     <string name="description">Description</string>
     <string name="Example">Example</string>
-    <!-- *******************************Examples Texts for Day 1 ends here *******************************-->
 
 </resources>
