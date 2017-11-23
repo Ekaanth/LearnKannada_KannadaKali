@@ -42,7 +42,7 @@ public class ExampleActivity extends AppCompatActivity {
         //replacing whitespaces with "_" and saving it as nameInEng and nameInKan
         //RULE: STRINGS.XML SHOULD HAVE THE VALUES IN THE SAME FORMAT
         //Ex: Value = "For Me" --> String.xml = "For_Me_ex_inEng/inKan
-        String exampleText = name.replaceAll(" ", "_")
+        String exampleText = name.replaceAll(" ", "_").replaceAll("\\?","")
                 .replaceAll("\\(","_").replaceAll("\\)","")+ "_ex";
                 //.replaceAll("\\)","")+ "_ex_inEng";
         /*final String nameInKan = name.replaceAll(" ","_")

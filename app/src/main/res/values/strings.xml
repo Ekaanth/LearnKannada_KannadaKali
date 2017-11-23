@@ -179,6 +179,7 @@
         <item>How?</item>
         <item>Which?</item>
         <item>Whom?</item>
+        <item>Whose?</item>
     </string-array>
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
 
@@ -203,6 +204,7 @@
         <item>hEge?</item>
         <item>yaavudu?</item>
         <item>yaarige?</item>
+        <item>yaaradu?</item>
     </string-array>
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
 
@@ -226,6 +228,7 @@
     <string name="How_ex"><b><u>Eng</u> : HOW did it happen?</b>\n<b><u>Kan</u> : idu HEGE aayitu(happen)?</b></string>
     <string name="Which_ex"><b><u>Eng</u> : WHICH is your bag?</b>\n<b><u>Kan</u> : ninna cheela(bag) yaavudu?</b></string>
     <string name="Whom_ex"><b><u>Eng</u> : WHOM to give this?</b>\n<b><u>Kan</u> : idu YAARIGE kodabeku?</b></string>
+    <string name="Whose_ex"><b><u>Eng</u> : WHOSE this pen?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
@@ -235,6 +238,7 @@
         <item>Good Evening</item>
         <item>Good Night</item>
         <item>See you soon</item>
+        <item>Thank you</item>
         <item>Breakfast or Snacks</item>
         <item>Lunch or Dinner</item>
         <item>Go(Singular)</item>
@@ -248,6 +252,8 @@
         <item>Day After Tomorrow</item>
         <item>Yesterday</item>
         <item>Day Before Yesterday</item>
+        <item>Day</item>
+        <item>Night</item>
     </string-array>
     <!-- *******************************Day 3 content (ENGLISH) ENDS here *******************************-->
 
@@ -258,6 +264,7 @@
         <item>shubhasanje</item>
         <item>shubharaatri</item>
         <item>matte sigONa</item>
+        <item>dhanyavaadagaLu</item>
         <item>thindi</item>
         <item>Uta</item>
         <item>hOgu</item>
@@ -271,15 +278,19 @@
         <item>naDiddu</item>
         <item>ninne</item>
         <item>monne</item>
+        <item>dina or hagalu</item>
+        <item>raathri</item>
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 3 STARTS here *******************************-->
+    <!-- TAG = GREETINGS -->
     <string name="Hi_Hello_ex"><b><u>Eng</u> : HI! How are you?</b>\n<b><u>Kan</u> : namaskaara! hege iddera (hEgidira)?</b></string>
     <string name="Good_Morning_ex"><b><u>Eng</u> : GOOD MORNING! Had breakfast?</b>\n<b><u>Kan</u> : SHUBHODAYA! thindi ayta?</b></string>
     <string name="Good_Evening_ex"><b><u>Eng</u> : GOOD EVENING! Had coffee?</b>\n<b><u>Kan</u> : SHUBHASANJE! coffee ayta?</b></string>
     <string name="Good_Night_ex"><b><u>Eng</u> : GOOD NIGHT! Have a tight sleep</b>\n<b><u>Kan</u> : SHUBHARAATRI! nidde(sleep) channagi madi</b></string>
     <string name="See_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
+    <string name="Thank_you_ex"><b><u>Eng</u> : THANK YOU for your help!</b>\n<b><u>Kan</u> : nimma sahaayakke DHANYAVAADAGALU (help - sahaaya)</b></string>
     <string name="Breakfast_or_Snacks_ex"><b><u>Eng</u> : How was the BREAKFAST?</b>\n<b><u>Kan</u> : THINDI hege itthu (hegitthu)?</b></string>
     <string name="Lunch_or_Dinner_ex"><b><u>Eng</u> : LUNCH/DINNER was very good</b>\n<b><u>Kan</u> : UTA thumba channagi itthu.</b></string>
     <string name="Go_Singular_ex"><b><u>Eng</u> : You GO, I will come</b>\n<b><u>Kan</u> : neenu HOGU, naanu barteeni</b></string>
@@ -293,8 +304,90 @@
     <string name="Day_After_Tomorrow_ex"><b><u>Eng</u> : Cricket Match is there on DAY AFTER TOMORROW</b>\n<b><u>Kan</u> : Cricket match NAADIDDU ide</b></string>
     <string name="Yesterday_ex"><b><u>Eng</u> : I went there YESTERDAY</b>\n<b><u>Kan</u> : naanu alli NINNE hogidde</b></string>
     <string name="Day_Before_Yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
+    <string name="Day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
+    <string name="Night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie_ge hogutta iddeeni</b></string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
+    <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day4_content">
+        <item>will eat</item>
+        <item>will not eat</item>
+        <item>will come</item>
+        <item>will not come</item>
+        <item>will do</item>
+        <item>will not do</item>
+        <item>will drink</item>
+        <item>will not drink</item>
+        <item>will give</item>
+        <item>will not give</item>
+        <item>will sleep</item>
+        <item>will not sleep</item>
+        <item>Done?</item>
+        <item>Not Done</item>
+        <item>Finished?</item>
+        <item>Not Finished</item>
+        <item>Name</item>
+        <item>Place</item>
+        <item>For that</item>
+        <item>For this</item>
+        <item>Yes or No</item>
+        <item>True or False</item>
+    </string-array>
+    <!-- *******************************Day 4 content (ENGLISH) ENDS here *******************************-->
+
+    <!-- *******************************Day 4 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day4_content_kannada">
+        <item>thinthini</item>
+        <item>thinnalla</item>
+        <item>bartini</item>
+        <item>baralla</item>
+        <item>maadtini</item>
+        <item>maadalla</item>
+        <item>kudithini</item>
+        <item>kudiyalla</item>
+        <item>kodthini</item>
+        <item>kodalla</item>
+        <item>malagthini</item>
+        <item>malgalla</item>
+        <item>aaytha?</item>
+        <item>aagilla</item>
+        <item>mugitha?</item>
+        <item>mugidilla</item>
+        <item>hesaru</item>
+        <item>ooru or sthala</item>
+        <item>adakke</item>
+        <item>idakke</item>
+        <item>haudu or illa</item>
+        <item>sari or thappu</item>
+    </string-array>
+    <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts for Day 4 STARTS here *******************************-->
+    <string name="will_eat_ex"><b><u>Eng</u> : I WILL EAT fruits</b>\n<b><u>Kan</u> : naanu haNNugaLu THINTHINI (Fruit - haNNu)</b></string>
+    <string name="will_not_eat_ex"><b><u>Eng</u> : I WILL NOT EAT fruits</b>\n<b><u>Kan</u> : naanu haNNugaLu THINNALLA</b></string>
+    <string name="will_come_ex"><b><u>Eng</u> : I WILL COME in evening</b>\n<b><u>Kan</u> : naanu evening(sanje) BARTHINI</b></string>
+    <string name="will_not_come_ex"><b><u>Eng</u> : I WILL NOT COME in the night</b>\n<b><u>Kan</u> : naanu raathri BARALLA</b></string>
+    <string name="will_do_ex"><b><u>Eng</u> : I WILL DO that work</b>\n<b><u>Kan</u> : naanu aa work(kelasa) MAADTHINI</b></string>
+    <string name="will_not_do_ex"><b><u>Eng</u> : I WILL NOT DO that work</b>\n<b><u>Kan</u> : naanu aa kelasa maadalla</b></string>
+    <string name="will_drink_ex"><b><u>Eng</u> : I WILL DRINK water</b>\n<b><u>Kan</u> : naanu neeru(water) KUDITHINI</b></string>
+    <string name="will_not_drink_ex"><b><u>Eng</u> : I WILL NOT DRINK juice</b>\n<b><u>Kan</u> : naanu juice KUDIYALLA</b></string>
+    <string name="will_give_ex"><b><u>Eng</u> : I WILL GIVE your book tomorrow</b>\n<b><u>Kan</u> : naanu nimma pusthaka naaLe KODTHINI</b></string>
+    <string name="will_not_give_ex"><b><u>Eng</u> : I WILL NOT GIVE your book</b>\n<b><u>Kan</u> : naanu nimma pusthaka kodalla</b></string>
+    <string name="will_sleep_ex"><b><u>Eng</u> : I WILL SLEEP at 10 P.M</b>\n<b><u>Kan</u> : naanu 10 P.M ge MALAGTHINI</b></string>
+    <string name="will_not_sleep_ex"><b><u>Eng</u> : I WILL NOT SLEEP today</b>\n<b><u>Kan</u> : naanu ivatthu MALAGALLA</b></string>
+    <string name="Done_ex"><b><u>Eng</u> : is that DONE?</b>\n<b><u>Kan</u> : adu AAYTHA?</b></string>
+    <string name="Not_Done_ex"><b><u>Eng</u> : It is NOT DONE</b>\n<b><u>Kan</u> : adu AAGILLA</b></string>
+    <string name="Finished_ex"><b><u>Eng</u> : is the work FINISHED?</b>\n<b><u>Kan</u> : kelasa MUGITHA?</b></string>
+    <string name="Not_Finished_ex"><b><u>Eng</u> : Work is NOT FINISHED yet</b>\n<b><u>Kan</u> : kelasa innu(yet) MUGIDILLA</b></string>
+    <string name="Name_ex"><b><u>Eng</u> : What is your NAME?</b>\n<b><u>Kan</u> : ninna HESARU enu?</b></string>
+    <string name="Place_ex"><b><u>Eng</u> : which is your PLACE?</b>\n<b><u>Kan</u> : nimma OORU yaavudu?</b></string>
+    <string name="For_that_ex"><b><u>Eng</u> : I will go FOR THAT</b>\n<b><u>Kan</u> : naanu ADAKKE hogthini.</b></string>
+    <string name="For_this_ex"><b><u>Eng</u> : I will go FOR THIS</b>\n<b><u>Kan</u> : naanu IDAKKE hogthini</b></string>
+    <string name="Yes_or_No_ex"><b><u>Eng</u> : Are you an Indian? YES, Are you a chef?, NO</b>\n<b>
+        <u>Kan</u> : neenu bhaaratheeyana? HAUDU, neenu adige bhaTTana? ILLA</b></string>
+    <string name="True_or_False_ex"><b><u>Eng</u> : That is TRUE, This is FALSE</b>\n<b>
+        <u>Kan</u> : adu SARI, idu THAPPU</b></string>
+    <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>
     <string name="description">Description</string>
