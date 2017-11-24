@@ -69,6 +69,11 @@ public class DayActivity extends AppCompatActivity {
                 listValuesInKan = res.getStringArray(R.array.Day5_content_kannada);
                 break;
             }
+            case "Day 6": {
+                listValues = res.getStringArray(R.array.Day6_content);
+                listValuesInKan = res.getStringArray(R.array.Day6_content_kannada);
+                break;
+            }
             default:
                 break;
         }

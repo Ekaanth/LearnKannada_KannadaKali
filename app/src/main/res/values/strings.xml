@@ -389,7 +389,7 @@
         <u>Kan</u> : adu SARI, idu THAPPU</b></string>
     <!-- *******************************Examples Texts for Day 4 ENDS here *******************************-->
 
-    <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
+    <!-- *******************************Day 5 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day5_content">
         <item>Beautiful</item>
         <item>Good</item>
@@ -470,6 +470,78 @@
     <string name="First_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
     <string name="Last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
     <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
+
+    <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day6_content">
+        <item>Up</item>
+        <item>Down</item>
+        <item>Left</item>
+        <item>Right</item>
+        <item>Front or Further or Forward</item>
+        <item>Back or Backward</item>
+        <item>Turn</item>
+        <item>Take</item>
+        <item>Bring</item>
+        <item>Straight</item>
+        <item>Circle</item>
+        <item>Time</item>
+        <item>Late</item>
+        <item>Early</item>
+        <item>Way</item>
+        <item>Road</item>
+        <item>Out</item>
+        <item>In</item>
+        <item>Near</item>
+        <item>Far</item>
+    </string-array>
+    <!-- *******************************Day 6 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 6 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day6_content_kannada">
+        <item>mEle</item>
+        <item>keLage</item>
+        <item>eDagaDe</item>
+        <item>balagaDe</item>
+        <item>munde</item>
+        <item>hinde</item>
+        <item>thirugu</item>
+        <item>thago</item>
+        <item>thangondu ba</item>
+        <item>nEra</item>
+        <item>vrutha</item>
+        <item>samaya</item>
+        <item>thaDa</item>
+        <item>bEga</item>
+        <item>daari</item>
+        <item>rasthe</item>
+        <item>horage</item>
+        <item>oLage</item>
+        <item>hatthira</item>
+        <item>doora</item>
+    </string-array>
+    <!-- *******************************Day 6 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts for Day 6 STARTS here *******************************-->
+    <string name="Up_ex"><b><u>Eng</u> : please get UP</b>\n<b><u>Kan</u> : dayaviTTu MELE ELi</b></string>
+    <string name="Down_ex"><b><u>Eng</u> : Please come DOWN</b>\n<b><u>Kan</u> : dayaviTTU KELAGE banni</b></string>
+    <string name="Left_ex"><b><u>Eng</u> : Go front and go LEFT</b>\n<b><u>Kan</u> : munde hogi matthu EDAGADE hogi</b></string>
+    <string name="Right_ex"><b><u>Eng</u> : Orion mall is on RIGHT side of World Trade Building</b>\n<b><u>Kan</u> : Orion Mall World Trade Building na BALAGADE ide</b></string>
+    <string name="Front_or_Further_or_Forward_ex"><b><u>Eng</u> : I have parked my car infront of my house</b>\n<b><u>Kan</u> : naanu nanna car annu nanna mane MUNDE park maadidini</b></string>
+    <string name="Back_or_Backward_ex"><b><u>Eng</u> : Take a step backward</b>\n<b><u>Kan</u> : ondu hejje(step) hinde thagoLi</b></string>
+    <string name="Turn_ex"><b><u>Eng</u> : Go further for 1 KM and turn LEFT</b>\n<b><u>Kan</u> : 1(ondu) km munde hOgi eDagaDe THIRUGI</b></string>
+    <string name="Take_ex"><b><u>Eng</u> : Please TAKE this box.</b>\n<b><u>Kan</u> : dayaviTTU ee box THAGOLI</b></string>
+    <string name="Bring_ex"><b><u>Eng</u> : Please BRING that book tomorrow</b>\n<b><u>Kan</u> : dayaviTTu aa pushtakavanna naaLe THAGONDU BANNI/BA</b></string>
+    <string name="Straight_ex"><b><u>Eng</u> : Go STRAIGHT and take right</b>\n<b><u>Kan</u> : NERA hogi balagaDe thirugi</b></string>
+    <string name="Circle_ex"><b><u>Eng</u> : I am near Mekhri CIRCLE</b>\n<b><u>Kan</u> : naanu Mekhri VRUTHADA hatthira iddeeni</b></string>
+    <string name="Time_ex"><b><u>Eng</u> : My TIME is very good today</b>\n<b><u>Kan</u> : ivatthu nanna SAMAYA thumba channagi ide</b></string>
+    <string name="Late_ex"><b><u>Eng</u> : I came LATE today</b>\n<b><u>Kan</u> : naanu ivatthu THADAvaagi bande</b></string>
+    <string name="Early_ex"><b><u>Eng</u> : I came EARLY today</b>\n<b><u>Kan</u> : naanu ivatthu BEGA bande</b></string>
+    <string name="Way_ex"><b><u>Eng</u> : Show me the WAY</b>\n<b><u>Kan</u> : nanage DAARI thorisi</b></string>
+    <string name="Road_ex"><b><u>Eng</u> : Right side of the ROAD</b>\n<b><u>Kan</u> : RASTHEya balagaDe</b></string>
+    <string name="Out_ex"><b><u>Eng</u> : Please Get OUT!</b>\n<b><u>Kan</u> : dayaviTTU HORAGE hOgi</b></string>
+    <string name="In_ex"><b><u>Eng</u> : Please come IN!</b>\n<b><u>Kan</u> : dayaviTTU OLAGE banni</b></string>
+    <string name="Near_ex"><b><u>Eng</u> : My house is NEAR to your house</b>\n<b><u>Kan</u> : Nanna mane nimma manege HATTHIRA ide</b></string>
+    <string name="Far_ex"><b><u>Eng</u> : Electronic City is very FAR from Vijayanagar</b>\n<b><u>Kan</u> : Electronic City VijayaNagar inda thumba DOORA</b></string>
+    <!-- *******************************Examples Texts for Day 6 ENDS here *******************************-->
 
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>
