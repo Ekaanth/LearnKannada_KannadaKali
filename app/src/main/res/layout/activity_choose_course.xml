@@ -36,4 +36,13 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
 
 </LinearLayout>
 
+<ImageView
+    android:id="@+id/micID"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="40dp"
+    android:src="@drawable/mic"
+    android:layout_width="50dp"
+    android:layout_height="100dp" />
+
 </RelativeLayout>

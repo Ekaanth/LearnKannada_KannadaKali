@@ -57,7 +57,7 @@
         <item>Your</item>
         <item>Yours (Singular)</item>
         <item>Yours (Plural)</item>
-        <item>This</item>
+        <item>This or It</item>
         <item>That</item>
     </string-array>
     <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
@@ -126,8 +126,8 @@
         <item>namma</item>
         <item>nanage</item>
         <item>namage</item>
-        <item>nanna</item>
-        <item>namma</item>
+        <item>nannadu</item>
+        <item>nammadu</item>
         <item>neenu</item>
         <item>neevu</item>
         <item>ninna</item>
@@ -140,22 +140,22 @@
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 1 STARTS here *******************************-->
-    <string name="I_ex"><b><u>Eng</u> : I am Varun.</b>\n<b><u>Kan</u> : Naanu Varun.</b></string>
-    <string name="We_ex"><b><u>Eng</u> : WE are Indians.\n<u>Kan</u> : NAAVU bhaaratheeyaru.</b></string>
-    <string name="My_ex"><b><u>Eng</u> : MY name is Rohith.\n<u>Kan</u> : NANNA hesaru Rohith.</b></string>
-    <string name="Our_ex"><b><u>Eng</u> : OUR country is India.\n<u>Kan</u> : NANNA hesaru Rohith.</b></string>
-    <string name="For_Us_ex"><b><u>Eng</u> : This is FOR US.\n<u>Kan</u> : idu NAMAGE.</b></string>
-    <string name="For_Me_ex"><b><u>Eng</u> : This is FOR ME.\n<u>Kan</u> : idu NANAGE.</b></string>
-    <string name="Mine_ex"><b><u>Eng</u> : This pen is MINE.\n<u>Kan</u> : ee pen NANNADU.</b></string>
-    <string name="Ours_ex"><b><u>Eng</u> : This place is OURS.\n<u>Kan</u> : ee jaaga NAMMADU.</b></string>
-    <string name="You_Singular_ex"><b><u>Eng</u> : YOU are my friend.\n<u>Kan</u> : NEENU nanna gelaya.</b></string>
-    <string name="You_Plural_ex"><b><u>Eng</u> : YOU are my teacher.\n<u>Kan</u> : NEEVU nanna guru.</b></string>
-    <string name="Your_Singular_ex"><b><u>Eng</u> : This is YOUR book.\n<u>Kan</u> : idu NINNA pusthaka.</b></string>
-    <string name="Your_Plural_ex"><b><u>Eng</u> : These are YOUR books.\n<u>Kan</u> : ivu NIMMA pusthakagalu.</b></string>
-    <string name="For_You_Singular_ex"><b><u>Eng</u> : This book is FOR YOU.\n<u>Kan</u> : ee pusthaka NINAGE.</b></string>
-    <string name="For_You_Plural_ex"><b><u>Eng</u> : These books are FOR YOU.\n<u>Kan</u> : ee pusthakagalu NIMAGE.</b></string>
-    <string name="Yours_Singular_ex"><b><u>Eng</u> : This phone is YOURS.\n<u>Kan</u> : ee phone NINNADU.</b></string>
-    <string name="Yours_Plural_ex"><b><u>Eng</u> : This place is YOURS.\n<u>Kan</u> : ee jaaga NIMMADU.</b></string>
+    <string name="i_ex"><b><u>Eng</u> : I am Saraswathi.</b>\n<b><u>Kan</u> : Naanu Saraswathi.</b></string>
+    <string name="we_ex"><b><u>Eng</u> : WE are Indians.\n<u>Kan</u> : NAAVU bhaaratheeyaru.</b></string>
+    <string name="my_ex"><b><u>Eng</u> : MY name is Lakshmi.\n<u>Kan</u> : NANNA hesaru Lakshmi.</b></string>
+    <string name="our_ex"><b><u>Eng</u> : OUR country is India.\n<u>Kan</u> : namma dEsha Bhaaratha</b></string>
+    <string name="for_us_ex"><b><u>Eng</u> : This is FOR US.\n<u>Kan</u> : idu NAMAGE.</b></string>
+    <string name="for_me_ex"><b><u>Eng</u> : This is FOR ME.\n<u>Kan</u> : idu NANAGE.</b></string>
+    <string name="mine_ex"><b><u>Eng</u> : This pen is MINE.\n<u>Kan</u> : ee pen NANNADU.</b></string>
+    <string name="ours_ex"><b><u>Eng</u> : This place is OURS.\n<u>Kan</u> : ee jaaga NAMMADU.</b></string>
+    <string name="you_singular_ex"><b><u>Eng</u> : YOU are my friend.\n<u>Kan</u> : NEENU nanna gelaya.</b></string>
+    <string name="you_plural_ex"><b><u>Eng</u> : YOU are my teacher.\n<u>Kan</u> : NEEVU nanna guru.</b></string>
+    <string name="your_singular_ex"><b><u>Eng</u> : This is YOUR book.\n<u>Kan</u> : idu NINNA pusthaka.</b></string>
+    <string name="your_plural_ex"><b><u>Eng</u> : These are YOUR books.\n<u>Kan</u> : ivu NIMMA pusthakagalu.</b></string>
+    <string name="for_you_singular_ex"><b><u>Eng</u> : This book is FOR YOU.\n<u>Kan</u> : ee pusthaka NINAGE.</b></string>
+    <string name="for_you_plural_ex"><b><u>Eng</u> : These books are FOR YOU.\n<u>Kan</u> : ee pusthakagalu NIMAGE.</b></string>
+    <string name="yours_singular_ex"><b><u>Eng</u> : This phone is YOURS.\n<u>Kan</u> : ee phone NINNADU.</b></string>
+    <string name="yours_plural_ex"><b><u>Eng</u> : This place is YOURS.\n<u>Kan</u> : ee jaaga NIMMADU.</b></string>
     <!-- *******************************Examples Texts for Day 1 ENDS here *******************************-->
 
     <!-- *******************************Day 2 content (ENGLISH) STARTS here *******************************-->
@@ -169,7 +169,7 @@
         <item>For Him</item>
         <item>For Her</item>
         <item>For Them</item>
-        <item>This</item>
+        <item>This or It</item>
         <item>That</item>
         <item>There</item>
         <item>Here</item>
@@ -209,26 +209,26 @@
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 2 STARTS here *******************************-->
-    <string name="He_ex"><b><u>Eng</u> : HE is a cricket player</b>\n<b><u>Kan</u> : AVANU obba cricket aatagaara</b></string>
-    <string name="She_ex"><b><u>Eng</u> : SHE is a good girl</b>\n<b><u>Kan</u> : AVALU oLLe hudugi</b></string>
-    <string name="They_ex"><b><u>Eng</u> : THEY are cricket player(s)</b>\n<b><u>Kan</u> : AVARU cricket aatagaara(ru)</b></string>
-    <string name="His_ex"><b><u>Eng</u> : This is HIS book OR This book is his</b>\n<b><u>Kan</u> : idu AVANA Pusthaka OR ee pustaka AVANADU</b></string>
-    <string name="Her_ex"><b><u>Eng</u> : This is HER book OR This book is hers</b>\n<b><u>Kan</u> : idu AVALA Pusthaka OR ee pustaka AVALADU</b></string>
-    <string name="Their_ex"><b><u>Eng</u> : This is their house OR This house is theirs</b>\n<b><u>Kan</u> : idu AVARA mane OR ee mane AVARADU</b></string>
-    <string name="For_Him_ex"><b><u>Eng</u> : This sweet is FOR HIM</b>\n<b><u>Kan</u> : ee sweet(sihi) AVANIGE</b></string>
-    <string name="For_Her_ex"><b><u>Eng</u> : This box is FOR HER</b>\n<b><u>Kan</u> : ee box(Dabba) AVALIGE</b></string>
-    <string name="For_Them_ex"><b><u>Eng</u> : This gift is FOR THEM</b>\n<b><u>Kan</u> : ee gift(uDugore) AVARIGE</b></string>
-    <string name="This_ex"><b><u>Eng</u> : THIS is Bengaluru</b>\n<b><u>Kan</u> : IDU Bengaluru</b></string>
-    <string name="That_ex"><b><u>Eng</u> : THAT is Mysuru</b>\n<b><u>Kan</u> : ADU Mysuru</b></string>
-    <string name="There_Her_ex"><b><u>Eng</u> : Your book is THERE</b>\n<b><u>Kan</u> : nimma pusthaka ALLI ide</b></string>
-    <string name="Here_ex"><b><u>Eng</u> : Bottle is HERE</b>\n<b><u>Kan</u> : Bottle ILLI ide</b></string>
-    <string name="Where_ex"><b><u>Eng</u> : WHERE is my car?</b>\n<b><u>Kan</u> : nanna car ELLI ide?</b></string>
-    <string name="Why_ex"><b><u>Eng</u> : WHY are you late?</b>\n<b><u>Kan</u> : neenu late(taDa) yaake?</b></string>
-    <string name="What_ex"><b><u>Eng</u> : WHAT is your name?</b>\n<b><u>Kan</u> : ninna hesaru ENU?</b></string>
-    <string name="How_ex"><b><u>Eng</u> : HOW did it happen?</b>\n<b><u>Kan</u> : idu HEGE aayitu(happen)?</b></string>
-    <string name="Which_ex"><b><u>Eng</u> : WHICH is your bag?</b>\n<b><u>Kan</u> : ninna cheela(bag) yaavudu?</b></string>
-    <string name="Whom_ex"><b><u>Eng</u> : WHOM to give this?</b>\n<b><u>Kan</u> : idu YAARIGE kodabeku?</b></string>
-    <string name="Whose_ex"><b><u>Eng</u> : WHOSE this pen?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
+    <string name="he_ex"><b><u>Eng</u> : HE is a cricket player</b>\n<b><u>Kan</u> : AVANU obba cricket aatagaara</b></string>
+    <string name="she_ex"><b><u>Eng</u> : SHE is a good girl</b>\n<b><u>Kan</u> : AVALU oLLe hudugi</b></string>
+    <string name="they_ex"><b><u>Eng</u> : THEY are cricket player(s)</b>\n<b><u>Kan</u> : AVARU cricket aatagaara(ru)</b></string>
+    <string name="his_ex"><b><u>Eng</u> : This is HIS book OR This book is his</b>\n<b><u>Kan</u> : idu AVANA Pusthaka OR ee pustaka AVANADU</b></string>
+    <string name="her_ex"><b><u>Eng</u> : This is HER book OR This book is hers</b>\n<b><u>Kan</u> : idu AVALA Pusthaka OR ee pustaka AVALADU</b></string>
+    <string name="their_ex"><b><u>Eng</u> : This is their house OR This house is theirs</b>\n<b><u>Kan</u> : idu AVARA mane OR ee mane AVARADU</b></string>
+    <string name="for_him_ex"><b><u>Eng</u> : This sweet is FOR HIM</b>\n<b><u>Kan</u> : ee sweet(sihi) AVANIGE</b></string>
+    <string name="for_her_ex"><b><u>Eng</u> : This box is FOR HER</b>\n<b><u>Kan</u> : ee box(Dabba) AVALIGE</b></string>
+    <string name="for_them_ex"><b><u>Eng</u> : This gift is FOR THEM</b>\n<b><u>Kan</u> : ee gift(uDugore) AVARIGE</b></string>
+    <string name="this_or_it_ex"><b><u>Eng</u> : THIS is Bengaluru</b>\n<b><u>Kan</u> : IDU Bengaluru</b></string>
+    <string name="that_ex"><b><u>Eng</u> : THAT is Mysuru</b>\n<b><u>Kan</u> : ADU Mysuru</b></string>
+    <string name="there_ex"><b><u>Eng</u> : Your book is THERE</b>\n<b><u>Kan</u> : nimma pusthaka ALLI ide</b></string>
+    <string name="here_ex"><b><u>Eng</u> : Bottle is HERE</b>\n<b><u>Kan</u> : Bottle ILLI ide</b></string>
+    <string name="where_ex"><b><u>Eng</u> : WHERE is my car?</b>\n<b><u>Kan</u> : nanna car ELLI ide?</b></string>
+    <string name="why_ex"><b><u>Eng</u> : WHY are you late?</b>\n<b><u>Kan</u> : neenu late(taDa) yaake?</b></string>
+    <string name="what_ex"><b><u>Eng</u> : WHAT is your name?</b>\n<b><u>Kan</u> : ninna hesaru ENU?</b></string>
+    <string name="how_ex"><b><u>Eng</u> : HOW did it happen?</b>\n<b><u>Kan</u> : idu HEGE aayitu(happen)?</b></string>
+    <string name="which_ex"><b><u>Eng</u> : WHICH is your bag?</b>\n<b><u>Kan</u> : ninna cheela(bag) yaavudu?</b></string>
+    <string name="whom_ex"><b><u>Eng</u> : WHOM to give this?</b>\n<b><u>Kan</u> : idu YAARIGE kodabeku?</b></string>
+    <string name="whose_ex"><b><u>Eng</u> : WHOSE this pen?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
@@ -285,27 +285,27 @@
 
     <!-- *******************************Examples Texts for Day 3 STARTS here *******************************-->
     <!-- TAG = GREETINGS -->
-    <string name="Hi_Hello_ex"><b><u>Eng</u> : HI! How are you?</b>\n<b><u>Kan</u> : namaskaara! hege iddera (hEgidira)?</b></string>
-    <string name="Good_Morning_ex"><b><u>Eng</u> : GOOD MORNING! Had breakfast?</b>\n<b><u>Kan</u> : SHUBHODAYA! thindi ayta?</b></string>
-    <string name="Good_Evening_ex"><b><u>Eng</u> : GOOD EVENING! Had coffee?</b>\n<b><u>Kan</u> : SHUBHASANJE! coffee ayta?</b></string>
-    <string name="Good_Night_ex"><b><u>Eng</u> : GOOD NIGHT! Have a tight sleep</b>\n<b><u>Kan</u> : SHUBHARAATRI! nidde(sleep) channagi madi</b></string>
-    <string name="See_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
-    <string name="Thank_you_ex"><b><u>Eng</u> : THANK YOU for your help!</b>\n<b><u>Kan</u> : nimma sahaayakke DHANYAVAADAGALU (help - sahaaya)</b></string>
-    <string name="Breakfast_or_Snacks_ex"><b><u>Eng</u> : How was the BREAKFAST?</b>\n<b><u>Kan</u> : THINDI hege itthu (hegitthu)?</b></string>
-    <string name="Lunch_or_Dinner_ex"><b><u>Eng</u> : LUNCH/DINNER was very good</b>\n<b><u>Kan</u> : UTA thumba channagi itthu.</b></string>
-    <string name="Go_Singular_ex"><b><u>Eng</u> : You GO, I will come</b>\n<b><u>Kan</u> : neenu HOGU, naanu barteeni</b></string>
-    <string name="Go_Plural_ex"><b><u>Eng</u> : You please GO first</b>\n<b><u>Kan</u> : neevu dayavittu(Please) modalu(first) HOGI</b></string>
-    <string name="Come_Singular_ex"><b><u>Eng</u> : Brother, COME here!</b>\n<b><u>Kan</u> : thamma! BA illi</b></string>
-    <string name="Come_Plural_ex"><b><u>Eng</u> : Hi Madam! Please come inside</b>\n<b><u>Kan</u> : namaskaara Madam! dayavittu oLage BANNI</b></string>
-    <string name="Now_ex"><b><u>Eng</u> : I will eat NOW</b>\n<b><u>Kan</u> : naanu EEGA tinnu(eat)theNe</b></string>
-    <string name="Later_ex"><b><u>Eng</u> : I will do it LATER</b>\n<b><u>Kan</u> : naanu adanna AAMELE maadu(Do)thene</b></string>
-    <string name="Today_ex"><b><u>Eng</u> : I am working from home TODAY!</b>\n<b><u>Kan</u> : naanu IVATTU mane inda kelsa madutta ideeni</b></string>
-    <string name="Tomorrow_ex"><b><u>Eng</u> : I am on leave TOMORROW</b>\n<b><u>Kan</u> : naanu NAALE rajeyalli ideeni</b></string>
-    <string name="Day_After_Tomorrow_ex"><b><u>Eng</u> : Cricket Match is there on DAY AFTER TOMORROW</b>\n<b><u>Kan</u> : Cricket match NAADIDDU ide</b></string>
-    <string name="Yesterday_ex"><b><u>Eng</u> : I went there YESTERDAY</b>\n<b><u>Kan</u> : naanu alli NINNE hogidde</b></string>
-    <string name="Day_Before_Yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
-    <string name="Day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
-    <string name="Night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie_ge hogutta iddeeni</b></string>
+    <string name="hi_hello_ex"><b><u>Eng</u> : HI! How are you?</b>\n<b><u>Kan</u> : namaskaara! hege iddera (hEgidira)?</b></string>
+    <string name="good_morning_ex"><b><u>Eng</u> : GOOD MORNING! Had breakfast?</b>\n<b><u>Kan</u> : SHUBHODAYA! thindi ayta?</b></string>
+    <string name="good_evening_ex"><b><u>Eng</u> : GOOD EVENING! Had coffee?</b>\n<b><u>Kan</u> : SHUBHASANJE! coffee ayta?</b></string>
+    <string name="good_night_ex"><b><u>Eng</u> : GOOD NIGHT! Have a tight sleep</b>\n<b><u>Kan</u> : SHUBHARAATRI! nidde(sleep) channagi madi</b></string>
+    <string name="yee_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
+    <string name="thank_you_ex"><b><u>Eng</u> : THANK YOU for your help!</b>\n<b><u>Kan</u> : nimma sahaayakke DHANYAVAADAGALU (help - sahaaya)</b></string>
+    <string name="breakfast_or_snacks_ex"><b><u>Eng</u> : How was the BREAKFAST?</b>\n<b><u>Kan</u> : THINDI hege itthu (hegitthu)?</b></string>
+    <string name="lunch_or_dinner_ex"><b><u>Eng</u> : LUNCH/DINNER was very good</b>\n<b><u>Kan</u> : UTA thumba channagi itthu.</b></string>
+    <string name="go_singular_ex"><b><u>Eng</u> : You GO, I will come</b>\n<b><u>Kan</u> : neenu HOGU, naanu barteeni</b></string>
+    <string name="go_plural_ex"><b><u>Eng</u> : You please GO first</b>\n<b><u>Kan</u> : neevu dayavittu(Please) modalu(first) HOGI</b></string>
+    <string name="come_singular_ex"><b><u>Eng</u> : Brother, COME here!</b>\n<b><u>Kan</u> : thamma! BA illi</b></string>
+    <string name="come_plural_ex"><b><u>Eng</u> : Hi Madam! Please come inside</b>\n<b><u>Kan</u> : namaskaara Madam! dayavittu oLage BANNI</b></string>
+    <string name="now_ex"><b><u>Eng</u> : I will eat NOW</b>\n<b><u>Kan</u> : naanu EEGA tinnu(eat)theNe</b></string>
+    <string name="later_ex"><b><u>Eng</u> : I will do it LATER</b>\n<b><u>Kan</u> : naanu adanna AAMELE maadu(Do)thene</b></string>
+    <string name="today_ex"><b><u>Eng</u> : I am working from home TODAY!</b>\n<b><u>Kan</u> : naanu IVATTU mane inda kelsa madutta ideeni</b></string>
+    <string name="tomorrow_ex"><b><u>Eng</u> : I am on leave TOMORROW</b>\n<b><u>Kan</u> : naanu NAALE rajeyalli ideeni</b></string>
+    <string name="day_after_tomorrow_ex"><b><u>Eng</u> : Cricket Match is there on DAY AFTER TOMORROW</b>\n<b><u>Kan</u> : Cricket match NAADIDDU ide</b></string>
+    <string name="yesterday_ex"><b><u>Eng</u> : I went there YESTERDAY</b>\n<b><u>Kan</u> : naanu alli NINNE hogidde</b></string>
+    <string name="day_before_yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
+    <string name="day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
+    <string name="night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie ge hogutta iddeeni</b></string>
     <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
@@ -331,7 +331,7 @@
         <item>For that</item>
         <item>For this</item>
         <item>Yes or No</item>
-        <item>True or False</item>
+        <item>Correct or Incorrect</item>
     </string-array>
     <!-- *******************************Day 4 content (ENGLISH) ENDS here *******************************-->
 
@@ -373,19 +373,19 @@
     <string name="will_not_drink_ex"><b><u>Eng</u> : I WILL NOT DRINK juice</b>\n<b><u>Kan</u> : naanu juice KUDIYALLA</b></string>
     <string name="will_give_ex"><b><u>Eng</u> : I WILL GIVE your book tomorrow</b>\n<b><u>Kan</u> : naanu nimma pusthaka naaLe KODTHINI</b></string>
     <string name="will_not_give_ex"><b><u>Eng</u> : I WILL NOT GIVE your book</b>\n<b><u>Kan</u> : naanu nimma pusthaka kodalla</b></string>
-    <string name="will_sleep_ex"><b><u>Eng</u> : I WILL SLEEP at 10 P.M</b>\n<b><u>Kan</u> : naanu 10 P.M ge MALAGTHINI</b></string>
+    <string name="will_sleep_ex"><b><u>Eng</u> : WILL SLEEP at 10 P.M</b>\n<b><u>Kan</u> : 10 P.M ge MALAGTHINI</b></string>
     <string name="will_not_sleep_ex"><b><u>Eng</u> : I WILL NOT SLEEP today</b>\n<b><u>Kan</u> : naanu ivatthu MALAGALLA</b></string>
-    <string name="Done_ex"><b><u>Eng</u> : is that DONE?</b>\n<b><u>Kan</u> : adu AAYTHA?</b></string>
-    <string name="Not_Done_ex"><b><u>Eng</u> : It is NOT DONE</b>\n<b><u>Kan</u> : adu AAGILLA</b></string>
-    <string name="Finished_ex"><b><u>Eng</u> : is the work FINISHED?</b>\n<b><u>Kan</u> : kelasa MUGITHA?</b></string>
-    <string name="Not_Finished_ex"><b><u>Eng</u> : Work is NOT FINISHED yet</b>\n<b><u>Kan</u> : kelasa innu(yet) MUGIDILLA</b></string>
-    <string name="Name_ex"><b><u>Eng</u> : What is your NAME?</b>\n<b><u>Kan</u> : ninna HESARU enu?</b></string>
-    <string name="Place_ex"><b><u>Eng</u> : which is your PLACE?</b>\n<b><u>Kan</u> : nimma OORU yaavudu?</b></string>
-    <string name="For_that_ex"><b><u>Eng</u> : I will go FOR THAT</b>\n<b><u>Kan</u> : naanu ADAKKE hogthini.</b></string>
-    <string name="For_this_ex"><b><u>Eng</u> : I will go FOR THIS</b>\n<b><u>Kan</u> : naanu IDAKKE hogthini</b></string>
-    <string name="Yes_or_No_ex"><b><u>Eng</u> : Are you an Indian? YES, Are you a chef?, NO</b>\n<b>
+    <string name="done_ex"><b><u>Eng</u> : is that DONE?</b>\n<b><u>Kan</u> : adu AAYTHA?</b></string>
+    <string name="not_done_ex"><b><u>Eng</u> : It is NOT DONE</b>\n<b><u>Kan</u> : adu AAGILLA</b></string>
+    <string name="finished_ex"><b><u>Eng</u> : is the work FINISHED?</b>\n<b><u>Kan</u> : kelasa MUGITHA?</b></string>
+    <string name="not_finished_ex"><b><u>Eng</u> : Work is NOT FINISHED yet</b>\n<b><u>Kan</u> : kelasa innu(yet) MUGIDILLA</b></string>
+    <string name="name_ex"><b><u>Eng</u> : What is your NAME?</b>\n<b><u>Kan</u> : ninna HESARU enu?</b></string>
+    <string name="place_ex"><b><u>Eng</u> : which is your PLACE?</b>\n<b><u>Kan</u> : nimma OORU yaavudu?</b></string>
+    <string name="for_that_ex"><b><u>Eng</u> : I will go FOR THAT</b>\n<b><u>Kan</u> : naanu ADAKKE hogthini.</b></string>
+    <string name="for_this_ex"><b><u>Eng</u> : I will go FOR THIS</b>\n<b><u>Kan</u> : naanu IDAKKE hogthini</b></string>
+    <string name="yes_or_no_ex"><b><u>Eng</u> : Are you an Indian? YES, Are you a chef?, NO</b>\n<b>
         <u>Kan</u> : neenu bhaaratheeyana? HAUDU, neenu adige bhaTTana? ILLA</b></string>
-    <string name="True_or_False_ex"><b><u>Eng</u> : That is TRUE, This is FALSE</b>\n<b>
+    <string name="correct_or_incorrect_ex"><b><u>Eng</u> : That is CORRECT, This is INCORRECT</b>\n<b>
         <u>Kan</u> : adu SARI, idu THAPPU</b></string>
     <!-- *******************************Examples Texts for Day 4 ENDS here *******************************-->
 
@@ -396,14 +396,13 @@
         <item>Bad</item>
         <item>Big</item>
         <item>Small</item>
-        <item>Long</item>
-        <item>Short</item>
+        <item>Long or Lengthy</item>
+        <item>Short or Tiny</item>
         <item>Wide</item>
-        <item>New</item>
+        <item>New or Latest</item>
         <item>Old</item>
         <item>Elder</item>
         <item>Younger</item>
-        <item>Very</item>
         <item>Thick</item>
         <item>Thin</item>
         <item>Listen</item>
@@ -431,7 +430,6 @@
         <item>haLe</item>
         <item>hiriya</item>
         <item>kiriya</item>
-        <item>thumba</item>
         <item>dappa</item>
         <item>theLLa</item>
         <item>keLu</item>
@@ -445,30 +443,29 @@
     <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 5 STARTS here *******************************-->
-    <string name="Beautiful_ex"><b><u>Eng</u> : You look very BEAUTIFUL</b>\n<b><u>Kan</u> : neevu thumba SUNDARAvaagi kaaNutha ideera</b></string>
-    <string name="Good_ex"><b><u>Eng</u> : He is very GOOD man</b>\n<b><u>Kan</u> : avanu thumba OLLE manushya</b></string>
-    <string name="Bad_ex"><b><u>Eng</u> : He is a BAD boy</b>\n<b><u>Kan</u> : avanu obba KETTA huduga</b></string>
-    <string name="Big_ex"><b><u>Eng</u> : This place is very BIG</b>\n<b><u>Kan</u> : idu thumba DODDA ooru/jaaga</b></string>
-    <string name="Small_ex"><b><u>Eng</u> : This room is very SMALL</b>\n<b><u>Kan</u> : idu thumba SANNA room</b></string>
-    <string name="Long_ex"><b><u>Eng</u> : This stick is very LONG</b>\n<b><u>Kan</u> : ee kOlu(stick) thumba UDDA ide</b></string>
-    <string name="Short_ex"><b><u>Eng</u> : She is a short girl / This is a short stick</b>\n<b><u>Kan</u> : avaLu giDDa hudugi / idu chikka kOlu</b></string>
-    <string name="Wide_ex"><b><u>Eng</u> : This site is very Wide</b>\n<b><u>Kan</u> : ee site thumba AGALA ide</b></string>
-    <string name="New_ex"><b><u>Eng</u> : This is my NEW car</b>\n<b><u>Kan</u> : idu nanna HOSA car</b></string>
-    <string name="Old_ex"><b><u>Eng</u> : That is my OLD house</b>\n<b><u>Kan</u> : adu nanna HALE mane</b></string>
-    <string name="Elder_ex"><b><u>Eng</u> : He is ELDER to me</b>\n<b><u>Kan</u> : avanu nanage HIRIYAru</b></string>
-    <string name="Younger_ex"><b><u>Eng</u> : She is YOUNGER to me</b>\n<b><u>Kan</u> : avaLu nanage KIRIYAlu</b></string>
-    <string name="Very_ex"><b><u>Eng</u> : I like it VERY much</b>\n<b><u>Kan</u> : nanage idu THUMBA ishTa</b></string>
-    <string name="Thick_ex"><b><u>Eng</u> : This cloth is very THICK</b>\n<b><u>Kan</u> : ee baTTe(cloth) thumba DAPPA ide</b></string>
-    <string name="Thin_ex"><b><u>Eng</u> : This paper is very THIN</b>\n<b><u>Kan</u> : ee paper thumba THELLAgide</b></string>
-    <string name="Listen_ex"><b><u>Eng</u> : please LISTEN to my words</b>\n<b><u>Kan</u> : dayaviTTU nanna maathu KELU</b></string>
-    <string name="Read_ex"><b><u>Eng</u> : Can you READ this message?</b>\n<b><u>Kan</u> : neevu ee message Odutheera?</b></string>
-    <string name="Write_ex"><b><u>Eng</u> : I am WRITING</b>\n<b><u>Kan</u> : naanu BARIyuttha idini</b></string>
-    <string name="Talk_ex"><b><u>Eng</u> : Can we TALK for 2 minutes?</b>\n<b><u>Kan</u> : naavu 2 nimisha(minutes) MAATHU aadabahuda?</b></string>
-    <string name="Enough_ex"><b><u>Eng</u> : Enough doing this work</b>\n<b><u>Kan</u> : ee kelasa madiddu SAAKU</b></string>
-    <string name="Stop_ex"><b><u>Eng</u> : STOP talking</b>\n<b><u>Kan</u> : maathu NILLISI (Talk - Nillu)</b></string>
-    <string name="Start_ex"><b><u>Eng</u> : I will START writing</b>\n<b><u>Kan</u> : naanu bareyalu SHURU maduthEne</b></string>
-    <string name="First_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
-    <string name="Last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
+    <string name="beautiful_ex"><b><u>Eng</u> : You look very BEAUTIFUL</b>\n<b><u>Kan</u> : neevu thumba SUNDARAvaagi kaaNutha ideera</b></string>
+    <string name="good_ex"><b><u>Eng</u> : He is very GOOD man</b>\n<b><u>Kan</u> : avanu thumba OLLE manushya</b></string>
+    <string name="bad_ex"><b><u>Eng</u> : He is a BAD boy</b>\n<b><u>Kan</u> : avanu obba KETTA huduga</b></string>
+    <string name="big_ex"><b><u>Eng</u> : This place is very BIG</b>\n<b><u>Kan</u> : idu thumba DODDA ooru/jaaga</b></string>
+    <string name="small_ex"><b><u>Eng</u> : This room is very SMALL</b>\n<b><u>Kan</u> : idu thumba SANNA room</b></string>
+    <string name="long_or_lengthy_ex"><b><u>Eng</u> : This stick is very LONG</b>\n<b><u>Kan</u> : ee kOlu(stick) thumba UDDA ide</b></string>
+    <string name="short_or_tiny_ex"><b><u>Eng</u> : She is a short girl / This is a short stick</b>\n<b><u>Kan</u> : avaLu giDDa hudugi / idu chikka kOlu</b></string>
+    <string name="wide_ex"><b><u>Eng</u> : This site is very Wide</b>\n<b><u>Kan</u> : ee site thumba AGALA ide</b></string>
+    <string name="new_or_latest_ex"><b><u>Eng</u> : This is my NEW car</b>\n<b><u>Kan</u> : idu nanna HOSA car</b></string>
+    <string name="old_ex"><b><u>Eng</u> : That is my OLD house</b>\n<b><u>Kan</u> : adu nanna HALE mane</b></string>
+    <string name="elder_ex"><b><u>Eng</u> : He is ELDER to me</b>\n<b><u>Kan</u> : avanu nanage HIRIYAru</b></string>
+    <string name="younger_ex"><b><u>Eng</u> : She is YOUNGER to me</b>\n<b><u>Kan</u> : avaLu nanage KIRIYAlu</b></string>
+    <string name="thick_ex"><b><u>Eng</u> : This cloth is very THICK</b>\n<b><u>Kan</u> : ee baTTe(cloth) thumba DAPPA ide</b></string>
+    <string name="thin_ex"><b><u>Eng</u> : This paper is very THIN</b>\n<b><u>Kan</u> : ee paper thumba THELLAgide</b></string>
+    <string name="listen_ex"><b><u>Eng</u> : please LISTEN to my words</b>\n<b><u>Kan</u> : dayaviTTU nanna maathu KELU</b></string>
+    <string name="read_ex"><b><u>Eng</u> : Can you READ this message?</b>\n<b><u>Kan</u> : neevu ee message Odutheera?</b></string>
+    <string name="write_ex"><b><u>Eng</u> : I am WRITING</b>\n<b><u>Kan</u> : naanu BARIyuttha idini</b></string>
+    <string name="talk_ex"><b><u>Eng</u> : Can we TALK for 2 minutes?</b>\n<b><u>Kan</u> : naavu 2 nimisha(minutes) MAATHU aadabahuda?</b></string>
+    <string name="enough_ex"><b><u>Eng</u> : Enough doing this work</b>\n<b><u>Kan</u> : ee kelasa madiddu SAAKU</b></string>
+    <string name="stop_ex"><b><u>Eng</u> : STOP talking</b>\n<b><u>Kan</u> : maathu NILLISI (Stop - Nillu)</b></string>
+    <string name="start_ex"><b><u>Eng</u> : I will START writing</b>\n<b><u>Kan</u> : naanu bareyalu SHURU maduthEne</b></string>
+    <string name="first_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
+    <string name="last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
     <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
 
     <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
@@ -521,31 +518,246 @@
     <!-- *******************************Day 6 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 6 STARTS here *******************************-->
-    <string name="Up_ex"><b><u>Eng</u> : please get UP</b>\n<b><u>Kan</u> : dayaviTTu MELE ELi</b></string>
-    <string name="Down_ex"><b><u>Eng</u> : Please come DOWN</b>\n<b><u>Kan</u> : dayaviTTU KELAGE banni</b></string>
-    <string name="Left_ex"><b><u>Eng</u> : Go front and go LEFT</b>\n<b><u>Kan</u> : munde hogi matthu EDAGADE hogi</b></string>
-    <string name="Right_ex"><b><u>Eng</u> : Orion mall is on RIGHT side of World Trade Building</b>\n<b><u>Kan</u> : Orion Mall World Trade Building na BALAGADE ide</b></string>
-    <string name="Front_or_Further_or_Forward_ex"><b><u>Eng</u> : I have parked my car infront of my house</b>\n<b><u>Kan</u> : naanu nanna car annu nanna mane MUNDE park maadidini</b></string>
-    <string name="Back_or_Backward_ex"><b><u>Eng</u> : Take a step backward</b>\n<b><u>Kan</u> : ondu hejje(step) hinde thagoLi</b></string>
-    <string name="Turn_ex"><b><u>Eng</u> : Go further for 1 KM and turn LEFT</b>\n<b><u>Kan</u> : 1(ondu) km munde hOgi eDagaDe THIRUGI</b></string>
-    <string name="Take_ex"><b><u>Eng</u> : Please TAKE this box.</b>\n<b><u>Kan</u> : dayaviTTU ee box THAGOLI</b></string>
-    <string name="Bring_ex"><b><u>Eng</u> : Please BRING that book tomorrow</b>\n<b><u>Kan</u> : dayaviTTu aa pushtakavanna naaLe THAGONDU BANNI/BA</b></string>
-    <string name="Straight_ex"><b><u>Eng</u> : Go STRAIGHT and take right</b>\n<b><u>Kan</u> : NERA hogi balagaDe thirugi</b></string>
-    <string name="Circle_ex"><b><u>Eng</u> : I am near Mekhri CIRCLE</b>\n<b><u>Kan</u> : naanu Mekhri VRUTHADA hatthira iddeeni</b></string>
-    <string name="Time_ex"><b><u>Eng</u> : My TIME is very good today</b>\n<b><u>Kan</u> : ivatthu nanna SAMAYA thumba channagi ide</b></string>
-    <string name="Late_ex"><b><u>Eng</u> : I came LATE today</b>\n<b><u>Kan</u> : naanu ivatthu THADAvaagi bande</b></string>
-    <string name="Early_ex"><b><u>Eng</u> : I came EARLY today</b>\n<b><u>Kan</u> : naanu ivatthu BEGA bande</b></string>
-    <string name="Way_ex"><b><u>Eng</u> : Show me the WAY</b>\n<b><u>Kan</u> : nanage DAARI thorisi</b></string>
-    <string name="Road_ex"><b><u>Eng</u> : Right side of the ROAD</b>\n<b><u>Kan</u> : RASTHEya balagaDe</b></string>
-    <string name="Out_ex"><b><u>Eng</u> : Please Get OUT!</b>\n<b><u>Kan</u> : dayaviTTU HORAGE hOgi</b></string>
-    <string name="In_ex"><b><u>Eng</u> : Please come IN!</b>\n<b><u>Kan</u> : dayaviTTU OLAGE banni</b></string>
-    <string name="Near_ex"><b><u>Eng</u> : My house is NEAR to your house</b>\n<b><u>Kan</u> : Nanna mane nimma manege HATTHIRA ide</b></string>
-    <string name="Far_ex"><b><u>Eng</u> : Electronic City is very FAR from Vijayanagar</b>\n<b><u>Kan</u> : Electronic City VijayaNagar inda thumba DOORA</b></string>
+    <string name="up_ex"><b><u>Eng</u> : please get UP</b>\n<b><u>Kan</u> : dayaviTTu MELE ELi</b></string>
+    <string name="down_ex"><b><u>Eng</u> : Please come DOWN</b>\n<b><u>Kan</u> : dayaviTTU KELAGE banni</b></string>
+    <string name="left_ex"><b><u>Eng</u> : Go front and go LEFT</b>\n<b><u>Kan</u> : munde hogi matthu EDAGADE hogi</b></string>
+    <string name="right_ex"><b><u>Eng</u> : Orion mall is on RIGHT side of World Trade Building</b>\n<b><u>Kan</u> : Orion Mall World Trade Building na BALAGADE ide</b></string>
+    <string name="front_or_further_or_forward_ex"><b><u>Eng</u> : I have parked my car infront of my house</b>\n<b><u>Kan</u> : naanu nanna car annu nanna mane MUNDE park maadidini</b></string>
+    <string name="back_or_backward_ex"><b><u>Eng</u> : Take a step BACKWARD</b>\n<b><u>Kan</u> : ondu hejje(step) hinde thagoLi</b></string>
+    <string name="turn_ex"><b><u>Eng</u> : Go further for 1 KM and TURN left</b>\n<b><u>Kan</u> : 1(ondu) km munde hOgi eDagaDe THIRUGI</b></string>
+    <string name="take_ex"><b><u>Eng</u> : Please TAKE this box.</b>\n<b><u>Kan</u> : dayaviTTU ee box THAGOLI</b></string>
+    <string name="bring_ex"><b><u>Eng</u> : Please BRING that book tomorrow</b>\n<b><u>Kan</u> : dayaviTTu aa pushtakavanna naaLe THAGONDU BANNI/BA</b></string>
+    <string name="straight_ex"><b><u>Eng</u> : Go STRAIGHT and take right</b>\n<b><u>Kan</u> : NERA hogi balagaDe thirugi</b></string>
+    <string name="circle_ex"><b><u>Eng</u> : I am near Mekhri CIRCLE</b>\n<b><u>Kan</u> : naanu Mekhri VRUTHADA hatthira iddeeni</b></string>
+    <string name="time_ex"><b><u>Eng</u> : My TIME is very good today</b>\n<b><u>Kan</u> : ivatthu nanna SAMAYA thumba channagi ide</b></string>
+    <string name="late_ex"><b><u>Eng</u> : I came LATE today</b>\n<b><u>Kan</u> : naanu ivatthu THADAvaagi bande</b></string>
+    <string name="early_ex"><b><u>Eng</u> : I came EARLY today</b>\n<b><u>Kan</u> : naanu ivatthu BEGA bande</b></string>
+    <string name="way_ex"><b><u>Eng</u> : Show me the WAY</b>\n<b><u>Kan</u> : nanage DAARI thorisi</b></string>
+    <string name="road_ex"><b><u>Eng</u> : Right side of the ROAD</b>\n<b><u>Kan</u> : RASTHEya balagaDe</b></string>
+    <string name="out_ex"><b><u>Eng</u> : Please Get OUT!</b>\n<b><u>Kan</u> : dayaviTTU HORAGE hOgi</b></string>
+    <string name="in_ex"><b><u>Eng</u> : Please come IN!</b>\n<b><u>Kan</u> : dayaviTTU OLAGE banni</b></string>
+    <string name="near_ex"><b><u>Eng</u> : My house is NEAR to your house</b>\n<b><u>Kan</u> : Nanna mane nimma manege HATTHIRA ide</b></string>
+    <string name="far_ex"><b><u>Eng</u> : Electronic City is very FAR from Vijayanagar</b>\n<b><u>Kan</u> : Electronic City VijayaNagar inda thumba DOORA</b></string>
     <!-- *******************************Examples Texts for Day 6 ENDS here *******************************-->
+
+    <!-- *******************************Day 7 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day7_content">
+        <item>Family</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Children or Kids</item>
+        <item>Elder Brother</item>
+        <item>Younger Brother</item>
+        <item>Elder Sister</item>
+        <item>Younger Sister</item>
+        <item>Mother in law</item>
+        <item>Father in law</item>
+        <item>Grand Father</item>
+        <item>Grand Mother</item>
+        <item>Grand Son</item>
+        <item>Grand Daughter</item>
+        <item>Cook</item>
+        <item>Water</item>
+    </string-array>
+    <!-- *******************************Day 7 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 7 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day7_content_kannada">
+        <item>kuTumba</item>
+        <item>amma</item>
+        <item>appa</item>
+        <item>maga</item>
+        <item>magaLu</item>
+        <item>makkaLu</item>
+        <item>aNNa</item>
+        <item>thamma</item>
+        <item>akka</item>
+        <item>thangi</item>
+        <item>atthe</item>
+        <item>maava</item>
+        <item>ajja</item>
+        <item>ajji</item>
+        <item>mommaga</item>
+        <item>mommagaLu</item>
+        <item>adige</item>
+        <item>neeru</item>
+    </string-array>
+    <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts for Day 7 STARTS here *******************************-->
+    <string name="family_ex"><b><u>Eng</u> : I love my FAMILY a lot</b>\n<b><u>Kan</u> : naanu nanna KUTUMBAvannu thumba ishTa paduthEne</b></string>
+    <string name="mother_ex"><b><u>Eng</u> : My MOTHER cooks very well</b>\n<b><u>Kan</u> : nanna AMMA thumba channagi adige maaduthaare</b></string>
+    <string name="father_ex"><b><u>Eng</u> : My FATHER is a doctor</b>\n<b><u>Kan</u> : nanna APPA obba doctor</b></string>
+    <string name="son_ex"><b><u>Eng</u> : He is my SON</b>\n<b><u>Kan</u> : avanu nanna MAGA</b></string>
+    <string name="daughter_ex"><b><u>Eng</u> : She is my DAUGHTER</b>\n<b><u>Kan</u> : avaLu nanna MAGALU</b></string>
+    <string name="children_or_kids_ex"><b><u>Eng</u> : I have two CHILDREN/KIDS</b>\n<b><u>Kan</u> : nannage ibbaru MAKKALU</b></string>
+    <string name="elder_brother_ex"><b><u>Eng</u> : My BROTHER(Elder) is a Software Engineer</b>\n<b><u>Kan</u> : nanna ANNA obba Software Engineer</b></string>
+    <string name="younger_brother_ex"><b><u>Eng</u> : My BROTHER(Younger) is a Civil Engineer</b>\n<b><u>Kan</u> : nanna THAMMA obba Civil Engineer</b></string>
+    <string name="elder_sister_ex"><b><u>Eng</u> : My SISTER(Elder) is a teacher</b>\n<b><u>Kan</u> : nanna AKKA obba teacher</b></string>
+    <string name="younger_sister_ex"><b><u>Eng</u> : My SISTER(Younger) is a dancer</b>\n<b><u>Kan</u> : nanna THANGI obba dancer</b></string>
+    <string name="mother_in_law_ex"><b><u>Eng</u> : My Mother-in-law is a housewife</b>\n<b><u>Kan</u> : nanna ATTHE obba gruhiNi(housewife)</b></string>
+    <string name="father_in_law_ex"><b><u>Eng</u> : My Father-in-law is a retired police man</b>\n<b><u>Kan</u> : nanna MAAVA obba retired police</b></string>
+    <string name="grand_father_ex"><b><u>Eng</u> : I like my GRAND FATHER very much</b>\n<b><u>Kan</u> : nanna AJJA andare nanage thumba ishTa</b></string>
+    <string name="grand_mother_ex"><b><u>Eng</u> : I stay with my GRAND MOTHER</b>\n<b><u>Kan</u> : naanu nanna AJJI jothe(with/together) ideeni</b></string>
+    <string name="grand_son_ex"><b><u>Eng</u> : My GRAND SON is in Bengaluru</b>\n<b><u>Kan</u> : nanna MOMMAGA Bengalurinalli idaane</b></string>
+    <string name="grand_daughter_ex"><b><u>Eng</u> : My GRAND DAUGHTER is studying M.Sc</b>\n<b><u>Kan</u> : nanna MOMMAGALU M.Sc Odutha idaaLe</b></string>
+    <string name="cook_ex"><b><u>Eng</u> : My mother COOKs very well</b>\n<b><u>Kan</u> : nanna amma thumba channagi ADIGE maaduthaare</b></string>
+    <string name="water_ex"><b><u>Eng</u> : I want WATER</b>\n<b><u>Kan</u> : nanage NEERU bEku</b></string>
+    <!-- *******************************Examples Texts for Day 7 ENDS here *******************************-->
+
+    <!-- *******************************Day 8 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day8_content">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+        <item>Twenty</item>
+        <item>Thirty</item>
+        <item>Forty</item>
+        <item>Fifty</item>
+        <item>Sixty</item>
+        <item>Seventy</item>
+        <item>Eighty</item>
+        <item>Ninety</item>
+        <item>Hundred</item>
+        <item>Two Hundred</item>
+        <item>Three Hundred</item>
+        <item>Four Hundred</item>
+        <item>Five Hundred</item>
+        <item>One Thousand</item>
+        <item>One Lakh</item>
+        <item>One Crore</item>
+    </string-array>
+    <!-- *******************************Day 8 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 8 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day8_content_kannada">
+        <item>Ondu</item>
+        <item>EraDu</item>
+        <item>mooru</item>
+        <item>naalku</item>
+        <item>aidu</item>
+        <item>aaru</item>
+        <item>ELu</item>
+        <item>EnTu</item>
+        <item>Ombatthu</item>
+        <item>hatthu</item>
+        <item>ippathu</item>
+        <item>moovathu</item>
+        <item>nalavatthu</item>
+        <item>aivatthu</item>
+        <item>aravatthu</item>
+        <item>eppatthu</item>
+        <item>embatthu</item>
+        <item>thombatthu</item>
+        <item>nooru</item>
+        <item>innooru</item>
+        <item>munnooru</item>
+        <item>naanooru</item>
+        <item>ainooru</item>
+        <item>ondu saavira</item>
+        <item>ondu laksha</item>
+        <item>ondu kOTi</item>
+    </string-array>
+    <!-- *******************************Day 8 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Examples Texts for Day 8 STARTS here *******************************-->
+                        <!--EXAMPLES TO BE DISABLED FOR DAY 8 AS IT HAS ONLY NUMBERS-->
+    <!-- *******************************Examples Texts for Day 8 ENDS here *******************************-->
+
+    <!-- *******************************Day 9 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day9_content">
+        <item>Introduce Yourself</item>
+        <item>Pooja: Hi Ganesh, How are you?</item>
+        <item>Ganesh: Hi Pooja, I am fine. And you?</item>
+        <item>Pooja: I am also fine</item>
+        <item>Ganesh: What do you do?</item>
+        <item>Pooja: I am a software engineer. And you?</item>
+        <item>Ganesh: I am Hardware engineer.</item>
+        <item>Pooja: Good. Which is your place?</item>
+        <item>Ganesh: My place is Sirigere near Holalkere. And yours?</item>
+        <item>Pooja: My place is Mysuru.</item>
+        <item>Ganesh: Nice. Where do you stay in Bengaluru?</item>
+        <item>Pooja: Vijayanagar. And you?</item>
+        <item>Ganesh: Sanjaynagar</item>
+        <item>Pooja: ok. Nice meeting you.</item>
+        <item>Ganesh: Same here. See you again</item>
+        <item>Pooja: Sure. Bye</item>
+        <item>Ganesh: Bye</item>
+    </string-array>
+    <!-- *******************************Day 9 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 9 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day9_content_kannada">
+        <item>nimma parichaya maadikoLLi</item>
+        <item>Pooja: Hi Ganesh, hEgiddeera?</item>
+        <item>Ganesh: Hi Pooja, chennagi ideeni. Neevu?</item>
+        <item>Pooja: naanu saha(too) channagi ideeni</item>
+        <item>Ganesh: neevu Enu madutheera?</item>
+        <item>Pooja: naanu obba Software engineer. neevu?</item>
+        <item>Ganesh: naanu hardware engineer</item>
+        <item>Pooja: oLLeyadu. nimma ooru yaavudu?</item>
+        <item>Ganesh: nanna ooru Sirigere, holalkere hatthira. nimmadu?</item>
+        <item>Pooja: nanna ooru Mysuru.</item>
+        <item>Ganesh: Nice. Bengalurinalli elli ideera?</item>
+        <item>Pooja: Vijayanagar. Neevu?</item>
+        <item>Ganesh: Sanjayanagara</item>
+        <item>Pooja: ok. Nimmannu BhEti(meet) maadi khushi aaythu</item>
+        <item>Ganesh: nanagu kooda. Matte sigONa</item>
+        <item>Pooja: khanditha. Bye</item>
+        <item>Ganesh: Bye</item>
+    </string-array>
+    <!-- *******************************Day 9 content (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Day 10 content (ENGLISH) STARTS here *******************************-->
+    <string-array name="Day10_content">
+        <item>Conversation with Auto Driver</item>
+        <item>Pooja: Will you come to Vijayanagar?</item>
+        <item>Driver: Yes. Please hop on</item>
+        <item>Pooja: How much?</item>
+        <item>Driver: It will be 250 rupees</item>
+        <item>Pooja: It is too much. Will you come for 150 rupees?</item>
+        <item>Driver: Not possible madam. Atleast give 200.</item>
+        <item>Pooja: ok.</item>
+        <item>Driver: Madam, We have reached Vijayanagar.</item>
+        <item>Pooja: Thank you. Please take this 500 rupees and give me change</item>
+        <item>Driver: No change. Sorry madam</item>
+        <item>Pooja: Do you have paytm?</item>
+        <item>Driver: Yes. Please send it through paytm only</item>
+        <item>Pooja: Thanks. I have sent it.</item>
+        <item>Driver: Thank you madam.</item>
+    </string-array>
+    <!-- *******************************Day 10 content (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Day 10 content (KANNADA) STARTS here *******************************-->
+    <string-array name="Day10_content_kannada">
+        <item>Auto-Driver jothe maathukathe</item>
+        <item>Pooja: Vijayanagar ge barthira?</item>
+        <item>Driver: hu. dayaviTTu hatthi</item>
+        <item>Pooja: Eshtu?</item>
+        <item>Driver: 250 rupees agatthe</item>
+        <item>Pooja: thumba jaasthi aythu. 150 rupees ge barthira?</item>
+        <item>Driver: aagalla madam. hogli 200 rupees koDi.</item>
+        <item>Pooja: sari.</item>
+        <item>Driver: Madam, Vijayanagar banthu</item>
+        <item>Pooja: dhanyavaadagaLu. dayaviTTu ee 500 rupees thagoLi, chillare(change) koDi</item>
+        <item>Driver: chillare illa, sorry madam.</item>
+        <item>Pooja: Paytm idiya?</item>
+        <item>Driver: ideff. dayaviTTu paytm ge kaLuhisi.</item>
+        <item>Pooja: dhanyavaadagaLu. kalsidini.</item>
+        <item>Driver: Thank you madam.</item>
+    </string-array>
+    <!-- *******************************Day 10 content (KANNADA) ENDS here *******************************-->
+
 
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>
     <string name="description">Description</string>
     <string name="Example">Example</string>
+    <string name="speech_prompt">Say a word...</string>
 
 </resources>
