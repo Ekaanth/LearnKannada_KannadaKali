@@ -146,6 +146,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
                     try {
                         playOffline(position);
                     } catch (IOException e) {
@@ -157,11 +158,15 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         }
         else if(mCategory.equals("homeCourse")) {
             if(name.equals("Day 1") || name.equals("Day 2") || name.equals("Day 3") || name.equals("Day 4")
-                || name.equals("Day 5") || name.equals("Day 6")) {
+                || name.equals("Day 5") || name.equals("Day 6") || name.equals("Day 7") || name.equals("Day 8")) {
                 String mname = name.replaceAll(" ", "") + "_content";
                 int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"array",context.getPackageName())).length;
                 holder.size.setText( n + " words");
             }
+            if(name.equals("Day 9"))
+                holder.size.setText("Conversation between friends");
+            if(name.equals("Day 10"))
+                holder.size.setText("Conversation with Cab/Auto Driver");
 
             //holder.size.setText("10" + " words");
             holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -178,12 +183,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
-                    /*try {
+                    //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
+                    try {
                         playOffline(position);
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }*/
+                    }
                 }
             });
 
@@ -198,13 +203,39 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
 
+        //separate condition for Day 9 and 10 to set exampleButton invisible for these as these are conversations
+        else if(mCategory.equals("day9_10Course"))
+        {
+            holder.exampleButton.setVisibility(View.INVISIBLE);
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
+                    try {
+                        playOffline(position);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+
     }
 
     private void playOffline(int position) throws IOException {
        // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
-        Integer id=context.getResources().getIdentifier(mFilteredList.get(position).toLowerCase(),"raw",context.getPackageName());
-        mediaPlayer = MediaPlayer.create(context,id);
+        String voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?","")
+                .replaceAll("\\(","_").replaceAll("\\)","")
+                .replaceAll(":","").replaceAll(",","").replaceAll("\\.","");
+        Integer id=context.getResources().getIdentifier(voiceId.toLowerCase(),"raw",context.getPackageName());
+        try{
+            mediaPlayer = MediaPlayer.create(context,id);
+        }
+        catch(Exception e)
+        {
+            Toast.makeText(context,voiceId + "***" + mFilteredList.get(position), Toast.LENGTH_LONG).show();
+        }
         mediaPlayer.start();
     }
 

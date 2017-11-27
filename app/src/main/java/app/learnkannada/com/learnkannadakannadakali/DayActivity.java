@@ -74,6 +74,26 @@ public class DayActivity extends AppCompatActivity {
                 listValuesInKan = res.getStringArray(R.array.Day6_content_kannada);
                 break;
             }
+            case "Day 7": {
+                listValues = res.getStringArray(R.array.Day7_content);
+                listValuesInKan = res.getStringArray(R.array.Day7_content_kannada);
+                break;
+            }
+            case "Day 8": {
+                listValues = res.getStringArray(R.array.Day8_content);
+                listValuesInKan = res.getStringArray(R.array.Day8_content_kannada);
+                break;
+            }
+            case "Day 9": {
+                listValues = res.getStringArray(R.array.Day9_content);
+                listValuesInKan = res.getStringArray(R.array.Day9_content_kannada);
+                break;
+            }
+            case "Day 10": {
+                listValues = res.getStringArray(R.array.Day10_content);
+                listValuesInKan = res.getStringArray(R.array.Day10_content_kannada);
+                break;
+            }
             default:
                 break;
         }
@@ -84,7 +104,10 @@ public class DayActivity extends AppCompatActivity {
             kanInput.add(listValuesInKan[i]);
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
+        if(day.equals("Day 9") || day.equals("Day 10"))
+            adapter = new ListViewAdapter(getApplicationContext(),input, "day9_10Course", kanInput);
+        else
+            adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
         recyclerView.setAdapter(adapter);
 
     }

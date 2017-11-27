@@ -51,21 +51,21 @@ public class ExampleActivity extends AppCompatActivity {
 
         /*Toast.makeText(getApplicationContext(),nameInEng + nameInKan, Toast.LENGTH_LONG).show();*/
 
-        example.setText(getResources().getIdentifier(exampleText,"string",getPackageName()));
+        example.setText(getResources().getIdentifier(exampleText.toLowerCase(),"string",getPackageName()));
         //exampleKan.setText(getResources().getIdentifier(nameInKan,"string",getPackageName()));
 
         //spokenWord to keep the name of relevant mp3 file
         //RULE: mp3 file must be saved in the same format
         //Ex: Value = "For Us" --> mp3 file = for_us_ex.mp3
         //spokenWord = nameInKan;
-        spokenWord = name.replaceAll(" ", "_").toLowerCase()
+        spokenWord = name.replaceAll(" ", "_").replaceAll("\\?","").toLowerCase()
                 .replaceAll("\\(","_")
                 .replaceAll("\\)","")+ "_ex";
 
         speaker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),spokenWord,Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),spokenWord,Toast.LENGTH_LONG).show();
                 try {
                     playOffline(spokenWord);
                 } catch (IOException e) {
@@ -79,9 +79,9 @@ public class ExampleActivity extends AppCompatActivity {
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
         Integer id=getResources().getIdentifier(name.toLowerCase(),"raw",getPackageName());
-        Toast.makeText(getApplicationContext(),"Playing " + name + ".mp3 file...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"Playing " + name + ".mp3 file...", Toast.LENGTH_SHORT).show();
         //Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
-        //mediaPlayer = MediaPlayer.create(getApplicationContext(),id);
-        //mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(getApplicationContext(),id);
+        mediaPlayer.start();
     }
 }
