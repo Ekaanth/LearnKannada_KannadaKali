@@ -18,7 +18,6 @@ import java.util.Locale;
 public class Homepage extends AppCompatActivity {
 
     private Button words, conversations;
-    private ImageView mic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class Homepage extends AppCompatActivity {
 
         words = (Button) findViewById(R.id.wordsID);
         conversations = (Button) findViewById(R.id.conversationsID);
-        mic = (ImageView) findViewById(R.id.micID);
+
 
         words.setOnClickListener(new View.OnClickListener() {
             @Override
