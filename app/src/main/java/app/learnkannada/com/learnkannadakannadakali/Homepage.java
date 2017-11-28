@@ -50,19 +50,8 @@ public class Homepage extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_feedback, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.feedbackID)
-        {
-            Toast.makeText(getApplicationContext(),"True",Toast.LENGTH_LONG).show();
-            return true;
-        }
-        else if(item.getItemId() == android.R.id.home)
+        if(item.getItemId() == android.R.id.home)
         {
             onBackPressed();
             return  true;

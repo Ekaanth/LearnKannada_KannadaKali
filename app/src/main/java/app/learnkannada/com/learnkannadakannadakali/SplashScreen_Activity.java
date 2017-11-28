@@ -18,6 +18,8 @@ public class SplashScreen_Activity extends AppCompatActivity {
 
         flagGif = (GIFView) findViewById(R.id.welcomeFlagID);
 
+        //getSupportActionBar().hide();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

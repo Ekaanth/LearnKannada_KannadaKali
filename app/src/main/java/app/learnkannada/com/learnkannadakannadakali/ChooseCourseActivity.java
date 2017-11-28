@@ -9,6 +9,9 @@ import android.speech.RecognizerIntent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,7 +27,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private static final int REQ_CODE_SPEECH_INPUT = 100;
 
     private Button dayCourse, flexiCourse;
-    private ImageView mic, infoIcon;
+    private ImageView mic;
 
     private MediaPlayer mediaPlayer;
     private AlertDialog.Builder builder, infoBuilder;
@@ -37,7 +40,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
         dayCourse = (Button) findViewById(R.id.dayCourseID);
         flexiCourse = (Button) findViewById(R.id.comfortCourseID);
         mic = (ImageView) findViewById(R.id.micID);
-        infoIcon = (ImageView) findViewById(R.id.infoIconID);
 
         builder = new AlertDialog.Builder(this);
         infoBuilder = new AlertDialog.Builder(this);
@@ -68,34 +70,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
         });
 
-        infoIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(getApplicationContext(),"Test",Toast.LENGTH_LONG).show();
-                infoBuilder.setTitle("Learn Kannada (Beta)")
-                        .setMessage("This is a beta app. Please use it for a while and feel free to" +
-                                "provide your feedback so that we can get to stable version asap.")
-                        .setPositiveButton("ok",null)
-                        .setNegativeButton("Bug Report/Feedback", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                StringBuilder body = new StringBuilder();
-                                body.append("Hello Team HithAM, \n \n");
-                                body.append("I have used your app \"Kannada Kali\"\n\n");
-                                body.append("********Please fill in your feedback/grievances here********\n");
-                                body.append("\n Regards, \n");
-                                body.append("Kannada Kali User");
-                                String company[] = {"varunvgnc@gmail.com","aggithaya@gmail.com"};
-                                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                                intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
-                                intent.putExtra(Intent.EXTRA_EMAIL, company);
-                                intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                startActivity(intent);
-                            }
-                        })
-                        .create().show();
-            }
-        });
     }
 
     /**
@@ -204,5 +178,40 @@ public class ChooseCourseActivity extends AppCompatActivity {
         }
 
         mediaPlayer.start();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_feedback, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.feedbackID) {
+            //Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_LONG).show();
+            StringBuilder body = new StringBuilder();
+            body.append("Hello Team HithAM, \n \n");
+            body.append("I have used your app \"Kannada Kali\"\n\n");
+            body.append("********Please fill in your feedback/grievances here********\n");
+            body.append("\n Regards, \n");
+            body.append("Kannada Kali User");
+            String company[] = {"varunvgnc@gmail.com","aggithaya@gmail.com"};
+            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+            intent.putExtra(Intent.EXTRA_EMAIL, company);
+            intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+            startActivity(intent);
+            return true;
+        }
+        else if (item.getItemId() == R.id.settingsID)
+        {
+            infoBuilder.setTitle("Settings");
+            LayoutInflater inflater = this.getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.settings_dialog, null);
+            infoBuilder.setView(dialogView);
+            infoBuilder.create().show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
