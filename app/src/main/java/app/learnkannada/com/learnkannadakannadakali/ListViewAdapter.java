@@ -158,14 +158,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         }
         else if(mCategory.equals("homeCourse")) {
             if(name.equals("Day 1") || name.equals("Day 2") || name.equals("Day 3") || name.equals("Day 4")
-                || name.equals("Day 5") || name.equals("Day 6") || name.equals("Day 7") || name.equals("Day 8")) {
+                || name.equals("Day 5") || name.equals("Day 6") || name.equals("Day 7")) {
                 String mname = name.replaceAll(" ", "") + "_content";
                 int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"array",context.getPackageName())).length;
                 holder.size.setText( n + " words");
             }
-            if(name.equals("Day 9"))
+            else if(name.equals("Day 8"))
+                holder.size.setText("Numbers");
+            else if(name.equals("Day 9"))
                 holder.size.setText("Conversation between friends");
-            if(name.equals("Day 10"))
+            else if(name.equals("Day 10"))
                 holder.size.setText("Conversation with Cab/Auto Driver");
 
             //holder.size.setText("10" + " words");
@@ -204,7 +206,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         }
 
         //separate condition for Day 9 and 10 to set exampleButton invisible for these as these are conversations
-        else if(mCategory.equals("day9_10Course"))
+        else if(mCategory.equals("day89_10Course"))
         {
             holder.exampleButton.setVisibility(View.INVISIBLE);
             holder.layout.setOnClickListener(new View.OnClickListener() {

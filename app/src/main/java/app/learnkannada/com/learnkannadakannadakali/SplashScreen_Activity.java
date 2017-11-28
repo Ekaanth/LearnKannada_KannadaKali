@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class SplashScreen_Activity extends AppCompatActivity {
 
-    private static final int WELCOME_DURATION = 1000;
+    private static final int WELCOME_DURATION = 2000;
     private GIFView flagGif;
 
     @Override

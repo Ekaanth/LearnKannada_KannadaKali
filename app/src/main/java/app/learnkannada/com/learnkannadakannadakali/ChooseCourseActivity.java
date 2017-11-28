@@ -60,7 +60,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Mic",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Mic",Toast.LENGTH_SHORT).show();
                 promptSpeechInput();
             }
         });
@@ -79,7 +79,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
         }catch(ActivityNotFoundException e)
         {
-            Toast.makeText(getApplicationContext(),"Resource not found",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Missing in my Vocabulary!",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -96,7 +96,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    Toast.makeText(getApplicationContext(),result.get(0),Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(),result.get(0),Toast.LENGTH_LONG).show();
                     handleSpokenWords(result.get(0));
                 }
                 break;
@@ -136,7 +136,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getApplicationContext(),"No Problem!",Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),"No Problem!",Toast.LENGTH_LONG).show();
                             }
                 }).setMessage("Would you like to check it?")
                         .create().show();
@@ -162,13 +162,13 @@ public class ChooseCourseActivity extends AppCompatActivity {
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
         Integer id=getResources().getIdentifier(name.toLowerCase(),"raw",getPackageName());
-        Toast.makeText(getApplicationContext(),"Playing " + name + ".mp3 file...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"Playing " + name + ".mp3 file...", Toast.LENGTH_SHORT).show();
         //Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
         try{
             mediaPlayer = MediaPlayer.create(getApplicationContext(),id);
         }
         catch(Exception e) {
-            Toast.makeText(getApplicationContext(), "Resource Not found!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Missing in my Vocabulary!", Toast.LENGTH_LONG).show();
         }
 
         mediaPlayer.start();

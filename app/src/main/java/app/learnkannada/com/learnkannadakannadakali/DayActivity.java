@@ -104,8 +104,8 @@ public class DayActivity extends AppCompatActivity {
             kanInput.add(listValuesInKan[i]);
         }
 
-        if(day.equals("Day 9") || day.equals("Day 10"))
-            adapter = new ListViewAdapter(getApplicationContext(),input, "day9_10Course", kanInput);
+        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8"))
+            adapter = new ListViewAdapter(getApplicationContext(),input, "day89_10Course", kanInput);
         else
             adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
         recyclerView.setAdapter(adapter);
