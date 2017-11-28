@@ -554,10 +554,10 @@
         <item>Younger Sister</item>
         <item>Mother in law</item>
         <item>Father in law</item>
-        <item>Grand Father</item>
-        <item>Grand Mother</item>
-        <item>Grand Son</item>
-        <item>Grand Daughter</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Grandson</item>
+        <item>Granddaughter</item>
         <item>Cook</item>
         <item>Water</item>
     </string-array>
@@ -598,10 +598,10 @@
     <string name="younger_sister_ex"><b><u>Eng</u> : My SISTER(Younger) is a dancer</b>\n<b><u>Kan</u> : nanna THANGI obba dancer</b></string>
     <string name="mother_in_law_ex"><b><u>Eng</u> : My Mother-in-law is a housewife</b>\n<b><u>Kan</u> : nanna ATTHE obba gruhiNi(housewife)</b></string>
     <string name="father_in_law_ex"><b><u>Eng</u> : My Father-in-law is a retired police man</b>\n<b><u>Kan</u> : nanna MAAVA obba retired police</b></string>
-    <string name="grand_father_ex"><b><u>Eng</u> : I like my GRAND FATHER very much</b>\n<b><u>Kan</u> : nanna AJJA andare nanage thumba ishTa</b></string>
-    <string name="grand_mother_ex"><b><u>Eng</u> : I stay with my GRAND MOTHER</b>\n<b><u>Kan</u> : naanu nanna AJJI jothe(with/together) ideeni</b></string>
-    <string name="grand_son_ex"><b><u>Eng</u> : My GRAND SON is in Bengaluru</b>\n<b><u>Kan</u> : nanna MOMMAGA Bengalurinalli idaane</b></string>
-    <string name="grand_daughter_ex"><b><u>Eng</u> : My GRAND DAUGHTER is studying M.Sc</b>\n<b><u>Kan</u> : nanna MOMMAGALU M.Sc Odutha idaaLe</b></string>
+    <string name="grandfather_ex"><b><u>Eng</u> : I like my GRAND FATHER very much</b>\n<b><u>Kan</u> : nanna AJJA andare nanage thumba ishTa</b></string>
+    <string name="grandmother_ex"><b><u>Eng</u> : I stay with my GRAND MOTHER</b>\n<b><u>Kan</u> : naanu nanna AJJI jothe(with/together) ideeni</b></string>
+    <string name="grandson_ex"><b><u>Eng</u> : My GRAND SON is in Bengaluru</b>\n<b><u>Kan</u> : nanna MOMMAGA Bengalurinalli idaane</b></string>
+    <string name="granddaughter_ex"><b><u>Eng</u> : My GRAND DAUGHTER is studying M.Sc</b>\n<b><u>Kan</u> : nanna MOMMAGALU M.Sc Odutha idaaLe</b></string>
     <string name="cook_ex"><b><u>Eng</u> : My mother COOKs very well</b>\n<b><u>Kan</u> : nanna amma thumba channagi ADIGE maaduthaare</b></string>
     <string name="water_ex"><b><u>Eng</u> : I want WATER</b>\n<b><u>Kan</u> : nanage NEERU bEku</b></string>
     <!-- *******************************Examples Texts for Day 7 ENDS here *******************************-->
@@ -758,6 +758,8 @@
     <string name="kan">Kan:</string>
     <string name="description">Description</string>
     <string name="Example">Example</string>
-    <string name="speech_prompt">Say a word...</string>
+    <string name="speech_prompt">Say a word in English...</string>
+    <string name="feedback">Bug Report/Feedback</string>
+    <string name="micWord">Instant word Transalation</string>
 
 </resources>

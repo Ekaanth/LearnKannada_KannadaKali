@@ -6,6 +6,14 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
 
+
+<ImageView
+    android:src="@drawable/homepage_logo"
+    android:layout_width="260dp"
+    android:layout_height="160dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"/>
+
 <LinearLayout
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
@@ -40,9 +48,27 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
     android:id="@+id/micID"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
-    android:layout_margin="40dp"
+    android:layout_marginBottom="20dp"
     android:src="@drawable/mic"
     android:layout_width="50dp"
-    android:layout_height="100dp" />
+    android:layout_height="80dp" />
+
+<TextView
+    android:id="@+id/micWordID"
+    android:text="@string/micWord"
+    android:layout_above="@id/micID"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<!--
+<Button
+    android:id="@+id/feedbackButton"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:text="@string/feedback"
+    android:textSize="12sp"
+    android:layout_margin="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp" />-->
 
 </RelativeLayout>

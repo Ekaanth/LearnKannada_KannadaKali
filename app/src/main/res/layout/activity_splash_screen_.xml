@@ -9,7 +9,7 @@
 
     <app.learnkannada.com.learnkannadakannadakali.GIFView
         android:id="@+id/welcomeFlagID"
-        components:src="@drawable/flag_gif"
+        components:src="@raw/flag_gif"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/welcomeID"
         android:layout_margin="20dp"
