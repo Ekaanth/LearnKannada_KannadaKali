@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,6 +25,9 @@ public class ExampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         example = (TextView) findViewById(R.id.exampleText);
         //exampleKan = (TextView) findViewById(R.id.exampleInKanID);
         wordInEng = (TextView) findViewById(R.id.wordInEngID);
@@ -39,6 +43,10 @@ public class ExampleActivity extends AppCompatActivity {
 
         wordInEng.setText(name);
         wordInKan.setText(kName);
+
+        //setting day in actionbar
+        getSupportActionBar().setTitle("\"" + name + "\"" + " example");
+
         //replacing whitespaces with "_" and saving it as nameInEng and nameInKan
         //RULE: STRINGS.XML SHOULD HAVE THE VALUES IN THE SAME FORMAT
         //Ex: Value = "For Me" --> String.xml = "For_Me_ex_inEng/inKan
@@ -83,5 +91,16 @@ public class ExampleActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
         mediaPlayer = MediaPlayer.create(getApplicationContext(),id);
         mediaPlayer.start();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home)
+        {
+            onBackPressed();
+            return  true;
+        }
+        else
+            return super.onOptionsItemSelected(item);
     }
 }

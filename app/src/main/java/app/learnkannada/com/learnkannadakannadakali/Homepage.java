@@ -28,6 +28,9 @@ public class Homepage extends AppCompatActivity {
         words = (Button) findViewById(R.id.wordsID);
         conversations = (Button) findViewById(R.id.conversationsID);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         words.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,11 @@ public class Homepage extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"True",Toast.LENGTH_LONG).show();
             return true;
+        }
+        else if(item.getItemId() == android.R.id.home)
+        {
+            onBackPressed();
+            return  true;
         }
         return super.onOptionsItemSelected(item);
     }

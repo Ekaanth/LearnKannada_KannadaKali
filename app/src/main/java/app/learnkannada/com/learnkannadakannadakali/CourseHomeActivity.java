@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -25,12 +26,16 @@ public class CourseHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_home);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
-//        SearchView sv = (SearchView) findViewById(R.id.searchViewID);
-//        sv.setVisibility(View.INVISIBLE);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        //setting day in actionbar
+        getSupportActionBar().setTitle("10 Days Course");
 
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
@@ -50,5 +55,16 @@ public class CourseHomeActivity extends AppCompatActivity {
         adapter = new ListViewAdapter(getApplicationContext(),input, "homeCourse", kanInput);
         recyclerView.setAdapter(adapter);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home)
+        {
+            onBackPressed();
+            return  true;
+        }
+        else
+            return super.onOptionsItemSelected(item);
     }
 }
