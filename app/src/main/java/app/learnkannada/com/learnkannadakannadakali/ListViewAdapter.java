@@ -1,14 +1,13 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
-import android.app.ProgressDialog;
+//import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
+/*import android.media.AudioManager;*/
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.support.annotation.NonNull;
+/*import android.net.Uri;
+import android.support.annotation.NonNull;*/
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,19 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by vaam on 24-10-2017.
- */
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
@@ -39,22 +30,21 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     private Context context;
     private String mCategory;
 
-    private MediaPlayer mediaPlayer;
-    private Uri downloadUri;
+    //private Uri downloadUri;
 
-    private Button exampleButton;
+    //private Button exampleButton;
 
     //Firebase details
-    private StorageReference storageReference;
+    //private StorageReference storageReference;
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView textInEng, textInKan, size;
-        public ImageView imageView1, imageView2;
-        public Button exampleButton;
-        public View layout;
+        TextView textInEng, textInKan, size;
+        ImageView imageView1, imageView2;
+        Button exampleButton;
+        View layout;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
             textInEng = (TextView) layout.findViewById(R.id.textID);
@@ -81,7 +71,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
+    ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;
         mFilteredKanList = kanInput;
@@ -93,25 +83,28 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
-        if(mCategory.equals("dayCourse")) {
-            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            v = inflater.inflate(R.layout.row_layout_day, parent, false);
-        }
-        else if(mCategory.equals("homeCourse")){
-            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            v = inflater.inflate(R.layout.row_layout_course, parent, false);
-        }
-        else {
-            if (mCategory.equals("numbers")|| mCategory.equals("flexiWords")) {
+        switch (mCategory) {
+            case "dayCourse": {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                v = inflater.inflate(R.layout.row_layout_image, parent, false);
-            } else {
-                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                v = inflater.inflate(R.layout.row_layout, parent, false);
+                v = inflater.inflate(R.layout.row_layout_day, parent, false);
+                break;
             }
+            case "homeCourse": {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_course, parent, false);
+                break;
+            }
+            default:
+                if (mCategory.equals("numbers") || mCategory.equals("flexiWords")) {
+                    LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                    v = inflater.inflate(R.layout.row_layout_image, parent, false);
+                } else {
+                    LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                    v = inflater.inflate(R.layout.row_layout, parent, false);
+                }
+                break;
         }
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -157,18 +150,28 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         else if(mCategory.equals("homeCourse")) {
-            if(name.equals("Day 1") || name.equals("Day 2") || name.equals("Day 3") || name.equals("Day 4")
-                || name.equals("Day 5") || name.equals("Day 6") || name.equals("Day 7")) {
-                String mname = name.replaceAll(" ", "") + "_content";
-                int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname,"array",context.getPackageName())).length;
-                holder.size.setText( n + " words");
+            switch (name) {
+                case "Day 1":
+                case "Day 2":
+                case "Day 3":
+                case "Day 4":
+                case "Day 5":
+                case "Day 6":
+                case "Day 7":
+                    String mname = name.replaceAll(" ", "") + "_content";
+                    int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname, "array", context.getPackageName())).length;
+                    holder.size.setText(n + " words");
+                    break;
+                case "Day 8":
+                    holder.size.setText("Numbers");
+                    break;
+                case "Day 9":
+                    holder.size.setText("Conversation between friends");
+                    break;
+                case "Day 10":
+                    holder.size.setText("Conversation with Cab/Auto Driver");
+                    break;
             }
-            else if(name.equals("Day 8"))
-                holder.size.setText("Numbers");
-            else if(name.equals("Day 9"))
-                holder.size.setText("Conversation between friends");
-            else if(name.equals("Day 10"))
-                holder.size.setText("Conversation with Cab/Auto Driver");
 
             //holder.size.setText("10" + " words");
             holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -226,7 +229,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     private void playOffline(int position) throws IOException {
        // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
-        mediaPlayer = new MediaPlayer();
+        MediaPlayer mediaPlayer = new MediaPlayer();
         String voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?","")
                 .replaceAll("\\(","_").replaceAll("\\)","")
                 .replaceAll(":","").replaceAll(",","").replaceAll("\\.","");
