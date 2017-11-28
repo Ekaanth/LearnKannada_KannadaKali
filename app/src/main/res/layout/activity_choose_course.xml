@@ -8,16 +8,18 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
 
 
 <ImageView
+    android:id="@+id/homepage_logoID"
     android:src="@drawable/homepage_logo"
     android:layout_width="260dp"
     android:layout_height="160dp"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="20dp"/>
+    android:layout_marginTop="40dp"/>
 
 <LinearLayout
+    android:layout_below="@+id/homepage_logoID"
+    android:layout_marginTop="30dp"
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -60,24 +62,5 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
     android:layout_centerHorizontal="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
-<!--
-<Button
-    android:id="@+id/feedbackButton"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentEnd="true"
-    android:text="@string/feedback"
-    android:textSize="12sp"
-    android:layout_margin="10dp"
-    android:layout_width="wrap_content"
-    android:layout_height="40dp" />-->
-
-<ImageView
-    android:id="@+id/infoIconID"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentEnd="true"
-    android:src="@drawable/info"
-    android:layout_margin="10dp"
-    android:layout_width="30dp"
-    android:layout_height="30dp" />
 
 </RelativeLayout>

@@ -7,43 +7,45 @@
     android:layout_height="match_parent"
     tools:context="app.learnkannada.com.learnkannadakannadakali.SplashScreen_Activity">
 
-    <app.learnkannada.com.learnkannadakannadakali.GIFView
-        android:id="@+id/welcomeFlagID"
-        components:src="@raw/flag_gif"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/welcomeID"
-        android:layout_margin="20dp"
-        android:layout_width="295dp"
-        android:layout_height="150dp" />
-
-    <!--<ImageView
-        android:id="@+id/welcomeFlagID"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/welcomeID"
-        android:src="@drawable/flag_gif"
-        android:layout_margin="30dp"
-        android:layout_width="300dp"
-        android:layout_height="100dp" />-->
-
-    <TextView
-        android:id="@+id/welcomeID"
+    <ScrollView
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/logoID"
-        android:layout_margin="30dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:fontFamily="cursive"
-        android:text="@string/welcomeNote"/>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/logoID"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/hitham"
-        android:layout_margin="30dp"
-        android:layout_width="100dp"
-        android:layout_height="80dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <app.learnkannada.com.learnkannadakannadakali.GIFView
+                android:id="@+id/welcomeFlagID"
+                components:src="@raw/flag_gif"
+                android:layout_margin="20dp"
+                android:layout_width="295dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:id="@+id/welcomeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+                android:text="@string/welcomeNote"/>
+
+            <ImageView
+                android:id="@+id/logoID"
+                android:src="@drawable/hitham"
+                android:layout_gravity="right"
+                android:layout_marginTop="60dp"
+                android:layout_width="100dp"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
