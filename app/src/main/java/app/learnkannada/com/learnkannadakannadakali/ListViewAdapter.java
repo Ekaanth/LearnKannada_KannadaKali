@@ -239,6 +239,14 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             Toast.makeText(context,voiceId + "***" + mFilteredList.get(position), Toast.LENGTH_LONG).show();
         }
         mediaPlayer.start();
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                    mp.stop();
+                    mp.release();
+            }
+        });
     }
 
     /*private void playOnline(int position) {
