@@ -12,7 +12,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".Homepage" />
-        <activity android:name=".SplashScreen_Activity">
+        <activity android:name=".SplashScreen_Activity"
+            android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
