@@ -328,6 +328,7 @@
         <item>Not Finished</item>
         <item>Name</item>
         <item>Place</item>
+        <item>Work</item>
         <item>For that</item>
         <item>For this</item>
         <item>Yes or No</item>
@@ -355,6 +356,7 @@
         <item>mugidilla</item>
         <item>hesaru</item>
         <item>ooru or sthala</item>
+        <item>kelasa</item>
         <item>adakke</item>
         <item>idakke</item>
         <item>haudu or illa</item>
@@ -368,6 +370,7 @@
     <string name="will_come_ex"><b><u>Eng</u> : I WILL COME in evening</b>\n<b><u>Kan</u> : naanu evening(sanje) BARTHINI</b></string>
     <string name="will_not_come_ex"><b><u>Eng</u> : I WILL NOT COME in the night</b>\n<b><u>Kan</u> : naanu raathri BARALLA</b></string>
     <string name="will_do_ex"><b><u>Eng</u> : I WILL DO that work</b>\n<b><u>Kan</u> : naanu aa work(kelasa) MAADTHINI</b></string>
+    <string name="work_ex"><b><u>Eng</u> : I will do that WORK</b>\n<b><u>Kan</u> : naanu aa KELASA maadthini</b></string>
     <string name="will_not_do_ex"><b><u>Eng</u> : I WILL NOT DO that work</b>\n<b><u>Kan</u> : naanu aa kelasa maadalla</b></string>
     <string name="will_drink_ex"><b><u>Eng</u> : I WILL DRINK water</b>\n<b><u>Kan</u> : naanu neeru(water) KUDITHINI</b></string>
     <string name="will_not_drink_ex"><b><u>Eng</u> : I WILL NOT DRINK juice</b>\n<b><u>Kan</u> : naanu juice KUDIYALLA</b></string>
@@ -414,6 +417,8 @@
         <item>Start</item>
         <item>First</item>
         <item>Last</item>
+        <item>Easy</item>
+        <item>Difficult</item>
     </string-array>
     <!-- *******************************Day 5 content (ENGLISH) ENDS here *******************************-->
     <!-- *******************************Day 5 content (KANNADA) STARTS here *******************************-->
@@ -438,7 +443,11 @@
         <item>maathu</item>
         <item>saaku</item>
         <item>nillu</item>
-        <item>shuru</item>        <item>modalu</item>        <item>kone</item>
+        <item>shuru</item>
+        <item>modalu</item>
+        <item>kone</item>
+        <item>sulabha</item>
+        <item>kashta</item>
     </string-array>
     <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
 
@@ -466,6 +475,8 @@
     <string name="start_ex"><b><u>Eng</u> : I will START writing</b>\n<b><u>Kan</u> : naanu bareyalu SHURU maduthEne</b></string>
     <string name="first_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
     <string name="last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
+    <string name="difficult_ex"><b><u>Eng</u> : That work is DIFFICULT</b>\n<b><u>Kan</u> : aa kelasa KASHTA</b></string>
+    <string name="easy_ex"><b><u>Eng</u> : This work is EASY!</b>\n<b><u>Kan</u> : ee kelasa SULABHA!</b></string>
     <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
 
     <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
@@ -761,5 +772,11 @@
     <string name="speech_prompt">Say a word in English...</string>
     <string name="feedback">Bug Report/Feedback</string>
     <string name="micWord">Instant word Transalation</string>
+
+    <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular) athava neevu HOGI(plural)</b></string>
+    <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular) athava adu NIMAGE(plural)</b></string>
+    <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular) or idu NIMMADU(plural)</b></string>
+    <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) hogu athava NEEVU(plural) HOGI</b></string>
+    <string name="come_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu BAA(singular) athava neevu BANNI(plural)</b></string>
 
 </resources>
