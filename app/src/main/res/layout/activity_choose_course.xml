@@ -7,17 +7,17 @@ android:layout_height="match_parent"
 tools:context="app.learnkannada.com.learnkannadakannadakali.Homepage">
 
 
-<ImageView
-    android:id="@+id/homepage_logoID"
-    android:src="@drawable/homepage_logo"
-    android:layout_width="260dp"
-    android:layout_height="160dp"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="40dp"/>
+    <ImageView
+        android:id="@+id/homepage_logoID"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logologo" />
 
 <LinearLayout
     android:layout_below="@+id/homepage_logoID"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="40dp"
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
     android:layout_width="wrap_content"
