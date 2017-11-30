@@ -7,11 +7,11 @@
         android:title="@string/feedback"
         app:showAsAction="collapseActionView" />
 
-    <!--<item
-        android:id="@+id/settingsID"
+    <item
+        android:id="@+id/shareAppID"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="collapseActionView"/>-->
+        android:title="Refer a friend"
+        app:showAsAction="collapseActionView"/>
 
     <item
         android:id="@+id/rateID"

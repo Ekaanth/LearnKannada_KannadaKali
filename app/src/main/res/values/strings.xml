@@ -773,10 +773,10 @@
     <string name="feedback">Bug Report/Feedback</string>
     <string name="micWord">Instant word Transalation</string>
 
-    <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular) athava neevu HOGI(plural)</b></string>
-    <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular) athava adu NIMAGE(plural)</b></string>
-    <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular) or idu NIMMADU(plural)</b></string>
-    <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) hogu athava NEEVU(plural) HOGI</b></string>
-    <string name="come_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu BAA(singular) athava neevu BANNI(plural)</b></string>
+    <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular), neevu HOGI(plural)</b></string>
+    <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular), adu NIMAGE(plural)</b></string>
+    <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular), idu NIMMADU(plural)</b></string>
+    <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
+    <string name="come_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
 
 </resources>

@@ -228,6 +228,19 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
             }
         }
+        else if (item.getItemId() == R.id.shareAppID)
+        {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, ("Learn \"Spoken Kannada\" in just 10 days!\n" +
+                    "Use helpful and handy feature Instant Words Translation\n" +
+                    "\n\nDownload Kannada Kali app now!\n" +
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())
+                    + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
+            sendIntent.setType("text/plain");
+            sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+            startActivity(sendIntent);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
