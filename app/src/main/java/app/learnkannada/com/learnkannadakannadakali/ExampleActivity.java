@@ -91,6 +91,22 @@ public class ExampleActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
         mediaPlayer = MediaPlayer.create(getApplicationContext(),id);
         mediaPlayer.start();
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.stop();
+                mp.release();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(mediaPlayer!= null)
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        super.onBackPressed();
     }
 
     @Override
