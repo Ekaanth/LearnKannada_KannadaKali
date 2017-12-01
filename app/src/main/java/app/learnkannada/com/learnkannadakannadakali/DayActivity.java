@@ -152,4 +152,32 @@ public class DayActivity extends AppCompatActivity {
         else
             return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        if(AudioPlayer.mediaPlayer!=null) {
+            if(AudioPlayer.mediaPlayer.isPlaying())
+            {
+                AudioPlayer.mediaPlayer.stop();
+                AudioPlayer.mediaPlayer.release();
+                AudioPlayer.mediaPlayer = null;
+                Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        if(AudioPlayer.mediaPlayer!=null) {
+            if(AudioPlayer.mediaPlayer.isPlaying())
+            {
+                AudioPlayer.mediaPlayer.stop();
+                AudioPlayer.mediaPlayer.release();
+                AudioPlayer.mediaPlayer = null;
+                //Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onPause();
+    }
 }

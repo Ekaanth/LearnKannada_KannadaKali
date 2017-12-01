@@ -233,7 +233,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         String voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?","")
                 .replaceAll("\\(","_").replaceAll("\\)","")
                 .replaceAll(":","").replaceAll(",","").replaceAll("\\.","");
-        Integer id=context.getResources().getIdentifier(voiceId.toLowerCase(),"raw",context.getPackageName());
+        AudioPlayer.playAudio(context,voiceId);
+        /*Integer id=context.getResources().getIdentifier(voiceId.toLowerCase(),"raw",context.getPackageName());
         try{
             mediaPlayer = MediaPlayer.create(context,id);
         }
@@ -249,7 +250,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     mp.stop();
                     mp.release();
             }
-        });
+
+        });*/
     }
 
     /*private void playOnline(int position) {

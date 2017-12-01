@@ -17,7 +17,7 @@ public class ExampleActivity extends AppCompatActivity {
     private TextView example, wordInEng, wordInKan;
     private ImageView speaker;
 
-    private MediaPlayer mediaPlayer;
+    //private MediaPlayer mediaPlayer;
     private String spokenWord;
 
     @Override
@@ -74,16 +74,13 @@ public class ExampleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getApplicationContext(),spokenWord,Toast.LENGTH_LONG).show();
-                try {
-                    playOffline(spokenWord);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                    //playOffline(spokenWord);
+                    AudioPlayer.playAudio(getApplicationContext(),spokenWord);
             }
         });
     }
 
-    private void playOffline(String name) throws IOException {
+  /*  private void playOffline(String name) throws IOException {
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         mediaPlayer = new MediaPlayer();
         Integer id=getResources().getIdentifier(name.toLowerCase(),"raw",getPackageName());
@@ -100,12 +97,18 @@ public class ExampleActivity extends AppCompatActivity {
             }
         });
     }
-
+*/
     @Override
     public void onBackPressed() {
-        if(mediaPlayer!= null)
-        mediaPlayer.stop();
-        mediaPlayer.release();
+        if(AudioPlayer.mediaPlayer!=null) {
+            if(AudioPlayer.mediaPlayer.isPlaying())
+            {
+                AudioPlayer.mediaPlayer.stop();
+            AudioPlayer.mediaPlayer.release();
+            AudioPlayer.mediaPlayer = null;
+            Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            }
+        }
         super.onBackPressed();
     }
 
@@ -118,5 +121,19 @@ public class ExampleActivity extends AppCompatActivity {
         }
         else
             return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPause() {
+        if(AudioPlayer.mediaPlayer!=null) {
+            if(AudioPlayer.mediaPlayer.isPlaying())
+            {
+                AudioPlayer.mediaPlayer.stop();
+                AudioPlayer.mediaPlayer.release();
+                AudioPlayer.mediaPlayer = null;
+                //Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onPause();
     }
 }
