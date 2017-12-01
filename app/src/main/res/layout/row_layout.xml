@@ -45,7 +45,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_volume_up_black_48dp_2x"
+                android:src="@drawable/speaker"
                 android:layout_gravity="center_vertical"
                 />
 

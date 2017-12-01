@@ -12,7 +12,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".Homepage" />
-        <activity android:name=".SplashScreen_Activity"
+        <activity
+            android:name=".SplashScreen_Activity"
             android:hardwareAccelerated="false"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,7 +25,8 @@
         <activity android:name=".ChooseCourseActivity" />
         <activity android:name=".DayActivity" />
         <activity android:name=".ExampleActivity" />
-        <activity android:name=".CourseHomeActivity"></activity>
+        <activity android:name=".CourseHomeActivity" />
+        <activity android:name=".MoreActivity"></activity>
     </application>
 
 </manifest>

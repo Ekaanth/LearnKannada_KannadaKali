@@ -1,5 +1,6 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
@@ -31,6 +33,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
     private AlertDialog.Builder builder, infoBuilder;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         builder = new AlertDialog.Builder(this);
         infoBuilder = new AlertDialog.Builder(this);
+
+        //dialog = new Dialog(this);
 
         dayCourse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,16 +125,73 @@ public class ChooseCourseActivity extends AppCompatActivity {
         int lengthOfWords = s.split(" ").length;
 
         //throwing message if it has more than 2 words
-        if(lengthOfWords>2)
+        /*if(lengthOfWords>2)
         {
             Toast.makeText(getApplicationContext(),"Stay tuned! \nSentences Translations \"coming soon!\"",Toast.LENGTH_LONG).show();
             return;
-        }
+        }*/
 
         //playing found music file
         try {
-            playOffline(spokenString);
-            if(checkResource(spokenStringEx))
+            if(resourceAvailable(spokenString))
+                playOffline(spokenString);
+            else
+            {
+                final String[] splitWords = s.split(" ");
+                for(int j=0; j<splitWords.length; j++)
+                {
+                    if (resourceAvailable(splitWords[j] + "_ex"))
+                    {
+                        //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
+                        final int finalJ = j;
+                        infoBuilder.setTitle("Oops! I am too young for sentences. But wait!")
+                                .setMessage("\nI can give you different example for \n\"" + splitWords[j].toUpperCase()
+                                + "\"\n")
+                                .setPositiveButton("Show me", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Intent exIntent = new Intent(ChooseCourseActivity.this, ExampleActivity.class);
+                                        exIntent.putExtra("name",splitWords[finalJ]);
+                                        startActivity(exIntent);
+                                    }
+                                })
+                                .setIcon(R.drawable.idea)
+                                .setCancelable(false)
+                                .setNegativeButton("No", null)
+                                .create().show();
+                        /*View view = getLayoutInflater().inflate(R.layout.intelligent_response_layout,null);
+                        TextView title = (TextView) view.findViewById(R.id.titleID);
+                        TextView message = (TextView) view.findViewById(R.id.messageID);
+                        Button yesButton = (Button) view.findViewById(R.id.positiveButtonID);
+                        Button noButton = (Button) view.findViewById(R.id.negativeButtonID);
+                        title.setText("Did you just try a sentence?");
+                        String displayMessage = "I am still learning to translate one!" + "\n But Wait! I can give you different example for \"" + splitWords[j].toUpperCase() +
+                        "Would you like to check it?";
+                        message.setText(displayMessage);
+                        yesButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent exIntent = new Intent(ChooseCourseActivity.this, ExampleActivity.class);
+                                exIntent.putExtra("name",splitWords[finalJ]);
+                                startActivity(exIntent);
+                            }
+                        });
+                        noButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.setTitle("Hello");
+                        dialog.setContentView(view);
+                        dialog.show();
+                        infoBuilder.setView(view).create().show();*/
+                        return;
+                    }
+                }
+                Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
+            }
+            if(resourceAvailable(spokenStringEx))
             {
                 builder.setTitle("Yay! Example found for \"" + spokenString.replaceAll("_"," ") + "\"")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -156,7 +218,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     }
 
     //method checks if the resource with string supplied is present in raw directory
-    private boolean checkResource(String spokenStringEx) {
+    private boolean resourceAvailable(String spokenStringEx) {
         Integer id = getResources().getIdentifier(spokenStringEx.toLowerCase(),"raw",getPackageName());
         if(id>0)
             return true;

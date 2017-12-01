@@ -82,7 +82,7 @@
             android:id="@+id/speakerID"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:src="@drawable/ic_volume_up_black_48dp_2x"
+            android:src="@drawable/speaker"
             android:layout_width="60dp"
             android:layout_height="60dp" />
 

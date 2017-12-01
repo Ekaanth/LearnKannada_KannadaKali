@@ -6,9 +6,9 @@
 
     <!-- *******************************Flexi course menu STARTS here *******************************-->
     <string-array name="flexi_words_array">
-        <item >Beginner</item>
-        <item >Enquiry</item>
-        <item >Numbers</item>
+        <item>Beginner</item>
+        <item>Enquiry</item>
+        <item>Numbers</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
@@ -679,7 +679,7 @@
     <!-- *******************************Day 8 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 8 STARTS here *******************************-->
-                        <!--EXAMPLES TO BE DISABLED FOR DAY 8 AS IT HAS ONLY NUMBERS-->
+    <!--EXAMPLES TO BE DISABLED FOR DAY 8 AS IT HAS ONLY NUMBERS-->
     <!-- *******************************Examples Texts for Day 8 ENDS here *******************************-->
 
     <!-- *******************************Day 9 content (ENGLISH) STARTS here *******************************-->
@@ -771,12 +771,16 @@
     <string name="Example">Example</string>
     <string name="speech_prompt">Say a word in English...</string>
     <string name="feedback">Bug Report/Feedback</string>
-    <string name="micWord">Instant word Transalation</string>
+    <string name="micWord">Instant Word Translation (IWT) </string>
 
     <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular), neevu HOGI(plural)</b></string>
     <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular), adu NIMAGE(plural)</b></string>
     <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular), idu NIMMADU(plural)</b></string>
     <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
     <string name="come_ex"><b><u>Eng</u> : you come</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
+    <string name="aboutKannada">About Kannada</string>
+    <string name="aboutKarnataka">About Karnataka</string>
+    <string name="aboutHithAM">About HithAM</string>
+    <string name="aboutVoiceArtist">Voice behind APP</string>
 
 </resources>
