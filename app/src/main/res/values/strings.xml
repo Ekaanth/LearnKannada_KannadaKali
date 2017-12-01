@@ -281,15 +281,15 @@
         <item>dina or hagalu</item>
         <item>raathri</item>
     </string-array>
-    <!-- *******************************Day 3 content (KANNADA) ENDS here *******************************-->
+    <!--*******************************Day 3 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 3 STARTS here *******************************-->
+    <!--*******************************Examples Texts for Day 3 STARTS here *******************************-->
     <!-- TAG = GREETINGS -->
     <string name="hi_hello_ex"><b><u>Eng</u> : HI! How are you?</b>\n<b><u>Kan</u> : namaskaara! hege iddera (hEgidira)?</b></string>
     <string name="good_morning_ex"><b><u>Eng</u> : GOOD MORNING! Had breakfast?</b>\n<b><u>Kan</u> : SHUBHODAYA! thindi ayta?</b></string>
     <string name="good_evening_ex"><b><u>Eng</u> : GOOD EVENING! Had coffee?</b>\n<b><u>Kan</u> : SHUBHASANJE! coffee ayta?</b></string>
     <string name="good_night_ex"><b><u>Eng</u> : GOOD NIGHT! Have a tight sleep</b>\n<b><u>Kan</u> : SHUBHARAATRI! nidde(sleep) channagi madi</b></string>
-    <string name="yee_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
+    <string name="see_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
     <string name="thank_you_ex"><b><u>Eng</u> : THANK YOU for your help!</b>\n<b><u>Kan</u> : nimma sahaayakke DHANYAVAADAGALU (help - sahaaya)</b></string>
     <string name="breakfast_or_snacks_ex"><b><u>Eng</u> : How was the BREAKFAST?</b>\n<b><u>Kan</u> : THINDI hege itthu (hegitthu)?</b></string>
     <string name="lunch_or_dinner_ex"><b><u>Eng</u> : LUNCH/DINNER was very good</b>\n<b><u>Kan</u> : UTA thumba channagi itthu.</b></string>
@@ -777,6 +777,6 @@
     <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular), adu NIMAGE(plural)</b></string>
     <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular), idu NIMMADU(plural)</b></string>
     <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
-    <string name="come_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
+    <string name="come_ex"><b><u>Eng</u> : you come</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
 
 </resources>
