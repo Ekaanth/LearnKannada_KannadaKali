@@ -106,7 +106,7 @@ public class ExampleActivity extends AppCompatActivity {
                 AudioPlayer.mediaPlayer.stop();
             AudioPlayer.mediaPlayer.release();
             AudioPlayer.mediaPlayer = null;
-            Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
             }
         }
         super.onBackPressed();

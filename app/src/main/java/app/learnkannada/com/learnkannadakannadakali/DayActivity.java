@@ -29,6 +29,8 @@ public class DayActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
+        AppRater.app_launched(this);
+
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -161,7 +163,7 @@ public class DayActivity extends AppCompatActivity {
                 AudioPlayer.mediaPlayer.stop();
                 AudioPlayer.mediaPlayer.release();
                 AudioPlayer.mediaPlayer = null;
-                Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
             }
         }
         super.onBackPressed();

@@ -24,6 +24,7 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        AppRater.app_launched(this);
 
         words = (Button) findViewById(R.id.wordsID);
         conversations = (Button) findViewById(R.id.conversationsID);

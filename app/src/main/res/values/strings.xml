@@ -782,5 +782,9 @@
     <string name="aboutKarnataka">About Karnataka</string>
     <string name="aboutHithAM">About HithAM</string>
     <string name="aboutVoiceArtist">Voice behind APP</string>
+    <string name="rateText">Loving Kannada Kali? Please take a moment to appreciate our efforts.</string>
+    <string name="neverAsk">Never Ask again</string>
+    <string name="remindLater">Remind me later</string>
+    <string name="rateNow">Rate app Now</string>
 
 </resources>
