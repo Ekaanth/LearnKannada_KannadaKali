@@ -59,8 +59,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
         flexiCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
-                //startActivity(new Intent(ChooseCourseActivity.this, Homepage.class));
+                //Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(ChooseCourseActivity.this, Homepage.class));
             }
         });
 

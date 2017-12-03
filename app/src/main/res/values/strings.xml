@@ -7,8 +7,19 @@
     <!-- *******************************Flexi course menu STARTS here *******************************-->
     <string-array name="flexi_words_array">
         <item>Beginner</item>
-        <item>Enquiry</item>
         <item>Numbers</item>
+        <item>Greetings</item>
+        <item>Days</item>
+        <item>Time</item>
+        <item>Verbs</item>
+        <item>Adjectives</item>
+        <item>Directions</item>
+        <item>Relationships</item>
+        <item>Colors</item>
+        <item>Vegetables</item>
+        <item>Fruits</item>
+        <item>Body parts</item>
+        <item>Alphabets</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
@@ -23,6 +34,18 @@
         <item>Eight</item>
         <item>Nine</item>
         <item>Ten</item>
+        <item>Twenty</item>
+        <item>Thirty</item>
+        <item>Forty</item>
+        <item>Fifty</item>
+        <item>Hundred</item>
+        <item>Two Hundred</item>
+        <item>Three Hundred</item>
+        <item>Four Hundred</item>
+        <item>Five Hundred</item>
+        <item>One Thousand</item>
+        <item>One Lakh</item>
+        <item>One Crore</item>
     </string-array>
     <!-- *******************************Category Numbers (ENGLISH) ENDS here *******************************-->
 
@@ -38,50 +61,145 @@
         <item>enTu</item>
         <item>ombattu</item>
         <item>hattu</item>
+        <item>ippathu</item>
+        <item>moovathu</item>
+        <item>nalavatthu</item>
+        <item>aivatthu</item>
+        <item>aravatthu</item>
+        <item>eppatthu</item>
+        <item>embatthu</item>
+        <item>thombatthu</item>
+        <item>nooru</item>
+        <item>innooru</item>
+        <item>munnooru</item>
+        <item>naanooru</item>
+        <item>ainooru</item>
+        <item>ondu saavira</item>
+        <item>ondu laksha</item>
+        <item>ondu kOTi</item>
     </string-array>
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
 
 
     <!-- *******************************Category Beginner (ENGLISH) STARTS here *******************************-->
-    <string-array name="biginnerEng_array">
+    <string-array name="beginnerEng_array">
         <item>I</item>
         <item>We</item>
-        <item>You</item>
-        <item>You (Plural)</item>
+        <item>My</item>
+        <item>Our</item>
+        <item>For Me</item>
+        <item>For Us</item>
+        <item>Mine</item>
+        <item>Ours</item>
+        <item>You(Singular)</item>
+        <item>You(Plural)</item>
+        <item>Your(Singular)</item>
+        <item>Your(Plural)</item>
+        <item>For You(Singular)</item>
+        <item>For You(Plural)</item>
+        <item>Yours(Singular)</item>
+        <item>Yours(Plural)</item>
         <item>He</item>
         <item>She</item>
         <item>They</item>
-        <item>My</item>
-        <item>Mine</item>
-        <item>Our</item>
-        <item>Your</item>
-        <item>Yours (Singular)</item>
-        <item>Yours (Plural)</item>
+        <item>His</item>
+        <item>Her</item>
+        <item>Their</item>
+        <item>For Him</item>
+        <item>For Her</item>
+        <item>For Them</item>
         <item>This or It</item>
         <item>That</item>
+        <item>There</item>
+        <item>Here</item>
     </string-array>
     <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
 
 
     <!-- *******************************Category Beginner (KANNADA) STARTS here *******************************-->
-    <string-array name="biginnerKan_array">
+    <string-array name="beginnerKan_array">
         <item>naanu</item>
         <item>naavu</item>
+        <item>nanna</item>
+        <item>namma</item>
+        <item>nanage</item>
+        <item>namage</item>
+        <item>nannadu</item>
+        <item>nammadu</item>
         <item>neenu</item>
         <item>neevu</item>
+        <item>ninna</item>
+        <item>nimma</item>
+        <item>ninage</item>
+        <item>nimage</item>
+        <item>ninnadu</item>
+        <item>nimmadu</item>
         <item>avanu</item>
         <item>avaLu</item>
         <item>avaru</item>
-        <item>nanna</item>
-        <item>nannadu</item>
-        <item>namma</item>
-        <item>nimma</item>
-        <item>ninnadu</item>
-        <item>nimmadu</item>
+        <item>avanadu</item>
+        <item>avaLadu</item>
+        <item>avaradu</item>
+        <item>avanige</item>
+        <item>avaLige</item>
+        <item>avarige</item>
         <item>idu</item>
         <item>adu</item>
+        <item>alli</item>
+        <item>illi</item>
     </string-array>
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Category Greetings (ENGLISH) STARTS here *******************************-->
+    <string-array name="greetingsEng_array">
+        <item>Hi (Hello)</item>
+        <item>Good Morning</item>
+        <item>Good Evening</item>
+        <item>Good Night</item>
+        <item>See you soon</item>
+        <item>Thank you</item>
+    </string-array>
+    <!-- *******************************Category Greetings (ENGLISH) ENDS here *******************************-->
+
+    <!-- *******************************Category Greetings (KANNADA) STARTS here *******************************-->
+    <string-array name="greetingsKan_array">
+        <item>namaskaara</item>
+        <item>shubhOdaya</item>
+        <item>shubhasanje</item>
+        <item>shubharaatri</item>
+        <item>matte sigONa</item>
+        <item>dhanyavaadagaLu</item>
+    </string-array>
+    <!-- *******************************Category Greetings (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Category Time (ENGLISH) STARTS here *******************************-->
+    <string-array name="timeEng_array">
+        <item>Now</item>
+        <item>Later</item>
+        <item>Today</item>
+        <item>Tomorrow</item>
+        <item>Day After Tomorrow</item>
+        <item>Yesterday</item>
+        <item>Day Before Yesterday</item>
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
+    <!-- *******************************Category Time (ENGLISH) ENDS here *******************************-->
+
+    <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
+    <string-array name="timeKan_array">
+        <item>eega</item>
+        <item>aamele</item>
+        <item>ivatthu</item>
+        <item>naaLe</item>
+        <item>naDiddu</item>
+        <item>ninne</item>
+        <item>monne</item>
+        <item>dina or hagalu</item>
+        <item>raathri</item>
+    </string-array>
+    <!-- *******************************Category Time (KANNADA) ENDS here *******************************-->
+
 
     <string-array name="days_array">
         <item>Day 1</item>
