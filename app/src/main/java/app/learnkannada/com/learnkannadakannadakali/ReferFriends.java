@@ -9,33 +9,32 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by vaam on 01-12-2017.
+ * Created by vaam on 06-12-2017.
  */
 
-public class AppRater {
-    private final static String APP_PNAME = "app.learnkannada.com.learnkannadakannadakali";
+public class ReferFriends {
 
-    private final static int DAYS_UNTIL_PROMPT = 2;
-    private final static int LAUNCHES_UNTIL_PROMPT = 7;
+    private final static int DAYS_UNTIL_PROMPT = 4;
+    private final static int LAUNCHES_UNTIL_PROMPT = 5;
 
     private static long launch_count = 0, date_firstLaunch = 0;
     private static SharedPreferences prefs;
 
     public static void app_launched(Context mContext) {
-        prefs = mContext.getSharedPreferences("apprater", 0);
-        if (prefs.getBoolean("dontshowagain", false)) { return ; }
+        prefs = mContext.getSharedPreferences("apprater_refer", 0);
+        if (prefs.getBoolean("dontshowagain_refer", false)) { return ; }
 
         SharedPreferences.Editor editor = prefs.edit();
 
         // Increment launch counter
-        launch_count = prefs.getLong("launch_count", 0) + 1;
-        editor.putLong("launch_count", launch_count);
+        launch_count = prefs.getLong("launch_count_refer", 0) + 1;
+        editor.putLong("launch_count_refer", launch_count);
 
         // Get date of first launch
-        date_firstLaunch = prefs.getLong("date_firstlaunch", 0);
+        date_firstLaunch = prefs.getLong("date_firstlaunch_refer", 0);
         if (date_firstLaunch == 0) {
             date_firstLaunch = System.currentTimeMillis();
-            editor.putLong("date_firstlaunch", date_firstLaunch);
+            editor.putLong("date_firstlaunch_refer", date_firstLaunch);
         }
 
         // Wait at least n days before opening dialog
@@ -51,20 +50,20 @@ public class AppRater {
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        View view = View.inflate(mContext,R.layout.rateapp_layout, null);
+        View view = View.inflate(mContext,R.layout.refer_friends_layout, null);
         builder.setView(view);
         final AlertDialog dialog = builder.create();
         dialog.show();
 
-        Button neverAgainButton = (Button) view.findViewById(R.id.neverAskButtonID);
-        Button remindMeLater = (Button) view.findViewById(R.id.remindMeLaterID);
-        Button rateNowID = (Button) view.findViewById(R.id.rateNowID);
+        Button neverAgainButton = (Button) view.findViewById(R.id.noID);
+        Button remindMeLater = (Button) view.findViewById(R.id.laterID);
+        Button rateNowID = (Button) view.findViewById(R.id.sureID);
 
         neverAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (editor != null) {
-                    editor.putBoolean("dontshowagain", true);
+                    editor.putBoolean("dontshowagain_refer", true);
                     editor.commit();
                 }
                 dialog.dismiss();
@@ -74,9 +73,9 @@ public class AppRater {
         remindMeLater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putLong("launch_count",0);
+                editor.putLong("launch_count_refer",0);
                 date_firstLaunch = System.currentTimeMillis();
-                editor.putLong("date_firstlaunch", date_firstLaunch);
+                editor.putLong("date_firstlaunch_refer", date_firstLaunch);
                 editor.commit();
                 dialog.dismiss();
             }
@@ -85,7 +84,16 @@ public class AppRater {
         rateNowID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + APP_PNAME)));
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, ("Learn \"Spoken Kannada\" in just 10 days!\n" +
+                        "Use helpful and handy feature Instant Words Translation\n" +
+                        "\n\nDownload Kannada Kali app now!\n" +
+                        Uri.parse("http://play.google.com/store/apps/details?id=" + view.getContext().getApplicationContext().getPackageName())
+                        + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
+                sendIntent.setType("text/plain");
+                sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                view.getContext().startActivity(sendIntent);
                 dialog.dismiss();
             }
         });

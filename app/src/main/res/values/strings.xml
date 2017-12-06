@@ -904,5 +904,9 @@
     <string name="neverAsk">Never Ask again</string>
     <string name="remindLater">Remind me later</string>
     <string name="rateNow">Rate app Now</string>
+    <string name="referFriends">Liking the app? Would you like to refer this app to your friends?</string>
+    <string name="sure">Sure</string>
+    <string name="later">Later</string>
+    <string name="no">No</string>
 
 </resources>

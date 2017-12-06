@@ -29,6 +29,7 @@ public class DayActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
         AppRater.app_launched(this);
+        ReferFriends.app_launched(this);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

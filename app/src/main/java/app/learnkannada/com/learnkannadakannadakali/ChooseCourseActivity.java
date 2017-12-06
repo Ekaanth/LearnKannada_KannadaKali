@@ -156,33 +156,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 .setCancelable(false)
                                 .setNegativeButton("No", null)
                                 .create().show();
-                        /*View view = getLayoutInflater().inflate(R.layout.intelligent_response_layout,null);
-                        TextView title = (TextView) view.findViewById(R.id.titleID);
-                        TextView message = (TextView) view.findViewById(R.id.messageID);
-                        Button yesButton = (Button) view.findViewById(R.id.positiveButtonID);
-                        Button noButton = (Button) view.findViewById(R.id.negativeButtonID);
-                        title.setText("Did you just try a sentence?");
-                        String displayMessage = "I am still learning to translate one!" + "\n But Wait! I can give you different example for \"" + splitWords[j].toUpperCase() +
-                        "Would you like to check it?";
-                        message.setText(displayMessage);
-                        yesButton.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent exIntent = new Intent(ChooseCourseActivity.this, ExampleActivity.class);
-                                exIntent.putExtra("name",splitWords[finalJ]);
-                                startActivity(exIntent);
-                            }
-                        });
-                        noButton.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                dialog.cancel();
-                            }
-                        });
-                        dialog.setTitle("Hello");
-                        dialog.setContentView(view);
-                        dialog.show();
-                        infoBuilder.setView(view).create().show();*/
                         return;
                     }
                 }
