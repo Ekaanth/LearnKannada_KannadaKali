@@ -6,6 +6,7 @@
 
     <!-- *******************************Flexi course menu STARTS here *******************************-->
     <string-array name="flexi_words_array">
+        <item>Alphabets</item>
         <item>Beginner</item>
         <item>Numbers</item>
         <item>Greetings</item>
@@ -17,7 +18,6 @@
         <item>Vegetables</item>
         <item>Fruits</item>
         <item>Body parts</item>
-        <item>Alphabets</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
 

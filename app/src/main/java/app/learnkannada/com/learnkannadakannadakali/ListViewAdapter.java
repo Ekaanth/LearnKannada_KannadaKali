@@ -110,7 +110,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
         if(mCategory.equals("flexiWords")) {
             holder.textInKan.setVisibility(View.INVISIBLE);
-            String imageName = name.toLowerCase();
+            String imageName = name.toLowerCase().replaceAll(" ", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName,"drawable",context.getPackageName()));
             holder.imageView2.setVisibility(View.INVISIBLE);
             holder.textInEng.setPaddingRelative(20,60,0,0);

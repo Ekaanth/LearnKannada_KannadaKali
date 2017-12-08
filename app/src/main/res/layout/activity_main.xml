@@ -38,7 +38,7 @@
                     android:layout_width="90dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.33"
-                    app:srcCompat="@drawable/enquiry"
+                    app:srcCompat="@drawable/vegetables"
                     />
 
                 <ImageView
