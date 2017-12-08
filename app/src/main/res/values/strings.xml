@@ -11,8 +11,6 @@
         <item>Greetings</item>
         <item>Days</item>
         <item>Time</item>
-        <item>Verbs</item>
-        <item>Adjectives</item>
         <item>Directions</item>
         <item>Relationships</item>
         <item>Colors</item>
@@ -22,6 +20,7 @@
         <item>Alphabets</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
+
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
     <string-array name="eNumbers_array">
         <item>One</item>
@@ -172,8 +171,8 @@
     </string-array>
     <!-- *******************************Category Greetings (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Category Time (ENGLISH) STARTS here *******************************-->
-    <string-array name="timeEng_array">
+    <!-- *******************************Category Days (ENGLISH) STARTS here *******************************-->
+    <string-array name="daysEng_array">
         <item>Now</item>
         <item>Later</item>
         <item>Today</item>
@@ -183,11 +182,12 @@
         <item>Day Before Yesterday</item>
         <item>Day</item>
         <item>Night</item>
+        <item>Everyday</item>
     </string-array>
-    <!-- *******************************Category Time (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Category Days (ENGLISH) ENDS here *******************************-->
 
-    <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
-    <string-array name="timeKan_array">
+    <!-- *******************************Category Days (KANNADA) STARTS here *******************************-->
+    <string-array name="daysKan_array">
         <item>eega</item>
         <item>aamele</item>
         <item>ivatthu</item>
@@ -197,10 +197,189 @@
         <item>monne</item>
         <item>dina or hagalu</item>
         <item>raathri</item>
+        <item>prathidina</item>
     </string-array>
-    <!-- *******************************Category Time (KANNADA) ENDS here *******************************-->
+    <!-- *******************************Category Days (KANNADA) ENDS here *******************************-->
 
+    <!-- *******************************Category Time (ENGLISH) STARTS here *******************************-->
+    <string-array name="timeEng_array">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+        <item>Night</item>
+    </string-array>
+    <!-- *******************************Category Time (ENGLISH) ENDS here *******************************-->
 
+    <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
+    <string-array name="timeKan_array">
+        <item>beligge</item>
+        <item>madyaana</item>
+        <item>sanje</item>
+        <item>raatri</item>
+    </string-array>
+
+    <!-- *******************************Category Directions (ENGLISH) STARTS here *******************************-->
+    <string-array name="directionsEng_array">
+        <item>Up</item>
+        <item>Down</item>
+        <item>Left</item>
+        <item>Right</item>
+        <item>Front or Further or Forward</item>
+        <item>Back or Backward</item>
+        <item>Turn</item>
+        <item>Take</item>
+        <item>Bring</item>
+        <item>Straight</item>
+        <item>Circle</item>
+        <item>Out</item>
+        <item>In</item>
+        <item>Near</item>
+        <item>Far</item>
+    </string-array>
+    <!-- ******************************* Category Directions (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Category Directions (KANNADA) STARTS here *******************************-->
+    <string-array name="directionsKan_array">
+        <item>mEle</item>
+        <item>keLage</item>
+        <item>eDagaDe</item>
+        <item>balagaDe</item>
+        <item>munde</item>
+        <item>hinde</item>
+        <item>thirugu</item>
+        <item>thago</item>
+        <item>thangondu ba</item>
+        <item>nEra</item>
+        <item>vrutha</item>
+        <item>horage</item>
+        <item>oLage</item>
+        <item>hatthira</item>
+        <item>doora</item>
+    </string-array>
+    <!-- ******************************* Category Directions (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Category Relationships (ENGLISH) STARTS here *******************************-->
+    <string-array name="relationshipsEng_array">
+        <item>Family</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Children or Kids</item>
+        <item>Elder Brother</item>
+        <item>Younger Brother</item>
+        <item>Elder Sister</item>
+        <item>Younger Sister</item>
+        <item>Mother in law</item>
+        <item>Father in law</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Grandson</item>
+        <item>Granddaughter</item>
+    </string-array>
+    <!-- ******************************* Category Relationships (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Category Relationships (KANNADA) STARTS here *******************************-->
+    <string-array name="relationshipsKan_array">
+        <item>kuTumba</item>
+        <item>amma</item>
+        <item>appa</item>
+        <item>maga</item>
+        <item>magaLu</item>
+        <item>makkaLu</item>
+        <item>aNNa</item>
+        <item>thamma</item>
+        <item>akka</item>
+        <item>thangi</item>
+        <item>atthe</item>
+        <item>maava</item>
+        <item>ajja</item>
+        <item>ajji</item>
+        <item>mommaga</item>
+        <item>mommagaLu</item>
+    </string-array>
+    <!-- ******************************* Category Relationships (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Category Colors (ENGLISH) STARTS here *******************************-->
+    <string-array name="colorsEng_array">
+        <item>color(s)</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Brown</item>
+    </string-array>
+    <!-- ******************************* Category Colors (ENGLISH) ENDS here *******************************-->
+
+    <!-- ******************************* Category Colors (KANNADA) STARTS here *******************************-->
+    <string-array name="colorsKan_array">
+        <item>baNNa(galu)</item>
+        <item>kappu</item>
+        <item>biLi</item>
+        <item>hasiru</item>
+        <item>kempu</item>
+        <item>neeli</item>
+        <item>haLadi</item>
+        <item>nEraLe baNNa</item>
+        <item>kandu</item>
+    </string-array>
+    <!-- ******************************* Category Colors (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Category Vegetables (ENGLISH) STARTS here *******************************-->
+    <string-array name="vegetablesEng_array">
+        <item>Vegetable(s)</item>
+        <item>Onion</item>
+        <item>Ladies Finger</item>
+        <item>Bitter gourd</item>
+        <item>Green chilli</item>
+        <item>Red Chilli</item>
+        <item>Brinjal</item>
+        <item>Cucumber</item>
+        <item>Beans</item>
+        <item>Potato</item>
+        <item>Sweet Potato</item>
+        <item>Garlic</item>
+        <item>Ginger</item>
+        <item>Lemon</item>
+        <item>Coconut</item>
+        <item>Tender Coconut</item>
+        <item>Coriander</item>
+        <item>Curry Leaves</item>
+        <item>Cauliflower</item>
+        <item>Drumstick</item>
+        <item>Bottle gourd</item>
+    </string-array>
+    <!-- ******************************* Category Vegetables (ENGLISH) ENDS here *******************************-->
+
+    <!-- ******************************* Category Vegetables (KANNADA) STARTS here *******************************-->
+    <string-array name="vegetablesKan_array">
+        <item>tharakaari(gaLu)</item>
+        <item>eeruLLi</item>
+        <item>benDekaayi</item>
+        <item>haagalakaayi</item>
+        <item>hasiru menasinakaayi</item>
+        <item>kempu menasinakaayi</item>
+        <item>badanekaayi</item>
+        <item>sauthekaayi</item>
+        <item>huraLikaayi</item>
+        <item>aalugaDDe</item>
+        <item>geNasu</item>
+        <item>beLLuLLi</item>
+        <item>shunti</item>
+        <item>nimbehaNNu</item>
+        <item>thenginakaayi</item>
+        <item>elaneeru</item>
+        <item>kottambari soppu</item>
+        <item>karibEvu</item>
+        <item>hookosu</item>
+        <item>nuggekaayi</item>
+        <item>sorekaayi</item>
+        <item></item>
+    </string-array>
+    <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
+
+    <!-- Days Array Starts here -->
     <string-array name="days_array">
         <item>Day 1</item>
         <item>Day 2</item>
@@ -213,6 +392,7 @@
         <item>Day 9</item>
         <item>Day 10</item>
     </string-array>
+    <!-- Days Array Ends here -->
 
 
     <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->

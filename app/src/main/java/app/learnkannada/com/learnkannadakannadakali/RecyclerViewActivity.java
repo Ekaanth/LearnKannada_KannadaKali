@@ -51,11 +51,36 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 listValuesInKan = res.getStringArray(R.array.beginnerKan_array);
                 break;
             case "greetings":
-
+                listValues = res.getStringArray(R.array.greetingsEng_array);
+                listValuesInKan = res.getStringArray(R.array.greetingsKan_array);
                 break;
-            case "calendar":
+            case "days":
+                listValues = res.getStringArray(R.array.daysEng_array);
+                listValuesInKan = res.getStringArray(R.array.daysKan_array);
+                break;
+            case "time":
+                listValues = res.getStringArray(R.array.timeEng_array);
+                listValuesInKan = res.getStringArray(R.array.timeKan_array);
+                break;
+            case "relationships":
+                listValues = res.getStringArray(R.array.relationshipsEng_array);
+                listValuesInKan = res.getStringArray(R.array.relationshipsKan_array);
+                break;
+            case "vegetables":
+                listValues = res.getStringArray(R.array.vegetablesEng_array);
+                listValuesInKan = res.getStringArray(R.array.vegetablesKan_array);
+                break;
+            case "colors":
+                listValues = res.getStringArray(R.array.colorsEng_array);
+                listValuesInKan = res.getStringArray(R.array.colorsKan_array);
+                break;
+            case "directions":
+                listValues = res.getStringArray(R.array.directionsEng_array);
+                listValuesInKan = res.getStringArray(R.array.directionsKan_array);
                 break;
             default:
+                listValues = res.getStringArray(R.array.vegetablesKan_array);
+                listValuesInKan = res.getStringArray(R.array.vegetablesKan_array);
                 break;
         }
 
