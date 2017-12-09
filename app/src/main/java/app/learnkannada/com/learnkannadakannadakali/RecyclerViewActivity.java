@@ -39,7 +39,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         String category = intent.getStringExtra("category");
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
-        switch (category) {
+
+       listValues = getResources().getStringArray(getApplication().getApplicationContext().getResources().getIdentifier(category+"Eng_array","array",getApplication().getApplicationContext().getPackageName()));
+       listValuesInKan = res.getStringArray(getApplication().getApplicationContext().getResources().getIdentifier(category+"Kan_array","array",getApplication().getApplicationContext().getPackageName()));
+       /* switch (category) {
             case "enquiry":
                 break;
             case "numbers":
@@ -78,11 +81,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 listValues = res.getStringArray(R.array.directionsEng_array);
                 listValuesInKan = res.getStringArray(R.array.directionsKan_array);
                 break;
+            case "body_parts":
+                listValues = res.getStringArray(R.array.body_partsEng_array);
+                listValuesInKan = res.getStringArray(R.array.body_partsKan_array);
+                break;
             default:
                 listValues = res.getStringArray(R.array.vegetablesKan_array);
                 listValuesInKan = res.getStringArray(R.array.vegetablesKan_array);
                 break;
-        }
+        }*/
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);

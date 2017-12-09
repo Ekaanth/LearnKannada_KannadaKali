@@ -11,6 +11,8 @@ import android.widget.Toast;
 public class AudioPlayer {
     public static MediaPlayer mediaPlayer = new MediaPlayer();
     public static void playAudio(Context context, String name) {
+        if(mediaPlayer!= null)
+            mediaPlayer.reset();
 
         Integer id = context.getResources().getIdentifier(name.toLowerCase(),"raw",context.getPackageName());
         try {
@@ -19,6 +21,7 @@ public class AudioPlayer {
             Toast.makeText(context, name , Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
+
         mediaPlayer.start();
 
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

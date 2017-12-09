@@ -121,7 +121,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 public void onClick(View v) {
                     Intent i = new Intent(context, RecyclerViewActivity.class);
                     i.putExtra("from","flexi");
-                    i.putExtra("category",name.toLowerCase());
+                    i.putExtra("category",name.toLowerCase().replaceAll(" ","_") );
                     v.getContext().startActivity(i);
                 }
             });

@@ -22,7 +22,7 @@
     <!-- *******************************flexi Course menu ends here *******************************-->
 
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
-    <string-array name="eNumbers_array">
+    <string-array name="numbersEng_array">
         <item>One</item>
         <item>Two</item>
         <item>Three</item>
@@ -49,7 +49,7 @@
     <!-- *******************************Category Numbers (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Numbers (KANNADA) STARTS here *******************************-->
-    <string-array name="kNumbers_array">
+    <string-array name="numbersKan_array">
         <item>ondu</item>
         <item>eradu</item>
         <item>mooru</item>
@@ -378,6 +378,50 @@
         <item></item>
     </string-array>
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Category Body Parts (ENGLISH) STARTS here *******************************-->
+    <string-array name="body_partsEng_array">
+        <item>Eye(s)</item>
+        <item>Ear(s)</item>
+        <item>Hand(s)</item>
+        <item>Leg(s)</item>
+        <item>Nose</item>
+        <item>Head</item>
+        <item>Mouth</item>
+        <item>Tongue</item>
+        <item>Nail(s)</item>
+        <item>Finger(s)</item>
+        <item>Skin</item>
+        <item>Hair</item>
+        <item>Thigh</item>
+        <item>Shoulder</item>
+        <item>Tooth</item>
+        <item>Elbow</item>
+        <item>Knee</item>
+    </string-array>
+    <!-- ******************************* Category Body Parts (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
+    <string-array name="body_partsKan_array">
+        <item>kannu(sgalu)</item>
+        <item>kivi(galu)</item>
+        <item>kai(galu)</item>
+        <item>kaalu(galu)</item>
+        <item>moogu</item>
+        <item>thale</item>
+        <item>baayi</item>
+        <item>naalige</item>
+        <item>uguru(galu)</item>
+        <item>beralu(galu)</item>
+        <item>charma</item>
+        <item>koodalu</item>
+        <item>thoDe</item>
+        <item>bhuja</item>
+        <item>hallu</item>
+        <item>moNakai</item>
+        <item>moNakaalu</item>
+    </string-array>
+    <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
+
 
     <!-- Days Array Starts here -->
     <string-array name="days_array">
@@ -1074,7 +1118,7 @@
     <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular), neevu HOGI(plural)</b></string>
     <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular), adu NIMAGE(plural)</b></string>
     <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular), idu NIMMADU(plural)</b></string>
-    <string name="you_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
+    <string name="you_ex"><b><u>Eng</u> : you go there</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
     <string name="come_ex"><b><u>Eng</u> : you come</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
     <string name="aboutKannada">About Kannada</string>
     <string name="aboutKarnataka">About Karnataka</string>
