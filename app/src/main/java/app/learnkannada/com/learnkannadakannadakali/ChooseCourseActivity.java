@@ -29,7 +29,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private ImageView mic;
 
     private MediaPlayer mediaPlayer;
-    private AlertDialog.Builder builder, infoBuilder;
+    private AlertDialog.Builder builder, infoBuilder, infoProvider;
     private Dialog dialog;
 
     @Override
@@ -43,6 +43,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         builder = new AlertDialog.Builder(this);
         infoBuilder = new AlertDialog.Builder(this);
+        infoProvider = new AlertDialog.Builder(this);
 
         //dialog = new Dialog(this);
 
@@ -159,7 +160,29 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         return;
                     }
                 }
-                Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
+                if(splitWords.length>1)
+                    Toast.makeText(getApplicationContext(),"Oops! I am too young for sentences.", Toast.LENGTH_LONG).show();
+                else{
+                //Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
+                infoProvider.setTitle("Sorry! I don't know that yet.")
+                        .setMessage(" Would you like to add \""+spokenString.toUpperCase()+"\" to my vocabulary?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                StringBuilder body = new StringBuilder();
+                                body.append("Hello Team HithAM, \n \n");
+                                body.append("I found that the word \""+spokenString.toUpperCase()+"\" is missing in your app vocabulary and it would be helpful to all if this word is added to it.\n\n");
+                                body.append("\n Regards, \n");
+                                body.append("Kannada Kali User");
+                                String company[] = {"varunvgnc@gmail.com","aggithaya@gmail.com"};
+                                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+                                intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+                                intent.putExtra(Intent.EXTRA_EMAIL, company);
+                                intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+                                startActivity(intent);
+                            }
+                        }).setCancelable(false).setNegativeButton("No",null).create().show();
+                }
             }
             if(resourceAvailable(spokenStringEx))
             {
