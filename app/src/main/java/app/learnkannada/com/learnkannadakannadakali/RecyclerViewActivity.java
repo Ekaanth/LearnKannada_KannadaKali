@@ -30,6 +30,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
@@ -37,6 +40,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String category = intent.getStringExtra("category");
+
+        //setting Action bar title
+        String actionBarTitle = category.substring(0,1).toUpperCase()+category.substring(1,category.length());
+        getSupportActionBar().setTitle(actionBarTitle);
+
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
 
@@ -65,6 +73,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
