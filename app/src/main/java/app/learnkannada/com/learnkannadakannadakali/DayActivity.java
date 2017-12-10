@@ -50,7 +50,13 @@ public class DayActivity extends AppCompatActivity {
 
         Resources res = getResources();
 
-        switch(day)
+        String englishArray = day.replaceAll(" ","")+"_content";
+        String kannadaArray = day.replaceAll(" ","")+"_content_kannada";
+        listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,"array",getPackageName()));
+        listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,"array",getPackageName()));
+
+
+        /*switch(day)
         {
             case "Day 1": {
                 listValues = res.getStringArray(R.array.Day1_content);
@@ -105,14 +111,15 @@ public class DayActivity extends AppCompatActivity {
             default:
                 break;
         }
-
+*/
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);
             kanInput.add(listValuesInKan[i]);
         }
 
-        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8"))
+        //below condition is to disable example button for particular cases
+        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8") || !day.contains("day"))
             adapter = new ListViewAdapter(getApplicationContext(),input, "day89_10Course", kanInput);
         else
             adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);

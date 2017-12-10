@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class Homepage extends AppCompatActivity {
 
-    private Button words, conversations;
+    private Button words, conversations, randomMagic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class Homepage extends AppCompatActivity {
 
         words = (Button) findViewById(R.id.wordsID);
         conversations = (Button) findViewById(R.id.conversationsID);
+        randomMagic = (Button) findViewById(R.id.randomVerbsID);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -29,7 +30,9 @@ public class Homepage extends AppCompatActivity {
         words.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Homepage.this, MainActivity.class));
+                Intent i = new Intent(Homepage.this, MainActivity.class);
+                i.putExtra("from","words");
+                startActivity(i);
 
             }
         });
@@ -37,7 +40,16 @@ public class Homepage extends AppCompatActivity {
         conversations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
+                Intent i = new Intent(Homepage.this, MainActivity.class);
+                i.putExtra("from","conversations");
+                startActivity(i);
+            }
+        });
+
+        randomMagic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Coming soon...", Toast.LENGTH_LONG).show();
             }
         });
 

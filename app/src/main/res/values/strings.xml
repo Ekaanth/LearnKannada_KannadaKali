@@ -21,6 +21,47 @@
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
 
+    <!-- *******************************Flexi course WORDS in KANNADA STARTS here *******************************-->
+    <string-array name="flexi_words_kanArray">
+        <item>AksharamaalegaLu</item>
+        <item>harikaara</item>
+        <item>sankyegaLu</item>
+        <item>shubhaashayagaLu</item>
+        <item>dinagaLu</item>
+        <item>samaya</item>
+        <item>dikkugalu</item>
+        <item>sambandhagaLu</item>
+        <item>baNNagaLu</item>
+        <item>tarakaarigaLu</item>
+        <item>haNNugaLu</item>
+        <item>dEhada bhaagagaLu</item>
+    </string-array>
+    <!-- *******************************flexi Course menu ends here *******************************-->
+
+    <!-- *******************************flexi Conversations menu STARTS here *******************************-->
+    <string-array name="flexi_conversations_array">
+        <item>Conversation with Auto/Cab Driver</item>
+        <item>Conversation with Maid</item>
+        <item>Conversation with a friend</item>
+        <item>Conversation with waiter</item>
+        <item>Conversation with vendor</item>
+        <item>Conversation with Delivery boy</item>
+        <item>Conversation to ask directions</item>
+    </string-array>
+    <!-- *******************************flexi Conversations menu ENDS here here *******************************-->
+
+    <!-- *******************************flexi Conversations menu STARTS here *******************************-->
+    <string-array name="flexi_conversations_kanArray">
+        <item>Auto/Cab chaalakara jothe maathukate</item>
+        <item>kelasadavara jothe maathukathe</item>
+        <item>Snehitara jothe maathukathe</item>
+        <item>maaraatagaarara jothe maathukathe</item>
+        <item>waiter jothe maathukathe</item>
+        <item>delivery boy jothe maathukathe</item>
+        <item>dikkugalannu keluva maathukathe</item>
+    </string-array>
+    <!-- *******************************flexi Conversations menu ENDS here here *******************************-->
+
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
     <string-array name="numbersEng_array">
         <item>One</item>
@@ -173,8 +214,13 @@
 
     <!-- *******************************Category Days (ENGLISH) STARTS here *******************************-->
     <string-array name="daysEng_array">
-        <item>Now</item>
-        <item>Later</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
         <item>Today</item>
         <item>Tomorrow</item>
         <item>Day After Tomorrow</item>
@@ -188,8 +234,13 @@
 
     <!-- *******************************Category Days (KANNADA) STARTS here *******************************-->
     <string-array name="daysKan_array">
-        <item>eega</item>
-        <item>aamele</item>
+        <item>somavaara</item>
+        <item>mangaLavaara</item>
+        <item>budhavaara</item>
+        <item>guruvaara</item>
+        <item>shukravaara</item>
+        <item>shanivaara</item>
+        <item>bhaanuvaara</item>
         <item>ivatthu</item>
         <item>naaLe</item>
         <item>naDiddu</item>
@@ -207,6 +258,9 @@
         <item>Afternoon</item>
         <item>Evening</item>
         <item>Night</item>
+        <item>Day</item>
+        <item>Now</item>
+        <item>Later</item>
     </string-array>
     <!-- *******************************Category Time (ENGLISH) ENDS here *******************************-->
 
@@ -216,6 +270,9 @@
         <item>madyaana</item>
         <item>sanje</item>
         <item>raatri</item>
+        <item>dina or hagalu</item>
+        <item>eega</item>
+        <item>aamele</item>
     </string-array>
 
     <!-- *******************************Category Directions (ENGLISH) STARTS here *******************************-->
@@ -343,7 +400,6 @@
         <item>Ginger</item>
         <item>Lemon</item>
         <item>Coconut</item>
-        <item>Tender Coconut</item>
         <item>Coriander</item>
         <item>Curry Leaves</item>
         <item>Cauliflower</item>
@@ -369,7 +425,6 @@
         <item>shunti</item>
         <item>nimbehaNNu</item>
         <item>thenginakaayi</item>
-        <item>elaneeru</item>
         <item>kottambari soppu</item>
         <item>karibEvu</item>
         <item>hookosu</item>
@@ -378,6 +433,36 @@
         <item></item>
     </string-array>
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Category Fruits (ENGLISH) STARTS here *******************************-->
+    <string-array name="fruitsEng_array">
+        <item>Fruits</item>
+        <item>Banana</item>
+        <item>Apple</item>
+        <item>Orange</item>
+        <item>Watermelon</item>
+        <item>Guava</item>
+        <item>Custart Apple</item>
+        <item>Mango</item>
+        <item>Muskmelon</item>
+        <item>Jackfruit</item>
+    </string-array>
+    <!-- ******************************* Category Fruits (ENGLISH) ENDS here *******************************-->
+
+    <!-- ******************************* Category Fruits (KANNADA) STARTS here *******************************-->
+    <string-array name="fruitsKan_array">
+        <item>haNNugaLu</item>
+        <item>baalehaNNu</item>
+        <item>sEbu</item>
+        <item>kittale haNNu</item>
+        <item>kallangadi</item>
+        <item>seebehaNNu</item>
+        <item>seethaphala</item>
+        <item>maavina haNNu</item>
+        <item>karbuja</item>
+        <item>halasina haNNu</item>
+    </string-array>
+    <!-- ******************************* Category Fruits (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Body Parts (ENGLISH) STARTS here *******************************-->
     <string-array name="body_partsEng_array">
@@ -441,6 +526,7 @@
 
     <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day1_content">
+        <item>Learn</item>
         <item>I</item>
         <item>We</item>
         <item>My</item>
@@ -462,6 +548,7 @@
 
     <!-- *******************************Day 1 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day1_content_kannada">
+        <item>kali</item>
         <item>naanu</item>
         <item>naavu</item>
         <item>nanna</item>
@@ -594,6 +681,9 @@
         <item>Day After Tomorrow</item>
         <item>Yesterday</item>
         <item>Day Before Yesterday</item>
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
         <item>Day</item>
         <item>Night</item>
     </string-array>
@@ -620,6 +710,9 @@
         <item>naDiddu</item>
         <item>ninne</item>
         <item>monne</item>
+        <item>beligge</item>
+        <item>madyaana</item>
+        <item>sanje</item>
         <item>dina or hagalu</item>
         <item>raathri</item>
     </string-array>
@@ -911,8 +1004,6 @@
         <item>Grandmother</item>
         <item>Grandson</item>
         <item>Granddaughter</item>
-        <item>Cook</item>
-        <item>Water</item>
     </string-array>
     <!-- *******************************Day 7 content (ENGLISH) ENDS here *******************************-->
     <!-- *******************************Day 7 content (KANNADA) STARTS here *******************************-->
@@ -933,8 +1024,6 @@
         <item>ajji</item>
         <item>mommaga</item>
         <item>mommagaLu</item>
-        <item>adige</item>
-        <item>neeru</item>
     </string-array>
     <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
 
@@ -1106,6 +1195,89 @@
     </string-array>
     <!-- *******************************Day 10 content (KANNADA) ENDS here *******************************-->
 
+    <!--*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!-->
+
+    <!-- ******************************* Conversation with a friend (ENGLISH) STARTS here *******************************-->
+    <string-array name="afriend_content">
+        <item>Introduce Yourself</item>
+        <item>Pooja: Hi Ganesh, How are you?</item>
+        <item>Ganesh: Hi Pooja, I am fine. And you?</item>
+        <item>Pooja: I am also fine</item>
+        <item>Ganesh: What do you do?</item>
+        <item>Pooja: I am a software engineer. And you?</item>
+        <item>Ganesh: I am Hardware engineer.</item>
+        <item>Pooja: Good. Which is your place?</item>
+        <item>Ganesh: My place is Sirigere near Holalkere. And yours?</item>
+        <item>Pooja: My place is Mysuru.</item>
+        <item>Ganesh: Nice. Where do you stay in Bengaluru?</item>
+        <item>Pooja: Vijayanagar. And you?</item>
+        <item>Ganesh: Sanjaynagar</item>
+        <item>Pooja: ok. Nice meeting you.</item>
+        <item>Ganesh: Same here. See you again</item>
+        <item>Pooja: Sure. Bye</item>
+        <item>Ganesh: Bye</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with a friend (KANNADA) STARTS here *******************************-->
+    <string-array name="afriend_content_kannada">
+        <item>nimma parichaya maadikoLLi</item>
+        <item>Pooja: Hi Ganesh, hEgiddeera?</item>
+        <item>Ganesh: Hi Pooja, chennagi ideeni. Neevu?</item>
+        <item>Pooja: naanu saha(too) channagi ideeni</item>
+        <item>Ganesh: neevu Enu madutheera?</item>
+        <item>Pooja: naanu obba Software engineer. neevu?</item>
+        <item>Ganesh: naanu hardware engineer</item>
+        <item>Pooja: oLLeyadu. nimma ooru yaavudu?</item>
+        <item>Ganesh: nanna ooru Sirigere, holalkere hatthira. nimmadu?</item>
+        <item>Pooja: nanna ooru Mysuru.</item>
+        <item>Ganesh: Nice. Bengalurinalli elli ideera?</item>
+        <item>Pooja: Vijayanagar. Neevu?</item>
+        <item>Ganesh: Sanjayanagara</item>
+        <item>Pooja: ok. Nimmannu BhEti(meet) maadi khushi aaythu</item>
+        <item>Ganesh: nanagu kooda. Matte sigONa</item>
+        <item>Pooja: khanditha. Bye</item>
+        <item>Ganesh: Bye</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
+
+    <!-- *******************************Conversation with Audo driver STARTS here *******************************-->
+    <string-array name="autocabdriver_content">
+        <item>Conversation with Auto Driver</item>
+        <item>Pooja: Will you come to Vijayanagar?</item>
+        <item>Driver: Yes. Please hop on</item>
+        <item>Pooja: How much?</item>
+        <item>Driver: It will be 250 rupees</item>
+        <item>Pooja: It is too much. Will you come for 150 rupees?</item>
+        <item>Driver: Not possible madam. Atleast give 200.</item>
+        <item>Pooja: ok.</item>
+        <item>Driver: Madam, We have reached Vijayanagar.</item>
+        <item>Pooja: Thank you. Please take this 500 rupees and give me change</item>
+        <item>Driver: No change. Sorry madam</item>
+        <item>Pooja: Do you have paytm?</item>
+        <item>Driver: Yes. Please send it through paytm only</item>
+        <item>Pooja: Thanks. I have sent it.</item>
+        <item>Driver: Thank you madam.</item>
+    </string-array>
+    <!-- ******************************* Conversation with auto driver (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with Auto Driver (KANNADA) STARTS here *******************************-->
+    <string-array name="autocabdriver_content_kannada">
+        <item>Auto-Driver jothe maathukathe</item>
+        <item>Pooja: Vijayanagar ge barthira?</item>
+        <item>Driver: hu. dayaviTTu hatthi</item>
+        <item>Pooja: Eshtu?</item>
+        <item>Driver: 250 rupees agatthe</item>
+        <item>Pooja: thumba jaasthi aythu. 150 rupees ge barthira?</item>
+        <item>Driver: aagalla madam. hogli 200 rupees koDi.</item>
+        <item>Pooja: sari.</item>
+        <item>Driver: Madam, Vijayanagar banthu</item>
+        <item>Pooja: dhanyavaadagaLu. dayaviTTu ee 500 rupees thagoLi, chillare(change) koDi</item>
+        <item>Driver: chillare illa, sorry madam.</item>
+        <item>Pooja: Paytm idiya?</item>
+        <item>Driver: ide. dayaviTTu paytm ge kaLuhisi.</item>
+        <item>Pooja: dhanyavaadagaLu. kalsidini.</item>
+        <item>Driver: Thank you madam.</item>
+    </string-array>
+    <!-- ******************************* Conversation with Auto Driver (KANNADA) ENDS here *******************************-->
 
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>

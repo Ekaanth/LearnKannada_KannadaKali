@@ -40,8 +40,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
 
-       listValues = getResources().getStringArray(getApplication().getApplicationContext().getResources().getIdentifier(category+"Eng_array","array",getApplication().getApplicationContext().getPackageName()));
-       listValuesInKan = res.getStringArray(getApplication().getApplicationContext().getResources().getIdentifier(category+"Kan_array","array",getApplication().getApplicationContext().getPackageName()));
+       listValues = getResources().getStringArray(getResources().getIdentifier(category+"Eng_array","array",getPackageName()));
+       listValuesInKan = res.getStringArray(getResources().getIdentifier(category+"Kan_array","array",getPackageName()));
        /* switch (category) {
             case "enquiry":
                 break;

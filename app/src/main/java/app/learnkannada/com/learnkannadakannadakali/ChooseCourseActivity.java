@@ -181,7 +181,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                 startActivity(intent);
                             }
-                        }).setCancelable(true).create().show();
+                        })
+                        .setIcon(R.drawable.idea).setCancelable(true).create().show();
                 }
             }
             if(resourceAvailable(spokenStringEx))

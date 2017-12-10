@@ -28,18 +28,34 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Categories");
+
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
+        String listValues[] = null;
+        String listValueKan[] = null;
 
-        String[] listValues = getResources().getStringArray(R.array.flexi_words_array);
-
-        for (String listValue : listValues) {
-            input.add(listValue);
-            kanInput.add("Dummy");
+        String from = getIntent().getStringExtra("from");
+        if (from.equals("words")) {
+            listValues = getResources().getStringArray(R.array.flexi_words_array);
+            listValueKan = getResources().getStringArray(R.array.flexi_words_kanArray);
+            adapter = new ListViewAdapter(getApplicationContext(), input, "flexiWords", kanInput);
+        } else {
+            listValues = getResources().getStringArray(R.array.flexi_conversations_array);
+            listValueKan = getResources().getStringArray(R.array.flexi_conversations_kanArray);
+            adapter = new ListViewAdapter(getApplicationContext(), input, "flexiConversations", kanInput);
         }
-        adapter = new ListViewAdapter(getApplicationContext(),input, "flexiWords", kanInput);
+
+        if (listValueKan.length == listValues.length)
+            for (int i = 0; i < listValues.length; i++) {
+                input.add(listValues[i]);
+                kanInput.add(listValueKan[i]);
+            }
+
         recyclerView.setAdapter(adapter);
 
     }
@@ -52,11 +68,6 @@ public class MainActivity extends AppCompatActivity {
         searchView = (SearchView) MenuItemCompat.getActionView(item);
         search(searchView);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
     }
 
     private void search(SearchView searchView) {
@@ -72,5 +83,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
