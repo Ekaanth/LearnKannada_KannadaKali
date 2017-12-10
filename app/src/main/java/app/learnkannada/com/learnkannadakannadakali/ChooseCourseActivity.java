@@ -166,7 +166,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
                 infoProvider.setTitle("Sorry! I don't know that yet.")
                         .setMessage(" Would you like to add \""+spokenString.toUpperCase()+"\" to my vocabulary?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 StringBuilder body = new StringBuilder();
@@ -181,7 +181,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                 startActivity(intent);
                             }
-                        }).setCancelable(false).setNegativeButton("No",null).create().show();
+                        }).setCancelable(true).create().show();
                 }
             }
             if(resourceAvailable(spokenStringEx))
