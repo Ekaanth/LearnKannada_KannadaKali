@@ -55,64 +55,6 @@ public class DayActivity extends AppCompatActivity {
         listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,"array",getPackageName()));
         listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,"array",getPackageName()));
 
-
-        /*switch(day)
-        {
-            case "Day 1": {
-                listValues = res.getStringArray(R.array.Day1_content);
-                listValuesInKan = res.getStringArray(R.array.Day1_content_kannada);
-                break;
-            }
-            case "Day 2": {
-                listValues = res.getStringArray(R.array.Day2_content);
-                listValuesInKan = res.getStringArray(R.array.Day2_content_kannada);
-                break;
-            }
-            case "Day 3": {
-                listValues = res.getStringArray(R.array.Day3_content);
-                listValuesInKan = res.getStringArray(R.array.Day3_content_kannada);
-                break;
-            }
-            case "Day 4": {
-                listValues = res.getStringArray(R.array.Day4_content);
-                listValuesInKan = res.getStringArray(R.array.Day4_content_kannada);
-                break;
-            }
-            case "Day 5": {
-                listValues = res.getStringArray(R.array.Day5_content);
-                listValuesInKan = res.getStringArray(R.array.Day5_content_kannada);
-                break;
-            }
-            case "Day 6": {
-                listValues = res.getStringArray(R.array.Day6_content);
-                listValuesInKan = res.getStringArray(R.array.Day6_content_kannada);
-                break;
-            }
-            case "Day 7": {
-                listValues = res.getStringArray(R.array.Day7_content);
-                listValuesInKan = res.getStringArray(R.array.Day7_content_kannada);
-                break;
-            }
-            case "Day 8": {
-                listValues = res.getStringArray(R.array.Day8_content);
-                listValuesInKan = res.getStringArray(R.array.Day8_content_kannada);
-                break;
-            }
-            case "Day 9": {
-                listValues = res.getStringArray(R.array.Day9_content);
-                listValuesInKan = res.getStringArray(R.array.Day9_content_kannada);
-                break;
-            }
-            case "Day 10": {
-                listValues = res.getStringArray(R.array.Day10_content);
-                listValuesInKan = res.getStringArray(R.array.Day10_content_kannada);
-                break;
-            }
-            default:
-                break;
-        }
-*/
-
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);
             kanInput.add(listValuesInKan[i]);
