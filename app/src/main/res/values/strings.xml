@@ -192,7 +192,7 @@
 
     <!-- *******************************Category Greetings (ENGLISH) STARTS here *******************************-->
     <string-array name="greetingsEng_array">
-        <item>Hi (Hello)</item>
+        <item>Hi(Hello)</item>
         <item>Good Morning</item>
         <item>Good Evening</item>
         <item>Good Night</item>
@@ -741,6 +741,9 @@
     <string name="day_before_yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
     <string name="day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
     <string name="night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie ge hogutta iddeeni</b></string>
+    <string name="morning_ex"><b><u>Eng</u> :  I woke up at 7.30am in the morning  today</b>\n<b><u>Kan</u> : naanu ivattu beligge Elu vare gantege edde</b></string>
+    <string name="afternoon_ex"><b><u>Eng</u> : I had lunch at 1:15pm today</b>\n<b><u>Kan</u> : naanu madyana ondu kaalige uta madide</b></string>
+    <string name="evening_ex"><b><u>Eng</u> : We will have coffee at 4:45 pm</b>\n<b><u>Kan</u> : naavu naalku mukkalige coffee kudiyona</b></string>
     <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->

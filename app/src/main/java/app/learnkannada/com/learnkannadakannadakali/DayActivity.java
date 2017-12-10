@@ -119,7 +119,7 @@ public class DayActivity extends AppCompatActivity {
         }
 
         //below condition is to disable example button for particular cases
-        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8") || !day.contains("day"))
+        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8") || !day.contains("Day"))
             adapter = new ListViewAdapter(getApplicationContext(),input, "day89_10Course", kanInput);
         else
             adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
