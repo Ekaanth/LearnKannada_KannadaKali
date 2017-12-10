@@ -125,7 +125,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals("flexiConversations")) {
+        }
+        else if (mCategory.equals("flexiConversations"))
+        {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
                     .replaceAll("/", "").replaceAll("conversationto", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
@@ -201,7 +203,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals("dayCourse")) {
+        }
+        else if (mCategory.equals("dayCourse"))
+        {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -245,10 +249,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     private void playOffline(int position) throws IOException {
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        String voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?", "")
-                .replaceAll("\\(", "_").replaceAll("\\)", "")
-                .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
+        //MediaPlayer mediaPlayer = new MediaPlayer();
+        String voiceId=null;
+        if(mCategory.equals("alphabets")){
+            voiceId= audioResourceFinder(mFilteredList.get(position));
+        }
+        else {
+            voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?", "")
+                    .replaceAll("\\(", "_").replaceAll("\\)", "")
+                    .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
+        }
         AudioPlayer.playAudio(context, voiceId);
         /*Integer id=context.getResources().getIdentifier(voiceId.toLowerCase(),"raw",context.getPackageName());
         try{
@@ -268,6 +278,30 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             }
 
         });*/
+    }
+
+    private String audioResourceFinder(String s) {
+        if(s.equals("Nya"))
+            return ("nya_");
+        else if(s.equals("Cha"))
+            return ("cha_");
+        else if(s.equals("Ta"))
+            return ("ta_");
+        else if(s.equals("Tha"))
+            return ("tha_");
+        else if(s.equals("Da"))
+            return ("da_");
+        else if(s.equals("Na"))
+            return ("na_");
+        else if(s.equals("Dha"))
+            return ("dha_");
+        else if(s.equals("La"))
+            return ("la_");
+        else if(s.equals("Sha"))
+            return ("sha_");
+        else
+            return s;
+
     }
 
     /*private void playOnline(int position) {

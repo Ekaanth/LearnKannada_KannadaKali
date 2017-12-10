@@ -120,6 +120,112 @@
     </string-array>
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
 
+    <!-- *******************************Category Alphabets (ENGLISH) STARTS here *******************************-->
+    <string-array name="alphabetsEng_array">
+        <item>a</item>
+        <item>aa</item>
+        <item>e</item>
+        <item>ee</item>
+        <item>u</item>
+        <item>uu</item>
+        <item>ru</item>
+        <item>ae</item>
+        <item>aae</item>
+        <item>ai</item>
+        <item>o</item>
+        <item>oo</item>
+        <item>ow</item>
+        <item>am</item>
+        <item>aha</item>
+        <item>ka</item>
+        <item>kha</item>
+        <item>ga</item>
+        <item>gha</item>
+        <item>nya</item>
+        <item>cha</item>
+        <item>Cha</item>
+        <item>ja</item>
+        <item>jha</item>
+        <item>Nya</item>
+        <item>ta</item>
+        <item>Ta</item>
+        <item>Da</item>
+        <item>Dha</item>
+        <item>Na</item>
+        <item>tha</item>
+        <item>Tha</item>
+        <item>da</item>
+        <item>dha</item>
+        <item>na</item>
+        <item>pa</item>
+        <item>pha</item>
+        <item>ba</item>
+        <item>bha</item>
+        <item>ma</item>
+        <item>ya</item>
+        <item>ra</item>
+        <item>la</item>
+        <item>va</item>
+        <item>sha</item>
+        <item>Sha</item>
+        <item>sa</item>
+        <item>ha</item>
+        <item>La</item>
+    </string-array>
+    <!-- *******************************Category Alphabets (ENGLISH) ENDS here *******************************-->
+    <!-- *******************************Category Alphabets (Kannada) STARTS here *******************************-->
+    <string-array name="alphabetsKan_array">
+        <item>ಅ</item>
+        <item>ಆ</item>
+        <item>ಇ</item>
+        <item>ಈ</item>
+        <item>ಉ</item>
+        <item>ಊ</item>
+        <item>ಋ</item>
+        <item>ಎ</item>
+        <item>ಏ</item>
+        <item>ಐ</item>
+        <item>ಒ</item>
+        <item>ಓ</item>
+        <item>ಔ</item>
+        <item>ಅಂ</item>
+        <item>ಅಃ</item>
+        <item>ಕ</item>
+        <item>ಖ</item>
+        <item>ಗ</item>
+        <item>ಘ</item>
+        <item>ಙ</item>
+        <item>ಚ</item>
+        <item>ಛ</item>
+        <item>ಜ</item>
+        <item>ಝ</item>
+        <item>ಞ</item>
+        <item>ಟ</item>
+        <item>ಠ</item>
+        <item>ಡ</item>
+        <item>ಢ</item>
+        <item>ಣ</item>
+        <item>ತ</item>
+        <item>ಥ</item>
+        <item>ದ</item>
+        <item>ಧ</item>
+        <item>ನ</item>
+        <item>ಪ</item>
+        <item>ಫ</item>
+        <item>ಬ</item>
+        <item>ಭ</item>
+        <item>ಮ</item>
+        <item>ಯ</item>
+        <item>ರ</item>
+        <item>ಲ</item>
+        <item>ವ</item>
+        <item>ಶ</item>
+        <item>ಷ</item>
+        <item>ಸ</item>
+        <item>ಹ</item>
+        <item>ಳ</item>
+    </string-array>
+    <!-- *******************************Category Alphabets (Kannada) ENDS here *******************************-->
 
     <!-- *******************************Category Beginner (ENGLISH) STARTS here *******************************-->
     <string-array name="beginnerEng_array">
