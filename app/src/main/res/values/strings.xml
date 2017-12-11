@@ -78,6 +78,10 @@
         <item>Thirty</item>
         <item>Forty</item>
         <item>Fifty</item>
+        <item>Sixty</item>
+        <item>Seventy</item>
+        <item>Eighty</item>
+        <item>Ninety</item>
         <item>Hundred</item>
         <item>Two Hundred</item>
         <item>Three Hundred</item>
@@ -1414,5 +1418,10 @@
     <string name="sure">Sure</string>
     <string name="later">Later</string>
     <string name="no">No</string>
+
+
+    <!--Below helps where to keep the background image on the notificaiton-->
+    <!--right now palace image is kept with below name. change it when required -->
+    <!--<string name="onesignal_bgimage_notif_image_align">right</string>-->
 
 </resources>

@@ -30,6 +30,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
@@ -37,59 +40,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String category = intent.getStringExtra("category");
+
+        //setting Action bar title
+        String actionBarTitle = category.substring(0,1).toUpperCase()+category.substring(1,category.length());
+        getSupportActionBar().setTitle(actionBarTitle);
+
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
 
        listValues = getResources().getStringArray(getResources().getIdentifier(category+"Eng_array","array",getPackageName()));
        listValuesInKan = res.getStringArray(getResources().getIdentifier(category+"Kan_array","array",getPackageName()));
-       /* switch (category) {
-            case "enquiry":
-                break;
-            case "numbers":
-                listValues = res.getStringArray(R.array.eNumbers_array);
-                listValuesInKan = res.getStringArray(R.array.kNumbers_array);
-                break;
-            case "beginner":
-                listValues = res.getStringArray(R.array.beginnerEng_array);
-                listValuesInKan = res.getStringArray(R.array.beginnerKan_array);
-                break;
-            case "greetings":
-                listValues = res.getStringArray(R.array.greetingsEng_array);
-                listValuesInKan = res.getStringArray(R.array.greetingsKan_array);
-                break;
-            case "days":
-                listValues = res.getStringArray(R.array.daysEng_array);
-                listValuesInKan = res.getStringArray(R.array.daysKan_array);
-                break;
-            case "time":
-                listValues = res.getStringArray(R.array.timeEng_array);
-                listValuesInKan = res.getStringArray(R.array.timeKan_array);
-                break;
-            case "relationships":
-                listValues = res.getStringArray(R.array.relationshipsEng_array);
-                listValuesInKan = res.getStringArray(R.array.relationshipsKan_array);
-                break;
-            case "vegetables":
-                listValues = res.getStringArray(R.array.vegetablesEng_array);
-                listValuesInKan = res.getStringArray(R.array.vegetablesKan_array);
-                break;
-            case "colors":
-                listValues = res.getStringArray(R.array.colorsEng_array);
-                listValuesInKan = res.getStringArray(R.array.colorsKan_array);
-                break;
-            case "directions":
-                listValues = res.getStringArray(R.array.directionsEng_array);
-                listValuesInKan = res.getStringArray(R.array.directionsKan_array);
-                break;
-            case "body_parts":
-                listValues = res.getStringArray(R.array.body_partsEng_array);
-                listValuesInKan = res.getStringArray(R.array.body_partsKan_array);
-                break;
-            default:
-                listValues = res.getStringArray(R.array.vegetablesKan_array);
-                listValuesInKan = res.getStringArray(R.array.vegetablesKan_array);
-                break;
-        }*/
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);
@@ -113,6 +73,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
