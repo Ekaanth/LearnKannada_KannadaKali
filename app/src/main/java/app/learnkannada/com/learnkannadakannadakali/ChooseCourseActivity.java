@@ -2,6 +2,7 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -244,6 +246,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.feedbackID) {
             //Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_LONG).show();
             StringBuilder body = new StringBuilder();
@@ -296,6 +299,28 @@ public class ChooseCourseActivity extends AppCompatActivity {
             sendIntent.setType("text/plain");
             sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
             startActivity(sendIntent);
+        }
+
+        else if(item.getItemId()==R.id.moreID){
+            item.getSubMenu().clear();
+            getMenuInflater().inflate(R.menu.menu_more,item.getSubMenu());
+        }
+        else if(item.getItemId()==R.id.aboutUsID) {
+            Intent i = new Intent(this, MoreActivity.class);
+            i.putExtra("menuItem",item.toString());
+            startActivity(i);
+            //Toast.makeText(getApplicationContext(), "About us selected", Toast.LENGTH_SHORT).show();
+        }
+        else if(item.getItemId()==R.id.disclaimerID)
+        {
+            Intent i = new Intent(this, MoreActivity.class);
+            i.putExtra("menuItem",item.toString());
+            startActivity(i);
+        }
+        else if(item.getItemId()==R.id.aboutKannadaID){
+            Intent i = new Intent(this, MoreActivity.class);
+            i.putExtra("menuItem",item.toString());
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }

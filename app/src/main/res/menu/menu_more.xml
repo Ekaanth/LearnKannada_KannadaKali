@@ -2,28 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/feedbackID"
+        android:id="@+id/aboutUsID"
         android:orderInCategory="100"
-        android:title="@string/feedback"
+        android:title="About Us"
         app:showAsAction="collapseActionView" />
 
     <item
-        android:id="@+id/shareAppID"
+        android:id="@+id/disclaimerID"
         android:orderInCategory="100"
-        android:title="Refer a friend"
+        android:title="Disclaimer"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/aboutKannadaID"
+        android:orderInCategory="100"
+        android:title="About Kannada"
         app:showAsAction="collapseActionView"/>
 
-    <item
-        android:id="@+id/rateID"
-        android:orderInCategory="100"
-        android:title="Rate this app"
-        app:showAsAction="collapseActionView"/>
-    <item
-        android:id="@+id/moreID"
-        android:orderInCategory="100"
-        android:title="More"
-        app:showAsAction="collapseActionView">
-        <menu>
-        </menu>
-    </item>
 </menu>

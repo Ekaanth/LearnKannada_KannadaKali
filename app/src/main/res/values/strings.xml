@@ -632,7 +632,6 @@
 
     <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day1_content">
-        <item>Learn</item>
         <item>I</item>
         <item>We</item>
         <item>My</item>
@@ -649,12 +648,12 @@
         <item>For You(Plural)</item>
         <item>Yours(Singular)</item>
         <item>Yours(Plural)</item>
+        <item>Learn</item>
     </string-array>
     <!-- *******************************Day 1 content (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Day 1 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day1_content_kannada">
-        <item>kali</item>
         <item>naanu</item>
         <item>naavu</item>
         <item>nanna</item>
@@ -671,10 +670,12 @@
         <item>nimage</item>
         <item>ninnadu</item>
         <item>nimmadu</item>
+        <item>kali</item>
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 1 STARTS here *******************************-->
+    <string name="learn_ex"><b><u>Eng</u> : LEARN Kannada.</b>\n<b><u>Kan</u> : Kannada KALI .</b></string>
     <string name="i_ex"><b><u>Eng</u> : I am Saraswathi.</b>\n<b><u>Kan</u> : Naanu Saraswathi.</b></string>
     <string name="we_ex"><b><u>Eng</u> : WE are Indians.\n<u>Kan</u> : NAAVU bhaaratheeyaru.</b></string>
     <string name="my_ex"><b><u>Eng</u> : MY name is Lakshmi.\n<u>Kan</u> : NANNA hesaru Lakshmi.</b></string>
