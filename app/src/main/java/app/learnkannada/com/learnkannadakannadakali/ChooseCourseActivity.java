@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.onesignal.OneSignal;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -36,6 +38,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_course);
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
 
         dayCourse = (Button) findViewById(R.id.dayCourseID);
         flexiCourse = (Button) findViewById(R.id.comfortCourseID);

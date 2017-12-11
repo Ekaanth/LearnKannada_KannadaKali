@@ -1418,4 +1418,9 @@
     <string name="later">Later</string>
     <string name="no">No</string>
 
+
+    <!--Below helps where to keep the background image on the notificaiton-->
+    <!--right now palace image is kept with below name. change it when required -->
+    <!--<string name="onesignal_bgimage_notif_image_align">right</string>-->
+
 </resources>
