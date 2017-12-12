@@ -183,7 +183,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 body.append("I found that the word \""+spokenString.toUpperCase()+"\" is missing in your app vocabulary and it would be helpful to all if this word is added to it.\n\n");
                                 body.append("\n Regards, \n");
                                 body.append("Kannada Kali User");
-                                String company[] = {"varunvgnc@gmail.com","aggithaya@gmail.com"};
+                                String company[] = {"hithamcreations@gmail.com"};
                                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
                                 intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
                                 intent.putExtra(Intent.EXTRA_EMAIL, company);
@@ -262,7 +262,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             body.append("********Please fill in your feedback/grievances here********\n");
             body.append("\n Regards, \n");
             body.append("Kannada Kali User");
-            String company[] = {"varunvgnc@gmail.com","aggithaya@gmail.com"};
+            String company[] = {"hithamcreations@gmail.com"};
             Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
             intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
             intent.putExtra(Intent.EXTRA_EMAIL, company);
