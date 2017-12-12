@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.learnkannada.com.learnkannadakannadakali.SplashScreen_Activity">
+    tools:context="app.learnkannada.com.learnkannadakannadakali.SplashScreenActivity">
 
         <LinearLayout
             android:orientation="vertical"
@@ -14,7 +14,7 @@
             android:layout_alignParentBottom="true"
             android:layout_height="match_parent">
 
-            <app.learnkannada.com.learnkannadakannadakali.GIFView
+            <app.learnkannada.com.Utils.GIFView
                 android:id="@+id/welcomeFlagID"
                 components:src="@raw/flag_gif"
                 android:layout_marginTop="100dp"

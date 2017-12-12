@@ -10,7 +10,9 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseHomeActivity extends AppCompatActivity {
+import app.learnkannada.com.Adapter.ListViewAdapter;
+
+public class DaysCourseHomeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -20,7 +22,7 @@ public class CourseHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course_home);
+        setContentView(R.layout.activity_recycler_view);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

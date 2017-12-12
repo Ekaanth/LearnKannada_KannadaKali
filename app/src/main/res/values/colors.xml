@@ -2,9 +2,15 @@
 <resources>
     <color name="colorPrimary">#f20f08</color>
     <color name="colorPrimaryDark">#d64a47</color>
-    <color name="colorAccent">#690fd7</color>
+    <color name="colorAccent">#7c4dff</color>
 
+    <color name="card_purple">#7c4dff</color>
     <color name="yellow">#e7bc10</color>
+    <color name="card_background">#beaa83</color>
+    <color name="card_pink">#ff4081</color>
+    <color name="card_green">#00bfa5</color>
+    <color name="card_materialYellow">#ffb300</color>
+
 
     <!-- first line below sets NOTIFICATION TITLE color and second line sets Message TITLE-->
     <!--<color name="onesignal_bgimage_notif_title_color">#FFFF0000</color>-->

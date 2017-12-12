@@ -8,7 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class SplashScreen_Activity extends AppCompatActivity {
+import app.learnkannada.com.Utils.GIFView;
+
+public class SplashScreenActivity extends AppCompatActivity {
 
     private static final int WELCOME_DURATION = 2000;
     private GIFView flagGif;
@@ -31,7 +33,7 @@ public class SplashScreen_Activity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen_Activity.this, ChooseCourseActivity.class));
+                startActivity(new Intent(SplashScreenActivity.this, ChooseCourseActivity.class));
                 finish();
             }
         }, WELCOME_DURATION);

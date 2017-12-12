@@ -1,4 +1,4 @@
-package app.learnkannada.com.learnkannadakannadakali;
+package app.learnkannada.com.Utils;
 
 /**
  * Created by vaam on 27-11-2017.
@@ -10,6 +10,8 @@ import android.graphics.Color;
 import android.graphics.Movie;
 import android.util.AttributeSet;
 import android.view.View;
+
+import app.learnkannada.com.learnkannadakannadakali.R;
 
 public class GIFView extends View {
     public Movie mMovie;

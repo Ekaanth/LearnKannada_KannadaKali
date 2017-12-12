@@ -3,34 +3,37 @@ package app.learnkannada.com.learnkannadakannadakali;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
-public class Homepage extends AppCompatActivity {
+import app.learnkannada.com.SharedPreferences.AppRater;
 
-    private Button words, conversations, randomMagic;
+public class FlexiCourseHomeActivity extends AppCompatActivity {
+
+    private CardView words, conversations, randomMagic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_flexi_course_home);
 
         AppRater.app_launched(this);
 
-        words = (Button) findViewById(R.id.wordsID);
-        conversations = (Button) findViewById(R.id.conversationsID);
-        randomMagic = (Button) findViewById(R.id.randomVerbsID);
+        words = (CardView) findViewById(R.id.wordsID);
+        conversations = (CardView) findViewById(R.id.conversationsID);
+        randomMagic = (CardView) findViewById(R.id.randomMagicID);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Flexi Course");
 
 
         words.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Homepage.this, MainActivity.class);
+                Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
                 i.putExtra("from","words");
                 startActivity(i);
 
@@ -40,7 +43,7 @@ public class Homepage extends AppCompatActivity {
         conversations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Homepage.this, MainActivity.class);
+                Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
                 i.putExtra("from","conversations");
                 startActivity(i);
             }

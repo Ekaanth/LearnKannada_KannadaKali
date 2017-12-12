@@ -2,7 +2,6 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -16,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.onesignal.OneSignal;
@@ -41,6 +39,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_course);
 
+        getSupportActionBar().setTitle("Kannada Kali");
+
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
@@ -59,10 +59,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
         dayCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(ChooseCourseActivity.this,RecyclerViewActivity.class);
+                //Intent intent = new Intent(ChooseCourseActivity.this,CategoryContentActivity.class);
                 /*intent.putExtra("category","dayCours");
                 intent.putExtra("from","dayCourse");*/
-                startActivity(new Intent(ChooseCourseActivity.this,CourseHomeActivity.class));
+                startActivity(new Intent(ChooseCourseActivity.this,DaysCourseHomeActivity.class));
             }
         });
 
@@ -70,7 +70,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
-                startActivity(new Intent(ChooseCourseActivity.this, Homepage.class));
+                startActivity(new Intent(ChooseCourseActivity.this, FlexiCourseHomeActivity.class));
             }
         });
 
@@ -313,21 +313,14 @@ public class ChooseCourseActivity extends AppCompatActivity {
             getMenuInflater().inflate(R.menu.menu_more,item.getSubMenu());
         }
         else if(item.getItemId()==R.id.aboutUsID) {
-            Intent i = new Intent(this, MoreActivity.class);
-            i.putExtra("menuItem",item.toString());
-            startActivity(i);
-            //Toast.makeText(getApplicationContext(), "About us selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "About us selected", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.disclaimerID)
         {
-            Intent i = new Intent(this, MoreActivity.class);
-            i.putExtra("menuItem",item.toString());
-            startActivity(i);
+            Toast.makeText(getApplicationContext(), "Disclaimer selected", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.aboutKannadaID){
-            Intent i = new Intent(this, MoreActivity.class);
-            i.putExtra("menuItem",item.toString());
-            startActivity(i);
+            Toast.makeText(getApplicationContext(), "About Kannada selected", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

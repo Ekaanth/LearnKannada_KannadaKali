@@ -1,4 +1,4 @@
-package app.learnkannada.com.learnkannadakannadakali;
+package app.learnkannada.com.Utils;
 
 import android.content.Context;
 import android.media.MediaPlayer;

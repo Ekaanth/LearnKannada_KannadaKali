@@ -1,8 +1,7 @@
-package app.learnkannada.com.learnkannadakannadakali;
+package app.learnkannada.com.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +17,12 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import app.learnkannada.com.Utils.AudioPlayer;
+import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
+import app.learnkannada.com.learnkannadakannadakali.DayActivity;
+import app.learnkannada.com.learnkannadakannadakali.ExampleActivity;
+import app.learnkannada.com.learnkannadakannadakali.R;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
@@ -67,7 +72,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;
         mFilteredKanList = kanInput;
@@ -119,7 +124,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context, RecyclerViewActivity.class);
+                    Intent i = new Intent(context, CategoryContentActivity.class);
                     i.putExtra("from", "flexi");
                     i.putExtra("category", name.toLowerCase().replaceAll(" ", "_"));
                     v.getContext().startActivity(i);

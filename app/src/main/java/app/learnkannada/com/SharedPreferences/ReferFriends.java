@@ -1,4 +1,4 @@
-package app.learnkannada.com.learnkannadakannadakali;
+package app.learnkannada.com.SharedPreferences;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
+
+import app.learnkannada.com.learnkannadakannadakali.R;
 
 /**
  * Created by vaam on 06-12-2017.
@@ -50,7 +52,7 @@ public class ReferFriends {
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        View view = View.inflate(mContext,R.layout.refer_friends_layout, null);
+        View view = View.inflate(mContext, R.layout.refer_friends_layout, null);
         builder.setView(view);
         final AlertDialog dialog = builder.create();
         dialog.show();
