@@ -67,4 +67,10 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(FlexiCourseHomeActivity.this, ChooseCourseActivity.class));
+        finish();
+    }
 }

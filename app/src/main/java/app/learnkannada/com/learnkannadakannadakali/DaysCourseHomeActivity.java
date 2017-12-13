@@ -1,5 +1,6 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,5 +65,11 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
         }
         else
             return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(DaysCourseHomeActivity.this, ChooseCourseActivity.class));
+        finish();
     }
 }

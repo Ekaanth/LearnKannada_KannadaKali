@@ -134,7 +134,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         else if (mCategory.equals("flexiConversations"))
         {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
-                    .replaceAll("/", "").replaceAll("conversationto", "");
+                    .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-","");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
             holder.imageView2.setVisibility(View.INVISIBLE);
             //holder.textInEng.setPaddingRelative(20,60,0,0);

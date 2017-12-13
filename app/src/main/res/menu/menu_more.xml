@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/aboutUsID"
+        android:id="@+id/thumbRuleID"
         android:orderInCategory="100"
-        android:title="About Us"
-        app:showAsAction="collapseActionView" />
+        android:title="Thumb Rule"
+        app:showAsAction="collapseActionView"/>
+
 
     <item
         android:id="@+id/disclaimerID"
         android:orderInCategory="100"
         android:title="Disclaimer"
         app:showAsAction="collapseActionView"/>
+
+
+    <item
+        android:id="@+id/aboutUsID"
+        android:orderInCategory="100"
+        android:title="About Us"
+        app:showAsAction="collapseActionView" />
+<!--
     <item
         android:id="@+id/aboutKannadaID"
         android:orderInCategory="100"
         android:title="About Kannada"
-        app:showAsAction="collapseActionView"/>
+        app:showAsAction="collapseActionView"/>-->
 
 </menu>

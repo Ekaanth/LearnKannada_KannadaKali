@@ -14,6 +14,7 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.FlexiCourseHomeActiv
         android:layout_marginTop="40dp"
         android:src="@drawable/logologo" />
 
+
 <LinearLayout
     android:layout_below="@+id/homepage_logoID"
     android:layout_marginTop="40dp"

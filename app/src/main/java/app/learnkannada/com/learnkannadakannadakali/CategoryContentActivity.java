@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.learnkannada.com.Adapter.ListViewAdapter;
+import app.learnkannada.com.Utils.AudioPlayer;
 
 public class CategoryContentActivity extends AppCompatActivity {
 
@@ -95,5 +96,19 @@ public class CategoryContentActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(AudioPlayer.mediaPlayer!=null) {
+            if(AudioPlayer.mediaPlayer.isPlaying())
+            {
+                AudioPlayer.mediaPlayer.stop();
+                AudioPlayer.mediaPlayer.release();
+                AudioPlayer.mediaPlayer = null;
+                //Toast.makeText(getApplicationContext(),"killed on back pressed",Toast.LENGTH_SHORT).show();
+            }
+        }
+        super.onBackPressed();
     }
 }
