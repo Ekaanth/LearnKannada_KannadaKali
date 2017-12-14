@@ -54,6 +54,7 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
         adapter = new ListViewAdapter(getApplicationContext(),input, "homeCourse", kanInput);
         recyclerView.setAdapter(adapter);
 
+
     }
 
     @Override

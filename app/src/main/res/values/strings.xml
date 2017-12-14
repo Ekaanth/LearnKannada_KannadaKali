@@ -517,12 +517,13 @@
         <item>Cauliflower</item>
         <item>Drumstick</item>
         <item>Bottle gourd</item>
+        <item>Carrot</item>
     </string-array>
     <!-- ******************************* Category Vegetables (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Vegetables (KANNADA) STARTS here *******************************-->
     <string-array name="vegetablesKan_array">
-        <item>tharakaari(gaLu)</item>
+        <item>tarakaari(gaLu)</item>
         <item>eeruLLi</item>
         <item>benDekaayi</item>
         <item>haagalakaayi</item>
@@ -542,7 +543,7 @@
         <item>hookosu</item>
         <item>nuggekaayi</item>
         <item>sorekaayi</item>
-        <item></item>
+        <item>gajjari</item>
     </string-array>
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
 
@@ -824,7 +825,7 @@
         <item>ninne</item>
         <item>monne</item>
         <item>beligge</item>
-        <item>madyaana</item>
+        <item>madhyaana</item>
         <item>sanje</item>
         <item>dina or hagalu</item>
         <item>raathri</item>
@@ -855,7 +856,7 @@
     <string name="day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
     <string name="night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie ge hogutta iddeeni</b></string>
     <string name="morning_ex"><b><u>Eng</u> :  I woke up at 7.30am in the morning  today</b>\n<b><u>Kan</u> : naanu ivattu beligge Elu vare gantege edde</b></string>
-    <string name="afternoon_ex"><b><u>Eng</u> : I had lunch at 1:15pm today</b>\n<b><u>Kan</u> : naanu madyana ondu kaalige uta madide</b></string>
+    <string name="afternoon_ex"><b><u>Eng</u> : I had lunch at 1:15pm today</b>\n<b><u>Kan</u> : naanu madhyaana ondu kaalige uta madide</b></string>
     <string name="evening_ex"><b><u>Eng</u> : We will have coffee at 4:45 pm</b>\n<b><u>Kan</u> : naavu naalku mukkalige coffee kudiyona</b></string>
     <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
 
