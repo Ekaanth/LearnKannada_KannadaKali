@@ -12,7 +12,7 @@ tools:context="app.learnkannada.com.learnkannadakannadakali.FlexiCourseHomeActiv
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:src="@drawable/logologo" />
+        android:src="@drawable/newlogo" />
 
 
 <LinearLayout

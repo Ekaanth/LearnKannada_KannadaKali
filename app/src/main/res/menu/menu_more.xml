@@ -3,24 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/thumbRuleID"
-        android:orderInCategory="100"
-        android:title="Thumb Rule"
-        app:showAsAction="collapseActionView"/>
-
-
-    <item
         android:id="@+id/disclaimerID"
         android:orderInCategory="100"
         android:title="Disclaimer"
         app:showAsAction="collapseActionView"/>
 
-
     <item
+        android:id="@+id/aboutAppID"
+        android:orderInCategory="100"
+        android:title="About app"
+        app:showAsAction="collapseActionView">
+    </item>
+
+<!--    <item
         android:id="@+id/aboutUsID"
         android:orderInCategory="100"
         android:title="About Us"
-        app:showAsAction="collapseActionView" />
+        app:showAsAction="collapseActionView" />-->
 <!--
     <item
         android:id="@+id/aboutKannadaID"

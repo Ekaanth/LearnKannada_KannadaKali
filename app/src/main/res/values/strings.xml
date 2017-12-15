@@ -308,7 +308,7 @@
         <item>Good Morning</item>
         <item>Good Evening</item>
         <item>Good Night</item>
-        <item>See you soon</item>
+        <item>See you again</item>
         <item>Thank you</item>
     </string-array>
     <!-- *******************************Category Greetings (ENGLISH) ENDS here *******************************-->
@@ -396,8 +396,6 @@
         <item>Front or Further or Forward</item>
         <item>Back or Backward</item>
         <item>Turn</item>
-        <item>Take</item>
-        <item>Bring</item>
         <item>Straight</item>
         <item>Circle</item>
         <item>Out</item>
@@ -415,8 +413,6 @@
         <item>munde</item>
         <item>hinde</item>
         <item>thirugu</item>
-        <item>thago</item>
-        <item>thangondu ba</item>
         <item>nEra</item>
         <item>vrutha</item>
         <item>horage</item>

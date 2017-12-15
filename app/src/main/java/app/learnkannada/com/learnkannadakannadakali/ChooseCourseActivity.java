@@ -275,7 +275,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (item.getItemId() == R.id.feedbackID) {
+        /*if (item.getItemId() == R.id.feedbackID) {
             //Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_LONG).show();
             StringBuilder body = new StringBuilder();
             body.append("Hello Team HithAM, \n \n");
@@ -290,7 +290,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_TEXT, body.toString());
             startActivity(intent);
             return true;
-        }
+        }*/
        /* else if (item.getItemId() == R.id.settingsID)
         {
             infoBuilder.setTitle("Settings");
@@ -299,7 +299,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             infoBuilder.setView(dialogView);
             infoBuilder.create().show();
         }*/
-        else if (item.getItemId() == R.id.rateID) {
+        if (item.getItemId() == R.id.rateID) {
             Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
             Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
             // To count with Play market backstack, After pressing back button,
@@ -327,8 +327,56 @@ public class ChooseCourseActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.moreID) {
             item.getSubMenu().clear();
             getMenuInflater().inflate(R.menu.menu_more, item.getSubMenu());
-        } else if (item.getItemId() == R.id.aboutUsID) {
+        } /*else if (item.getItemId() == R.id.aboutUsID) {
             Toast.makeText(getApplicationContext(), "About us selected", Toast.LENGTH_SHORT).show();
+        }*/
+        else if (item.getItemId() == R.id.aboutAppID)
+        {
+          dialog.setTitle("About the app")
+                  .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
+                          "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
+                          " on the go.\n" +
+                          "-- We are working really hard to add more and more exciting features to the app." +
+                          "\n-- We request all the users to spend some time on the app and let us know your expectations." +
+                          "\n-- Please help us improve this app by providing your valuable suggestions.")
+                  .setPositiveButton("Feedback", new DialogInterface.OnClickListener() {
+                      @Override
+                      public void onClick(DialogInterface dialogInterface, int i) {
+                          StringBuilder body = new StringBuilder();
+                          body.append("Hello Team HithAM, \n \n");
+                          body.append("I have used your app \"Kannada Kali\"\n\n");
+                          body.append("********Please fill in your feedback/grievances here********\n");
+                          body.append("\n Regards, \n");
+                          body.append("Kannada Kali User");
+                          String company[] = {"hithamcreations@gmail.com"};
+                          Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+                          intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+                          intent.putExtra(Intent.EXTRA_EMAIL, company);
+                          intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+                          startActivity(intent);
+                      }
+                  })
+                  .setNegativeButton("Rate app", new DialogInterface.OnClickListener() {
+                      @Override
+                      public void onClick(DialogInterface dialogInterface, int i) {
+                          Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+                          Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                          // To count with Play market backstack, After pressing back button,
+                          // to taken back to our application, we need to add following flags to intent.
+                          goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                                  Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                                  Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                          try {
+                              startActivity(goToMarket);
+                          } catch (ActivityNotFoundException e) {
+                              startActivity(new Intent(Intent.ACTION_VIEW,
+                                      Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+                          }
+                      }
+                  })
+                  .setIcon(R.drawable.alphabets)
+                  .setCancelable(true)
+                  .create().show();
         } else if (item.getItemId() == R.id.disclaimerID) {
             dialog.setTitle("Disclaimer")
                     .setMessage("-- This is a FREE app."
@@ -342,6 +390,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             "spoken Kannada only.")
                     .setIcon(R.drawable.ic_error_black_24dp)
                     .setCancelable(true)
+                    .setPositiveButton(null,null)
+                    .setNegativeButton(null,null)
                     .create().show();
         } /*else if (item.getItemId() == R.id.aboutKannadaID) {
             Toast.makeText(getApplicationContext(), "About Kannada selected", Toast.LENGTH_SHORT).show();
@@ -352,6 +402,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     .setMessage("-- Always try to translate given English sentences to your mother tongue first and " +
                             "then to Kannada. \n--This helps you understand and learn kannada faster!" )
                     .setCancelable(true)
+                    .setPositiveButton(null,null)
+                    .setNegativeButton(null,null)
                     .setIcon(R.drawable.ic_thumb_up_black_24dp)
                     .create().show();
         }
