@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Learn Kannada (Kannada Kali)</string>
     <string name="action_settings">Settings</string>
-    <string name="welcomeNote">Welcome to Kannada Kali</string>
+    <string name="welcomeNote">Kannada Kali</string>
     <string name="test">Test Text</string>
 
     <!-- *******************************Flexi course menu STARTS here *******************************-->
