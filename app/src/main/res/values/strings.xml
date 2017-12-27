@@ -616,6 +616,55 @@
     </string-array>
     <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Category Back to School (ENGLISH) Starts here *******************************-->
+    <string-array name="back_to_schoolEng_array">
+        <item>School</item>
+        <item>Learn</item>
+        <item>Class</item>
+        <item>Lesson</item>
+        <item>Book</item>
+        <item>Exam</item>
+        <item>Teacher</item>
+        <item>Bell</item>
+        <item>Uniform</item>
+        <item>Pen</item>
+        <item>Pencil</item>
+        <item>Chalk</item>
+        <item>Head Master</item>
+        <item>Language</item>
+        <item>Math</item>
+        <item>Science</item>
+        <item>Play</item>
+        <item>Rank</item>
+        <item>Row</item>
+        <item>Drama</item>
+        <item>Picture</item>
+    </string-array>
+    <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
+    <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
+    <string-array name="back_to_schoolKan_array">
+        <item>shaale</item>
+        <item>kali</item>
+        <item>koTHaDi</item>
+        <item>paaTHa</item>
+        <item>pusthaka</item>
+        <item>pareekshe</item>
+        <item>shikshaka</item>
+        <item>gante</item>
+        <item>samavasthra</item>
+        <item>lekhani</item>
+        <item>seesakaDDi</item>
+        <item>baLapa</item>
+        <item>mukhyoopaadhyaayaru</item>
+        <item>bhaShe</item>
+        <item>gaNitha</item>
+        <item>vijjnaana</item>
+        <item>aata</item>
+        <item>darje</item>
+        <item>saalu</item>
+        <item>naataka</item>
+    </string-array>
+    <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
     <!-- Days Array Starts here -->
     <string-array name="days_array">
@@ -767,7 +816,7 @@
     <string name="how_ex"><b><u>Eng</u> : HOW did it happen?</b>\n<b><u>Kan</u> : idu HEGE aayitu(happen)?</b></string>
     <string name="which_ex"><b><u>Eng</u> : WHICH is your bag?</b>\n<b><u>Kan</u> : ninna cheela(bag) yaavudu?</b></string>
     <string name="whom_ex"><b><u>Eng</u> : WHOM to give this?</b>\n<b><u>Kan</u> : idu YAARIGE kodabeku?</b></string>
-    <string name="whose_ex"><b><u>Eng</u> : WHOSE this pen?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
+    <string name="whose_ex"><b><u>Eng</u> : WHOSE pen is this?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
