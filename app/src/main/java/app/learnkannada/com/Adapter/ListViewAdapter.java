@@ -37,28 +37,14 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     //Firebase details
     //private StorageReference storageReference;
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-
-        TextView textInEng, textInKan, size;
-        ImageView imageView1, imageView2;
-        Button exampleButton;
-        View layout;
-
-        ViewHolder(View itemView) {
-            super(itemView);
-            layout = itemView;
-            textInEng = (TextView) layout.findViewById(R.id.textID);
-            textInKan = (TextView) layout.findViewById(R.id.textInKanID);
-            if (mCategory.equals("homeCourse"))
-                size = (TextView) layout.findViewById(R.id.sizeID);
-            if (mCategory.equals("dayCourse"))
-                exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
-            if (mCategory.equals("flexiWords") || mCategory.equals("flexiConversations")) {
-                imageView1 = (ImageView) layout.findViewById(R.id.imageID);
-                imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
-            }
-
-        }
+    // Provide a suitable constructor (depends on the kind of dataset)
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
+        context = mContext;
+        values = myDataset;
+        mFilteredKanList = kanInput;
+        mFilteredList = myDataset;
+        mCategory = category;
+        kanValues = kanInput;
     }
 
     public void add(int position, String item) {
@@ -69,16 +55,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public void remove(int position) {
         mFilteredList.remove(position);
         notifyItemRemoved(position);
-    }
-
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
-        context = mContext;
-        values = myDataset;
-        mFilteredKanList = kanInput;
-        mFilteredList = myDataset;
-        mCategory = category;
-        kanValues = kanInput;
     }
 
     @Override
@@ -130,32 +106,22 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        }
-        else if (mCategory.equals("flexiConversations"))
-        {
+        } else if (mCategory.equals("flexiConversations")) {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
-                    .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-","");
+                    .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
             holder.imageView2.setVisibility(View.INVISIBLE);
             //holder.textInEng.setPaddingRelative(20,60,0,0);
 
             //setOnClickListener code starts here for flexi course->Conversations
-            if (conversationName.contains("driver") || conversationName.contains("friend"))
-                holder.layout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(context, DayActivity.class);
-                        i.putExtra("position", conversationName);
-                        v.getContext().startActivity(i);
-                    }
-                });
-            else
-                holder.layout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Toast.makeText(context,"Coming soon...",Toast.LENGTH_LONG).show();
-                    }
-                });
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, DayActivity.class);
+                    i.putExtra("position", conversationName);
+                    v.getContext().startActivity(i);
+                }
+            });
         }
         if (!mCategory.equals("homeCourse")) {
             holder.textInKan.setText(mFilteredKanList.get(position));
@@ -208,9 +174,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        }
-        else if (mCategory.equals("dayCourse"))
-        {
+        } else if (mCategory.equals("dayCourse")) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -255,11 +219,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     private void playOffline(int position) throws IOException {
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         //MediaPlayer mediaPlayer = new MediaPlayer();
-        String voiceId=null;
-        if(mCategory.equals("alphabets")){
-            voiceId= audioResourceFinder(mFilteredList.get(position));
-        }
-        else {
+        String voiceId = null;
+        if (mCategory.equals("alphabets")) {
+            voiceId = audioResourceFinder(mFilteredList.get(position));
+        } else {
             voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?", "")
                     .replaceAll("\\(", "_").replaceAll("\\)", "")
                     .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
@@ -286,27 +249,32 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     private String audioResourceFinder(String s) {
-        if(s.equals("Nya"))
+        if (s.equals("Nya"))
             return ("nya_");
-        else if(s.equals("Cha"))
+        else if (s.equals("Cha"))
             return ("cha_");
-        else if(s.equals("Ta"))
+        else if (s.equals("Ta"))
             return ("ta_");
-        else if(s.equals("Tha"))
+        else if (s.equals("Tha"))
             return ("tha_");
-        else if(s.equals("Da"))
+        else if (s.equals("Da"))
             return ("da_");
-        else if(s.equals("Na"))
+        else if (s.equals("Na"))
             return ("na_");
-        else if(s.equals("Dha"))
+        else if (s.equals("Dha"))
             return ("dha_");
-        else if(s.equals("La"))
+        else if (s.equals("La"))
             return ("la_");
-        else if(s.equals("Sha"))
+        else if (s.equals("Sha"))
             return ("sha_");
         else
             return s;
 
+    }
+
+    @Override
+    public int getItemCount() {
+        return mFilteredList.size();
     }
 
     /*private void playOnline(int position) {
@@ -335,11 +303,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             }
         });
     }*/
-
-    @Override
-    public int getItemCount() {
-        return mFilteredList.size();
-    }
 
     @Override
     public Filter getFilter() {
@@ -384,5 +347,29 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 notifyDataSetChanged();
             }
         };
+    }
+
+    class ViewHolder extends RecyclerView.ViewHolder {
+
+        TextView textInEng, textInKan, size;
+        ImageView imageView1, imageView2;
+        Button exampleButton;
+        View layout;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            layout = itemView;
+            textInEng = (TextView) layout.findViewById(R.id.textID);
+            textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+            if (mCategory.equals("homeCourse"))
+                size = (TextView) layout.findViewById(R.id.sizeID);
+            if (mCategory.equals("dayCourse"))
+                exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
+            if (mCategory.equals("flexiWords") || mCategory.equals("flexiConversations")) {
+                imageView1 = (ImageView) layout.findViewById(R.id.imageID);
+                imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
+            }
+
+        }
     }
 }

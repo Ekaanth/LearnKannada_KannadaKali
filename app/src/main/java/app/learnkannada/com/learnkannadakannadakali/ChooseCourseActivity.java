@@ -385,6 +385,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                          +   "-- Translations given at some places in the app are not in pure Kannada."
                     + "\n-- We have used English words at many places to keep the learning simple and appealing.\n" +
                             "This attempt should not be mistaken as disrespect to Kannada language." +
+                            "\n-- Individual names used in the app are used " +
+                                    "for illustration purposes ONLY. " +
+                                    "If anybody's name is matching with the names used in the app, it's " +
+                                    "purely coincidental." +
                             "\n-- HithAM Creations is not responsible for any damage caused due to misuse of this " +
                             "application. The app is published for the sole purpose of helping people learn " +
                             "spoken Kannada only.")

@@ -18,6 +18,7 @@
         <item>Vegetables</item>
         <item>Fruits</item>
         <item>Body parts</item>
+        <item>Back to School</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
 
@@ -35,16 +36,17 @@
         <item>tarakaarigaLu</item>
         <item>haNNugaLu</item>
         <item>dEhada bhaagagaLu</item>
+        <item>maraLi shaalege</item>
     </string-array>
     <!-- *******************************flexi Course menu ends here *******************************-->
 
     <!-- *******************************flexi Conversations menu STARTS here *******************************-->
     <string-array name="flexi_conversations_array">
         <item>Conversation with Auto/Cab Driver</item>
-        <item>Conversation with Maid</item>
+        <item>Conversation with a new Maid</item>
+        <item>Conversation with a regular Maid</item>
         <item>Conversation with a friend</item>
         <item>Conversation with Bus-conductor</item>
-        <item>Conversation with waiter</item>
         <item>Conversation with vendor</item>
         <item>Conversation with Delivery boy</item>
         <item>Conversation to ask directions</item>
@@ -54,11 +56,11 @@
     <!-- *******************************flexi Conversations menu STARTS here *******************************-->
     <string-array name="flexi_conversations_kanArray">
         <item>Auto/Cab chaalakara jothe maathukate</item>
-        <item>kelasadavara jothe maathukathe</item>
+        <item>hosa kelasadavara jothe maathukathe</item>
+        <item>niyamitha kelasadavara jothe maathukathe</item>
         <item>Snehitara jothe maathukathe</item>
         <item>bus-conductor jothe maathukathe</item>
         <item>maaraatagaarara jothe maathukathe</item>
-        <item>waiter jothe maathukathe</item>
         <item>delivery boy jothe maathukathe</item>
         <item>dikkugalannu keluva maathukathe</item>
     </string-array>
@@ -650,19 +652,20 @@
         <item>pusthaka</item>
         <item>pareekshe</item>
         <item>shikshaka</item>
-        <item>gante</item>
+        <item>ghante</item>
         <item>samavasthra</item>
         <item>lekhani</item>
         <item>seesakaDDi</item>
         <item>baLapa</item>
-        <item>mukhyoopaadhyaayaru</item>
-        <item>bhaShe</item>
+        <item>mukhya upaadhyaayaru</item>
+        <item>bhaaShe</item>
         <item>gaNitha</item>
-        <item>vijjnaana</item>
+        <item>vignaana</item>
         <item>aata</item>
         <item>darje</item>
         <item>saalu</item>
         <item>naataka</item>
+        <item>chitra</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
@@ -1359,6 +1362,84 @@
 
     <!--*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!*!-->
 
+    <!-- ******************************* Conversation with a new Maid (ENGLISH) STARTS here *******************************-->
+    <string-array name="anewmaid_content">
+        <item>Conversation with a new Maid</item>
+        <item>Owner: What is your name? </item>
+        <item>Maid: My name is chandramma.</item>
+        <item>Owner: Hmm. Where are you from?</item>
+        <item>Maid: I am from Bengaluru.</item>
+        <item>Owner: ok. How much money do you take per month?</item>
+        <item>Maid: Just 2000 rupees madam.</item>
+        <item>Owner: That\'s too much!</item>
+        <item>Maid: No madam. I work for 4 more houses and I take same amount there also.</item>
+        <item>Owner: Can\'t you reduce?</item>
+        <item>Maid: No Madam. We have to lead our family with this money. Please understand.</item>
+        <item>Owner: ok ok. You can come from 1st of next month.</item>
+        <item>Maid: Sure. Thank you madam.</item>
+    </string-array>
+    <!-- ******************************* Conversation with a new Maid (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with a new Maid (KANNADA) STARTS here *******************************-->
+    <string-array name="anewmaid_content_kannada">
+        <item>hosa kelasadavara jothe maathukathe</item>
+        <item>Owner: nimma hesaru Enu?</item>
+        <item>Maid: nanna hesaru chandramma.</item>
+        <item>Owner: Hmm. neevu elliyavaru? </item>
+        <item>Maid: naanu bengalurinavaLu</item>
+        <item>Owner: Sari. ondu thingaLige eshtu duddu tagothira?</item>
+        <item>Maid: kEvala eraDu saavira rupees madam.</item>
+        <item>Owner: adu thumba jasti aytu.</item>
+        <item>Maid: Maid: illa madam. Naanu innu 4 manegalalli kelasa madtini. alli kooda ashte duddu tagotini.</item>
+        <item>Owner: kammi madakke agalwa?</item>
+        <item>Maid: illa madam. Naavu ee duddalli jeevana madabeku. Dayavittu artha madikolli</item>
+        <item>Owner: sari sari. mundina thingaLu 1st inda ba.</item>
+        <item>Maid: Khanditha. dhanyavada madam.</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with a regular Maid (ENGLISH) STARTS here *******************************-->
+    <string-array name="aregularmaid_content">
+        <item>Conversation with a regular Maid</item>
+        <item>Owner: Why are you late today?</item>
+        <item>Maid: Took time in other house madam.</item>
+        <item>Owner: You will always have reasons for everything.</item>
+        <item>Maid: Sorry madam, Nothing like that madam.</item>
+        <item>Owner: hmm. Don\'t repeat this again.</item>
+        <item>Maid: ok madam.</item>
+        <item>Owner: Tomorrow we have festival. Don\'t bunk</item>
+        <item>Maid: No madam. I will come</item>
+        <item>Owner: ok. Take this month\'s money</item>
+        <item>Maid: thank you madam. What about festival bonus?</item>
+        <item>Owner: You take a week leave every month, that too without informing and you expect bonus.</item>
+        <item>Maid: What to do madam, we do have family problems.</item>
+        <item>Owner: You keep telling this every time.</item>
+        <item>Maid: That\'s true madam. Why would i lie?</item>
+        <item>Owner: Ok. Tomorrow will give clothes. don\'t cry!</item>
+        <item>Maid: Thank you so much madam. See you tomorrow.</item>
+    </string-array>
+    <!-- ******************************* Conversation with a regular Maid (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with a regular Maid (KANNADA) STARTS here *******************************-->
+    <string-array name="aregularmaid_content_kannada">
+        <item>niyamitha kelsadavara jothe mathukathe</item>
+        <item>Owner: Yake late ivattu?</item>
+        <item>Maid: innondu maneyalli time aytu madam.</item>
+        <item>Owner: ninna hatra elladikku reasons(kaaraNagalu) iratte.</item>
+        <item>Maid: khamisi madam, hagenu illa madam.</item>
+        <item>Owner: hmm. matte idanna repeat (matthomme) madbeda.</item>
+        <item>Maid: sari madam.</item>
+        <item>Owner: Naale habba ide. barade irbeda.</item>
+        <item>Maid: illa madam. Nanu bartini</item>
+        <item>Owner: sari. ee thingalina duddu thago.</item>
+        <item>Maid: dhanyavada madam. habba da bonus ilwa?</item>
+        <item>Owner: neenu ondu thingalalli ondu vaara raje thago, adu kooda helade matte bonus keLu.</item>
+        <item>Maid: enu madodu madam, namagu family problems ide.</item>
+        <item>Owner: idanne helutha irtiya prathisari.</item>
+        <item>Maid: Adu nija madam. suLLu yake heLali?</item>
+        <item>Owner: sari. Naale batte kodtini. aLbeda!</item>
+        <item>Maid: thumba dhanyavaadaglu madam. naale sigoNa.</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
+
     <!-- ******************************* Conversation with a friend (ENGLISH) STARTS here *******************************-->
     <string-array name="afriend_content">
         <item>Introduce Yourself</item>
@@ -1440,6 +1521,152 @@
         <item>Driver: Thank you madam.</item>
     </string-array>
     <!-- ******************************* Conversation with Auto Driver (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with a bus conductor (ENGLISH) STARTS here *******************************-->
+    <string-array name="busconductor_content">
+        <item>Conversation with bus-conductor</item>
+        <item>Conductor: Take tickets, take tickets.</item>
+        <item>Passenger: Sir, one ticket to whitefield</item>
+        <item>Conductor: Give 23 rupees.</item>
+        <item>Passenger: take this 50 rupees.</item>
+        <item>Conductor: Give change madam.</item>
+        <item>Passenger: I don\'t have change sir.</item>
+        <item>Conductor: Ok. take this 20 rupees. ask 7 rupees later.</item>
+        <item>Passenger: Ok. Please tell me when whitefield stop comes. I am new to bengaluru.</item>
+        <item>Conductor: Sure.</item>
+        <item>Passenger: Sir, give change of 7 rupees.</item>
+        <item>Conductor: sure. here it is.</item>
+        <item>Passenger: thank you sir.</item>
+    </string-array>
+    <!-- ******************************* Conversation with bus conductor (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with bus conductor (KANNADA) STARTS here *******************************-->
+    <string-array name="busconductor_content_kannada">
+        <item>bus nirvahakara jothe mathukathe</item>
+        <item>Conductor: Tickets thagoLi, tickets thagoLi</item>
+        <item>Passenger: sir, whitefield ge ondu ticket koDi</item>
+        <item>Conductor: ipatha mooru rupees koDi</item>
+        <item>Passenger: ee aivattu rupees thagoLi</item>
+        <item>Conductor: chillare koDi madam</item>
+        <item>Passenger: chillare illa sir.</item>
+        <item>Conductor: sari. ee ipatthu rupees thagoLi. Elu rupees amele kELi.</item>
+        <item>Passenger: Sari. dayavittu whitefield stop bandaga hELi. naanu bengalurige hosaba.</item>
+        <item>Conductor: khanditha.</item>
+        <item>Passenger: Sir, ELu rupees chillare kODi.</item>
+        <item>Conductor: khanditha. thagoLi</item>
+        <item>Passenger: dhanyavadagaLu sir.</item>
+    </string-array>
+    <!-- ******************************* Conversation with bus conductor(KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with vendor (ENGLISH) STARTS here *******************************-->
+    <string-array name="vendor_content">
+        <item>Shopping Vegetables</item>
+        <item>Customer: Hi sir. Good morning</item>
+        <item>Vendor: Good morning sir. How are you? </item>
+        <item>Customer: I am good sir.</item>
+        <item>Vendor: Good. What do you want sir? </item>
+        <item>Customer: how much for potato?</item>
+        <item>Vendor: 40rs 1kg sir.</item>
+        <item>Customer: Don\'t you have any better than this?</item>
+        <item>Vendor: These are good only sir. Take it.</item>
+        <item>Customer: ok give me half kg.</item>
+        <item>Vendor: Ok. What else sir?</item>
+        <item>Customer: Give me coriander for 5rs.</item>
+        <item>Vendor: Coriander is costly sir. Can\'t give for 5rs. Shall i give for 10 rs? </item>
+        <item>Customer: ok give. what to do</item>
+        <item>Vendor: ok sir. Take coconut sir. they are very good.</item>
+        <item>Customer: Not required now. How much is green chilli?</item>
+        <item>Vendor: 60 rupees kg sir. how much shall I give?</item>
+        <item>Customer: give 1/4 kg.</item>
+        <item>Vendor: ok sir. 45 rupees total. What else?</item>
+        <item>Customer: that\'s enough. take this 50 rupees.</item>
+        <item>Vendor: thank you sir. Take this 5 rupees change.</item>
+        <item>Customer: thank you sir.</item>
+    </string-array>
+    <!-- ******************************* Conversation with vendor (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with vendor (KANNADA) STARTS here *******************************-->
+    <string-array name="vendor_content_kannada">
+        <item>tharakaari koLLuvike</item>
+        <item>Customer: namaskara sir. Shubodaya</item>
+        <item>Vendor: shubhodhaya sir. Hegiddeera?</item>
+        <item>Customer: channagi ideeni sir.</item>
+        <item>Customer: Olleyadu. En bEku sir?</item>
+        <item>Customer: alugadde ge eshTu?</item>
+        <item>Vendor: nalavattu rupaayi ondu kilo ge sir.</item>
+        <item> Customer: idakkinta olleyadu ilwa?</item>
+        <item>Vendor: idu olleyade sir. Thagoli</item>
+        <item>Customer: sari. half(arda) kilo koDi.</item>
+        <item>Vendor: sari. mattenu sir?</item>
+        <item>Customer: aidu rupees ge kottambari soppu koDi.</item>
+        <item>Vendor: kottambari dubaari sir. aidu rupees ge baralla. 10 rupees ge kodla?</item>
+        <item>Customer: sari kodi. innEnu madak agatte?</item>
+        <item>Vendor: sari sir. thengina kaayi thagoLi sir. thumba channagi ide.</item>
+        <item>Customer: ega avashyakathe illa. hasiru meNasinakaayi eshTu?</item>
+        <item>Vendor: aravattu rupees sir. eshtu kodli?</item>
+        <item>Customer: kaalu kg koDi.</item>
+        <item> Vendor: sari sir. nalavatta aidu rupees aytu. Ineenu beku sir?</item>
+        <item>Customer: ashte saaku. ee aivattu rupees thagoLi.</item>
+        <item>Vendor: dhanyavaadagaLu sir. ee aidu rupees chillare thagoLi.</item>
+        <item>Customer: dhanyavadagaLu sir.</item>
+    </string-array>
+    <!-- ******************************* Conversation with vendor (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with delivery boy (ENGLISH) STARTS here *******************************-->
+    <string-array name="deliveryboy_content">
+        <item>Conversation with delivery boy</item>
+        <item>Delivery Boy: Hi Madam, I am calling from Pizza Bhat.</item>
+        <item>Customer: yes sir. Tell me</item>
+        <item>DB: I am near DMart. Where should I come?</item>
+        <item>Customer: Come straight for half km and then take left near ganesha temple.</item>
+        <item>DB: Ok madam. I will come in 10 minutes</item>
+        <item>Customer: ok sir.</item>
+        <item>DB: Hi madam, Please take your pizza. Check if it is hot.</item>
+        <item>Customer: It's hot. Thank you and I have already paid for this online</item>
+        <item>DB: Yes madam. Thank you for buying from Pizza Bhat. Enjoy pizza</item>
+        <item>Customer: Sure. Thank you.</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with delivery boy (KANNADA) STARTS here *******************************-->
+    <string-array name="deliveryboy_content_kannada">
+        <item>vitharaNe hudugana jothe mathukathe</item>
+        <item>DB: Namaskara madam. Naanu Pizza Bhat inda call madta ideeni.</item>
+        <item>Customer: yes sir. heLi.</item>
+        <item>DB: naanu DMart hathira ideeni. naanu ellige barbeku?</item>
+        <item>Customer: munde banni arda km matte ganesha devasthaana hattira left thagoLi</item>
+        <item>DB: sari madam. Naanu hattu nimishadalli bartini.</item>
+        <item>Customer: sari sir.</item>
+        <item>DB: namaskara madam. dayavittu nimma pizza thagoLi. bisi idiya check maadi.</item>
+        <item>Customer: bisi ide, dhanyavaadagaLu. matte naanu idakke agale pay madidini online alli.</item>
+        <item>DB: haudu madam. Pizza bhat inda khareedisidakke dhanyavaadagaLu. Pizza enjoy maaDi.</item>
+        <item>Customer: khanditha. DhanyavaadagaLu</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation to ask directions (ENGLISH) STARTS here *******************************-->
+    <string-array name="askdirections_content">
+        <item>Harshitha is in Mekhri circle and she wants directions to Manyatha tech park.</item>
+        <item>Harshitha: Hi sir, How to go to Manyatha tech park from here?</item>
+        <item>Helper: Hi madam, Go straight till hebbal flyover and take narrow road on the left.</item>
+        <item>Harshitha: Sure, after that?</item>
+        <item>Helper: Don't take any diversions, keep right and you will join outer ring road.</item>
+        <item>Harshitha: Sure. I think straight for few kilometers from there right?</item>
+        <item>Helper: Exactly. You will get manyatha tech park on the right side after veerannapalya flyover.</item>
+        <item>Harshitha: thank you so much sir. </item>
+        <item>Helper: No Problem.</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (ENGLISH) ENDS here *******************************-->
+    <!-- ******************************* Conversation with delivery boy (KANNADA) STARTS here *******************************-->
+    <string-array name="askdirections_content_kannada">
+        <item>harshitha Mekhri vruthadalli idale. Avalige Manyatha tech park ge hogalu dikkugaLu bEku</item>
+        <item>Harshitha: Namaskara sir, Manyatha tech park ge hEge hogbEku?</item>
+        <item>Helper: Namaskara madam, nEra hogi hebbal flyover sigatte, matte eDagaDe alli iro chikka road thagoLi</item>
+        <item>Harshitha: khanditha, amele?</item>
+        <item>Helper: ellu kooda diversion tagobEDi, balagaDe iri, outer ring road join agtira</item>
+        <item>Harshitha: Khanditha, allinda nEra few kilometers ansatte alwa?</item>
+        <item>Helper: Exactly, manyatha tech park balagaDe siggate veerannapalya flyover adamEle.</item>
+        <item>Harshitha: thumba dhanyavaadagaLu sir.</item>
+        <item>Helper: thondare illa.</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
 
     <string name="eng">Eng:</string>
     <string name="kan">Kan:</string>

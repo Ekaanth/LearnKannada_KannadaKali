@@ -46,7 +46,24 @@ public class DayActivity extends AppCompatActivity {
         String day = intent.getStringExtra("position");
 
         //setting day in actionbar
-        getSupportActionBar().setTitle(day);
+        if(day.contains("cab"))
+            getSupportActionBar().setTitle("Cab/Auto Driver");
+        else if(day.contains("newmaid"))
+            getSupportActionBar().setTitle("New maid");
+        else if(day.contains("regular"))
+            getSupportActionBar().setTitle("Regular Maid");
+        else if(day.contains("friend"))
+            getSupportActionBar().setTitle("Friend");
+        else if(day.contains("conductor"))
+            getSupportActionBar().setTitle("Bus-conductor");
+        else if(day.contains("vendor"))
+            getSupportActionBar().setTitle("Vendor");
+        else if(day.contains("delivery"))
+            getSupportActionBar().setTitle("Delivery boy");
+        else if(day.contains("directions"))
+            getSupportActionBar().setTitle("Asking directions");
+        else
+            getSupportActionBar().setTitle(day);
 
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
