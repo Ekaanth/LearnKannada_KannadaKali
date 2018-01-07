@@ -1367,7 +1367,7 @@
         <item>Maid: My name is chandramma.</item>
         <item>Owner: Hmm. Where are you from?</item>
         <item>Maid: I am from Bengaluru.</item>
-        <item>Owner: ok. How much money do you take per month?</item>
+        <item>Owner: Ok. How much money do you take per month?</item>
         <item>Maid: Just 2000 rupees madam.</item>
         <item>Owner: Thats too much!</item>
         <item>Maid: No madam. I work for 4 more houses and I take same amount there also.</item>
@@ -1398,43 +1398,35 @@
     <!-- ******************************* Conversation with a regular Maid (ENGLISH) STARTS here *******************************-->
     <string-array name="aregularmaid_content">
         <item>Conversation with a regular Maid</item>
-        <item>Owner: Why are you late today?</item>
+        <item>Owner: Why did you come late today?</item>
         <item>Maid: Took time in other house madam.</item>
-        <item>Owner: You will always have reasons for everything.</item>
-        <item>Maid: Sorry madam, Nothing like that madam.</item>
+        <item>Owner: You always say some or the other reason for being late.</item>
+        <item>Maid: Sorry madam, Nothing like that.</item>
         <item>Owner: hmm. Dont repeat this again.</item>
         <item>Maid: ok madam.</item>
-        <item>Owner: Tomorrow we have festival. Dont bunk</item>
-        <item>Maid: No madam. I will come</item>
-        <item>Owner: ok. Take this months money</item>
-        <item>Maid: thank you madam. What about festival bonus?</item>
-        <item>Owner: You take a week leave every month, that too without informing and you expect bonus.</item>
-        <item>Maid: What to do madam, we do have family problems.</item>
-        <item>Owner: You keep telling this every time.</item>
-        <item>Maid: Thats true madam. Why would i lie?</item>
-        <item>Owner: Ok. Tomorrow will give clothes. dont cry!</item>
-        <item>Maid: Thank you so much madam. See you tomorrow.</item>
+        <item>Owner: Tomorrow we have festival. Come early.</item>
+        <item>Maid: No madam. Not possible. We also have Pooja at home.</item>
+        <item>Owner: Ok. Take this month's salary.</item>
+        <item>Maid: Thank you madam. What about festival bonus?</item>
+        <item>Owner: Won't give extra money. I will give you a new saree for festival.</item>
+        <item>Maid:  ok madam, Thank you. See you tomorrow.</item>
     </string-array>
     <!-- ******************************* Conversation with a regular Maid (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Conversation with a regular Maid (KANNADA) STARTS here *******************************-->
     <string-array name="aregularmaid_content_kannada">
         <item>niyamitha kelsadavara jothe mathukathe</item>
-        <item>Owner: Yake late ivattu?</item>
+        <item>Owner: ivattu yaake late aagi bande?</item>
         <item>Maid: innondu maneyalli time aytu madam.</item>
-        <item>Owner: ninna hatra elladikku reasons(kaaraNagalu) iratte.</item>
-        <item>Maid: khamisi madam, hagenu illa madam.</item>
+        <item>Owner:late aagi bandaaga Eno ondu reason(kaaraNa) heLtiya.</item>
+        <item>Maid: kshamisi madam, hagenu illa.</item>
         <item>Owner: hmm. matte idanna repeat (matthomme) madbeda.</item>
         <item>Maid: sari madam.</item>
-        <item>Owner: Naale habba ide. barade irbeda.</item>
-        <item>Maid: illa madam. Nanu bartini</item>
-        <item>Owner: sari. ee thingalina duddu thago.</item>
-        <item>Maid: dhanyavada madam. habba da bonus ilwa?</item>
-        <item>Owner: neenu ondu thingalalli ondu vaara raje thago, adu kooda helade matte bonus keLu.</item>
-        <item>Maid: enu madodu madam, namagu family problems ide.</item>
-        <item>Owner: idanne helutha irtiya prathisari.</item>
-        <item>Maid: Adu nija madam. suLLu yake heLali?</item>
-        <item>Owner: sari. Naale batte kodtini. aLbeda!</item>
-        <item>Maid: thumba dhanyavaadaglu madam. naale sigoNa.</item>
+        <item>Owner: Naale habba ide. bEga baa.</item>
+        <item>Maid: illa madam. aagalla. namma maneloo pooje ide.</item>
+        <item>Owner: sari. ee thingalina sambaLa thogo.</item>
+        <item>Maid: dhanyavada madam. habba da bonus koDtira?</item>
+        <item>Owner: extra duDDu koDalla. Habbakke hosa seere koDtini.</item>
+        <item>Maid: sari madam, dhanyavaadagaLu. naale sigoNa.</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
@@ -1561,18 +1553,18 @@
         <item>Customer: I am good sir.</item>
         <item>Vendor: Good. What do you want sir? </item>
         <item>Customer: how much for potato?</item>
-        <item>Vendor: 40rs 1kg sir.</item>
+        <item>Vendor: 40 rupees 1 kg sir.</item>
         <item>Customer: Dont you have any better than this?</item>
         <item>Vendor: These are good only sir. Take it.</item>
         <item>Customer: ok give me half kg.</item>
         <item>Vendor: Ok. What else sir?</item>
-        <item>Customer: Give me coriander for 5rs.</item>
-        <item>Vendor: Coriander is costly sir. Cant give for 5rs. Shall i give for 10 rs? </item>
+        <item>Customer: Give me coriander for 5 rs.</item>
+        <item>Vendor: Coriander is costly sir. Cant give for 5 rs. Shall i give for 10 rs?</item>
         <item>Customer: ok give. what to do</item>
         <item>Vendor: ok sir. Take coconut sir. they are very good.</item>
         <item>Customer: Not required now. How much is green chilli?</item>
         <item>Vendor: 60 rupees kg sir. how much shall I give?</item>
-        <item>Customer: give 1/4 kg.</item>
+        <item>Customer: give quarter kg.</item>
         <item>Vendor: ok sir. 45 rupees total. What else?</item>
         <item>Customer: thats enough. take this 50 rupees.</item>
         <item>Vendor: thank you sir. Take this 5 rupees change.</item>
@@ -1702,9 +1694,9 @@
         <item>Eat</item>
         <item>Drink</item>
         <item>Listen</item>
-        <item>run</item>
-        <item>sleep</item>
-        <item>close</item>
+        <item>Run</item>
+        <item>Sleep</item>
+        <item>Close</item>
     </string-array>
 
     <string-array name="randomVerbs_kan">
