@@ -1,8 +1,5 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,19 +9,27 @@ import android.speech.RecognizerIntent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.onesignal.OSNotification;
+import com.onesignal.OSNotificationAction;
+import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import app.learnkannada.com.Animation.AnimateVisibility;
+import app.learnkannada.com.Utils.FindResource;
 
 public class ChooseCourseActivity extends AppCompatActivity {
 
@@ -45,7 +50,9 @@ public class ChooseCourseActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Kannada Kali");
 
         OneSignal.startInit(this)
+                .setNotificationOpenedHandler(new NotificationOpenedHandler())
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .setNotificationReceivedHandler(new NotificationReceivedHandler())
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
 
@@ -67,7 +74,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 intent.putExtra("from","dayCourse");*/
                 startActivity(new Intent(ChooseCourseActivity.this, DaysCourseHomeActivity.class));
                 finish();
-                animateInvisible(flexiCourse);
+                AnimateVisibility.animateInvisible(flexiCourse);
             }
         });
 
@@ -77,7 +84,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(ChooseCourseActivity.this, FlexiCourseHomeActivity.class));
                 finish();
-                animateInvisible(dayCourse);
+                AnimateVisibility.animateInvisible(dayCourse);
             }
         });
 
@@ -89,36 +96,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void animateInvisible(final View myView) {
-        // previously visible view
-
-// get the center for the clipping circle
-        int cx = myView.getWidth() / 2;
-        int cy = myView.getHeight() / 2;
-
-// get the initial radius for the clipping circle
-        float initialRadius = (float) Math.hypot(cx, cy);
-
-// create the animation (the final radius is zero)
-        Animator anim =
-                null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-        }
-
-// make the view invisible when the animation is done
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                myView.setVisibility(View.INVISIBLE);
-            }
-        });
-
-// start the animation
-        anim.start();
     }
 
     /**
@@ -166,12 +143,12 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         //playing found music file
         try {
-            if (resourceAvailable(spokenString))
+            if (FindResource.resourceAvailable(getApplicationContext(), spokenString))
                 playOffline(spokenString);
             else {
                 final String[] splitWords = s.split(" ");
                 for (int j = 0; j < splitWords.length; j++) {
-                    if (resourceAvailable(splitWords[j] + "_ex")) {
+                    if (FindResource.resourceAvailable(getApplicationContext(), splitWords[j] + "_ex")) {
                         //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                         final int finalJ = j;
                         infoBuilder.setTitle("Oops! I am too young for sentences. But wait!")
@@ -217,7 +194,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .setIcon(R.drawable.idea).setCancelable(true).create().show();
                 }
             }
-            if (resourceAvailable(spokenStringEx)) {
+            if (FindResource.resourceAvailable(getApplicationContext(), spokenStringEx)) {
                 builder.setTitle("Yay! Example found for \"" + spokenString.replaceAll("_", " ") + "\"")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
@@ -240,15 +217,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
             //Toast.makeText(getApplicationContext(),"Resouce Not Found",Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-    }
-
-    //method checks if the resource with string supplied is present in raw directory
-    private boolean resourceAvailable(String spokenStringEx) {
-        Integer id = getResources().getIdentifier(spokenStringEx.toLowerCase(), "raw", getPackageName());
-        if (id > 0)
-            return true;
-        else
-            return false;
     }
 
     private void playOffline(String name) throws IOException {
@@ -412,5 +380,62 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     .create().show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private class NotificationReceivedHandler implements OneSignal.NotificationReceivedHandler{
+
+        @Override
+        public void notificationReceived(OSNotification notification) {
+            JSONObject data = notification.payload.additionalData;
+            String notificationID = notification.payload.notificationID;
+            String customKey;
+
+            Log.i("OneSignalExample", "NotificationID received: " + notificationID);
+
+            if (data != null) {
+                customKey = data.optString("customkey", null);
+                if (customKey != null)
+                    Log.i("OneSignalExample", "customkey set with value: " + customKey);
+            }
+        }
+    }
+
+    private class NotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
+        @Override
+        public void notificationOpened(final OSNotificationOpenResult result) {
+            OSNotificationAction.ActionType actionType = result.action.type;
+            JSONObject data = result.notification.payload.additionalData;
+            String customKey;
+
+            if(data!=null)
+            {
+                customKey = data.optString("customKey",null);
+                if(customKey!=null)
+                    Log.i("OneSignalExample", "customkey set with value: " + customKey);
+            }
+
+            Intent intent = new Intent(getApplicationContext(), ChooseCourseActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
+            if(actionType == OSNotificationAction.ActionType.ActionTaken)
+            {
+                Log.i("OneSignalExample", "Button pressed with id: " + result.action.actionID);
+                Integer id = getResources().getIdentifier(result.action.actionID,"drawable",getPackageName());
+                if(id>0)
+                {
+                    Log.i("OneSignalExample","Found resource!");
+                    if(result.action.actionID.equals("mic"))
+                    {
+                        Log.i("OneSignalExample","Called promptSpeechInput");
+                        promptSpeechInput();
+                    }
+                }
+                else
+                    Log.i("OneSignalExample","No luck!");
+
+            }
+            Log.i("OneSignalExample","Key: " + result.action.actionID + " customKey: " + data.optString("customKey",null));
+        }
     }
 }

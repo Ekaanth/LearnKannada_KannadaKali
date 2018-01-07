@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import app.learnkannada.com.SharedPreferences.AppRater;
 
@@ -36,6 +35,7 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
                 Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
                 i.putExtra("from","words");
                 startActivity(i);
+                finish();
 
             }
         });
@@ -46,13 +46,16 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
                 Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
                 i.putExtra("from","conversations");
                 startActivity(i);
+                finish();
             }
         });
 
         randomMagic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Coming soon...", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"Coming soon...", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(FlexiCourseHomeActivity.this, RandomMagicActivity.class));
+                finish();
             }
         });
 

@@ -1620,7 +1620,7 @@
         <item>DB: Ok madam. I will come in 10 minutes</item>
         <item>Customer: ok sir.</item>
         <item>DB: Hi madam, Please take your pizza. Check if it is hot.</item>
-        <item >Customer: It is hot. Thank you and I have already paid for this online</item>
+        <item>Customer: It is hot. Thank you and I have already paid for this online</item>
         <item>DB: Yes madam. Thank you for buying from Pizza Bhat. Enjoy pizza</item>
         <item>Customer: Sure. Thank you.</item>
     </string-array>
@@ -1694,6 +1694,99 @@
     <string name="later">Later</string>
     <string name="no">No</string>
 
+    <string name="whats_this_string"><b><u>what\'s this?</u></b></string>
+    <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\n<u>How to use?</u>\nJust click on the \"Random Verb\" button and voila! you will be shown a new verb with it\'s past, present and future tenses.
+    \nClick on any of the cards to listen to the audio message!</string>
+
+
+    <!--The below section contains contents of Random Magic Feature -->
+    <string-array name="randomVerbs">
+        <item>Learn</item>
+        <item>Do</item>
+        <item>Eat</item>
+        <item>Drink</item>
+        <item>Listen</item>
+        <item>run</item>
+        <item>sleep</item>
+        <item>close</item>
+    </string-array>
+
+    <string-array name="randomVerbs_kan">
+        <item>kali (ಕಲಿ)</item>
+        <item>maaDu (ಮಾಡು)</item>
+        <item>thinnu (ತಿನ್ನು)</item>
+        <item>kuDi (ಕುಡಿ)</item>
+        <item>kELu (ಕೇಳು)</item>
+        <item>ODu(ಓಡು)</item>
+        <item>malagu (ಮಲಗು)</item>
+        <item>mucchu (ಮುಚ್ಚು)</item>
+    </string-array>
+
+    <string-array name="past_kan">
+        <item>kalithe</item>
+        <item>maaDide</item>
+        <item>thinde</item>
+        <item>kuDide</item>
+        <item>keLide</item>
+        <item>ODide</item>
+        <item>malagide</item>
+        <item>mucchide</item>
+    </string-array>
+
+    <string-array name="present_kan">
+        <item>kali</item>
+        <item>maaDu</item>
+        <item>thinnu</item>
+        <item>kuDi</item>
+        <item>keLu</item>
+        <item>ODu</item>
+        <item>malagu</item>
+        <item>mucchu</item>
+    </string-array>
+
+    <string-array name="future_kan">
+        <item>kalithini</item>
+        <item>maaDthini</item>
+        <item>thinthini</item>
+        <item>kuDithini</item>
+        <item>keLthini</item>
+        <item>ODtini</item>
+        <item>malagtini</item>
+        <item>mucchtini</item>
+    </string-array>
+
+    <string-array name="pastCont_kan">
+        <item>kaliyuthaa idde</item>
+        <item>maaDuthaa idde</item>
+        <item>thinnuthaa idde</item>
+        <item>kuDiyuthaa idde</item>
+        <item>keLuthaa idde</item>
+        <item>ODuthaa idde</item>
+        <item>malaguthaa idde</item>
+        <item>mucchuthaa idde</item>
+    </string-array>
+
+    <string-array name="presentCont_kan">
+        <item>kaliyuthaa idini</item>
+        <item>maaDuthaa idini</item>
+        <item>thinnuthaa idini</item>
+        <item>kuDiyuthaa idini</item>
+        <item>keLuthaa idini</item>
+        <item>ODuthaa idini</item>
+        <item>malaguthaa idini</item>
+        <item>mucchuthaa idini</item>
+    </string-array>
+
+    <string-array name="futureCont_kan">
+        <item>kaliyuthaa irtini</item>
+        <item>maaDuthaa irtini</item>
+        <item>thinnuthaa irtini</item>
+        <item>kuDiyuthaa irtini</item>
+        <item>keLuthaa irtini</item>
+        <item>ODuthaa irtini</item>
+        <item>malaguthaa irtini</item>
+        <item>mucchuthaa irtini</item>
+    </string-array>
 
     <!--Below helps where to keep the background image on the notificaiton-->
     <!--right now palace image is kept with below name. change it when required -->

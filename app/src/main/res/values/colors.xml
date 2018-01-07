@@ -11,6 +11,44 @@
     <color name="card_green">#00bfa5</color>
     <color name="card_materialYellow">#ffb300</color>
 
+    <color name="indigo">#3F51B5</color>
+
+    <color name="textColor_light">#ffee</color>
+    <color name="textColor_dark">#242222</color>
+
+
+    <color name="orange_200">#FFC680</color>
+    <color name="orange_300">#FFB74D</color>
+    <color name="orange_400">#FFA726</color>
+    <color name="orange_500">#FF9850</color>
+
+
+
+    <color name="purple_800">#6a1b9a</color>
+    <color name="purple_700">#7b1fa2</color>
+    <color name="purple_600">#8e24aa</color>
+
+    <color name="pink_600">#d81b60</color>
+    <color name="pink_700">#c2185b</color>
+    <color name="pink_800">#ad1457</color>
+
+    <color name="deeppurple_600">#5e35b1</color>
+    <color name="deeppurple_700">#512da8</color>
+    <color name="deeppurple_800">#4527a0</color>
+
+    <color name="red_600">#e53935</color>
+    <color name="red_700">#d32f2f</color>
+    <color name="red_800">#c62828</color>
+
+    <color name="blue_600">#1e88ef</color>
+    <color name="blue_700">#1976d2</color>
+    <color name="blue_800">#1565c0</color>
+
+    <color name="orange_600">#FB8C00</color>
+    <color name="orange_700">#F57A00</color>
+    <color name="orange_800">#EF6C00</color>
+
+
 
     <!-- first line below sets NOTIFICATION TITLE color and second line sets Message TITLE-->
     <!--<color name="onesignal_bgimage_notif_title_color">#FFFF0000</color>-->

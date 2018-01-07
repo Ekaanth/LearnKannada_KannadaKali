@@ -1,5 +1,6 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
+import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -93,5 +94,11 @@ public class CategoriesActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(CategoriesActivity.this, FlexiCourseHomeActivity.class));
+        finish();
     }
 }

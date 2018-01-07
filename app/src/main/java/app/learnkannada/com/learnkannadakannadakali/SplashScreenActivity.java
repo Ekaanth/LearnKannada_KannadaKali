@@ -17,7 +17,7 @@ import com.flaviofaria.kenburnsview.KenBurnsView;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private static final int WELCOME_DURATION = 7000;
+    private static final int WELCOME_DURATION = 4000;
     private ImageView hitham;
     private TextView splashText;
     private KenBurnsView kenBurnsView;

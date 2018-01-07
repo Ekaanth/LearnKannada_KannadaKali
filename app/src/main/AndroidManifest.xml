@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.learnkannada.com.learnkannadakannadakali">
 
+    <!-- Example: Sets all OneSignal notification's accent color to Green by default. -->
+    <!-- Color format is in ARGB. -->
+    <meta-data
+        android:name="com.onesignal.NotificationAccentColor.DEFAULT"
+        android:value="#e7bc10" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,12 +16,15 @@
         android:supportsRtl="true"
 
         android:theme="@style/AppTheme">
-        <activity android:name=".CategoriesActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".CategoryContentActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".FlexiCourseHomeActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CategoriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategoryContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FlexiCourseHomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreenActivity"
             android:hardwareAccelerated="false"
@@ -27,16 +36,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseCourseActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DayActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ExampleActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DaysCourseHomeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".RandomMagic"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ChooseCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DaysCourseHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RandomMagicActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
     </application>
 
     <!-- Example: Sets all OneSignal notification's accent color to Green by default.  -->
