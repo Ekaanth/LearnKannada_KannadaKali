@@ -622,7 +622,6 @@
     <string-array name="back_to_schoolEng_array">
         <item>School</item>
         <item>Learn</item>
-        <item>Class</item>
         <item>Lesson</item>
         <item>Book</item>
         <item>Exam</item>
@@ -632,7 +631,7 @@
         <item>Pen</item>
         <item>Pencil</item>
         <item>Chalk</item>
-        <item>Head Master</item>
+        <item>Headmaster</item>
         <item>Language</item>
         <item>Math</item>
         <item>Science</item>
@@ -647,7 +646,6 @@
     <string-array name="back_to_schoolKan_array">
         <item>shaale</item>
         <item>kali</item>
-        <item>koTHaDi</item>
         <item>paaTHa</item>
         <item>pusthaka</item>
         <item>pareekshe</item>
@@ -657,7 +655,7 @@
         <item>lekhani</item>
         <item>seesakaDDi</item>
         <item>baLapa</item>
-        <item>mukhya upaadhyaayaru</item>
+        <item>mukhyopaadhyaayaru</item>
         <item>bhaaShe</item>
         <item>gaNitha</item>
         <item>vignaana</item>
@@ -1371,9 +1369,9 @@
         <item>Maid: I am from Bengaluru.</item>
         <item>Owner: ok. How much money do you take per month?</item>
         <item>Maid: Just 2000 rupees madam.</item>
-        <item>Owner: That\'s too much!</item>
+        <item>Owner: Thats too much!</item>
         <item>Maid: No madam. I work for 4 more houses and I take same amount there also.</item>
-        <item>Owner: Can\'t you reduce?</item>
+        <item>Owner: Cant you reduce?</item>
         <item>Maid: No Madam. We have to lead our family with this money. Please understand.</item>
         <item>Owner: ok ok. You can come from 1st of next month.</item>
         <item>Maid: Sure. Thank you madam.</item>
@@ -1404,17 +1402,17 @@
         <item>Maid: Took time in other house madam.</item>
         <item>Owner: You will always have reasons for everything.</item>
         <item>Maid: Sorry madam, Nothing like that madam.</item>
-        <item>Owner: hmm. Don\'t repeat this again.</item>
+        <item>Owner: hmm. Dont repeat this again.</item>
         <item>Maid: ok madam.</item>
-        <item>Owner: Tomorrow we have festival. Don\'t bunk</item>
+        <item>Owner: Tomorrow we have festival. Dont bunk</item>
         <item>Maid: No madam. I will come</item>
-        <item>Owner: ok. Take this month\'s money</item>
+        <item>Owner: ok. Take this months money</item>
         <item>Maid: thank you madam. What about festival bonus?</item>
         <item>Owner: You take a week leave every month, that too without informing and you expect bonus.</item>
         <item>Maid: What to do madam, we do have family problems.</item>
         <item>Owner: You keep telling this every time.</item>
-        <item>Maid: That\'s true madam. Why would i lie?</item>
-        <item>Owner: Ok. Tomorrow will give clothes. don\'t cry!</item>
+        <item>Maid: Thats true madam. Why would i lie?</item>
+        <item>Owner: Ok. Tomorrow will give clothes. dont cry!</item>
         <item>Maid: Thank you so much madam. See you tomorrow.</item>
     </string-array>
     <!-- ******************************* Conversation with a regular Maid (ENGLISH) ENDS here *******************************-->
@@ -1473,7 +1471,7 @@
         <item>Pooja: oLLeyadu. nimma ooru yaavudu?</item>
         <item>Ganesh: nanna ooru Sirigere, holalkere hatthira. nimmadu?</item>
         <item>Pooja: nanna ooru Mysuru.</item>
-        <item>Ganesh: Nice. Bengalurinalli elli ideera?</item>
+        <item>Ganesh: Nice. Bengalurinalli elli iddeera?</item>
         <item>Pooja: Vijayanagar. Neevu?</item>
         <item>Ganesh: Sanjayanagara</item>
         <item>Pooja: ok. Nimmannu BhEti(meet) maadi khushi aaythu</item>
@@ -1525,12 +1523,11 @@
     <!-- ******************************* Conversation with a bus conductor (ENGLISH) STARTS here *******************************-->
     <string-array name="busconductor_content">
         <item>Conversation with bus-conductor</item>
-        <item>Conductor: Take tickets, take tickets.</item>
         <item>Passenger: Sir, one ticket to whitefield</item>
         <item>Conductor: Give 23 rupees.</item>
         <item>Passenger: take this 50 rupees.</item>
         <item>Conductor: Give change madam.</item>
-        <item>Passenger: I don\'t have change sir.</item>
+        <item>Passenger: I dont have change sir.</item>
         <item>Conductor: Ok. take this 20 rupees. ask 7 rupees later.</item>
         <item>Passenger: Ok. Please tell me when whitefield stop comes. I am new to bengaluru.</item>
         <item>Conductor: Sure.</item>
@@ -1542,7 +1539,6 @@
     <!-- ******************************* Conversation with bus conductor (KANNADA) STARTS here *******************************-->
     <string-array name="busconductor_content_kannada">
         <item>bus nirvahakara jothe mathukathe</item>
-        <item>Conductor: Tickets thagoLi, tickets thagoLi</item>
         <item>Passenger: sir, whitefield ge ondu ticket koDi</item>
         <item>Conductor: ipatha mooru rupees koDi</item>
         <item>Passenger: ee aivattu rupees thagoLi</item>
@@ -1566,19 +1562,19 @@
         <item>Vendor: Good. What do you want sir? </item>
         <item>Customer: how much for potato?</item>
         <item>Vendor: 40rs 1kg sir.</item>
-        <item>Customer: Don\'t you have any better than this?</item>
+        <item>Customer: Dont you have any better than this?</item>
         <item>Vendor: These are good only sir. Take it.</item>
         <item>Customer: ok give me half kg.</item>
         <item>Vendor: Ok. What else sir?</item>
         <item>Customer: Give me coriander for 5rs.</item>
-        <item>Vendor: Coriander is costly sir. Can\'t give for 5rs. Shall i give for 10 rs? </item>
+        <item>Vendor: Coriander is costly sir. Cant give for 5rs. Shall i give for 10 rs? </item>
         <item>Customer: ok give. what to do</item>
         <item>Vendor: ok sir. Take coconut sir. they are very good.</item>
         <item>Customer: Not required now. How much is green chilli?</item>
         <item>Vendor: 60 rupees kg sir. how much shall I give?</item>
         <item>Customer: give 1/4 kg.</item>
         <item>Vendor: ok sir. 45 rupees total. What else?</item>
-        <item>Customer: that\'s enough. take this 50 rupees.</item>
+        <item>Customer: thats enough. take this 50 rupees.</item>
         <item>Vendor: thank you sir. Take this 5 rupees change.</item>
         <item>Customer: thank you sir.</item>
     </string-array>
@@ -1591,19 +1587,19 @@
         <item>Customer: channagi ideeni sir.</item>
         <item>Customer: Olleyadu. En bEku sir?</item>
         <item>Customer: alugadde ge eshTu?</item>
-        <item>Vendor: nalavattu rupaayi ondu kilo ge sir.</item>
+        <item>Vendor: nalavattu rupees ondu kilo ge sir.</item>
         <item> Customer: idakkinta olleyadu ilwa?</item>
         <item>Vendor: idu olleyade sir. Thagoli</item>
         <item>Customer: sari. half(arda) kilo koDi.</item>
         <item>Vendor: sari. mattenu sir?</item>
         <item>Customer: aidu rupees ge kottambari soppu koDi.</item>
         <item>Vendor: kottambari dubaari sir. aidu rupees ge baralla. 10 rupees ge kodla?</item>
-        <item>Customer: sari kodi. innEnu madak agatte?</item>
+        <item>Customer: sari kodi. innEnu madakke agatte?</item>
         <item>Vendor: sari sir. thengina kaayi thagoLi sir. thumba channagi ide.</item>
-        <item>Customer: ega avashyakathe illa. hasiru meNasinakaayi eshTu?</item>
+        <item>Customer: eega avashyakathe illa. hasiru meNasinakaayi eshTu?</item>
         <item>Vendor: aravattu rupees sir. eshtu kodli?</item>
         <item>Customer: kaalu kg koDi.</item>
-        <item> Vendor: sari sir. nalavatta aidu rupees aytu. Ineenu beku sir?</item>
+        <item> Vendor: sari sir. nalavatta aidu rupees aytu. Inneenu bEku sir?</item>
         <item>Customer: ashte saaku. ee aivattu rupees thagoLi.</item>
         <item>Vendor: dhanyavaadagaLu sir. ee aidu rupees chillare thagoLi.</item>
         <item>Customer: dhanyavadagaLu sir.</item>
@@ -1613,7 +1609,7 @@
     <!-- ******************************* Conversation with delivery boy (ENGLISH) STARTS here *******************************-->
     <string-array name="deliveryboy_content">
         <item>Conversation with delivery boy</item>
-        <item>Delivery Boy: Hi Madam, I am calling from Pizza Bhat.</item>
+        <item>DB: Hi Madam, I am calling from Pizza Bhat.</item>
         <item>Customer: yes sir. Tell me</item>
         <item>DB: I am near DMart. Where should I come?</item>
         <item>Customer: Come straight for half km and then take left near ganesha temple.</item>
@@ -1644,24 +1640,24 @@
     <!-- ******************************* Conversation to ask directions (ENGLISH) STARTS here *******************************-->
     <string-array name="askdirections_content">
         <item>Harshitha is in Mekhri circle and she wants directions to Manyatha tech park.</item>
-        <item>Harshitha: Hi sir, How to go to Manyatha tech park?</item>
+        <item>Harshitha: Hi sir, how to go to Manyatha tech park?</item>
         <item>Helper: Hi madam, Go straight till hebbal flyover and take narrow road on the left.</item>
         <item>Harshitha: Sure, after that?</item>
-        <item>Helper: Don't take any diversions, keep right and you will join outer ring road.</item>
-        <item>Harshitha: Sure. I think straight for few kilometers from there right?</item>
+        <item>Helper: Dont take any diversions, keep right and you will join outer ring road.</item>
+        <item>Harshitha: Sure. I think its a few kilometers further straight from there right?</item>
         <item>Helper: Exactly. You will get manyatha tech park on the right side after veerannapalya flyover.</item>
-        <item>Harshitha: thank you so much sir. </item>
-        <item>Helper: No Problem.</item>
+        <item>Harshitha: Thank you so much sir. </item>
+        <item>Helper: No problem.</item>
     </string-array>
     <!-- ******************************* Conversation with delivery boy (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Conversation with delivery boy (KANNADA) STARTS here *******************************-->
     <string-array name="askdirections_content_kannada">
-        <item>harshitha Mekhri vruthadalli idale. Avalige Manyatha tech park ge hogalu dikkugaLu bEku</item>
+        <item>harshitha Mekhri vruthadalli iddaaLe. Avalige Manyatha tech park ge hogalu daari tiLiyabEku</item>
         <item>Harshitha: Namaskara sir, Manyatha tech park ge hEge hogbEku?</item>
         <item>Helper: Namaskara madam, nEra hogi hebbal flyover sigatte, matte eDagaDe alli iro chikka road thagoLi</item>
         <item>Harshitha: khanditha, amele?</item>
         <item>Helper: ellu kooda diversion tagobEDi, balagaDe iri, outer ring road join agtira</item>
-        <item>Harshitha: Khanditha, allinda nEra few kilometers ansatte alwa?</item>
+        <item>Harshitha: Khanditha, allinda swalpa kilometers munde ansatte alwa?</item>
         <item>Helper: Exactly, manyatha tech park balagaDe siggate veerannapalya flyover adamEle.</item>
         <item>Harshitha: thumba dhanyavaadagaLu sir.</item>
         <item>Helper: thondare illa.</item>
