@@ -631,7 +631,7 @@
         <item>Pen</item>
         <item>Pencil</item>
         <item>Chalk</item>
-        <item>Head Master</item>
+        <item>Headmaster</item>
         <item>Language</item>
         <item>Math</item>
         <item>Science</item>
@@ -655,7 +655,7 @@
         <item>lekhani</item>
         <item>seesakaDDi</item>
         <item>baLapa</item>
-        <item>mukhya upaadhyaayaru</item>
+        <item>mukhyopaadhyaayaru</item>
         <item>bhaaShe</item>
         <item>gaNitha</item>
         <item>vignaana</item>
@@ -1609,7 +1609,7 @@
     <!-- ******************************* Conversation with delivery boy (ENGLISH) STARTS here *******************************-->
     <string-array name="deliveryboy_content">
         <item>Conversation with delivery boy</item>
-        <item>Delivery Boy: Hi Madam, I am calling from Pizza Bhat.</item>
+        <item>DB: Hi Madam, I am calling from Pizza Bhat.</item>
         <item>Customer: yes sir. Tell me</item>
         <item>DB: I am near DMart. Where should I come?</item>
         <item>Customer: Come straight for half km and then take left near ganesha temple.</item>
