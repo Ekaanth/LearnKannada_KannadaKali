@@ -36,6 +36,11 @@ public class RandomMagicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_magic);
 
+        getSupportActionBar().setTitle("Random Magic");
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         builder = new AlertDialog.Builder(this);
         randomVerb = (Button) findViewById(R.id.randomVerbID);
         presentContWord = (TextView) findViewById(R.id.presentContWordID);
@@ -210,7 +215,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 rootVerbCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = rootVerbKan.getText().toString().replaceAll(" ","_");
+                        String resourceName = rootVerbEng.getText().toString().replaceAll(" ","_");
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -254,6 +259,11 @@ public class RandomMagicActivity extends AppCompatActivity {
                     .setIcon(R.drawable.ic_error_black_24dp)
                     .setPositiveButton("Ok",null)
                     .create().show();
+        }
+        else if(item.getItemId() == android.R.id.home)
+        {
+            onBackPressed();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

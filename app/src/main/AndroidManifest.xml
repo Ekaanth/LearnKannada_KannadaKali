@@ -60,6 +60,8 @@
 
     <!-- Example: Sets all OneSignal notification's accent color to Green by default.  -->
     <!-- Color format is in ARGB. -->
-    <meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="#e7bc10" />
+    <meta-data
+        android:name="com.onesignal.NotificationAccentColor.DEFAULT"
+        android:value="#e7bc10" />
 
 </manifest>
