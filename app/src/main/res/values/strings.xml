@@ -663,7 +663,6 @@
         <item>darje</item>
         <item>saalu</item>
         <item>naataka</item>
-        <item>chitra</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
@@ -1514,7 +1513,7 @@
 
     <!-- ******************************* Conversation with a bus conductor (ENGLISH) STARTS here *******************************-->
     <string-array name="busconductor_content">
-        <item>Conversation with bus-conductor</item>
+        <item>Conversation with bus conductor</item>
         <item>Passenger: Sir, one ticket to whitefield</item>
         <item>Conductor: Give 23 rupees.</item>
         <item>Passenger: take this 50 rupees.</item>
