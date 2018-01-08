@@ -7,21 +7,18 @@
 
             <com.flaviofaria.kenburnsview.KenBurnsView
                 android:id="@+id/kbimageID"
+                android:tint="#8e8484"
+                android:tintMode="multiply"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 />
 
-            <TextView
+            <ImageView
                 android:id="@+id/welcomeID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif-condensed"
-                android:text="@string/welcomeNote"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                android:textColor="@color/yellow"/>
+                android:src="@drawable/kannada_kali"
+                android:layout_centerInParent="true"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/logoID"

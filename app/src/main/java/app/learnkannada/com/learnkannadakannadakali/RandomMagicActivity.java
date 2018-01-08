@@ -2,7 +2,7 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Handler;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -149,7 +148,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 presentCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = presentWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = presentWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -160,7 +159,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 pastCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = pastWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = pastWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -171,7 +170,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 futureCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = futureWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = futureWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -182,7 +181,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 pastContcard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = pastContWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = pastContWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -193,7 +192,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 presentContCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = presentContWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = presentContWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -204,7 +203,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 futureContCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = futureContWord.getText().toString().replaceAll(" ","_");
+                        String resourceName = futureContWord.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -215,7 +214,9 @@ public class RandomMagicActivity extends AppCompatActivity {
                 rootVerbCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = rootVerbEng.getText().toString().replaceAll(" ","_");
+                        String resourceName = rootVerbEng.getText().toString().replaceAll(" ","_").toLowerCase();
+                        if(resourceName.equals("do"))
+                            resourceName+="_";
                         if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
@@ -238,7 +239,7 @@ public class RandomMagicActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.random_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_random, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -255,10 +256,25 @@ public class RandomMagicActivity extends AppCompatActivity {
         {
             builder.setTitle("Disclaimer")
                     .setMessage("All the verbs written here are with respect to \"First Person\" only." +
-                            "\nThey get changed a little for Second and Third person. \n")
+                            "\nThey get changed a little for Second and Third person (coming soon).")
                     .setIcon(R.drawable.ic_error_black_24dp)
                     .setPositiveButton("Ok",null)
                     .create().show();
+        }
+        else if (item.getItemId() == R.id.randomMagicSuggestVerbID)
+        {
+            StringBuilder body = new StringBuilder();
+            body.append("Hello Team HithAM, \n \n");
+            body.append("I think it would be helpful if you can add the below verb(s) and it\'s tenses to this section\n\n");
+            body.append("/* verbs here */ \n");
+            body.append("\n Regards, \n");
+            body.append("Kannada Kali User");
+            String company[] = {"hithamcreations@gmail.com"};
+            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+            intent.putExtra(Intent.EXTRA_EMAIL, company);
+            intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+            startActivity(intent);
         }
         else if(item.getItemId() == android.R.id.home)
         {

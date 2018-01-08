@@ -137,6 +137,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
     }
 
     private void handleSpokenWords(String s) {
+        if( s.equals("do")||s.equals("this"))
+            s=s+"_";
         final String spokenString = s.replaceAll(" ", "_")
                 .toLowerCase();
         String spokenStringEx = spokenString + "_ex";

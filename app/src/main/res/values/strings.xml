@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Learn Kannada (Kannada Kali)</string>
     <string name="action_settings">Settings</string>
-    <string name="welcomeNote">Kannada Kali</string>
+    <string name="welcomeNote">Welcome to Kannada Kali</string>
     <string name="test">Test Text</string>
 
     <!-- *******************************Flexi course menu STARTS here *******************************-->
@@ -381,7 +381,7 @@
     <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
     <string-array name="timeKan_array">
         <item>beligge</item>
-        <item>madyaana</item>
+        <item>madhyaana</item>
         <item>sanje</item>
         <item>raatri</item>
         <item>dina or hagalu</item>
@@ -563,11 +563,11 @@
     <!-- ******************************* Category Fruits (KANNADA) STARTS here *******************************-->
     <string-array name="fruitsKan_array">
         <item>haNNugaLu</item>
-        <item>baalehaNNu</item>
+        <item>baale haNNu</item>
         <item>sEbu</item>
-        <item>kittale haNNu</item>
+        <item>kittale</item>
         <item>kallangadi</item>
-        <item>seebehaNNu</item>
+        <item>seebe haNNu</item>
         <item>seethaphala</item>
         <item>maavina haNNu</item>
         <item>karbuja</item>
@@ -598,7 +598,7 @@
     <!-- ******************************* Category Body Parts (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
     <string-array name="body_partsKan_array">
-        <item>kannu(sgalu)</item>
+        <item>kannu(galu)</item>
         <item>kivi(galu)</item>
         <item>kai(galu)</item>
         <item>kaalu(galu)</item>
@@ -639,7 +639,6 @@
         <item>Rank</item>
         <item>Row</item>
         <item>Drama</item>
-        <item>Picture</item>
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
@@ -1362,16 +1361,16 @@
     <!-- ******************************* Conversation with a new Maid (ENGLISH) STARTS here *******************************-->
     <string-array name="anewmaid_content">
         <item>Conversation with a new Maid</item>
-        <item>Owner: What is your name? </item>
+        <item>Owner: What is your name?</item>
         <item>Maid: My name is chandramma.</item>
         <item>Owner: Hmm. Where are you from?</item>
         <item>Maid: I am from Bengaluru.</item>
-        <item>Owner: Ok. How much money do you take per month?</item>
+        <item>Owner: Ok. How much salary should be given per month?</item>
         <item>Maid: Just 2000 rupees madam.</item>
-        <item>Owner: Thats too much!</item>
+        <item>Owner: That is too much</item>
         <item>Maid: No madam. I work for 4 more houses and I take same amount there also.</item>
         <item>Owner: Cant you reduce?</item>
-        <item>Maid: No Madam. We have to lead our family with this money. Please understand.</item>
+        <item>Maid: We have to lead our life with this money. Please understand.</item>
         <item>Owner: ok ok. You can come from 1st of next month.</item>
         <item>Maid: Sure. Thank you madam.</item>
     </string-array>
@@ -1386,9 +1385,9 @@
         <item>Owner: Sari. ondu thingaLige eshtu duddu tagothira?</item>
         <item>Maid: kEvala eraDu saavira rupees madam.</item>
         <item>Owner: adu thumba jasti aytu.</item>
-        <item>Maid: Maid: illa madam. Naanu innu 4 manegalalli kelasa madtini. alli kooda ashte duddu tagotini.</item>
+        <item>Maid: illa madam. Naanu innu 4 manegalalli kelasa madtini. alli kooda ashte duddu tagotini.</item>
         <item>Owner: kammi madakke agalwa?</item>
-        <item>Maid: illa madam. Naavu ee duddalli jeevana madabeku. Dayavittu artha madikolli</item>
+        <item>Maid: Naavu ee duddalli jeevana madabeku. Dayavittu artha madikolli</item>
         <item>Owner: sari sari. mundina thingaLu 1st inda ba.</item>
         <item>Maid: Khanditha. dhanyavada madam.</item>
     </string-array>
@@ -1399,15 +1398,15 @@
         <item>Conversation with a regular Maid</item>
         <item>Owner: Why did you come late today?</item>
         <item>Maid: Took time in other house madam.</item>
-        <item>Owner: You always say some or the other reason for being late.</item>
+        <item>Owner: You always say one or the other reason for being late.</item>
         <item>Maid: Sorry madam, Nothing like that.</item>
         <item>Owner: hmm. Dont repeat this again.</item>
         <item>Maid: ok madam.</item>
-        <item>Owner: Tomorrow we have festival. Come early.</item>
+        <item>Owner: Tomorrow there is a festival. Come early.</item>
         <item>Maid: No madam. Not possible. We also have Pooja at home.</item>
-        <item>Owner: Ok. Take this month's salary.</item>
+        <item>Owner: Ok. Take this month salary.</item>
         <item>Maid: Thank you madam. What about festival bonus?</item>
-        <item>Owner: Won't give extra money. I will give you a new saree for festival.</item>
+        <item>Owner: Will not give extra money. I will give you a new saree for the festival.</item>
         <item>Maid:  ok madam, Thank you. See you tomorrow.</item>
     </string-array>
     <!-- ******************************* Conversation with a regular Maid (ENGLISH) ENDS here *******************************-->
@@ -1622,7 +1621,7 @@
         <item>DB: sari madam. Naanu hattu nimishadalli bartini.</item>
         <item>Customer: sari sir.</item>
         <item>DB: namaskara madam. dayavittu nimma pizza thagoLi. bisi idiya check maadi.</item>
-        <item>Customer: bisi ide, dhanyavaadagaLu. matte naanu idakke agale pay madidini online alli.</item>
+        <item>Customer: bisi ide, dhanyavaadagaLu. matte naanu idakke online alli agale pay madidini.</item>
         <item>DB: haudu madam. Pizza bhat inda khareedisidakke dhanyavaadagaLu. Pizza enjoy maaDi.</item>
         <item>Customer: khanditha. DhanyavaadagaLu</item>
     </string-array>
@@ -1682,8 +1681,8 @@
     <string name="no">No</string>
 
     <string name="whats_this_string"><b><u>what\'s this?</u></b></string>
-    <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\n<u>How to use?</u>\nJust click on the \"Random Verb\" button and voila! you will be shown a new verb with it\'s past, present and future tenses.
-    \nClick on any of the cards to listen to the audio message!</string>
+    <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\n<u>How to use?</u>\nJust click on the <b>\"CLICK HERE\"</b> button and voila! you will be shown a new verb with it\'s past, present and future tenses.
+    \n<b>Click</b> on any of the cards to listen to the audio message!</string>
 
 
     <!--The below section contains contents of Random Magic Feature -->
