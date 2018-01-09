@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.onesignal.OSNotification;
 import com.onesignal.OSNotificationAction;
 import com.onesignal.OSNotificationOpenResult;
+import com.onesignal.OSNotificationPayload;
 import com.onesignal.OneSignal;
 
 import org.json.JSONObject;
@@ -42,6 +43,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private AlertDialog.Builder builder, infoBuilder, infoProvider;
     private AlertDialog.Builder dialog;
 
+    private String payLoad = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +53,9 @@ public class ChooseCourseActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Kannada Kali");
 
         OneSignal.startInit(this)
-                .setNotificationOpenedHandler(new NotificationOpenedHandler())
+                /*.setNotificationOpenedHandler(new NotificationOpenedHandler())*/
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-                .setNotificationReceivedHandler(new NotificationReceivedHandler())
+                /*.setNotificationReceivedHandler(new NotificationReceivedHandler())*/
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
 
@@ -384,7 +387,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private class NotificationReceivedHandler implements OneSignal.NotificationReceivedHandler{
+    /*private class NotificationReceivedHandler implements OneSignal.NotificationReceivedHandler{
 
         @Override
         public void notificationReceived(OSNotification notification) {
@@ -393,6 +396,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
             String customKey;
 
             Log.i("OneSignalExample", "NotificationID received: " + notificationID);
+
+            if(notification.payload.launchURL!=null)
+                if(notification.payload.launchURL.equals(""))
+                    payLoad = notification.payload.launchURL;
 
             if (data != null) {
                 customKey = data.optString("customkey", null);
@@ -407,6 +414,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         public void notificationOpened(final OSNotificationOpenResult result) {
             OSNotificationAction.ActionType actionType = result.action.type;
             JSONObject data = result.notification.payload.additionalData;
+
             String customKey;
 
             if(data!=null)
@@ -416,9 +424,18 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     Log.i("OneSignalExample", "customkey set with value: " + customKey);
             }
 
-            Intent intent = new Intent(getApplicationContext(), ChooseCourseActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+            if(payLoad!=null)
+            {
+                Uri uri = Uri.parse(payLoad);
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(i);
+            }
+
+            else {
+                Intent intent = new Intent(getApplicationContext(), ChooseCourseActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
 
             if(actionType == OSNotificationAction.ActionType.ActionTaken)
             {
@@ -437,7 +454,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     Log.i("OneSignalExample","No luck!");
 
             }
-            Log.i("OneSignalExample","Key: " + result.action.actionID + " customKey: " + data.optString("customKey",null));
+            //Log.i("OneSignalExample","Key: " + result.action.actionID + " customKey: " + data.optString("customKey",null));
         }
-    }
+    }*/
 }

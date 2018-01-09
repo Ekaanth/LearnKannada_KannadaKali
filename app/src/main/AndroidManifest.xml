@@ -52,9 +52,9 @@
             android:name=".RandomMagicActivity"
             android:screenOrientation="portrait" />
 
-        <meta-data
+<!--        <meta-data
             android:name="com.onesignal.NotificationOpened.DEFAULT"
-            android:value="DISABLE" />
+            android:value="DISABLE" />-->
 
     </application>
 
