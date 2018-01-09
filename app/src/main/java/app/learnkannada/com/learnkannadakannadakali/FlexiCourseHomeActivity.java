@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import app.learnkannada.com.SharedPreferences.AppRater;
+import app.learnkannada.com.SharedPreferences.ReferFriends;
 
 public class FlexiCourseHomeActivity extends AppCompatActivity {
 
@@ -23,6 +24,9 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
         words = (CardView) findViewById(R.id.wordsID);
         conversations = (CardView) findViewById(R.id.conversationsID);
         randomMagic = (CardView) findViewById(R.id.randomMagicID);
+
+        AppRater.app_launched(this);
+        ReferFriends.app_launched(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

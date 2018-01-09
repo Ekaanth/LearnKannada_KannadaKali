@@ -1194,7 +1194,7 @@
     <string name="father_ex"><b><u>Eng</u> : My FATHER is a doctor</b>\n<b><u>Kan</u> : nanna APPA obba doctor</b></string>
     <string name="son_ex"><b><u>Eng</u> : He is my SON</b>\n<b><u>Kan</u> : avanu nanna MAGA</b></string>
     <string name="daughter_ex"><b><u>Eng</u> : She is my DAUGHTER</b>\n<b><u>Kan</u> : avaLu nanna MAGALU</b></string>
-    <string name="children_or_kids_ex"><b><u>Eng</u> : I have two CHILDREN/KIDS</b>\n<b><u>Kan</u> : nannage ibbaru MAKKALU</b></string>
+    <string name="children_or_kids_ex"><b><u>Eng</u> : I have two CHILDREN/KIDS</b>\n<b><u>Kan</u> : nanage ibbaru MAKKALU</b></string>
     <string name="elder_brother_ex"><b><u>Eng</u> : My BROTHER(Elder) is a Software Engineer</b>\n<b><u>Kan</u> : nanna ANNA obba Software Engineer</b></string>
     <string name="younger_brother_ex"><b><u>Eng</u> : My BROTHER(Younger) is a Civil Engineer</b>\n<b><u>Kan</u> : nanna THAMMA obba Civil Engineer</b></string>
     <string name="elder_sister_ex"><b><u>Eng</u> : My SISTER(Elder) is a teacher</b>\n<b><u>Kan</u> : nanna AKKA obba teacher</b></string>
@@ -1535,7 +1535,7 @@
         <item>Conductor: chillare koDi madam</item>
         <item>Passenger: chillare illa sir.</item>
         <item>Conductor: sari. ee ipatthu rupees thagoLi. Elu rupees amele kELi.</item>
-        <item>Passenger: Sari. dayavittu whitefield stop bandaga hELi. naanu bengalurige hosaba.</item>
+        <item>Passenger: Sari. dayavittu whitefield stop bandaga hELi. naanu bengalurige hosabalu.</item>
         <item>Conductor: khanditha.</item>
         <item>Passenger: Sir, ELu rupees chillare kODi.</item>
         <item>Conductor: khanditha. thagoLi</item>
@@ -1558,7 +1558,7 @@
         <item>Vendor: Ok. What else sir?</item>
         <item>Customer: Give me coriander for 5 rs.</item>
         <item>Vendor: Coriander is costly sir. Cant give for 5 rs. Shall i give for 10 rs?</item>
-        <item>Customer: ok give. what to do</item>
+        <item>Customer: ok give. what else to do</item>
         <item>Vendor: ok sir. Take coconut sir. they are very good.</item>
         <item>Customer: Not required now. How much is green chilli?</item>
         <item>Vendor: 60 rupees kg sir. how much shall I give?</item>
@@ -1587,9 +1587,9 @@
         <item>Customer: sari kodi. innEnu madakke agatte?</item>
         <item>Vendor: sari sir. thengina kaayi thagoLi sir. thumba channagi ide.</item>
         <item>Customer: eega avashyakathe illa. hasiru meNasinakaayi eshTu?</item>
-        <item>Vendor: aravattu rupees sir. eshtu kodli?</item>
+        <item>Vendor: aravattu rupees kilo ge sir. eshtu kodli?</item>
         <item>Customer: kaalu kg koDi.</item>
-        <item> Vendor: sari sir. nalavatta aidu rupees aytu. Inneenu bEku sir?</item>
+        <item> Vendor: sari sir. nalavatta aidu rupees aytu. InnEnu bEku sir?</item>
         <item>Customer: ashte saaku. ee aivattu rupees thagoLi.</item>
         <item>Vendor: dhanyavaadagaLu sir. ee aidu rupees chillare thagoLi.</item>
         <item>Customer: dhanyavadagaLu sir.</item>
@@ -1616,9 +1616,9 @@
         <item>vitharaNe hudugana jothe mathukathe</item>
         <item>DB: Namaskara madam. Naanu Pizza Bhat inda call madta ideeni.</item>
         <item>Customer: yes sir. heLi.</item>
-        <item>DB: naanu DMart hathira ideeni. naanu ellige barbeku?</item>
+        <item>DB: naanu DMart hathira ideeni. naanu ellige barabEku?</item>
         <item>Customer: munde banni arda km matte ganesha devasthaana hattira left thagoLi</item>
-        <item>DB: sari madam. Naanu hattu nimishadalli bartini.</item>
+        <item>DB: sari madam. Naanu hatthu nimishadalli bartini.</item>
         <item>Customer: sari sir.</item>
         <item>DB: namaskara madam. dayavittu nimma pizza thagoLi. bisi idiya check maadi.</item>
         <item>Customer: bisi ide, dhanyavaadagaLu. matte naanu idakke online alli agale pay madidini.</item>
