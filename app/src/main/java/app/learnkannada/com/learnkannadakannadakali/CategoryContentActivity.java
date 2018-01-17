@@ -15,8 +15,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.learnkannada.com.Adapter.ListViewAdapter;
-import app.learnkannada.com.Utils.AudioPlayer;
+import Adapter.ListViewAdapter;
+import Utils.AudioPlayer;
 
 public class CategoryContentActivity extends AppCompatActivity {
 

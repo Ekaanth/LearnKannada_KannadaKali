@@ -9,7 +9,6 @@ import android.speech.RecognizerIntent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,20 +16,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.onesignal.OSNotification;
-import com.onesignal.OSNotificationAction;
-import com.onesignal.OSNotificationOpenResult;
-import com.onesignal.OSNotificationPayload;
 import com.onesignal.OneSignal;
-
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import app.learnkannada.com.Animation.AnimateVisibility;
-import app.learnkannada.com.Utils.FindResource;
+import Animation.AnimateVisibility;
+import Utils.FindResource;
 
 public class ChooseCourseActivity extends AppCompatActivity {
 

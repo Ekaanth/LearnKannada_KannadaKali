@@ -1,4 +1,4 @@
-package app.learnkannada.com.SharedPreferences;
+package SharedPreferences;
 
 import android.app.AlertDialog;
 import android.content.Context;

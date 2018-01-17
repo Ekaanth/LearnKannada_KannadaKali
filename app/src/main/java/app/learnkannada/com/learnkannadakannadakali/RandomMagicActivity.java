@@ -19,9 +19,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import app.learnkannada.com.Animation.AnimateVisibility;
-import app.learnkannada.com.Utils.AudioPlayer;
-import app.learnkannada.com.Utils.FindResource;
+import Animation.AnimateVisibility;
+import Utils.AudioPlayer;
+import Utils.FindResource;
 
 public class RandomMagicActivity extends AppCompatActivity {
 

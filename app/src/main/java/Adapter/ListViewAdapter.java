@@ -1,4 +1,4 @@
-package app.learnkannada.com.Adapter;
+package Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,14 +11,13 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.learnkannada.com.Utils.AudioPlayer;
+import Utils.AudioPlayer;
 import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
 import app.learnkannada.com.learnkannadakannadakali.DayActivity;
 import app.learnkannada.com.learnkannadakannadakali.ExampleActivity;
@@ -30,14 +29,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     private Context context;
     private String mCategory;
 
-    //private Uri downloadUri;
-
-    //private Button exampleButton;
-
-    //Firebase details
-    //private StorageReference storageReference;
-
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param mContext Context to be supplied
+     */
     public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
         context = mContext;
         values = myDataset;

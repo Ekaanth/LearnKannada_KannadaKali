@@ -1,4 +1,4 @@
-package app.learnkannada.com.Utils;
+package Utils;
 
 /**
  * Created by vaam on 27-11-2017.

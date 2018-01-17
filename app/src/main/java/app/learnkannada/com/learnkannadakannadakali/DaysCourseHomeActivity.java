@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.learnkannada.com.Adapter.ListViewAdapter;
+import Adapter.ListViewAdapter;
 
 public class DaysCourseHomeActivity extends AppCompatActivity {
 

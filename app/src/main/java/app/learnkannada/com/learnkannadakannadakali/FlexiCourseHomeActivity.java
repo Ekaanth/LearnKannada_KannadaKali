@@ -7,8 +7,8 @@ import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 
-import app.learnkannada.com.SharedPreferences.AppRater;
-import app.learnkannada.com.SharedPreferences.ReferFriends;
+import SharedPreferences.AppRater;
+import SharedPreferences.ReferFriends;
 
 public class FlexiCourseHomeActivity extends AppCompatActivity {
 

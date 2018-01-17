@@ -14,10 +14,10 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.learnkannada.com.Adapter.ListViewAdapter;
-import app.learnkannada.com.SharedPreferences.AppRater;
-import app.learnkannada.com.SharedPreferences.ReferFriends;
-import app.learnkannada.com.Utils.AudioPlayer;
+import Adapter.ListViewAdapter;
+import SharedPreferences.AppRater;
+import SharedPreferences.ReferFriends;
+import Utils.AudioPlayer;
 
 public class DayActivity extends AppCompatActivity {
     private RecyclerView recyclerView;

@@ -1,4 +1,4 @@
-package app.learnkannada.com.Utils;
+package Utils;
 
 import android.content.Context;
 
