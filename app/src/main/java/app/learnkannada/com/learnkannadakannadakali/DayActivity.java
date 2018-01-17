@@ -14,10 +14,11 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.ListViewAdapter;
-import SharedPreferences.AppRater;
-import SharedPreferences.ReferFriends;
-import Utils.AudioPlayer;
+import adapter.ListViewAdapter;
+import constants.Constants;
+import sharedPreferences.AppRater;
+import sharedPreferences.ReferFriends;
+import utils.AudioPlayer;
 
 public class DayActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -46,21 +47,21 @@ public class DayActivity extends AppCompatActivity {
         String day = intent.getStringExtra("position");
 
         //setting day in actionbar
-        if(day.contains("cab"))
+        if(day.contains(Constants.CAB))
             getSupportActionBar().setTitle("Cab/Auto Driver");
-        else if(day.contains("newmaid"))
+        else if(day.contains(Constants.NEW_MAID))
             getSupportActionBar().setTitle("New maid");
-        else if(day.contains("regular"))
+        else if(day.contains(Constants.REGULAR))
             getSupportActionBar().setTitle("Regular Maid");
-        else if(day.contains("friend"))
+        else if(day.contains(Constants.FRIEND))
             getSupportActionBar().setTitle("Friend");
-        else if(day.contains("conductor"))
+        else if(day.contains(Constants.CONDUCTOR))
             getSupportActionBar().setTitle("Bus-conductor");
-        else if(day.contains("vendor"))
+        else if(day.contains(Constants.VENDOR))
             getSupportActionBar().setTitle("Vendor");
-        else if(day.contains("delivery"))
+        else if(day.contains(Constants.DELIVERY))
             getSupportActionBar().setTitle("Delivery boy");
-        else if(day.contains("directions"))
+        else if(day.contains(Constants.DIRECTIONS))
             getSupportActionBar().setTitle("Asking directions");
         else
             getSupportActionBar().setTitle(day);
@@ -72,10 +73,10 @@ public class DayActivity extends AppCompatActivity {
 
         Resources res = getResources();
 
-        String englishArray = day.replaceAll(" ","")+"_content";
-        String kannadaArray = day.replaceAll(" ","")+"_content_kannada";
-        listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,"array",getPackageName()));
-        listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,"array",getPackageName()));
+        String englishArray = day.replaceAll(" ","")+Constants._CONTENT;
+        String kannadaArray = day.replaceAll(" ","")+Constants._CONTENT_KANNADA;
+        listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,Constants.ARRAY,getPackageName()));
+        listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,Constants.ARRAY,getPackageName()));
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);
@@ -83,10 +84,10 @@ public class DayActivity extends AppCompatActivity {
         }
 
         //below condition is to disable example button for particular cases
-        if(day.equals("Day 9") || day.equals("Day 10") || day.equals("Day 8") || !day.contains("Day"))
-            adapter = new ListViewAdapter(getApplicationContext(),input, "day89_10Course", kanInput);
+        if(day.equals(Constants.DAY9) || day.equals(Constants.DAY10) || day.equals(Constants.DAY8) || !day.contains(Constants.DAY))
+            adapter = new ListViewAdapter(getApplicationContext(),input, Constants.DAY89_10, kanInput);
         else
-            adapter = new ListViewAdapter(getApplicationContext(),input, "dayCourse", kanInput);
+            adapter = new ListViewAdapter(getApplicationContext(),input, Constants.DAYCOURSE, kanInput);
         recyclerView.setAdapter(adapter);
 
     }

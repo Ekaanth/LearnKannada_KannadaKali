@@ -1,8 +1,8 @@
-package Test;
+package testPackage;
 
 import java.util.ArrayList;
 
-import Utils.StringArrayUtils;
+import utils.StringArrayUtils;
 
 /**
  * Created by vaam on 1/17/2018.

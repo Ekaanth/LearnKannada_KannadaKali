@@ -11,7 +11,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.ListViewAdapter;
+import adapter.ListViewAdapter;
+import constants.Constants;
 
 public class DaysCourseHomeActivity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         //setting day in actionbar
-        getSupportActionBar().setTitle("10 Days Course");
+        getSupportActionBar().setTitle(Constants.TENDAYSCOURSE);
 
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
@@ -51,7 +52,7 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
             kanInput.add("Dummy");
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, "homeCourse", kanInput);
+        adapter = new ListViewAdapter(getApplicationContext(),input, Constants.HOMECOURSE, kanInput);
         recyclerView.setAdapter(adapter);
 
 

@@ -15,8 +15,9 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.ListViewAdapter;
-import Utils.AudioPlayer;
+import adapter.ListViewAdapter;
+import constants.Constants;
+import utils.AudioPlayer;
 
 public class CategoryContentActivity extends AppCompatActivity {
 
@@ -42,7 +43,7 @@ public class CategoryContentActivity extends AppCompatActivity {
         List<String> kanInput = new ArrayList<>();
 
         Intent intent = getIntent();
-        String category = intent.getStringExtra("category");
+        String category = intent.getStringExtra(Constants.CATEGORY);
 
         //setting Action bar title
         String actionBarTitle = category.substring(0,1).toUpperCase()+category.substring(1,category.length());
@@ -51,8 +52,8 @@ public class CategoryContentActivity extends AppCompatActivity {
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;
 
-       listValues = getResources().getStringArray(getResources().getIdentifier(category+"Eng_array","array",getPackageName()));
-       listValuesInKan = res.getStringArray(getResources().getIdentifier(category+"Kan_array","array",getPackageName()));
+       listValues = getResources().getStringArray(getResources().getIdentifier(category+Constants.ENG_ARRAY,Constants.ARRAY,getPackageName()));
+       listValuesInKan = res.getStringArray(getResources().getIdentifier(category+Constants.KAN_ARRAY,Constants.ARRAY,getPackageName()));
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);

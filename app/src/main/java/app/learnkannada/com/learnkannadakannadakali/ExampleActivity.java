@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import Utils.AudioPlayer;
+import utils.AudioPlayer;
 
 public class ExampleActivity extends AppCompatActivity {
 

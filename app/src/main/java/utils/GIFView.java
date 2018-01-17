@@ -1,17 +1,14 @@
-package Utils;
+package utils;
 
 /**
  * Created by vaam on 27-11-2017.
  */
-import java.io.InputStream;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Movie;
 import android.util.AttributeSet;
 import android.view.View;
-
-import app.learnkannada.com.learnkannadakannadakali.R;
 
 public class GIFView extends View {
     public Movie mMovie;

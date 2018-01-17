@@ -1,8 +1,6 @@
-package Utils;
+package utils;
 
 import android.content.Context;
-
-import app.learnkannada.com.learnkannadakannadakali.ChooseCourseActivity;
 
 /**
  * Created by vaam on 07-01-2018.

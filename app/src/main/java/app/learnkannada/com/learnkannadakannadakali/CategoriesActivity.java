@@ -13,7 +13,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.ListViewAdapter;
+import adapter.ListViewAdapter;
+import constants.Constants;
 
 public class CategoriesActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class CategoriesActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Categories");
+        getSupportActionBar().setTitle(Constants.CATEGORIES);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -41,15 +42,16 @@ public class CategoriesActivity extends AppCompatActivity {
         String listValues[] = null;
         String listValueKan[] = null;
 
-        String from = getIntent().getStringExtra("from");
-        if (from.equals("words")) {
+        String from = getIntent().getStringExtra(Constants.FROM);
+
+        if (from.equals(Constants.WORDS)) {
             listValues = getResources().getStringArray(R.array.flexi_words_array);
             listValueKan = getResources().getStringArray(R.array.flexi_words_kanArray);
-            adapter = new ListViewAdapter(getApplicationContext(), input, "flexiWords", kanInput);
+            adapter = new ListViewAdapter(getApplicationContext(), input, Constants.FLEXI_WORDS, kanInput);
         } else {
             listValues = getResources().getStringArray(R.array.flexi_conversations_array);
             listValueKan = getResources().getStringArray(R.array.flexi_conversations_kanArray);
-            adapter = new ListViewAdapter(getApplicationContext(), input, "flexiConversations", kanInput);
+            adapter = new ListViewAdapter(getApplicationContext(), input, Constants.FLEXI_CONVERSATIONS, kanInput);
         }
 
         if (listValueKan.length == listValues.length)

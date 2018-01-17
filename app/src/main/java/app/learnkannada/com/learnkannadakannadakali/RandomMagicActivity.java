@@ -19,9 +19,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import Animation.AnimateVisibility;
-import Utils.AudioPlayer;
-import Utils.FindResource;
+import animation.AnimateVisibility;
+import constants.Constants;
+import utils.AudioPlayer;
+import utils.FindResource;
 
 public class RandomMagicActivity extends AppCompatActivity {
 
@@ -35,7 +36,7 @@ public class RandomMagicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_magic);
 
-        getSupportActionBar().setTitle("Random Magic");
+        getSupportActionBar().setTitle(Constants.RANDOM_MAGIC);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -246,7 +247,7 @@ public class RandomMagicActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.whatsthisID) {
-            builder.setTitle("Random magic")
+            builder.setTitle(Constants.RANDOM_MAGIC)
                     .setIcon(R.drawable.random)
                     .setMessage(R.string.randomMagicDialogMessage)
                     .setPositiveButton("Cool", null)
@@ -254,7 +255,7 @@ public class RandomMagicActivity extends AppCompatActivity {
         }
         else if(item.getItemId() == R.id.randomMagicDisclaimer)
         {
-            builder.setTitle("Disclaimer")
+            builder.setTitle(Constants.DISCLAIMER)
                     .setMessage("All the verbs written here are with respect to \"First Person\" only." +
                             "\nThey get changed a little for Second and Third person (coming soon).")
                     .setIcon(R.drawable.ic_error_black_24dp)
@@ -269,9 +270,9 @@ public class RandomMagicActivity extends AppCompatActivity {
             body.append("/* verbs here */ \n");
             body.append("\n Regards, \n");
             body.append("Kannada Kali User");
-            String company[] = {"hithamcreations@gmail.com"};
+            String company[] = {Constants.HITHAM_EMAIL};
             Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+            intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
             intent.putExtra(Intent.EXTRA_EMAIL, company);
             intent.putExtra(Intent.EXTRA_TEXT, body.toString());
             startActivity(intent);

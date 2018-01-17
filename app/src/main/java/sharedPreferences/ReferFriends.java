@@ -1,4 +1,4 @@
-package SharedPreferences;
+package sharedPreferences;
 
 import android.app.AlertDialog;
 import android.content.Context;

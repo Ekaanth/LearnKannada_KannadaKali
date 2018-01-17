@@ -1683,6 +1683,14 @@
     <string name="whats_this_string"><b><u>what\'s this?</u></b></string>
     <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\n<u>How to use?</u>\nJust click on the <b>\"CLICK HERE\"</b> button and voila! you will be shown a new verb with it\'s past, present and future tenses.
     \n<b>Click</b> on any of the cards to listen to the audio message!</string>
+    <string name="missing_in_voc">Missing in my Vocabulary!</string>
+    <string name="too_young">Oops! I am too young for sentences. But wait!</string>
+    <string name="I_can_give_you_different_example">I can give you different example for</string>
+    <string name="SHOW_ME">Show me</string>
+    <string name="sorry_idk_that_yet">Sorry! I don\'t know that yet.</string>
+    <string name="KANNADA_KALI_USER">Kannada Kali User</string>
+    <string name="WANTS_TO_CONTACT">Kannada Kali user wants to cantact you</string>
+    <string name="WOULD_YOU_LIKE_TO_CHECK">Would you like to check it?</string>
 
 
     <!--The below section contains contents of Random Magic Feature -->

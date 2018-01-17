@@ -7,8 +7,9 @@ import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 
-import SharedPreferences.AppRater;
-import SharedPreferences.ReferFriends;
+import constants.Constants;
+import sharedPreferences.AppRater;
+import sharedPreferences.ReferFriends;
 
 public class FlexiCourseHomeActivity extends AppCompatActivity {
 
@@ -30,14 +31,14 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Flexi Course");
+        getSupportActionBar().setTitle(Constants.FLEXI_COURSE);
 
 
         words.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
-                i.putExtra("from","words");
+                i.putExtra(Constants.FROM,Constants.WORDS);
                 startActivity(i);
                 finish();
 
@@ -48,7 +49,7 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FlexiCourseHomeActivity.this, CategoriesActivity.class);
-                i.putExtra("from","conversations");
+                i.putExtra(Constants.FROM,Constants.CONVERSATIONS);
                 startActivity(i);
                 finish();
             }

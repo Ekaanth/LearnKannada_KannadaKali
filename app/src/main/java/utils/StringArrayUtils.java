@@ -1,8 +1,7 @@
-package Utils;
+package utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by vaam on 1/17/2018.

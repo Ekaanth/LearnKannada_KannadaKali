@@ -22,8 +22,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import Animation.AnimateVisibility;
-import Utils.FindResource;
+import animation.AnimateVisibility;
+import constants.Constants;
+import utils.FindResource;
 
 public class ChooseCourseActivity extends AppCompatActivity {
 
@@ -43,7 +44,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_course);
 
-        getSupportActionBar().setTitle("Kannada Kali");
+        getSupportActionBar().setTitle(Constants.KANNADA_KALI);
 
         OneSignal.startInit(this)
                 /*.setNotificationOpenedHandler(new NotificationOpenedHandler())*/
@@ -106,7 +107,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException e) {
-            Toast.makeText(getApplicationContext(), "Missing in my Vocabulary!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.missing_in_voc, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -133,11 +134,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
     }
 
     private void handleSpokenWords(String s) {
-        if( s.equals("do")||s.equals("this"))
+        if( s.equals(Constants.DO)||s.equals(Constants.THIS))
             s=s+"_";
         final String spokenString = s.replaceAll(" ", "_")
                 .toLowerCase();
-        String spokenStringEx = spokenString + "_ex";
+        String spokenStringEx = spokenString + Constants._EX;
 
         //playing found music file
         try {
@@ -149,29 +150,29 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     if (FindResource.resourceAvailable(getApplicationContext(), splitWords[j] + "_ex")) {
                         //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                         final int finalJ = j;
-                        infoBuilder.setTitle("Oops! I am too young for sentences. But wait!")
-                                .setMessage("\nI can give you different example for \n\"" + splitWords[j].toUpperCase()
+                        infoBuilder.setTitle(R.string.too_young)
+                                .setMessage("\n"+R.string.I_can_give_you_different_example+"\n\"" + splitWords[j].toUpperCase()
                                         + "\"\n")
-                                .setPositiveButton("Show me", new DialogInterface.OnClickListener() {
+                                .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         Intent exIntent = new Intent(ChooseCourseActivity.this, ExampleActivity.class);
-                                        exIntent.putExtra("name", splitWords[finalJ]);
+                                        exIntent.putExtra(Constants.NAME, splitWords[finalJ]);
                                         startActivity(exIntent);
                                     }
                                 })
                                 .setIcon(R.drawable.idea)
                                 .setCancelable(false)
-                                .setNegativeButton("No", null)
+                                .setNegativeButton(Constants.NO, null)
                                 .create().show();
                         return;
                     }
                 }
                 if (splitWords.length > 1)
-                    Toast.makeText(getApplicationContext(), "Oops! I am too young for sentences.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.too_young, Toast.LENGTH_LONG).show();
                 else {
                     //Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
-                    infoProvider.setTitle("Sorry! I don't know that yet.")
+                    infoProvider.setTitle(R.string.sorry_idk_that_yet)
                             .setMessage(" Would you like to add \"" + spokenString.toUpperCase() + "\" to my vocabulary?")
                             .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
                                 @Override
@@ -180,10 +181,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     body.append("Hello Team HithAM, \n \n");
                                     body.append("I found that the word \"" + spokenString.toUpperCase() + "\" is missing in your app vocabulary and it would be helpful to all if this word is added to it.\n\n");
                                     body.append("\n Regards, \n");
-                                    body.append("Kannada Kali User");
-                                    String company[] = {"hithamcreations@gmail.com"};
+                                    body.append(R.string.KANNADA_KALI_USER);
+                                    String company[] = {Constants.HITHAM_EMAIL};
                                     Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                                    intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                     startActivity(intent);
@@ -206,7 +207,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //Toast.makeText(getApplicationContext(),"No Problem!",Toast.LENGTH_LONG).show();
                     }
-                }).setMessage("Would you like to check it?")
+                }).setMessage(R.string.WOULD_YOU_LIKE_TO_CHECK)
                         .create().show();
 
                 //Toast.makeText(getApplicationContext(),"Found",Toast.LENGTH_LONG).show();
@@ -226,7 +227,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         try {
             mediaPlayer = MediaPlayer.create(getApplicationContext(), id);
         } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Missing in my Vocabulary!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.missing_in_voc, Toast.LENGTH_LONG).show();
         }
 
         mediaPlayer.start();
@@ -313,16 +314,16 @@ public class ChooseCourseActivity extends AppCompatActivity {
                           body.append("I have used your app \"Kannada Kali\"\n\n");
                           body.append("********Please fill in your feedback/grievances here********\n");
                           body.append("\n Regards, \n");
-                          body.append("Kannada Kali User");
-                          String company[] = {"hithamcreations@gmail.com"};
+                          body.append(R.string.KANNADA_KALI_USER);
+                          String company[] = {Constants.HITHAM_EMAIL};
                           Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                          intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali user wants to cantact you");
+                          intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
                           intent.putExtra(Intent.EXTRA_EMAIL, company);
                           intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                           startActivity(intent);
                       }
                   })
-                  .setNegativeButton("Rate app", new DialogInterface.OnClickListener() {
+                  .setNegativeButton(Constants.RATE_APP, new DialogInterface.OnClickListener() {
                       @Override
                       public void onClick(DialogInterface dialogInterface, int i) {
                           Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
@@ -368,7 +369,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         }*/
         else if(item.getItemId() == R.id.thumbRuleID)
         {
-            dialog.setTitle("Thumb Rule")
+            dialog.setTitle(Constants.THUMB_RULE)
                     .setMessage("-- Always try to translate given English sentences to your mother tongue first and " +
                             "then to Kannada. \n--This helps you understand and learn kannada faster!" )
                     .setCancelable(true)

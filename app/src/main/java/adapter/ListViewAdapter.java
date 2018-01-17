@@ -1,4 +1,4 @@
-package Adapter;
+package adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,13 +11,15 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import Utils.AudioPlayer;
+import constants.Constants;
+import utils.AudioPlayer;
 import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
 import app.learnkannada.com.learnkannadakannadakali.DayActivity;
 import app.learnkannada.com.learnkannadakannadakali.ExampleActivity;
@@ -56,18 +58,18 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
         switch (mCategory) {
-            case "dayCourse": {
+            case Constants.DAYCOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_day, parent, false);
                 break;
             }
-            case "homeCourse": {
+            case Constants.HOMECOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
                 break;
             }
             default:
-                if (mCategory.equals("flexiWords") || mCategory.equals("flexiConversations")) {
+                if (mCategory.equals(Constants.FLEXI_WORDS) || mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
                     LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                     v = inflater.inflate(R.layout.row_layout_image, parent, false);
                 } else {
@@ -85,7 +87,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
 
-        if (mCategory.equals("flexiWords")) {
+        if (mCategory.equals(Constants.FLEXI_WORDS)) {
             //holder.textInKan.setVisibility(View.INVISIBLE);
             String imageName = name.toLowerCase().replaceAll(" ", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName, "drawable", context.getPackageName()));
@@ -96,12 +98,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(context, CategoryContentActivity.class);
-                    i.putExtra("from", "flexi");
-                    i.putExtra("category", name.toLowerCase().replaceAll(" ", "_"));
+                    i.putExtra(Constants.FROM, Constants.FLEXI);
+                    i.putExtra(Constants.CATEGORY, name.toLowerCase().replaceAll(" ", "_"));
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals("flexiConversations")) {
+        } else if (mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
                     .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
@@ -113,16 +115,16 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(context, DayActivity.class);
-                    i.putExtra("position", conversationName);
+                    i.putExtra(Constants.POSITION, conversationName);
                     v.getContext().startActivity(i);
                 }
             });
         }
-        if (!mCategory.equals("homeCourse")) {
+        if (!mCategory.equals(Constants.HOMECOURSE)) {
             holder.textInKan.setText(mFilteredKanList.get(position));
         }
         //onClickListener code begins
-        if (!mCategory.equals("dayCourse") && !mCategory.equals("homeCourse") && !mCategory.equals("flexiWords") && !mCategory.equals("flexiConversations")) {
+        if (!mCategory.equals(Constants.DAYCOURSE) && !mCategory.equals(Constants.HOMECOURSE) && !mCategory.equals(Constants.FLEXI_WORDS) && !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -135,7 +137,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     //playOnline(position);
                 }
             });
-        } else if (mCategory.equals("homeCourse")) {
+        } else if (mCategory.equals(Constants.HOMECOURSE)) {
             switch (name) {
                 case "Day 1":
                 case "Day 2":
@@ -165,11 +167,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 public void onClick(View v) {
                     //Toast.makeText(context,name,Toast.LENGTH_LONG).show();
                     Intent i = new Intent(context, DayActivity.class);
-                    i.putExtra("position", name);
+                    i.putExtra(Constants.POSITION, name);
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals("dayCourse")) {
+        } else if (mCategory.equals(Constants.DAYCOURSE)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -186,15 +188,15 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(context, ExampleActivity.class);
-                    i.putExtra("name", name);
-                    i.putExtra("kName", kName);
+                    i.putExtra(Constants.NAME, name);
+                    i.putExtra(Constants.KNAME, kName);
                     v.getContext().startActivity(i);
                 }
             });
         }
 
         //separate condition for Day 9 and 10 to set exampleButton invisible for these as these are conversations
-        else if (mCategory.equals("day89_10Course")) {
+        else if (mCategory.equals(Constants.DAY89_10)) {
             holder.exampleButton.setVisibility(View.INVISIBLE);
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -215,7 +217,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
         //MediaPlayer mediaPlayer = new MediaPlayer();
         String voiceId = null;
-        if (mCategory.equals("alphabets")) {
+        if (mCategory.equals(Constants.ALPHABETS)) {
             voiceId = audioResourceFinder(mFilteredList.get(position));
         } else {
             voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?", "")
@@ -356,11 +358,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             layout = itemView;
             textInEng = (TextView) layout.findViewById(R.id.textID);
             textInKan = (TextView) layout.findViewById(R.id.textInKanID);
-            if (mCategory.equals("homeCourse"))
+            if (mCategory.equals(Constants.HOMECOURSE))
                 size = (TextView) layout.findViewById(R.id.sizeID);
-            if (mCategory.equals("dayCourse"))
+            if (mCategory.equals(Constants.DAYCOURSE))
                 exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
-            if (mCategory.equals("flexiWords") || mCategory.equals("flexiConversations")) {
+            if (mCategory.equals(Constants.FLEXI_WORDS) || mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
                 imageView1 = (ImageView) layout.findViewById(R.id.imageID);
                 imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
             }
