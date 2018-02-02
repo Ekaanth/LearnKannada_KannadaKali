@@ -283,8 +283,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.shareAppID) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, ("Learn \"Spoken Kannada\" in just 10 days!\n" +
-                    "Use helpful and handy feature Instant Words Translation\n" +
+            sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
+                            "Kannada in just 10 days. Get Instant translation to any english word using \"Instant " +
+                    "Word Translation\" feature. \nYou can even have a chat with the developers and discuss on your ideas " +
+                            "in making this app better and better. Why don\'t you give it a try?" +
                     "\n\nDownload Kannada Kali app now!\n" +
                     Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())
                     + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
