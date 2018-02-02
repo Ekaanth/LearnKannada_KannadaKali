@@ -1671,11 +1671,11 @@
     <string name="aboutKarnataka">About Karnataka</string>
     <string name="aboutHithAM">About HithAM</string>
     <string name="aboutVoiceArtist">Voice behind APP</string>
-    <string name="rateText">Loving Kannada Kali? Please take a moment to appreciate our efforts.</string>
-    <string name="neverAsk">Never Ask again</string>
-    <string name="remindLater">Remind me later</string>
-    <string name="rateNow">Rate app Now</string>
-    <string name="referFriends">Liking the app? Would you like to refer this app to your friends?</string>
+    <string name="rateText">Please take a moment to appreciate our efforts.</string>
+    <string name="neverAsk">Never</string>
+    <string name="remindLater">Later</string>
+    <string name="rateNow">Sure</string>
+    <string name="referFriends">Why don\'t you let your friends know about the app?</string>
     <string name="sure">Sure</string>
     <string name="later">Later</string>
     <string name="no">No</string>
@@ -1781,9 +1781,5 @@
         <item>malaguthaa irtini</item>
         <item>mucchuthaa irtini</item>
     </string-array>
-
-    <!--Below helps where to keep the background image on the notificaiton-->
-    <!--right now palace image is kept with below name. change it when required -->
-    <!--<string name="onesignal_bgimage_notif_image_align">right</string>-->
 
 </resources>

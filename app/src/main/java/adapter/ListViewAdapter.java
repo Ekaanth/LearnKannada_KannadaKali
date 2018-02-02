@@ -66,6 +66,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             case Constants.HOMECOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
+                
                 break;
             }
             default:

@@ -19,23 +19,21 @@ public class AnimateVisibility {
         float initialRadius = (float) Math.hypot(cx, cy);
 
 // create the animation (the final radius is zero)
-        Animator anim =
-                null;
+        Animator anim = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-        }
-
-// make the view invisible when the animation is done
-        anim.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                myView.setVisibility(View.INVISIBLE);
-            }
-        });
+            // make the view invisible when the animation is done
+            anim.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    myView.setVisibility(View.INVISIBLE);
+                }
+            });
 
 // start the animation
-        anim.start();
+            anim.start();
+        }
     }
 
     public static void animateVisible(final View myView) {
@@ -52,10 +50,9 @@ public class AnimateVisibility {
                 null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
+            // make the view visible and start the animation
+            myView.setVisibility(View.VISIBLE);
+            anim.start();
         }
-
-// make the view visible and start the animation
-        myView.setVisibility(View.VISIBLE);
-        anim.start();
     }
 }

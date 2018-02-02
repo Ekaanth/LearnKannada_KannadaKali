@@ -41,10 +41,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/purple_600"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -88,10 +88,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/card_pink"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -135,10 +135,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/blue_700"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -192,10 +192,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/card_materialYellow"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -254,10 +254,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/red_600"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -301,10 +301,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/card_green"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -348,10 +348,10 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/orange_800"
                     app:cardCornerRadius="30dp"
-                    tools:targetApi="lollipop">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
