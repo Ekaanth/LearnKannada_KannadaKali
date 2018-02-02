@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import app.learnkannada.com.learnkannadakannadakali.R;
 
@@ -88,6 +89,7 @@ public class AppRater {
             @Override
             public void onClick(View view) {
                 mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + APP_PNAME)));
+                Toast.makeText(mContext,"Please review us on Play-store",Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
