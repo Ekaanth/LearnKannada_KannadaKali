@@ -1,5 +1,6 @@
 package adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -192,6 +193,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     i.putExtra(Constants.NAME, name);
                     i.putExtra(Constants.KNAME, kName);
                     v.getContext().startActivity(i);
+                   /* AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    View view = LayoutInflater.from(v.getContext()).inflate(R.layout.activity_example,null);
+                    builder.setView(view).create().show();*/
                 }
             });
         }
