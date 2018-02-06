@@ -2,6 +2,7 @@ package adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -189,13 +190,40 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.exampleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context, ExampleActivity.class);
+                    /*Intent i = new Intent(context, ExampleActivity.class);
                     i.putExtra(Constants.NAME, name);
                     i.putExtra(Constants.KNAME, kName);
-                    v.getContext().startActivity(i);
-                   /* AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    View view = LayoutInflater.from(v.getContext()).inflate(R.layout.activity_example,null);
-                    builder.setView(view).create().show();*/
+                    v.getContext().startActivity(i);*/
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    AlertDialog dialog = builder.create();
+                    View view = LayoutInflater.from(v.getContext()).inflate(R.layout.layout_example_popup,null);
+                    TextView english = (TextView) view.findViewById(R.id.pu_wordInEngID);
+                    TextView kannada = (TextView) view.findViewById(R.id.pu_wordInKanID);
+                    ImageView speaker = (ImageView) view.findViewById(R.id.pu_speakerID);
+                    TextView example = (TextView) view.findViewById(R.id.pu_exampleText);
+                    english.setText(name);
+                    kannada.setText(kName);
+                    String exampleText = name.replaceAll(" ", "_").replaceAll("\\?","")
+                            .replaceAll("\\(","_").replaceAll("\\)","")+ "_ex";
+                    final String spokenWord = name.replaceAll(" ", "_").replaceAll("\\?","").toLowerCase()
+                            .replaceAll("\\(","_")
+                            .replaceAll("\\)","")+ "_ex";
+                    example.setText(context.getResources().getIdentifier(exampleText.toLowerCase(),"string",context.getPackageName()));
+                    speaker.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            AudioPlayer.playAudio(context,spokenWord);
+                        }
+                    });
+                    dialog.setView(view);
+                    dialog.show();
+                    dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialogInterface) {
+                            if(AudioPlayer.mediaPlayer!=null && AudioPlayer.mediaPlayer.isPlaying())
+                                AudioPlayer.stopAudio();
+                        }
+                    });
                 }
             });
         }
@@ -219,8 +247,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     }
 
     private void playOffline(int position) throws IOException {
-        // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
-        //MediaPlayer mediaPlayer = new MediaPlayer();
         String voiceId = null;
         if (mCategory.equals(Constants.ALPHABETS)) {
             voiceId = audioResourceFinder(mFilteredList.get(position));
@@ -230,24 +256,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
         }
         AudioPlayer.playAudio(context, voiceId);
-        /*Integer id=context.getResources().getIdentifier(voiceId.toLowerCase(),"raw",context.getPackageName());
-        try{
-            mediaPlayer = MediaPlayer.create(context,id);
-        }
-        catch(Exception e)
-        {
-            Toast.makeText(context,voiceId + "***" + mFilteredList.get(position), Toast.LENGTH_LONG).show();
-        }
-        mediaPlayer.start();
-
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                    mp.stop();
-                    mp.release();
-            }
-
-        });*/
     }
 
     private String audioResourceFinder(String s) {

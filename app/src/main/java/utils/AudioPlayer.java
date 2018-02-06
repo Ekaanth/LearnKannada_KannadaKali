@@ -37,4 +37,14 @@ public class AudioPlayer {
         });
     }
 
+    public static void stopAudio()
+    {
+        if(mediaPlayer!=null)
+            mediaPlayer.stop();
+        mediaPlayer.release();
+        //mp = null;
+        mediaPlayer = null;
+        // Toast.makeText(context, "killed" , Toast.LENGTH_LONG).show();
+    }
+
 }

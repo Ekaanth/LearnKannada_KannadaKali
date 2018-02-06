@@ -683,6 +683,7 @@
 
     <!-- *******************************Day 1 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day1_content">
+        <item>Learn</item>
         <item>I</item>
         <item>We</item>
         <item>My</item>
@@ -699,12 +700,12 @@
         <item>For You(Plural)</item>
         <item>Yours(Singular)</item>
         <item>Yours(Plural)</item>
-        <item>Learn</item>
     </string-array>
     <!-- *******************************Day 1 content (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Day 1 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day1_content_kannada">
+        <item>kali</item>
         <item>naanu</item>
         <item>naavu</item>
         <item>nanna</item>
@@ -721,28 +722,27 @@
         <item>nimage</item>
         <item>ninnadu</item>
         <item>nimmadu</item>
-        <item>kali</item>
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 1 STARTS here *******************************-->
-    <string name="learn_ex"><b><u>Eng</u> : LEARN Kannada.</b>\n<b><u>Kan</u> : Kannada KALI .</b></string>
-    <string name="i_ex"><b><u>Eng</u> : I am Saraswathi.</b>\n<b><u>Kan</u> : Naanu Saraswathi.</b></string>
-    <string name="we_ex"><b><u>Eng</u> : WE are Indians.\n<u>Kan</u> : NAAVU bhaaratheeyaru.</b></string>
-    <string name="my_ex"><b><u>Eng</u> : MY name is Lakshmi.\n<u>Kan</u> : NANNA hesaru Lakshmi.</b></string>
-    <string name="our_ex"><b><u>Eng</u> : OUR country is India.\n<u>Kan</u> : namma dEsha Bhaaratha</b></string>
-    <string name="for_us_ex"><b><u>Eng</u> : This is FOR US.\n<u>Kan</u> : idu NAMAGE.</b></string>
-    <string name="for_me_ex"><b><u>Eng</u> : This is FOR ME.\n<u>Kan</u> : idu NANAGE.</b></string>
-    <string name="mine_ex"><b><u>Eng</u> : This pen is MINE.\n<u>Kan</u> : ee pen NANNADU.</b></string>
-    <string name="ours_ex"><b><u>Eng</u> : This place is OURS.\n<u>Kan</u> : ee jaaga NAMMADU.</b></string>
-    <string name="you_singular_ex"><b><u>Eng</u> : YOU are my friend.\n<u>Kan</u> : NEENU nanna gelaya.</b></string>
-    <string name="you_plural_ex"><b><u>Eng</u> : YOU are my teacher.\n<u>Kan</u> : NEEVU nanna guru.</b></string>
-    <string name="your_singular_ex"><b><u>Eng</u> : This is YOUR book.\n<u>Kan</u> : idu NINNA pusthaka.</b></string>
-    <string name="your_plural_ex"><b><u>Eng</u> : These are YOUR books.\n<u>Kan</u> : ivu NIMMA pusthakagalu.</b></string>
-    <string name="for_you_singular_ex"><b><u>Eng</u> : This book is FOR YOU.\n<u>Kan</u> : ee pusthaka NINAGE.</b></string>
-    <string name="for_you_plural_ex"><b><u>Eng</u> : These books are FOR YOU.\n<u>Kan</u> : ee pusthakagalu NIMAGE.</b></string>
-    <string name="yours_singular_ex"><b><u>Eng</u> : This phone is YOURS.\n<u>Kan</u> : ee phone NINNADU.</b></string>
-    <string name="yours_plural_ex"><b><u>Eng</u> : This place is YOURS.\n<u>Kan</u> : ee jaaga NIMMADU.</b></string>
+    <string name="learn_ex"><b><font color="#f20f08">Eng</font></b> : <i>Learn</i> Kannada.\n<b><font color="#ffb300">Kan</font></b> : Kannada <i>kali</i> .</string>
+    <string name="i_ex"><b><font color="#f20f08">Eng</font></b> : <i>I</i> am Saraswathi.\n<b><font color="#ffb300">Kan</font></b> : <i>Naanu</i> Saraswathi.</string>
+    <string name="we_ex"><b><font color="#f20f08">Eng</font></b> : <i>We</i> are Indians.\n<b><font color="#ffb300">Kan</font></b> : <i>Naavu</i> bhaaratheeyaru.</string>
+    <string name="my_ex"><b><font color="#f20f08">Eng</font></b> : <i>My</i> name is Lakshmi.\n<b><font color="#ffb300">Kan</font></b> : <i>Nanna</i> hesaru Lakshmi.</string>
+    <string name="our_ex"><b><font color="#f20f08">Eng</font></b> : <i>Our</i> country is India.\n<b><font color="#ffb300">Kan</font></b> : <i>Namma</i> dEsha Bhaaratha</string>
+    <string name="for_us_ex"><b><font color="#f20f08">Eng</font></b> : This is <i>for us</i>.\n<b><font color="#ffb300">Kan</font></b> : idu <i>namage</i>.</string>
+    <string name="for_me_ex"><b><font color="#f20f08">Eng</font></b> : This is <i>for me</i>.\n<b><font color="#ffb300">Kan</font></b> : idu <i>nanage</i>.</string>
+    <string name="mine_ex"><b><font color="#f20f08">Eng</font></b> : This pen is <i>mine</i>.\n<b><font color="#ffb300">Kan</font></b> : ee pen <i>nannadu</i>.</string>
+    <string name="ours_ex"><b><font color="#f20f08">Eng</font></b> : This place is <i>ours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee jaaga <i>nammadu</i>.</string>
+    <string name="you_singular_ex"><b><font color="#f20f08">Eng</font></b> : <i>You</i> are my friend.\n<b><font color="#ffb300">Kan</font></b> : <i>Neenu</i> nanna gelaya.</string>
+    <string name="you_plural_ex"><b><font color="#f20f08">Eng</font></b> : <i>You</i> are my teacher.\n<b><font color="#ffb300">Kan</font></b> : <i>Neevu</i> nanna guru.</string>
+    <string name="your_singular_ex"><b><font color="#f20f08">Eng</font></b> : This is <i>your</i> book.\n<b><font color="#ffb300">Kan</font></b> : idu <i>ninna</i> pusthaka.</string>
+    <string name="your_plural_ex"><b><font color="#f20f08">Eng</font></b> : These are <i>your</i> books.\n<b><font color="#ffb300">Kan</font></b> : ivu <i>nimma</i> pusthakagalu.</string>
+    <string name="for_you_singular_ex"><b><font color="#f20f08">Eng</font></b> : This book is <i>for you</i>.\n<b><font color="#ffb300">Kan</font></b> : ee pusthaka <i>ninage</i>.</string>
+    <string name="for_you_plural_ex"><b><font color="#f20f08">Eng</font></b> : These books are <i>for you</i>.\n<b><font color="#ffb300">Kan</font></b> : ee pusthakagalu <i>nimage</i>.</string>
+    <string name="yours_singular_ex"><b><font color="#f20f08">Eng</font></b> : This phone is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee phone <i>ninnadu</i>.</string>
+    <string name="yours_plural_ex"><b><font color="#f20f08">Eng</font></b> : This place is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee jaaga <i>nimmadu</i>.</string>
     <!-- *******************************Examples Texts for Day 1 ENDS here *******************************-->
 
     <!-- *******************************Day 2 content (ENGLISH) STARTS here *******************************-->
@@ -796,26 +796,26 @@
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 2 STARTS here *******************************-->
-    <string name="he_ex"><b><u>Eng</u> : HE is a cricket player</b>\n<b><u>Kan</u> : AVANU obba cricket aatagaara</b></string>
-    <string name="she_ex"><b><u>Eng</u> : SHE is a good girl</b>\n<b><u>Kan</u> : AVALU oLLe hudugi</b></string>
-    <string name="they_ex"><b><u>Eng</u> : THEY are cricket player(s)</b>\n<b><u>Kan</u> : AVARU cricket aatagaara(ru)</b></string>
-    <string name="his_ex"><b><u>Eng</u> : This is HIS book OR This book is his</b>\n<b><u>Kan</u> : idu AVANA Pusthaka OR ee pustaka AVANADU</b></string>
-    <string name="her_ex"><b><u>Eng</u> : This is HER book OR This book is hers</b>\n<b><u>Kan</u> : idu AVALA Pusthaka OR ee pustaka AVALADU</b></string>
-    <string name="their_ex"><b><u>Eng</u> : This is their house OR This house is theirs</b>\n<b><u>Kan</u> : idu AVARA mane OR ee mane AVARADU</b></string>
-    <string name="for_him_ex"><b><u>Eng</u> : This sweet is FOR HIM</b>\n<b><u>Kan</u> : ee sweet(sihi) AVANIGE</b></string>
-    <string name="for_her_ex"><b><u>Eng</u> : This box is FOR HER</b>\n<b><u>Kan</u> : ee box(Dabba) AVALIGE</b></string>
-    <string name="for_them_ex"><b><u>Eng</u> : This gift is FOR THEM</b>\n<b><u>Kan</u> : ee gift(uDugore) AVARIGE</b></string>
-    <string name="this_or_it_ex"><b><u>Eng</u> : THIS is Bengaluru</b>\n<b><u>Kan</u> : IDU Bengaluru</b></string>
-    <string name="that_ex"><b><u>Eng</u> : THAT is Mysuru</b>\n<b><u>Kan</u> : ADU Mysuru</b></string>
-    <string name="there_ex"><b><u>Eng</u> : Your book is THERE</b>\n<b><u>Kan</u> : nimma pusthaka ALLI ide</b></string>
-    <string name="here_ex"><b><u>Eng</u> : Bottle is HERE</b>\n<b><u>Kan</u> : Bottle ILLI ide</b></string>
-    <string name="where_ex"><b><u>Eng</u> : WHERE is my car?</b>\n<b><u>Kan</u> : nanna car ELLI ide?</b></string>
-    <string name="why_ex"><b><u>Eng</u> : WHY are you late?</b>\n<b><u>Kan</u> : neenu late(taDa) yaake?</b></string>
-    <string name="what_ex"><b><u>Eng</u> : WHAT is your name?</b>\n<b><u>Kan</u> : ninna hesaru ENU?</b></string>
-    <string name="how_ex"><b><u>Eng</u> : HOW did it happen?</b>\n<b><u>Kan</u> : idu HEGE aayitu(happen)?</b></string>
-    <string name="which_ex"><b><u>Eng</u> : WHICH is your bag?</b>\n<b><u>Kan</u> : ninna cheela(bag) yaavudu?</b></string>
-    <string name="whom_ex"><b><u>Eng</u> : WHOM to give this?</b>\n<b><u>Kan</u> : idu YAARIGE kodabeku?</b></string>
-    <string name="whose_ex"><b><u>Eng</u> : WHOSE pen is this?</b>\n<b><u>Kan</u> : ee pen YAARADU?</b></string>
+    <string name="he_ex"><b><font color="#f20f08">Eng</font></b> : <i>He</i> is a cricket player\n<b><font color="#ffb300">Kan</font></b> : <i>Avanu</i> obba cricket aatagaara</string>
+    <string name="she_ex"><b><font color="#f20f08">Eng</font></b> : <i>She</i> is a good girl\n<b><font color="#ffb300">Kan</font></b> : <i>AvaLu</i> oLLe hudugi</string>
+    <string name="they_ex"><b><font color="#f20f08">Eng</font></b> : <i>They</i> are cricket player(s)\n<b><font color="#ffb300">Kan</font></b> : <i>Avaru</i> cricket aatagaara(ru)</string>
+    <string name="his_ex"><b><font color="#f20f08">Eng</font></b> : This is <i>his</i> book <b>OR</b> This book is <i>his</i>\n<b><font color="#ffb300">Kan</font></b> : idu <i>avana</i> Pusthaka <b>athavaa</b> ee pustaka <i>avanadu</i></string>
+    <string name="her_ex"><b><font color="#f20f08">Eng</font></b> : This is <b>her</b> book <u>OR</u> This book is <i>her</i>s\n<b><font color="#ffb300">Kan</font></b> : idu <i>avaLa</i> Pusthaka <b>athavaa</b> ee pustaka <i>avaLadu</i></string>
+    <string name="their_ex"><b><font color="#f20f08">Eng</font></b> : This is <i>their</i> house OR This house is <i>their</i>s\n<b><font color="#ffb300">Kan</font></b> : idu <i>avara</i> mane OR ee mane <i>avaradu</i></string>
+    <string name="for_him_ex"><b><font color="#f20f08">Eng</font></b> : This sweet is <i>for him</i>\n<b><font color="#ffb300">Kan</font></b> : ee sweet(sihi) <i>avanige</i></string>
+    <string name="for_her_ex"><b><font color="#f20f08">Eng</font></b> : This box is <i>for her</i>\n<b><font color="#ffb300">Kan</font></b> : ee box(Dabba) <i>avaLige</i></string>
+    <string name="for_them_ex"><b><font color="#f20f08">Eng</font></b> : This gift is <i>for them</i>\n<b><font color="#ffb300">Kan</font></b> : ee gift(uDugore) <i>avarige</i></string>
+    <string name="this_or_it_ex"><b><font color="#f20f08">Eng</font></b> : <i>This</i> is Bengaluru\n<b><font color="#ffb300">Kan</font></b> : <i>idu</i> Bengaluru</string>
+    <string name="that_ex"><b><font color="#f20f08">Eng</font></b> : <i>That</i> is Mysuru\n<b><font color="#ffb300">Kan</font></b> : <i>adu</i> Mysuru</string>
+    <string name="there_ex"><b><font color="#f20f08">Eng</font></b> : Your book is <i>there</i>\n<b><font color="#ffb300">Kan</font></b> : nimma pusthaka <i>alli</i> ide</string>
+    <string name="here_ex"><b><font color="#f20f08">Eng</font></b> : Bottle is <i>here</i>\n<b><font color="#ffb300">Kan</font></b> : Bottle <i>illi</i> ide</string>
+    <string name="where_ex"><b><font color="#f20f08">Eng</font></b> : <i>Where</i> is my car?\n<b><font color="#ffb300">Kan</font></b> : nanna car <i>elli</i> ide?</string>
+    <string name="why_ex"><b><font color="#f20f08">Eng</font></b> : <i>Why</i> are you late?\n<b><font color="#ffb300">Kan</font></b> : neenu late(taDa) <i>yaake</i>?</string>
+    <string name="what_ex"><b><font color="#f20f08">Eng</font></b> : <i>What</i> is your name?\n<b><font color="#ffb300">Kan</font></b> : ninna hesaru <i>Enu</i>?</string>
+    <string name="how_ex"><b><font color="#f20f08">Eng</font></b> : <i>How</i> did it happen?\n<b><font color="#ffb300">Kan</font></b> : idu <i>hEge</i> aayitu(happen)?</string>
+    <string name="which_ex"><b><font color="#f20f08">Eng</font></b> : <i>Which</i> is your bag?\n<b><font color="#ffb300">Kan</font></b> : ninna cheela(bag) <i>yaavudu</i>?</string>
+    <string name="whom_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whom</i> to give this?\n<b><font color="#ffb300">Kan</font></b> : idu <i>yaarige</i> kodabeku?</string>
+    <string name="whose_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whose</i> pen is this?\n<b><font color="#ffb300">Kan</font></b> : ee pen <i>yaaradu</i>?</string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
@@ -878,30 +878,30 @@
 
     <!--*******************************Examples Texts for Day 3 STARTS here *******************************-->
     <!-- TAG = GREETINGS -->
-    <string name="hi_hello_ex"><b><u>Eng</u> : HI! How are you?</b>\n<b><u>Kan</u> : namaskaara! hege iddera (hEgidira)?</b></string>
-    <string name="good_morning_ex"><b><u>Eng</u> : GOOD MORNING! Had breakfast?</b>\n<b><u>Kan</u> : SHUBHODAYA! thindi ayta?</b></string>
-    <string name="good_evening_ex"><b><u>Eng</u> : GOOD EVENING! Had coffee?</b>\n<b><u>Kan</u> : SHUBHASANJE! coffee ayta?</b></string>
-    <string name="good_night_ex"><b><u>Eng</u> : GOOD NIGHT! Have a tight sleep</b>\n<b><u>Kan</u> : SHUBHARAATRI! nidde(sleep) channagi madi</b></string>
-    <string name="see_you_soon_ex"><b><u>Eng</u> : I am leaving... SEE YOU SOON!</b>\n<b><u>Kan</u> : naanu hogutha ideeni. MATTE SIGONA!</b></string>
-    <string name="thank_you_ex"><b><u>Eng</u> : THANK YOU for your help!</b>\n<b><u>Kan</u> : nimma sahaayakke DHANYAVAADAGALU (help - sahaaya)</b></string>
-    <string name="breakfast_or_snacks_ex"><b><u>Eng</u> : How was the BREAKFAST?</b>\n<b><u>Kan</u> : THINDI hege itthu (hegitthu)?</b></string>
-    <string name="lunch_or_dinner_ex"><b><u>Eng</u> : LUNCH/DINNER was very good</b>\n<b><u>Kan</u> : UTA thumba channagi itthu.</b></string>
-    <string name="go_singular_ex"><b><u>Eng</u> : You GO, I will come</b>\n<b><u>Kan</u> : neenu HOGU, naanu barteeni</b></string>
-    <string name="go_plural_ex"><b><u>Eng</u> : You please GO first</b>\n<b><u>Kan</u> : neevu dayavittu(Please) modalu(first) HOGI</b></string>
-    <string name="come_singular_ex"><b><u>Eng</u> : Brother, COME here!</b>\n<b><u>Kan</u> : thamma! BA illi</b></string>
-    <string name="come_plural_ex"><b><u>Eng</u> : Hi Madam! Please come inside</b>\n<b><u>Kan</u> : namaskaara Madam! dayavittu oLage BANNI</b></string>
-    <string name="now_ex"><b><u>Eng</u> : I will eat NOW</b>\n<b><u>Kan</u> : naanu EEGA tinnu(eat)theNe</b></string>
-    <string name="later_ex"><b><u>Eng</u> : I will do it LATER</b>\n<b><u>Kan</u> : naanu adanna AAMELE maadu(Do)thene</b></string>
-    <string name="today_ex"><b><u>Eng</u> : I am working from home TODAY!</b>\n<b><u>Kan</u> : naanu IVATTU mane inda kelsa madutta ideeni</b></string>
-    <string name="tomorrow_ex"><b><u>Eng</u> : I am on leave TOMORROW</b>\n<b><u>Kan</u> : naanu NAALE rajeyalli ideeni</b></string>
-    <string name="day_after_tomorrow_ex"><b><u>Eng</u> : Cricket Match is there on DAY AFTER TOMORROW</b>\n<b><u>Kan</u> : Cricket match NAADIDDU ide</b></string>
-    <string name="yesterday_ex"><b><u>Eng</u> : I went there YESTERDAY</b>\n<b><u>Kan</u> : naanu alli NINNE hogidde</b></string>
-    <string name="day_before_yesterday_ex"><b><u>Eng</u> : He was here on DAY BEFORE YESTERDAY</b>\n<b><u>Kan</u> : avanu MONNE illi idda</b></string>
-    <string name="day_ex"><b><u>Eng</u> : I had come that DAY</b>\n<b><u>Kan</u> : naanu aa DINA bandidde</b></string>
-    <string name="night_ex"><b><u>Eng</u> : I am going for a movie this NIGHT</b>\n<b><u>Kan</u> : ee RAATRI, naanu movie ge hogutta iddeeni</b></string>
-    <string name="morning_ex"><b><u>Eng</u> :  I woke up at 7.30am in the morning  today</b>\n<b><u>Kan</u> : naanu ivattu beligge Elu vare gantege edde</b></string>
-    <string name="afternoon_ex"><b><u>Eng</u> : I had lunch at 1:15pm today</b>\n<b><u>Kan</u> : naanu madhyaana ondu kaalige uta madide</b></string>
-    <string name="evening_ex"><b><u>Eng</u> : We will have coffee at 4:45 pm</b>\n<b><u>Kan</u> : naavu naalku mukkalige coffee kudiyona</b></string>
+    <string name="hi_hello_ex"><b><font color="#f20f08">Eng</font></b> : <i>Hi</i>! How are you?\n<b><font color="#ffb300">Kan</font></b> : namaskaara! hege iddera (hEgidira)?</string>
+    <string name="good_morning_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Morning</i>! Had breakfast?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhodaya</i>! thindi ayta?</string>
+    <string name="good_evening_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Evening</i>! Had coffee?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhasanje</i>! coffee ayta?</string>
+    <string name="good_night_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Night</i>! Have a tight sleep\n<b><font color="#ffb300">Kan</font></b> : <i>Shubharaatri</i>! nidde(sleep) channagi madi</string>
+    <string name="see_you_soon_ex"><b><font color="#f20f08">Eng</font></b> : I am leaving… <i>see you soon</i>!\n<b><font color="#ffb300">Kan</font></b> : naanu hogutha ideeni. <i>Matte sigoNa</i>!</string>
+    <string name="thank_you_ex"><b><font color="#f20f08">Eng</font></b> : <i>Thank you</i> for your help!\n<b><font color="#ffb300">Kan</font></b> : nimma sahaayakke <i>dhanyavaadagaLu</i> (help - sahaaya)</string>
+    <string name="breakfast_or_snacks_ex"><b><font color="#f20f08">Eng</font></b> : How was the <i>breakfast</i>i>?\n<b><font color="#ffb300">Kan</font></b> : <i>thinDi</i> hege itthu (hegitthu)?</string>
+    <string name="lunch_or_dinner_ex"><b><font color="#f20f08">Eng</font></b> : <i>Lunch/Dinner</i> was very good\n<b><font color="#ffb300">Kan</font></b> : <i>Uta</i> thumba channagi itthu.</string>
+    <string name="go_singular_ex"><b><font color="#f20f08">Eng</font></b> : You <i>go</i>, I will come\n<b><font color="#ffb300">Kan</font></b> : neenu <i>hOgu</i>, naanu barteeni</string>
+    <string name="go_plural_ex"><b><font color="#f20f08">Eng</font></b> : You please <i>go</i> first\n<b><font color="#ffb300">Kan</font></b> : neevu dayavittu(Please) modalu(first) <i>hOgi</i></string>
+    <string name="come_singular_ex"><b><font color="#f20f08">Eng</font></b> : Brother, <i>come</i> here!\n<b><font color="#ffb300">Kan</font></b> : thamma! <i>ba</i> illi</string>
+    <string name="come_plural_ex"><b><font color="#f20f08">Eng</font></b> : Hi Madam! Please <i>come</i> inside\n<b><font color="#ffb300">Kan</font></b> : namaskaara Madam! dayavittu oLage <i>banni</i></string>
+    <string name="now_ex"><b><font color="#f20f08">Eng</font></b> : I will eat <i>now</i>\n<b><font color="#ffb300">Kan</font></b> : naanu <i>eega</i> tinnu(eat)theNe</string>
+    <string name="later_ex"><b><font color="#f20f08">Eng</font></b> : I will do it <i>later</i>\n<b><font color="#ffb300">Kan</font></b> : naanu adanna <i>aamEle</i> maadu(Do)thene</string>
+    <string name="today_ex"><b><font color="#f20f08">Eng</font></b> : I am working from home <i>today</i>!\n<b><font color="#ffb300">Kan</font></b> : naanu <i>ivattu</i> mane inda kelsa madutta ideeni</string>
+    <string name="tomorrow_ex"><b><font color="#f20f08">Eng</font></b> : I am on leave <i>tomorrow</i>\n<b><font color="#ffb300">Kan</font></b> : naanu <i>naaLe</i> rajeyalli ideeni</string>
+    <string name="day_after_tomorrow_ex"><b><font color="#f20f08">Eng</font></b> : Cricket Match is there on <i>day after tomorrow</i>\n<b><font color="#ffb300">Kan</font></b> : Cricket match <i>naaDiddu</i> ide</string>
+    <string name="yesterday_ex"><b><font color="#f20f08">Eng</font></b> : I went there <i>yesterday</i>\n<b><font color="#ffb300">Kan</font></b> : naanu alli <i>ninne</i> hogidde</string>
+    <string name="day_before_yesterday_ex"><b><font color="#f20f08">Eng</font></b> : He was here on <i>day before yesterday</i>\n<b><font color="#ffb300">Kan</font></b> : avanu <i>monne</i> illi idda</string>
+    <string name="day_ex"><b><font color="#f20f08">Eng</font></b> : I had come that <i>day</i>\n<b><font color="#ffb300">Kan</font></b> : naanu aa <i>dina</i> bandidde</string>
+    <string name="night_ex"><b><font color="#f20f08">Eng</font></b> : I am going for a movie this <i>night</i>\n<b><font color="#ffb300">Kan</font></b> : ee <i>raatri</i>, naanu movie ge hogutta iddeeni</string>
+    <string name="morning_ex"><b><font color="#f20f08">Eng</font></b> :  I woke up at 7.30am in the <i>morning</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu ivattu <i>beLigge</i> Elu vare gantege edde</string>
+    <string name="afternoon_ex"><b><font color="#f20f08">Eng</font></b> : I had lunch at 1:15<i>pm</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu <i>madhyaana</i> ondu kaalige uta madide</string>
+    <string name="evening_ex"><b><font color="#f20f08">Eng</font></b> : We will have coffee at 4:45 pm\n<b><font color="#ffb300">Kan</font></b> : naavu naalku mukkalige coffee kudiyona</string>
     <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
@@ -940,8 +940,8 @@
         <item>baralla</item>
         <item>maadtini</item>
         <item>maadalla</item>
-        <item>kudithini</item>
-        <item>kudiyalla</item>
+        <item>kuDithini</item>
+        <item>kuDiyalla</item>
         <item>kodthini</item>
         <item>kodalla</item>
         <item>malagthini</item>
@@ -961,31 +961,31 @@
     <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 4 STARTS here *******************************-->
-    <string name="will_eat_ex"><b><u>Eng</u> : I WILL EAT fruits</b>\n<b><u>Kan</u> : naanu haNNugaLu THINTHINI (Fruit - haNNu)</b></string>
-    <string name="will_not_eat_ex"><b><u>Eng</u> : I WILL NOT EAT fruits</b>\n<b><u>Kan</u> : naanu haNNugaLu THINNALLA</b></string>
-    <string name="will_come_ex"><b><u>Eng</u> : I WILL COME in evening</b>\n<b><u>Kan</u> : naanu evening(sanje) BARTHINI</b></string>
-    <string name="will_not_come_ex"><b><u>Eng</u> : I WILL NOT COME in the night</b>\n<b><u>Kan</u> : naanu raathri BARALLA</b></string>
-    <string name="will_do_ex"><b><u>Eng</u> : I WILL DO that work</b>\n<b><u>Kan</u> : naanu aa work(kelasa) MAADTHINI</b></string>
-    <string name="work_ex"><b><u>Eng</u> : I will do that WORK</b>\n<b><u>Kan</u> : naanu aa KELASA maadthini</b></string>
-    <string name="will_not_do_ex"><b><u>Eng</u> : I WILL NOT DO that work</b>\n<b><u>Kan</u> : naanu aa kelasa maadalla</b></string>
-    <string name="will_drink_ex"><b><u>Eng</u> : I WILL DRINK water</b>\n<b><u>Kan</u> : naanu neeru(water) KUDITHINI</b></string>
-    <string name="will_not_drink_ex"><b><u>Eng</u> : I WILL NOT DRINK juice</b>\n<b><u>Kan</u> : naanu juice KUDIYALLA</b></string>
-    <string name="will_give_ex"><b><u>Eng</u> : I WILL GIVE your book tomorrow</b>\n<b><u>Kan</u> : naanu nimma pusthaka naaLe KODTHINI</b></string>
-    <string name="will_not_give_ex"><b><u>Eng</u> : I WILL NOT GIVE your book</b>\n<b><u>Kan</u> : naanu nimma pusthaka kodalla</b></string>
-    <string name="will_sleep_ex"><b><u>Eng</u> : WILL SLEEP at 10 P.M</b>\n<b><u>Kan</u> : 10 P.M ge MALAGTHINI</b></string>
-    <string name="will_not_sleep_ex"><b><u>Eng</u> : I WILL NOT SLEEP today</b>\n<b><u>Kan</u> : naanu ivatthu MALAGALLA</b></string>
-    <string name="done_ex"><b><u>Eng</u> : is that DONE?</b>\n<b><u>Kan</u> : adu AAYTHA?</b></string>
-    <string name="not_done_ex"><b><u>Eng</u> : It is NOT DONE</b>\n<b><u>Kan</u> : adu AAGILLA</b></string>
-    <string name="finished_ex"><b><u>Eng</u> : is the work FINISHED?</b>\n<b><u>Kan</u> : kelasa MUGITHA?</b></string>
-    <string name="not_finished_ex"><b><u>Eng</u> : Work is NOT FINISHED yet</b>\n<b><u>Kan</u> : kelasa innu(yet) MUGIDILLA</b></string>
-    <string name="name_ex"><b><u>Eng</u> : What is your NAME?</b>\n<b><u>Kan</u> : ninna HESARU enu?</b></string>
-    <string name="place_ex"><b><u>Eng</u> : which is your PLACE?</b>\n<b><u>Kan</u> : nimma OORU yaavudu?</b></string>
-    <string name="for_that_ex"><b><u>Eng</u> : I will go FOR THAT</b>\n<b><u>Kan</u> : naanu ADAKKE hogthini.</b></string>
-    <string name="for_this_ex"><b><u>Eng</u> : I will go FOR THIS</b>\n<b><u>Kan</u> : naanu IDAKKE hogthini</b></string>
-    <string name="yes_or_no_ex"><b><u>Eng</u> : Are you an Indian? YES, Are you a chef?, NO</b>\n<b>
-        <u>Kan</u> : neenu bhaaratheeyana? HAUDU, neenu adige bhaTTana? ILLA</b></string>
-    <string name="correct_or_incorrect_ex"><b><u>Eng</u> : That is CORRECT, This is INCORRECT</b>\n<b>
-        <u>Kan</u> : adu SARI, idu THAPPU</b></string>
+    <string name="will_eat_ex"><b><font color="#f20f08">Eng</font></b> : I WILL EAT fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu THINTHINI (Fruit - haNNu)</string>
+    <string name="will_not_eat_ex"><b><font color="#f20f08">Eng</font></b> : I WILL NOT EAT fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu THINNALLA</string>
+    <string name="will_come_ex"><b><font color="#f20f08">Eng</font></b> : I WILL COME in evening\n<b><font color="#ffb300">Kan</font></b> : naanu evening(sanje) BARTHINI</string>
+    <string name="will_not_come_ex"><b><font color="#f20f08">Eng</font></b> : I WILL NOT COME in the night\n<b><font color="#ffb300">Kan</font></b> : naanu raathri BARALLA</string>
+    <string name="will_do_ex"><b><font color="#f20f08">Eng</font></b> : I WILL DO that work\n<b><font color="#ffb300">Kan</font></b> : naanu aa work(kelasa) MAADTHINI</string>
+    <string name="work_ex"><b><font color="#f20f08">Eng</font></b> : I will do that WORK\n<b><font color="#ffb300">Kan</font></b> : naanu aa KELASA maadthini</string>
+    <string name="will_not_do_ex"><b><font color="#f20f08">Eng</font></b> : I WILL NOT DO that work\n<b><font color="#ffb300">Kan</font></b> : naanu aa kelasa maadalla</string>
+    <string name="will_drink_ex"><b><font color="#f20f08">Eng</font></b> : I WILL DRINK water\n<b><font color="#ffb300">Kan</font></b> : naanu neeru(water) KUDITHINI</string>
+    <string name="will_not_drink_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will not drink</i> juice\n<b><font color="#ffb300">Kan</font></b> : naanu juice <i>kuDiyalla</i></string>
+    <string name="will_give_ex"><b><font color="#f20f08">Eng</font></b> : I WILL GIVE your book tomorrow\n<b><font color="#ffb300">Kan</font></b> : naanu nimma pusthaka naaLe KODTHINI</string>
+    <string name="will_not_give_ex"><b><font color="#f20f08">Eng</font></b> : I WILL NOT GIVE your book\n<b><font color="#ffb300">Kan</font></b> : naanu nimma pusthaka kodalla</string>
+    <string name="will_sleep_ex"><b><font color="#f20f08">Eng</font></b> : WILL SLEEP at 10 P.M\n<b><font color="#ffb300">Kan</font></b> : 10 P.M ge MALAGTHINI</string>
+    <string name="will_not_sleep_ex"><b><font color="#f20f08">Eng</font></b> : I WILL NOT SLEEP today\n<b><font color="#ffb300">Kan</font></b> : naanu ivatthu MALAGALLA</string>
+    <string name="done_ex"><b><font color="#f20f08">Eng</font></b> : is that DONE?\n<b><font color="#ffb300">Kan</font></b> : adu AAYTHA?</string>
+    <string name="not_done_ex"><b><font color="#f20f08">Eng</font></b> : It is NOT DONE\n<b><font color="#ffb300">Kan</font></b> : adu AAGILLA</string>
+    <string name="finished_ex"><b><font color="#f20f08">Eng</font></b> : is the work FINISHED?\n<b><font color="#ffb300">Kan</font></b> : kelasa MUGITHA?</string>
+    <string name="not_finished_ex"><b><font color="#f20f08">Eng</font></b> : Work is NOT FINISHED yet\n<b><font color="#ffb300">Kan</font></b> : kelasa innu(yet) MUGIDILLA</string>
+    <string name="name_ex"><b><font color="#f20f08">Eng</font></b> : What is your NAME?\n<b><font color="#ffb300">Kan</font></b> : ninna HESARU enu?</string>
+    <string name="place_ex"><b><font color="#f20f08">Eng</font></b> : which is your PLACE?\n<b><font color="#ffb300">Kan</font></b> : nimma OORU yaavudu?</string>
+    <string name="for_that_ex"><b><font color="#f20f08">Eng</font></b> : I will go FOR THAT\n<b><font color="#ffb300">Kan</font></b> : naanu ADAKKE hogthini.</string>
+    <string name="for_this_ex"><b><font color="#f20f08">Eng</font></b> : I will go FOR THIS\n<b><font color="#ffb300">Kan</font></b> : naanu IDAKKE hogthini</string>
+    <string name="yes_or_no_ex"><b><font color="#f20f08">Eng</font></b> : Are you an Indian? YES, Are you a chef?, NO\n
+        <b><font color="#ffb300">Kan</font></b> : neenu bhaaratheeyana? HAUDU, neenu adige bhaTTana? ILLA</string>
+    <string name="correct_or_incorrect_ex"><b><font color="#f20f08">Eng</font></b> : That is CORRECT, This is INCORRECT\n
+        <b><font color="#ffb300">Kan</font></b> : adu SARI, idu THAPPU</string>
     <!-- *******************************Examples Texts for Day 4 ENDS here *******************************-->
 
     <!-- *******************************Day 5 content (ENGLISH) STARTS here *******************************-->
@@ -1048,31 +1048,31 @@
     <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 5 STARTS here *******************************-->
-    <string name="beautiful_ex"><b><u>Eng</u> : You look very BEAUTIFUL</b>\n<b><u>Kan</u> : neevu thumba SUNDARAvaagi kaaNutha ideera</b></string>
-    <string name="good_ex"><b><u>Eng</u> : He is very GOOD man</b>\n<b><u>Kan</u> : avanu thumba OLLE manushya</b></string>
-    <string name="bad_ex"><b><u>Eng</u> : He is a BAD boy</b>\n<b><u>Kan</u> : avanu obba KETTA huduga</b></string>
-    <string name="big_ex"><b><u>Eng</u> : This place is very BIG</b>\n<b><u>Kan</u> : idu thumba DODDA ooru/jaaga</b></string>
-    <string name="small_ex"><b><u>Eng</u> : This room is very SMALL</b>\n<b><u>Kan</u> : idu thumba SANNA room</b></string>
-    <string name="long_or_lengthy_ex"><b><u>Eng</u> : This stick is very LONG</b>\n<b><u>Kan</u> : ee kOlu(stick) thumba UDDA ide</b></string>
-    <string name="short_or_tiny_ex"><b><u>Eng</u> : She is a short girl / This is a short stick</b>\n<b><u>Kan</u> : avaLu giDDa hudugi / idu chikka kOlu</b></string>
-    <string name="wide_ex"><b><u>Eng</u> : This site is very Wide</b>\n<b><u>Kan</u> : ee site thumba AGALA ide</b></string>
-    <string name="new_or_latest_ex"><b><u>Eng</u> : This is my NEW car</b>\n<b><u>Kan</u> : idu nanna HOSA car</b></string>
-    <string name="old_ex"><b><u>Eng</u> : That is my OLD house</b>\n<b><u>Kan</u> : adu nanna HALE mane</b></string>
-    <string name="elder_ex"><b><u>Eng</u> : He is ELDER to me</b>\n<b><u>Kan</u> : avanu nanage HIRIYAru</b></string>
-    <string name="younger_ex"><b><u>Eng</u> : She is YOUNGER to me</b>\n<b><u>Kan</u> : avaLu nanage KIRIYAlu</b></string>
-    <string name="thick_ex"><b><u>Eng</u> : This cloth is very THICK</b>\n<b><u>Kan</u> : ee baTTe(cloth) thumba DAPPA ide</b></string>
-    <string name="thin_ex"><b><u>Eng</u> : This paper is very THIN</b>\n<b><u>Kan</u> : ee paper thumba THELLAgide</b></string>
-    <string name="listen_ex"><b><u>Eng</u> : please LISTEN to my words</b>\n<b><u>Kan</u> : dayaviTTU nanna maathu KELU</b></string>
-    <string name="read_ex"><b><u>Eng</u> : Can you READ this message?</b>\n<b><u>Kan</u> : neevu ee message Odutheera?</b></string>
-    <string name="write_ex"><b><u>Eng</u> : I am WRITING</b>\n<b><u>Kan</u> : naanu BARIyuttha idini</b></string>
-    <string name="talk_ex"><b><u>Eng</u> : Can we TALK for 2 minutes?</b>\n<b><u>Kan</u> : naavu 2 nimisha(minutes) MAATHU aadabahuda?</b></string>
-    <string name="enough_ex"><b><u>Eng</u> : Enough doing this work</b>\n<b><u>Kan</u> : ee kelasa madiddu SAAKU</b></string>
-    <string name="stop_ex"><b><u>Eng</u> : STOP talking</b>\n<b><u>Kan</u> : maathu NILLISI (Stop - Nillu)</b></string>
-    <string name="start_ex"><b><u>Eng</u> : I will START writing</b>\n<b><u>Kan</u> : naanu bareyalu SHURU maduthEne</b></string>
-    <string name="first_ex"><b><u>Eng</u> : This is my FIRST car</b>\n<b><u>Kan</u> : idu nanna MODALA car</b></string>
-    <string name="last_ex"><b><u>Eng</u> : That was my LAST mistake</b>\n<b><u>Kan</u> : adu nanna KONEya thappu</b></string>
-    <string name="difficult_ex"><b><u>Eng</u> : That work is DIFFICULT</b>\n<b><u>Kan</u> : aa kelasa KASHTA</b></string>
-    <string name="easy_ex"><b><u>Eng</u> : This work is EASY!</b>\n<b><u>Kan</u> : ee kelasa SULABHA!</b></string>
+    <string name="beautiful_ex"><b><font color="#f20f08">Eng</font></b> : You look very BEAUTIFUL\n<b><font color="#ffb300">Kan</font></b> : neevu thumba SUNDARAvaagi kaaNutha ideera</string>
+    <string name="good_ex"><b><font color="#f20f08">Eng</font></b> : He is very GOOD man\n<b><font color="#ffb300">Kan</font></b> : avanu thumba OLLE manushya</string>
+    <string name="bad_ex"><b><font color="#f20f08">Eng</font></b> : He is a BAD boy\n<b><font color="#ffb300">Kan</font></b> : avanu obba KETTA huduga</string>
+    <string name="big_ex"><b><font color="#f20f08">Eng</font></b> : This place is very BIG\n<b><font color="#ffb300">Kan</font></b> : idu thumba DODDA ooru/jaaga</string>
+    <string name="small_ex"><b><font color="#f20f08">Eng</font></b> : This room is very SMALL\n<b><font color="#ffb300">Kan</font></b> : idu thumba SANNA room</string>
+    <string name="long_or_lengthy_ex"><b><font color="#f20f08">Eng</font></b> : This stick is very LONG\n<b><font color="#ffb300">Kan</font></b> : ee kOlu(stick) thumba UDDA ide</string>
+    <string name="short_or_tiny_ex"><b><font color="#f20f08">Eng</font></b> : She is a short girl / This is a short stick\n<b><font color="#ffb300">Kan</font></b> : avaLu giDDa hudugi / idu chikka kOlu</string>
+    <string name="wide_ex"><b><font color="#f20f08">Eng</font></b> : This site is very Wide\n<b><font color="#ffb300">Kan</font></b> : ee site thumba AGALA ide</string>
+    <string name="new_or_latest_ex"><b><font color="#f20f08">Eng</font></b> : This is my NEW car\n<b><font color="#ffb300">Kan</font></b> : idu nanna HOSA car</string>
+    <string name="old_ex"><b><font color="#f20f08">Eng</font></b> : That is my OLD house\n<b><font color="#ffb300">Kan</font></b> : adu nanna HALE mane</string>
+    <string name="elder_ex"><b><font color="#f20f08">Eng</font></b> : He is ELDER to me\n<b><font color="#ffb300">Kan</font></b> : avanu nanage HIRIYAru</string>
+    <string name="younger_ex"><b><font color="#f20f08">Eng</font></b> : She is YOUNGER to me\n<b><font color="#ffb300">Kan</font></b> : avaLu nanage KIRIYAlu</string>
+    <string name="thick_ex"><b><font color="#f20f08">Eng</font></b> : This cloth is very THICK\n<b><font color="#ffb300">Kan</font></b> : ee baTTe(cloth) thumba DAPPA ide</string>
+    <string name="thin_ex"><b><font color="#f20f08">Eng</font></b> : This paper is very THIN\n<b><font color="#ffb300">Kan</font></b> : ee paper thumba THELLAgide</string>
+    <string name="listen_ex"><b><font color="#f20f08">Eng</font></b> : please LISTEN to my words\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU nanna maathu KELU</string>
+    <string name="read_ex"><b><font color="#f20f08">Eng</font></b> : Can you READ this message?\n<b><font color="#ffb300">Kan</font></b> : neevu ee message Odutheera?</string>
+    <string name="write_ex"><b><font color="#f20f08">Eng</font></b> : I am WRITING\n<b><font color="#ffb300">Kan</font></b> : naanu BARIyuttha idini</string>
+    <string name="talk_ex"><b><font color="#f20f08">Eng</font></b> : Can we TALK for 2 minutes?\n<b><font color="#ffb300">Kan</font></b> : naavu 2 nimisha(minutes) MAATHU aadabahuda?</string>
+    <string name="enough_ex"><b><font color="#f20f08">Eng</font></b> : Enough doing this work\n<b><font color="#ffb300">Kan</font></b> : ee kelasa madiddu SAAKU</string>
+    <string name="stop_ex"><b><font color="#f20f08">Eng</font></b> : STOP talking\n<b><font color="#ffb300">Kan</font></b> : maathu NILLISI (Stop - Nillu)</string>
+    <string name="start_ex"><b><font color="#f20f08">Eng</font></b> : I will START writing\n<b><font color="#ffb300">Kan</font></b> : naanu bareyalu SHURU maduthEne</string>
+    <string name="first_ex"><b><font color="#f20f08">Eng</font></b> : This is my FIRST car\n<b><font color="#ffb300">Kan</font></b> : idu nanna MODALA car</string>
+    <string name="last_ex"><b><font color="#f20f08">Eng</font></b> : That was my LAST mistake\n<b><font color="#ffb300">Kan</font></b> : adu nanna KONEya thappu</string>
+    <string name="difficult_ex"><b><font color="#f20f08">Eng</font></b> : That work is DIFFICULT\n<b><font color="#ffb300">Kan</font></b> : aa kelasa KASHTA</string>
+    <string name="easy_ex"><b><font color="#f20f08">Eng</font></b> : This work is EASY!\n<b><font color="#ffb300">Kan</font></b> : ee kelasa SULABHA!</string>
     <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
 
     <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
@@ -1125,26 +1125,26 @@
     <!-- *******************************Day 6 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 6 STARTS here *******************************-->
-    <string name="up_ex"><b><u>Eng</u> : please get UP</b>\n<b><u>Kan</u> : dayaviTTu MELE ELi</b></string>
-    <string name="down_ex"><b><u>Eng</u> : Please come DOWN</b>\n<b><u>Kan</u> : dayaviTTU KELAGE banni</b></string>
-    <string name="left_ex"><b><u>Eng</u> : Go front and go LEFT</b>\n<b><u>Kan</u> : munde hogi matthu EDAGADE hogi</b></string>
-    <string name="right_ex"><b><u>Eng</u> : Orion mall is on RIGHT side of World Trade Building</b>\n<b><u>Kan</u> : Orion Mall World Trade Building na BALAGADE ide</b></string>
-    <string name="front_or_further_or_forward_ex"><b><u>Eng</u> : I have parked my car infront of my house</b>\n<b><u>Kan</u> : naanu nanna car annu nanna mane MUNDE park maadidini</b></string>
-    <string name="back_or_backward_ex"><b><u>Eng</u> : Take a step BACKWARD</b>\n<b><u>Kan</u> : ondu hejje(step) hinde thagoLi</b></string>
-    <string name="turn_ex"><b><u>Eng</u> : Go further for 1 KM and TURN left</b>\n<b><u>Kan</u> : 1(ondu) km munde hOgi eDagaDe THIRUGI</b></string>
-    <string name="take_ex"><b><u>Eng</u> : Please TAKE this box.</b>\n<b><u>Kan</u> : dayaviTTU ee box THAGOLI</b></string>
-    <string name="bring_ex"><b><u>Eng</u> : Please BRING that book tomorrow</b>\n<b><u>Kan</u> : dayaviTTu aa pushtakavanna naaLe THAGONDU BANNI/BA</b></string>
-    <string name="straight_ex"><b><u>Eng</u> : Go STRAIGHT and take right</b>\n<b><u>Kan</u> : NERA hogi balagaDe thirugi</b></string>
-    <string name="circle_ex"><b><u>Eng</u> : I am near Mekhri CIRCLE</b>\n<b><u>Kan</u> : naanu Mekhri VRUTHADA hatthira iddeeni</b></string>
-    <string name="time_ex"><b><u>Eng</u> : My TIME is very good today</b>\n<b><u>Kan</u> : ivatthu nanna SAMAYA thumba channagi ide</b></string>
-    <string name="late_ex"><b><u>Eng</u> : I came LATE today</b>\n<b><u>Kan</u> : naanu ivatthu THADAvaagi bande</b></string>
-    <string name="early_ex"><b><u>Eng</u> : I came EARLY today</b>\n<b><u>Kan</u> : naanu ivatthu BEGA bande</b></string>
-    <string name="way_ex"><b><u>Eng</u> : Show me the WAY</b>\n<b><u>Kan</u> : nanage DAARI thorisi</b></string>
-    <string name="road_ex"><b><u>Eng</u> : Right side of the ROAD</b>\n<b><u>Kan</u> : RASTHEya balagaDe</b></string>
-    <string name="out_ex"><b><u>Eng</u> : Please Get OUT!</b>\n<b><u>Kan</u> : dayaviTTU HORAGE hOgi</b></string>
-    <string name="in_ex"><b><u>Eng</u> : Please come IN!</b>\n<b><u>Kan</u> : dayaviTTU OLAGE banni</b></string>
-    <string name="near_ex"><b><u>Eng</u> : My house is NEAR to your house</b>\n<b><u>Kan</u> : Nanna mane nimma manege HATTHIRA ide</b></string>
-    <string name="far_ex"><b><u>Eng</u> : Electronic City is very FAR from Vijayanagar</b>\n<b><u>Kan</u> : Electronic City VijayaNagar inda thumba DOORA</b></string>
+    <string name="up_ex"><b><font color="#f20f08">Eng</font></b> : please get UP\n<b><font color="#ffb300">Kan</font></b> : dayaviTTu MELE ELi</string>
+    <string name="down_ex"><b><font color="#f20f08">Eng</font></b> : Please come DOWN\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU KELAGE banni</string>
+    <string name="left_ex"><b><font color="#f20f08">Eng</font></b> : Go front and go LEFT\n<b><font color="#ffb300">Kan</font></b> : munde hogi matthu EDAGADE hogi</string>
+    <string name="right_ex"><b><font color="#f20f08">Eng</font></b> : Orion mall is on RIGHT side of World Trade Building\n<b><font color="#ffb300">Kan</font></b> : Orion Mall World Trade Building na BALAGADE ide</string>
+    <string name="front_or_further_or_forward_ex"><b><font color="#f20f08">Eng</font></b> : I have parked my car infront of my house\n<b><font color="#ffb300">Kan</font></b> : naanu nanna car annu nanna mane MUNDE park maadidini</string>
+    <string name="back_or_backward_ex"><b><font color="#f20f08">Eng</font></b> : Take a step BACKWARD\n<b><font color="#ffb300">Kan</font></b> : ondu hejje(step) hinde thagoLi</string>
+    <string name="turn_ex"><b><font color="#f20f08">Eng</font></b> : Go further for 1 KM and TURN left\n<b><font color="#ffb300">Kan</font></b> : 1(ondu) km munde hOgi eDagaDe THIRUGI</string>
+    <string name="take_ex"><b><font color="#f20f08">Eng</font></b> : Please TAKE this box.\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU ee box THAGOLI</string>
+    <string name="bring_ex"><b><font color="#f20f08">Eng</font></b> : Please BRING that book tomorrow\n<b><font color="#ffb300">Kan</font></b> : dayaviTTu aa pushtakavanna naaLe THAGONDU BANNI/BA</string>
+    <string name="straight_ex"><b><font color="#f20f08">Eng</font></b> : Go STRAIGHT and take right\n<b><font color="#ffb300">Kan</font></b> : NERA hogi balagaDe thirugi</string>
+    <string name="circle_ex"><b><font color="#f20f08">Eng</font></b> : I am near Mekhri CIRCLE\n<b><font color="#ffb300">Kan</font></b> : naanu Mekhri VRUTHADA hatthira iddeeni</string>
+    <string name="time_ex"><b><font color="#f20f08">Eng</font></b> : My TIME is very good today\n<b><font color="#ffb300">Kan</font></b> : ivatthu nanna SAMAYA thumba channagi ide</string>
+    <string name="late_ex"><b><font color="#f20f08">Eng</font></b> : I came LATE today\n<b><font color="#ffb300">Kan</font></b> : naanu ivatthu THADAvaagi bande</string>
+    <string name="early_ex"><b><font color="#f20f08">Eng</font></b> : I came EARLY today\n<b><font color="#ffb300">Kan</font></b> : naanu ivatthu BEGA bande</string>
+    <string name="way_ex"><b><font color="#f20f08">Eng</font></b> : Show me the WAY\n<b><font color="#ffb300">Kan</font></b> : nanage DAARI thorisi</string>
+    <string name="road_ex"><b><font color="#f20f08">Eng</font></b> : Right side of the ROAD\n<b><font color="#ffb300">Kan</font></b> : RASTHEya balagaDe</string>
+    <string name="out_ex"><b><font color="#f20f08">Eng</font></b> : Please Get OUT!\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU HORAGE hOgi</string>
+    <string name="in_ex"><b><font color="#f20f08">Eng</font></b> : Please come IN!\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU OLAGE banni</string>
+    <string name="near_ex"><b><font color="#f20f08">Eng</font></b> : My house is NEAR to your house\n<b><font color="#ffb300">Kan</font></b> : Nanna mane nimma manege HATTHIRA ide</string>
+    <string name="far_ex"><b><font color="#f20f08">Eng</font></b> : Electronic City is very FAR from Vijayanagar\n<b><font color="#ffb300">Kan</font></b> : Electronic City VijayaNagar inda thumba DOORA</string>
     <!-- *******************************Examples Texts for Day 6 ENDS here *******************************-->
 
     <!-- *******************************Day 7 content (ENGLISH) STARTS here *******************************-->
@@ -1189,24 +1189,24 @@
     <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Examples Texts for Day 7 STARTS here *******************************-->
-    <string name="family_ex"><b><u>Eng</u> : I love my FAMILY a lot</b>\n<b><u>Kan</u> : naanu nanna KUTUMBAvannu thumba ishTa paduthEne</b></string>
-    <string name="mother_ex"><b><u>Eng</u> : My MOTHER cooks very well</b>\n<b><u>Kan</u> : nanna AMMA thumba channagi adige maaduthaare</b></string>
-    <string name="father_ex"><b><u>Eng</u> : My FATHER is a doctor</b>\n<b><u>Kan</u> : nanna APPA obba doctor</b></string>
-    <string name="son_ex"><b><u>Eng</u> : He is my SON</b>\n<b><u>Kan</u> : avanu nanna MAGA</b></string>
-    <string name="daughter_ex"><b><u>Eng</u> : She is my DAUGHTER</b>\n<b><u>Kan</u> : avaLu nanna MAGALU</b></string>
-    <string name="children_or_kids_ex"><b><u>Eng</u> : I have two CHILDREN/KIDS</b>\n<b><u>Kan</u> : nanage ibbaru MAKKALU</b></string>
-    <string name="elder_brother_ex"><b><u>Eng</u> : My BROTHER(Elder) is a Software Engineer</b>\n<b><u>Kan</u> : nanna ANNA obba Software Engineer</b></string>
-    <string name="younger_brother_ex"><b><u>Eng</u> : My BROTHER(Younger) is a Civil Engineer</b>\n<b><u>Kan</u> : nanna THAMMA obba Civil Engineer</b></string>
-    <string name="elder_sister_ex"><b><u>Eng</u> : My SISTER(Elder) is a teacher</b>\n<b><u>Kan</u> : nanna AKKA obba teacher</b></string>
-    <string name="younger_sister_ex"><b><u>Eng</u> : My SISTER(Younger) is a dancer</b>\n<b><u>Kan</u> : nanna THANGI obba dancer</b></string>
-    <string name="mother_in_law_ex"><b><u>Eng</u> : My Mother-in-law is a housewife</b>\n<b><u>Kan</u> : nanna ATTHE obba gruhiNi(housewife)</b></string>
-    <string name="father_in_law_ex"><b><u>Eng</u> : My Father-in-law is a retired police man</b>\n<b><u>Kan</u> : nanna MAAVA obba retired police</b></string>
-    <string name="grandfather_ex"><b><u>Eng</u> : I like my GRAND FATHER very much</b>\n<b><u>Kan</u> : nanna AJJA andare nanage thumba ishTa</b></string>
-    <string name="grandmother_ex"><b><u>Eng</u> : I stay with my GRAND MOTHER</b>\n<b><u>Kan</u> : naanu nanna AJJI jothe(with/together) ideeni</b></string>
-    <string name="grandson_ex"><b><u>Eng</u> : My GRAND SON is in Bengaluru</b>\n<b><u>Kan</u> : nanna MOMMAGA Bengalurinalli idaane</b></string>
-    <string name="granddaughter_ex"><b><u>Eng</u> : My GRAND DAUGHTER is studying M.Sc</b>\n<b><u>Kan</u> : nanna MOMMAGALU M.Sc Odutha idaaLe</b></string>
-    <string name="cook_ex"><b><u>Eng</u> : My mother COOKs very well</b>\n<b><u>Kan</u> : nanna amma thumba channagi ADIGE maaduthaare</b></string>
-    <string name="water_ex"><b><u>Eng</u> : I want WATER</b>\n<b><u>Kan</u> : nanage NEERU bEku</b></string>
+    <string name="family_ex"><b><font color="#f20f08">Eng</font></b> : I love my FAMILY a lot\n<b><font color="#ffb300">Kan</font></b> : naanu nanna KUTUMBAvannu thumba ishTa paduthEne</string>
+    <string name="mother_ex"><b><font color="#f20f08">Eng</font></b> : My MOTHER cooks very well\n<b><font color="#ffb300">Kan</font></b> : nanna AMMA thumba channagi adige maaduthaare</string>
+    <string name="father_ex"><b><font color="#f20f08">Eng</font></b> : My FATHER is a doctor\n<b><font color="#ffb300">Kan</font></b> : nanna APPA obba doctor</string>
+    <string name="son_ex"><b><font color="#f20f08">Eng</font></b> : He is my SON\n<b><font color="#ffb300">Kan</font></b> : avanu nanna MAGA</string>
+    <string name="daughter_ex"><b><font color="#f20f08">Eng</font></b> : She is my DAUGHTER\n<b><font color="#ffb300">Kan</font></b> : avaLu nanna MAGALU</string>
+    <string name="children_or_kids_ex"><b><font color="#f20f08">Eng</font></b> : I have two CHILDREN/KIDS\n<b><font color="#ffb300">Kan</font></b> : nanage ibbaru MAKKALU</string>
+    <string name="elder_brother_ex"><b><font color="#f20f08">Eng</font></b> : My BROTHER(Elder) is a Software Engineer\n<b><font color="#ffb300">Kan</font></b> : nanna ANNA obba Software Engineer</string>
+    <string name="younger_brother_ex"><b><font color="#f20f08">Eng</font></b> : My BROTHER(Younger) is a Civil Engineer\n<b><font color="#ffb300">Kan</font></b> : nanna THAMMA obba Civil Engineer</string>
+    <string name="elder_sister_ex"><b><font color="#f20f08">Eng</font></b> : My SISTER(Elder) is a teacher\n<b><font color="#ffb300">Kan</font></b> : nanna AKKA obba teacher</string>
+    <string name="younger_sister_ex"><b><font color="#f20f08">Eng</font></b> : My SISTER(Younger) is a dancer\n<b><font color="#ffb300">Kan</font></b> : nanna THANGI obba dancer</string>
+    <string name="mother_in_law_ex"><b><font color="#f20f08">Eng</font></b> : My Mother-in-law is a housewife\n<b><font color="#ffb300">Kan</font></b> : nanna ATTHE obba gruhiNi(housewife)</string>
+    <string name="father_in_law_ex"><b><font color="#f20f08">Eng</font></b> : My Father-in-law is a retired police man\n<b><font color="#ffb300">Kan</font></b> : nanna MAAVA obba retired police</string>
+    <string name="grandfather_ex"><b><font color="#f20f08">Eng</font></b> : I like my GRAND FATHER very much\n<b><font color="#ffb300">Kan</font></b> : nanna AJJA andare nanage thumba ishTa</string>
+    <string name="grandmother_ex"><b><font color="#f20f08">Eng</font></b> : I stay with my GRAND MOTHER\n<b><font color="#ffb300">Kan</font></b> : naanu nanna AJJI jothe(with/together) ideeni</string>
+    <string name="grandson_ex"><b><font color="#f20f08">Eng</font></b> : My GRAND SON is in Bengaluru\n<b><font color="#ffb300">Kan</font></b> : nanna MOMMAGA Bengalurinalli idaane</string>
+    <string name="granddaughter_ex"><b><font color="#f20f08">Eng</font></b> : My GRAND DAUGHTER is studying M.Sc\n<b><font color="#ffb300">Kan</font></b> : nanna MOMMAGALU M.Sc Odutha idaaLe</string>
+    <string name="cook_ex"><b><font color="#f20f08">Eng</font></b> : My mother COOKs very well\n<b><font color="#ffb300">Kan</font></b> : nanna amma thumba channagi ADIGE maaduthaare</string>
+    <string name="water_ex"><b><font color="#f20f08">Eng</font></b> : I want WATER\n<b><font color="#ffb300">Kan</font></b> : nanage NEERU bEku</string>
     <!-- *******************************Examples Texts for Day 7 ENDS here *******************************-->
 
     <!-- *******************************Day 8 content (ENGLISH) STARTS here *******************************-->
@@ -1662,11 +1662,11 @@
     <string name="feedback">Bug Report/Feedback</string>
     <string name="micWord">Instant Word Translation (IWT) </string>
 
-    <string name="go_ex"><b><u>Eng</u> : you go</b>\n<b><u>Kan</u> : neenu HOGU(singular), neevu HOGI(plural)</b></string>
-    <string name="for_you_ex"><b><u>Eng</u> : that is for you</b>\n<b><u>Kan</u> : adu NINAGE(singular), adu NIMAGE(plural)</b></string>
-    <string name="yours_ex"><b><u>Eng</u> : this is yours</b>\n<b><u>Kan</u> : idu NINNADU(singular), idu NIMMADU(plural)</b></string>
-    <string name="you_ex"><b><u>Eng</u> : you go there</b>\n<b><u>Kan</u> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</b></string>
-    <string name="come_ex"><b><u>Eng</u> : you come</b>\n<b><u>Kan</u> : neenu BAA(singular), neevu BANNI(plural)</b></string>
+    <string name="go_ex"><b><font color="#f20f08">Eng</font></b> : you go\n<b><font color="#ffb300">Kan</font></b> : neenu HOGU(singular), neevu HOGI(plural)</string>
+    <string name="for_you_ex"><b><font color="#f20f08">Eng</font></b> : that is for you\n<b><font color="#ffb300">Kan</font></b> : adu NINAGE(singular), adu NIMAGE(plural)</string>
+    <string name="yours_ex"><b><font color="#f20f08">Eng</font></b> : this is yours\n<b><font color="#ffb300">Kan</font></b> : idu NINNADU(singular), idu NIMMADU(plural)</string>
+    <string name="you_ex"><b><font color="#f20f08">Eng</font></b> : you go there\n<b><font color="#ffb300">Kan</font></b> : NEENU(singular) allige hogu, NEEVU(plural) allige HOGI</string>
+    <string name="come_ex"><b><font color="#f20f08">Eng</font></b> : you come\n<b><font color="#ffb300">Kan</font></b> : neenu BAA(singular), neevu BANNI(plural)</string>
     <string name="aboutKannada">About Kannada</string>
     <string name="aboutKarnataka">About Karnataka</string>
     <string name="aboutHithAM">About HithAM</string>
@@ -1680,9 +1680,9 @@
     <string name="later">Later</string>
     <string name="no">No</string>
 
-    <string name="whats_this_string"><b><u>what\'s this?</u></b></string>
-    <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\n<u>How to use?</u>\nJust click on the <b>\"CLICK HERE\"</b> button and voila! you will be shown a new verb with it\'s past, present and future tenses.
-    \n<b>Click</b> on any of the cards to listen to the audio message!</string>
+    <string name="whats_this_string">what\'s this?</string>
+    <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\nHow to use?\nJust click on the \"CLICK HERE\" button and voila! you will be shown a new verb with it\'s past, present and future tenses.
+    \nClick on any of the cards to listen to the audio message!</string>
     <string name="missing_in_voc">Missing in my Vocabulary!</string>
     <string name="too_young">Oops! I am too young for sentences. But wait!</string>
     <string name="I_can_give_you_different_example">I can give you different example for</string>
