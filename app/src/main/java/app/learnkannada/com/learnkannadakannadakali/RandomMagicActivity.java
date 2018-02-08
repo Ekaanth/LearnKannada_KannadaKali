@@ -150,7 +150,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = presentWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -161,7 +161,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = pastWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -172,7 +172,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = futureWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -183,7 +183,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = pastContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -194,7 +194,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = presentContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -205,7 +205,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String resourceName = futureContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
@@ -218,7 +218,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                         String resourceName = rootVerbEng.getText().toString().replaceAll(" ","_").toLowerCase();
                         if(resourceName.equals("do"))
                             resourceName+="_";
-                        if(FindResource.resourceAvailable(getApplicationContext(),resourceName))
+                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
                             AudioPlayer.playAudio(getApplicationContext(),resourceName);
                         else
                             Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();

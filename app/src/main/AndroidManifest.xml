@@ -8,13 +8,20 @@
         android:name="com.onesignal.NotificationAccentColor.DEFAULT"
         android:value="#e7bc10" />
 
+    <!-- Example: Sets all OneSignal notification's accent color to Green by default. -->
+    <!-- Color format is in ARGB. -->
+    <meta-data
+        android:name="com.onesignal.NotificationAccentColor.DEFAULT"
+        android:value="#e7bc10" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".CategoriesActivity"
@@ -27,7 +34,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreenActivity"
-            android:hardwareAccelerated="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -52,16 +58,15 @@
             android:name=".RandomMagicActivity"
             android:screenOrientation="portrait" />
 
-<!--        <meta-data
+        <!--
+            <meta-data
             android:name="com.onesignal.NotificationOpened.DEFAULT"
-            android:value="DISABLE" />-->
+            android:value="DISABLE" />
+        -->
 
+        <activity
+            android:name=".AboutusActivity"
+            android:hardwareAccelerated="false" />
     </application>
-
-    <!-- Example: Sets all OneSignal notification's accent color to Green by default.  -->
-    <!-- Color format is in ARGB. -->
-    <meta-data
-        android:name="com.onesignal.NotificationAccentColor.DEFAULT"
-        android:value="#e7bc10" />
 
 </manifest>

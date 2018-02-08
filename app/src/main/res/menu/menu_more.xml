@@ -15,11 +15,11 @@
         app:showAsAction="collapseActionView">
     </item>
 
-<!--    <item
+    <item
         android:id="@+id/aboutUsID"
         android:orderInCategory="100"
         android:title="About Us"
-        app:showAsAction="collapseActionView" />-->
+        app:showAsAction="collapseActionView" />
 <!--
     <item
         android:id="@+id/aboutKannadaID"

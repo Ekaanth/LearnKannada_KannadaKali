@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.bumptech.glide.Glide;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +26,15 @@ import constants.Constants;
 import utils.AudioPlayer;
 import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
 import app.learnkannada.com.learnkannadakannadakali.DayActivity;
-import app.learnkannada.com.learnkannadakannadakali.ExampleActivity;
 import app.learnkannada.com.learnkannadakannadakali.R;
+import utils.FindResource;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
     private List<String> values, kanValues, mFilteredList, mFilteredKanList;
     private Context context;
     private String mCategory;
+    private AlertDialog.Builder letterWriter;
 
     /**
      * Provide a suitable constructor (depends on the kind of dataset)
@@ -44,6 +47,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         mFilteredList = myDataset;
         mCategory = category;
         kanValues = kanInput;
+        letterWriter = new AlertDialog.Builder(context);
     }
 
     public void add(int position, String item) {
@@ -68,7 +72,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             case Constants.HOMECOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
-                
+
                 break;
             }
             default:
@@ -106,7 +110,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
+        }
+        else if (mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
                     .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
@@ -127,11 +132,34 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.textInKan.setText(mFilteredKanList.get(position));
         }
         //onClickListener code begins
-        if (!mCategory.equals(Constants.DAYCOURSE) && !mCategory.equals(Constants.HOMECOURSE) && !mCategory.equals(Constants.FLEXI_WORDS) && !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
+        if (!mCategory.equals(Constants.DAYCOURSE) &&
+                !mCategory.equals(Constants.HOMECOURSE) &&
+                !mCategory.equals(Constants.FLEXI_WORDS) &&
+                !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
+                    if(mCategory.equals(Constants.ALPHABETS))
+                    {
+                        View view = LayoutInflater.from(context).inflate(R.layout.layout_letterwriting,null);
+                        Integer resID = v.getContext().getResources().getIdentifier("ka_"+ audioResourceFinder(name),"drawable",context.getPackageName());
+                        Glide.with(v.getContext()).load(resID).into((ImageView) view.findViewById(R.id.lw_iconID));
+                        //Toast.makeText(context,"ka_" + audioResourceFinder(name) + " " + FindResource.rawResourceAvailable(context,"ka_" + audioResourceFinder(name)),Toast.LENGTH_SHORT).show();
+                        TextView letter = (TextView) view.findViewById(R.id.lw_textID);
+                        ImageView speaker = (ImageView) view.findViewById(R.id.lw_speakerID);
+                        letter.setText(name);
+                        speaker.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                try {
+                                    playOffline(position);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                        letterWriter.setView(view).create().show();
+                    }
                     try {
                         playOffline(position);
                     } catch (IOException e) {
@@ -140,7 +168,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     //playOnline(position);
                 }
             });
-        } else if (mCategory.equals(Constants.HOMECOURSE)) {
+        }
+        else if (mCategory.equals(Constants.HOMECOURSE)) {
             switch (name) {
                 case "Day 1":
                 case "Day 2":
@@ -174,11 +203,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        } else if (mCategory.equals(Constants.DAYCOURSE)) {
+        }
+        else if (mCategory.equals(Constants.DAYCOURSE)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context,name + "_t_" + position, Toast.LENGTH_LONG).show();
                     try {
                         playOffline(position);
                     } catch (IOException e) {
@@ -227,7 +257,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 }
             });
         }
-
         //separate condition for Day 9 and 10 to set exampleButton invisible for these as these are conversations
         else if (mCategory.equals(Constants.DAY89_10)) {
             holder.exampleButton.setVisibility(View.INVISIBLE);

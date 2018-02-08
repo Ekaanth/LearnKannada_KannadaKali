@@ -1685,7 +1685,6 @@
     \nClick on any of the cards to listen to the audio message!</string>
     <string name="missing_in_voc">Missing in my Vocabulary!</string>
     <string name="too_young">Oops! I am too young for sentences. But wait!</string>
-    <string name="I_can_give_you_different_example">I can give you different example for</string>
     <string name="SHOW_ME">Show me</string>
     <string name="sorry_idk_that_yet">Sorry! I don\'t know that yet.</string>
     <string name="KANNADA_KALI_USER">Kannada Kali User</string>
@@ -1781,5 +1780,26 @@
         <item>malaguthaa irtini</item>
         <item>mucchuthaa irtini</item>
     </string-array>
+
+    <!-- About Us Text STARTS HERE -->
+
+    <string name="title_Varun">Varun <font color="#FFFFB300">A M</font></string>
+    <string name="about_Varun">\tSoftware Developer by profession, photographer and keyboardist by passion.
+     Key player in the app development </string>
+    <string name="connect"><b><u>connect here</u></b></string>
+    <string name="developer">Developer</string>
+    <string name="title_Rohith">Ro<font color="#FFF20F08">hith</font> S</string>
+    <string name="about_Rohith">\tSoftware Developer by profession, adventure lover by passion. Key player in the app development</string>
+    <string name="title_Pooja">Pooja H N</string>
+    <string name="about_pooja">\tSoftware Developer by profession. She loves to travel and read novels! She is behind the voice of IWT and 90% of all others words and conversations.</string>
+    <string name="voicesBehind"><u>Voices behind the app</u></string>
+    <string name="title_ganesh">Ganesha R</string>
+    <string name="about_ganesh">\tSoftware Engineer by profession, bike rider by passion. Listen to him as auto driver and a friend under conversations category.</string>
+    <string name="title_Bharghavi">Bharghavi</string>
+    <string name="contact_HithAM">Connect with <font color="#FFF20F08">H</font>ith<font color="#FFFFB300">AM</font></string>
+    <string name="about_bharghavi">\t Software Engineer by profession, classical musician by passion. She would love to dance and play sports! Listen to her voice as owner in owner-maid conversations.</string>
+    <string name="title_samraddha">Samraddha</string>
+
+    <!-- About Us Text ENDS HERE -->
 
 </resources>

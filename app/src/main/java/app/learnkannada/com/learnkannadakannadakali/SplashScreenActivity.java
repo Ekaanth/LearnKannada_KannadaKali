@@ -30,8 +30,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen_);
 
-        //flagGif = (GIFView) findViewById(R.id.welcomeFlagID);
-
         splashText = (ImageView)findViewById(R.id.welcomeID);
         hitham = (ImageView) findViewById(R.id.logoID);
 

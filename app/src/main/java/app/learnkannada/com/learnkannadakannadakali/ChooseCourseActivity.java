@@ -142,16 +142,16 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         //playing found music file
         try {
-            if (FindResource.resourceAvailable(getApplicationContext(), spokenString))
+            if (FindResource.rawResourceAvailable(getApplicationContext(), spokenString))
                 playOffline(spokenString);
             else {
                 final String[] splitWords = s.split(" ");
                 for (int j = 0; j < splitWords.length; j++) {
-                    if (FindResource.resourceAvailable(getApplicationContext(), splitWords[j] + "_ex")) {
+                    if (FindResource.rawResourceAvailable(getApplicationContext(), splitWords[j] + "_ex")) {
                         //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                         final int finalJ = j;
                         infoBuilder.setTitle(R.string.too_young)
-                                .setMessage("\n"+R.string.I_can_give_you_different_example+"\n\"" + splitWords[j].toUpperCase()
+                                .setMessage("\n"+"I can give you different example for "+"\n\"" + splitWords[j].toUpperCase()
                                         + "\"\n")
                                 .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
                                     @Override
@@ -193,7 +193,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .setIcon(R.drawable.idea).setCancelable(true).create().show();
                 }
             }
-            if (FindResource.resourceAvailable(getApplicationContext(), spokenStringEx)) {
+            if (FindResource.rawResourceAvailable(getApplicationContext(), spokenStringEx)) {
                 builder.setTitle("Yay! Example found for \"" + spokenString.replaceAll("_", " ") + "\"")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
@@ -346,7 +346,12 @@ public class ChooseCourseActivity extends AppCompatActivity {
                   .setIcon(R.drawable.alphabets)
                   .setCancelable(true)
                   .create().show();
-        } else if (item.getItemId() == R.id.disclaimerID) {
+        }
+        else if (item.getItemId() == R.id.aboutUsID)
+        {
+            startActivity(new Intent(this,AboutusActivity.class));
+        }
+        else if (item.getItemId() == R.id.disclaimerID) {
             dialog.setTitle("Disclaimer")
                     .setMessage("-- This is a FREE app."
                             +"\n-- \"10 Days Course\" has been designed to help people learn \"Basic Spoken " +

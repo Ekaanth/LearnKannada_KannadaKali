@@ -60,7 +60,7 @@ public class CategoryContentActivity extends AppCompatActivity {
             kanInput.add(listValuesInKan[i]);
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(), input, category, kanInput);
+        adapter = new ListViewAdapter(this, input, category, kanInput);
         recyclerView.setAdapter(adapter);
     }
 

@@ -8,7 +8,7 @@ import android.content.Context;
 
 public class FindResource {
     //method checks if the resource with string supplied is present in raw directory
-    public static boolean resourceAvailable(Context context, String spokenStringEx) {
+    public static boolean rawResourceAvailable(Context context, String spokenStringEx) {
         Integer id = context.getResources().getIdentifier(spokenStringEx.toLowerCase(), "raw", context.getPackageName());
         if (id > 0)
             return true;
