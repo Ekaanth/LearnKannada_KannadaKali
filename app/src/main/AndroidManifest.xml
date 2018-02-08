@@ -49,6 +49,9 @@
             android:name=".DayActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".AntonymsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".ExampleActivity"
             android:screenOrientation="portrait" />
         <activity

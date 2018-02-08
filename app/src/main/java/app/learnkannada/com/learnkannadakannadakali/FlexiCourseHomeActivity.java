@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import constants.Constants;
 import sharedPreferences.AppRater;
@@ -13,7 +14,8 @@ import sharedPreferences.ReferFriends;
 
 public class FlexiCourseHomeActivity extends AppCompatActivity {
 
-    private CardView words, conversations, randomMagic;
+    private CardView words, conversations, randomMagic, antonyms;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
         words = (CardView) findViewById(R.id.wordsID);
         conversations = (CardView) findViewById(R.id.conversationsID);
         randomMagic = (CardView) findViewById(R.id.randomMagicID);
+        antonyms = (CardView) findViewById(R.id.antonymID);
+
 
         AppRater.app_launched(this);
         ReferFriends.app_launched(this);
@@ -61,6 +65,13 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(),"Coming soon...", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(FlexiCourseHomeActivity.this, RandomMagicActivity.class));
                 finish();
+            }
+        });
+
+        antonyms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FlexiCourseHomeActivity.this, AntonymsActivity.class));
             }
         });
 

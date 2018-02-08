@@ -47,6 +47,7 @@ dependencies {
     compile 'com.onesignal:OneSignal:3.7.1'
     compile 'com.github.bumptech.glide:glide:4.3.1'
     compile 'com.flaviofaria:kenburnsview:1.0.6'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

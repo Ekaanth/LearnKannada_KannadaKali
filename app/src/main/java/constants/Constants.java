@@ -50,4 +50,6 @@ public class Constants {
     public static final String POSITION = "position";
     public static final String KNAME = "kName";
     public static final String ALPHABETS = "alphabets";
+    public static final String ANTONYMS= "Antonyms";
+    public static final String FROM_ADAPTER ="from-adapter" ;
 }

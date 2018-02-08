@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import java.util.List;
 import constants.Constants;
 import utils.AudioPlayer;
 import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
+import app.learnkannada.com.learnkannadakannadakali.AntonymsActivity;
 import app.learnkannada.com.learnkannadakannadakali.DayActivity;
 import app.learnkannada.com.learnkannadakannadakali.R;
 import utils.FindResource;
@@ -73,6 +75,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
 
+                break;
+            }
+            case Constants.ANTONYMS:{
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_minimal,parent,false);
                 break;
             }
             default:
@@ -128,11 +135,29 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 }
             });
         }
-        if (!mCategory.equals(Constants.HOMECOURSE)) {
+
+        else if(mCategory.equals(Constants.ANTONYMS))
+        {
+            //holder.textInKan.setVisibility(View.INVISIBLE);
+            //holder.imageView1.setVisibility(View.INVISIBLE);
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Constants.FROM_ADAPTER);
+                    intent.putExtra(Constants.WORDS,name);
+                    intent.putExtra(Constants.ANTONYMS,kName);
+                    LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+                }
+            });
+        }
+
+        if (!mCategory.equals(Constants.HOMECOURSE )&& !mCategory.equals(Constants.ANTONYMS)) {
             holder.textInKan.setText(mFilteredKanList.get(position));
         }
+
         //onClickListener code begins
-        if (!mCategory.equals(Constants.DAYCOURSE) &&
+        if (!mCategory.equals(Constants.ANTONYMS)&&
+                !mCategory.equals(Constants.DAYCOURSE) &&
                 !mCategory.equals(Constants.HOMECOURSE) &&
                 !mCategory.equals(Constants.FLEXI_WORDS) &&
                 !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
@@ -399,7 +424,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             super(itemView);
             layout = itemView;
             textInEng = (TextView) layout.findViewById(R.id.textID);
-            textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+            if(!mCategory.equals(Constants.ANTONYMS))
+                textInKan = (TextView) layout.findViewById(R.id.textInKanID);
             if (mCategory.equals(Constants.HOMECOURSE))
                 size = (TextView) layout.findViewById(R.id.sizeID);
             if (mCategory.equals(Constants.DAYCOURSE))

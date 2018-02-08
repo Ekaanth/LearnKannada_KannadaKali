@@ -181,10 +181,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     body.append("Hello Team HithAM, \n \n");
                                     body.append("I found that the word \"" + spokenString.toUpperCase() + "\" is missing in your app vocabulary and it would be helpful to all if this word is added to it.\n\n");
                                     body.append("\n Regards, \n");
-                                    body.append(R.string.KANNADA_KALI_USER);
+                                    body.append(getResources().getString(R.string.KANNADA_KALI_USER));
                                     String company[] = {Constants.HITHAM_EMAIL};
                                     Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                                    intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.WANTS_TO_CONTACT));
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                     startActivity(intent);

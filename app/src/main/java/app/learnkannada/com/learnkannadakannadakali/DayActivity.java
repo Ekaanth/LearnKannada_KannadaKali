@@ -71,8 +71,6 @@ public class DayActivity extends AppCompatActivity {
 
         String[] listValues = null, listValuesInKan = null;
 
-        Resources res = getResources();
-
         String englishArray = day.replaceAll(" ","")+Constants._CONTENT;
         String kannadaArray = day.replaceAll(" ","")+Constants._CONTENT_KANNADA;
         listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,Constants.ARRAY,getPackageName()));
