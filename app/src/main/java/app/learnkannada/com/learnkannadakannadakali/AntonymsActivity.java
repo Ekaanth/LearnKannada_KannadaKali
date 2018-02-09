@@ -40,8 +40,8 @@ public class AntonymsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        String[] wordList = getResources().getStringArray(R.array.Day1_content);
-        String[] antonymsList = getResources().getStringArray(R.array.Day2_content);
+        String[] wordList = getResources().getStringArray(R.array.pWords_array_Eng);
+        String[] antonymsList = getResources().getStringArray(R.array.nWords_array_Eng);
 
         for (int i = 0; i < wordList.length; i++) {
             word.add(wordList[i]);
@@ -62,8 +62,8 @@ public class AntonymsActivity extends AppCompatActivity {
             String antonymEng = intent.getStringExtra(Constants.ANTONYMS);
             String wordKan ,antonymKan;
 
-            String[] wordKanArray = getResources().getStringArray(R.array.Day1_content_kannada);
-            String[] antonymKanArray = getResources().getStringArray(R.array.Day2_content_kannada);
+            String[] wordKanArray = getResources().getStringArray(R.array.pWords_array_kan);
+            String[] antonymKanArray = getResources().getStringArray(R.array.nWords_array_kan);
             wordKan = wordKanArray[word.indexOf(wordEng)];
             antonymKan = antonymKanArray[antonym.indexOf(antonymEng)];
 

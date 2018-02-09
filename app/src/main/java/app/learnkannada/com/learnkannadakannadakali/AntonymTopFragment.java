@@ -18,6 +18,9 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import utils.AudioPlayer;
+import utils.FindResource;
+
 /**
  * Created by raggitha on 06-Feb-18.
  */
@@ -58,14 +61,20 @@ public class AntonymTopFragment extends Fragment{
         pCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Positive",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(),"Positive",Toast.LENGTH_SHORT).show();
+                String engVoice = engWord.getText().toString().replaceAll(" ","_").replaceAll("\\?","").trim();
+                if(FindResource.rawResourceAvailable(view.getContext(),engVoice))
+                    AudioPlayer.playAudio(view.getContext(),engVoice);
             }
         });
 
         nCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Negative",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(),"Negative",Toast.LENGTH_SHORT).show();
+                String engVoice = engAntonym.getText().toString().replaceAll(" ","_").replaceAll("\\?","").trim();
+                if(FindResource.rawResourceAvailable(view.getContext(),engVoice))
+                    AudioPlayer.playAudio(view.getContext(),engVoice);
             }
         });
 

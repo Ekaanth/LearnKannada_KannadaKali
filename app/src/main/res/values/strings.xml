@@ -1803,4 +1803,52 @@
 
     <!-- About Us Text ENDS HERE -->
 
+
+    <!-- ************************* Antonyms Section STARTS HERE ************************* -->
+
+    <string-array name="pWords_array_Eng">
+        <item>will eat</item>
+        <item>will come</item>
+        <item>will do</item>
+        <item>will drink</item>
+        <item>will give</item>
+        <item>will sleep</item>
+        <item>Done?</item>
+        <item>Finished?</item>
+    </string-array>
+
+    <string-array name="nWords_array_Eng">
+        <item>will not eat</item>
+        <item>will not come</item>
+        <item>will not do</item>
+        <item>will not drink</item>
+        <item>will not give</item>
+        <item>will not sleep</item>
+        <item>Not Done</item>
+        <item>Not Finished</item>
+    </string-array>
+
+    <string-array name="pWords_array_kan">
+        <item>thinthini</item>
+        <item>bartini</item>
+        <item>maadtini</item>
+        <item>kuDithini</item>
+        <item>kodthini</item>
+        <item>malagthini</item>
+        <item>aaytha?</item>
+        <item>mugitha?</item>
+    </string-array>
+
+    <string-array name="nWords_array_kan">
+        <item>thinnalla</item>
+        <item>baralla</item>
+        <item>maadalla</item>
+        <item>kuDiyalla</item>
+        <item>kodalla</item>
+        <item>malgalla</item>
+        <item>aagilla</item>
+        <item>mugidilla</item>
+    </string-array>
+    <!-- ************************* Antonyms Section ENDS HERE ************************* -->
+
 </resources>
