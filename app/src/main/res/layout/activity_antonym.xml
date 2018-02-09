@@ -4,23 +4,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
     tools:context="app.learnkannada.com.learnkannadakannadakali.AntonymsActivity">
 
     <fragment
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:id="@+id/fr_id"
         android:name="app.learnkannada.com.learnkannadakannadakali.AntonymTopFragment" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/card_background"
-        android:layout_marginTop="5dp"/>
-
     <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/yellow"
         android:id="@+id/antonymRecyclerViewID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

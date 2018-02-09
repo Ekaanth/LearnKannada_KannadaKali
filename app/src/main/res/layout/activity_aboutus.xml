@@ -29,6 +29,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="13sp"
+                android:textColor="#0645AD"
+                android:fontFamily="sans-serif-smallcaps"
                 android:layout_marginTop="4dp"
                 android:text="@string/connect" />
 
@@ -164,6 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
+                android:textSize="17sp"
                 android:textColor="@color/orange_800"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/voicesBehind"
@@ -324,7 +328,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/ganesh" />
+                    android:src="@drawable/sammy" />
 
 
                 <ImageView
@@ -353,7 +357,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="2dp"
                         android:baselineAligned="false"
-                        android:text="@string/about_ganesh"
+                        android:text="@string/about_sammy"
                         android:textAlignment="textStart" />
 
 

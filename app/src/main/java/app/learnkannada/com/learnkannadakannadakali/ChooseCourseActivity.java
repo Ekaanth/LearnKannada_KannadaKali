@@ -296,9 +296,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.moreID) {
             item.getSubMenu().clear();
             getMenuInflater().inflate(R.menu.menu_more, item.getSubMenu());
-        } /*else if (item.getItemId() == R.id.aboutUsID) {
-            Toast.makeText(getApplicationContext(), "About us selected", Toast.LENGTH_SHORT).show();
-        }*/
+        }
         else if (item.getItemId() == R.id.aboutAppID)
         {
           dialog.setTitle("About the app")
@@ -350,6 +348,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         else if (item.getItemId() == R.id.aboutUsID)
         {
             startActivity(new Intent(this,AboutusActivity.class));
+            finish();
         }
         else if (item.getItemId() == R.id.disclaimerID) {
             dialog.setTitle("Disclaimer")
@@ -371,9 +370,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     .setPositiveButton(null,null)
                     .setNegativeButton(null,null)
                     .create().show();
-        } /*else if (item.getItemId() == R.id.aboutKannadaID) {
-            Toast.makeText(getApplicationContext(), "About Kannada selected", Toast.LENGTH_SHORT).show();
-        }*/
+        }
         else if(item.getItemId() == R.id.thumbRuleID)
         {
             dialog.setTitle(Constants.THUMB_RULE)

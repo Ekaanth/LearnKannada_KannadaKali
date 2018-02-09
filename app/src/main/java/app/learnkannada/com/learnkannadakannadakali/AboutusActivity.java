@@ -41,7 +41,7 @@ public class AboutusActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 StringBuilder body = new StringBuilder();
                                 body.append("Hello Team HithAM, \n \n");
-                                body.append("< Your Text Here >\n\n");
+                                body.append("< Please enter your text here >\n\n");
                                 body.append("\n Regards, \n");
                                 body.append(getResources().getString(R.string.KANNADA_KALI_USER));
                                 String company[] = {Constants.HITHAM_EMAIL};

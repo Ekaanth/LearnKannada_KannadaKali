@@ -72,6 +72,7 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(FlexiCourseHomeActivity.this, AntonymsActivity.class));
+                finish();
             }
         });
 

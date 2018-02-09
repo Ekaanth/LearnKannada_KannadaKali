@@ -1,107 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:padding="20dp"
+    android:layout_height="wrap_content"
     android:gravity="center"
-    android:layout_height="180dp">
+    android:orientation="horizontal"
+    android:padding="10dp">
 
     <android.support.v7.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:id="@+id/fa_pCardID"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
-        app:cardCornerRadius="10dp"
-        >
+        android:background="@drawable/ic_sentiment_very_dissatisfied_black_24dp"
+        app:cardBackgroundColor="#ffee"
+        app:cardCornerRadius="40dp">
+
+        <ImageView
+            android:id="@+id/happyID"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sentiment_very_satisfied_black_24dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/antonym_eng_one"
                 android:layout_width="wrap_content"
-                android:layout_margin="10dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 android:layout_height="wrap_content"
-                android:text="ENG" />
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/antonym_kan_one"
                 android:layout_width="wrap_content"
-                android:layout_margin="10dp"
-                android:textSize="20sp"
-                android:textStyle="italic"
                 android:layout_height="wrap_content"
-                android:text="KAN" />
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp" />
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/leftSpeakerID"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="125dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/speaker" />
 
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="X"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        />
+        android:layout_margin="10dp"
+        android:text="X"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <android.support.v7.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:id="@+id/fa_nCardID"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
-        app:cardCornerRadius="10dp">
+        app:cardBackgroundColor="#ffee"
+        app:cardCornerRadius="40dp">
+
+        <ImageView
+            android:id="@+id/sadID"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sentiment_very_dissatisfied_black_24dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center">
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/antonym_eng_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ENG"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_margin="10dp"
-                android:id="@+id/antonym_eng_two"/>
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/antonym_kan_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:textStyle="italic"
-                android:text="KAN"
-                android:textSize="20sp"
-                android:id="@+id/antonym_kan_two"/>
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp" />
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/rightSpeakerID"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="125dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/speaker" />
 
     </android.support.v7.widget.CardView>
 
