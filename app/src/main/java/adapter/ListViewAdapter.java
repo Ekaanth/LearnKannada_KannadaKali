@@ -138,15 +138,13 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
         else if(mCategory.equals(Constants.ANTONYMS))
         {
-            //holder.textInKan.setVisibility(View.INVISIBLE);
-            //holder.imageView1.setVisibility(View.INVISIBLE);
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Constants.FROM_ADAPTER);
                     intent.putExtra(Constants.WORDS,name);
                     intent.putExtra(Constants.ANTONYMS,kName);
-                    LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+                    LocalBroadcastManager.getInstance(v.getContext()).sendBroadcast(intent);
                 }
             });
         }

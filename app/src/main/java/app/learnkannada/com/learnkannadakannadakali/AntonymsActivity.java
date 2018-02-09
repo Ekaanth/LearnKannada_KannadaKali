@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,12 @@ public class AntonymsActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, new IntentFilter(Constants.FROM_ADAPTER));
+      /*  BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+
+            }
+        };*/
 
     }
 
@@ -69,7 +76,7 @@ public class AntonymsActivity extends AppCompatActivity {
             antonymKan = antonymKanArray[antonym.indexOf(antonymEng)];
 
 
-//            Toast.makeText(getApplicationContext(),a +" "+ b,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),wordEng +" "+ antonymEng,Toast.LENGTH_SHORT).show();
             AntonymTopFragment fr = (AntonymTopFragment) getFragmentManager().findFragmentById(R.id.fr_id);
             fr.updateValues(wordEng,antonymEng,wordKan,antonymKan);
         }
@@ -88,6 +95,7 @@ public class AntonymsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(AntonymsActivity.this,FlexiCourseHomeActivity.class));
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
         finish();
     }
 }
