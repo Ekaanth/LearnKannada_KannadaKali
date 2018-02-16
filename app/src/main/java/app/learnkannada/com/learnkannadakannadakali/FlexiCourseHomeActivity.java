@@ -14,7 +14,7 @@ import sharedPreferences.ReferFriends;
 
 public class FlexiCourseHomeActivity extends AppCompatActivity {
 
-    private CardView words, conversations, randomMagic, antonyms;
+    private CardView words, conversations, randomMagic, antonyms, alphabets;
 
 
     @Override
@@ -28,6 +28,7 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
         conversations = (CardView) findViewById(R.id.conversationsID);
         randomMagic = (CardView) findViewById(R.id.randomMagicID);
         antonyms = (CardView) findViewById(R.id.antonymID);
+        alphabets = (CardView) findViewById(R.id.alphabetsID);
 
 
         AppRater.app_launched(this);
@@ -76,6 +77,14 @@ public class FlexiCourseHomeActivity extends AppCompatActivity {
             }
         });
 
+        alphabets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CategoryContentActivity.class);
+                i.putExtra(Constants.CATEGORY, Constants.ALPHABETS);
+                startActivity(i);
+            }
+        });
     }
 
     @Override

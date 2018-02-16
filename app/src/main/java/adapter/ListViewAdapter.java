@@ -169,7 +169,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                         Integer resID = v.getContext().getResources().getIdentifier("ka_"+ audioResourceFinder(name),"drawable",context.getPackageName());
                         Glide.with(v.getContext()).load(resID).into((ImageView) view.findViewById(R.id.lw_iconID));
                         //Toast.makeText(context,"ka_" + audioResourceFinder(name) + " " + FindResource.rawResourceAvailable(context,"ka_" + audioResourceFinder(name)),Toast.LENGTH_SHORT).show();
-                        TextView letter = (TextView) view.findViewById(R.id.lw_textID);
+                        Button letter = (Button) view.findViewById(R.id.lw_textID);
                         ImageView speaker = (ImageView) view.findViewById(R.id.lw_speakerID);
                         letter.setText(name);
                         speaker.setOnClickListener(new View.OnClickListener() {
