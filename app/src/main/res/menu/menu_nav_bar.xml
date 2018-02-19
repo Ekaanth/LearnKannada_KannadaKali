@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Kannada Kali - Smartapp">
+        <menu>
+            <item
+                android:icon="@drawable/ic_thumb_up_black_24dp"
+                android:id="@+id/thumbRuleID"
+                android:orderInCategory="100"
+                android:title="Thumb Rule"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/ic_share_black_24dp"
+                android:id="@+id/shareAppID"
+                android:orderInCategory="100"
+                android:title="Refer a friend"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/ic_star_half_black_24dp"
+                android:id="@+id/rateID"
+                android:orderInCategory="100"
+                android:title="Rate this app"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/ic_error_black_24dp"
+                android:id="@+id/disclaimerID"
+                android:orderInCategory="100"
+                android:title="Disclaimer"
+                app:showAsAction="collapseActionView" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="App powered by HithAM">
+        <menu>
+
+            <item
+                android:icon="@drawable/alphabets"
+                android:id="@+id/aboutAppID"
+                android:orderInCategory="100"
+                android:title="About app"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/idea"
+                android:id="@+id/aboutUsID"
+                android:orderInCategory="100"
+                android:title="About Us"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/facebook"
+                android:id="@+id/facebookID"
+                android:title="Follow us"
+                app:showAsAction="collapseActionView"
+                android:orderInCategory="100"
+                />
+        </menu>
+    </item>
+
+</menu>

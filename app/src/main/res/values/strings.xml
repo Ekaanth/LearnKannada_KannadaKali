@@ -1675,7 +1675,7 @@
     <string name="neverAsk">Never</string>
     <string name="remindLater">Later</string>
     <string name="rateNow">Sure</string>
-    <string name="referFriends">Why don\'t you let your friends know about the app?</string>
+    <string name="referFriends">Would you mind letting your friends know about the app?</string>
     <string name="sure">Sure</string>
     <string name="later">Later</string>
     <string name="no">No</string>
@@ -1850,5 +1850,10 @@
         <item>mugidilla</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
+
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
 
 </resources>

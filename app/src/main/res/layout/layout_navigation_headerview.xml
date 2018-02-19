@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerLayoutID"
+    android:background="@drawable/karnataka_collage"
+    android:layout_width="match_parent"
+    android:backgroundTint="#b3aeae"
+    android:gravity="center"
+    android:backgroundTintMode="multiply"
+    android:layout_margin="3dp"
+    android:layout_height="140dp">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/navKannadaKaliLogoID"
+            android:src="@drawable/kannada_kali"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:id="@+id/versionID"
+            android:textSize="16sp"
+            android:textColor="@color/textColor_light"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:text="vX.X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

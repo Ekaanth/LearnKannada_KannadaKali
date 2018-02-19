@@ -44,7 +44,8 @@
         </activity>
         <activity
             android:name=".ChooseCourseActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".DayActivity"
             android:screenOrientation="portrait" />

@@ -5,29 +5,28 @@
     android:layout_height="match_parent"
     tools:context="app.learnkannada.com.learnkannadakannadakali.SplashScreenActivity">
 
-            <com.flaviofaria.kenburnsview.KenBurnsView
-                android:id="@+id/kbimageID"
-                android:tint="#8e8484"
-                android:tintMode="multiply"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/kbimageID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tint="#8e8484"
+        android:tintMode="multiply" />
 
-            <ImageView
-                android:id="@+id/welcomeID"
-                android:src="@drawable/kannada_kali"
-                android:layout_centerInParent="true"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/welcomeID"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/kannada_kali" />
 
-            <ImageView
-                android:id="@+id/logoID"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="30dp"
-                android:layout_marginEnd="30dp"
-                android:src="@drawable/hitham" />
+    <ImageView
+        android:id="@+id/logoID"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/hitham" />
 
 </RelativeLayout>

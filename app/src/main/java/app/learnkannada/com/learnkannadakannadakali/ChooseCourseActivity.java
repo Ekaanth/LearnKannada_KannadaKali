@@ -3,17 +3,26 @@ package app.learnkannada.com.learnkannadakannadakali;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.speech.RecognizerIntent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.onesignal.OneSignal;
@@ -37,14 +46,17 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private AlertDialog.Builder builder, infoBuilder, infoProvider;
     private AlertDialog.Builder dialog;
 
-    private String payLoad = null;
+    private ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_course);
+        setContentView(R.layout.layout_navigation_drawer);
 
-        getSupportActionBar().setTitle(Constants.KANNADA_KALI);
+        //getSupportActionBar().setTitle(Constants.KANNADA_KALI);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarID);
+        toolbar.setTitle("Kannada Kali");
+        setSupportActionBar(toolbar);
 
         OneSignal.startInit(this)
                 /*.setNotificationOpenedHandler(new NotificationOpenedHandler())*/
@@ -52,6 +64,168 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 /*.setNotificationReceivedHandler(new NotificationReceivedHandler())*/
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
+
+        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigationID);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.rateID) {
+                    Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                    // To count with Play market backstack, After pressing back button,
+                    // to taken back to our application, we need to add following flags to intent.
+                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                            Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                            Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    try {
+                        startActivity(goToMarket);
+                    } catch (ActivityNotFoundException e) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+                    }
+                    Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.shareAppID) {
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
+                            "Kannada in just 10 days. Get Instant translation to any english word using \"Instant " +
+                            "Word Translation\" feature. \nYou can even have a chat with the developers and discuss on your ideas " +
+                            "in making this app better and better. Why don\'t you give it a try?" +
+                            "\n\nDownload Kannada Kali app now!\n" +
+                            Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())
+                            + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
+                    sendIntent.setType("text/plain");
+                    sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    startActivity(sendIntent);
+                    return true;
+                }
+                else if (item.getItemId() == R.id.aboutAppID)
+                {
+                    dialog.setTitle("About the app")
+                            .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
+                                    "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
+                                    " on the go.\n" +
+                                    "-- We are working really hard to add more and more exciting features to the app." +
+                                    "\n-- We request all the users to spend some time on the app and let us know your expectations." +
+                                    "\n-- Please help us improve this app by providing your valuable suggestions.")
+                            .setPositiveButton("Feedback", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    StringBuilder body = new StringBuilder();
+                                    body.append("Hello Team HithAM, \n \n");
+                                    body.append("I have used your app \"Kannada Kali\"\n\n");
+                                    body.append("********Please fill in your feedback/grievances here********\n");
+                                    body.append("\n Regards, \n");
+                                    body.append(R.string.KANNADA_KALI_USER);
+                                    String company[] = {Constants.HITHAM_EMAIL};
+                                    Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
+                                    intent.putExtra(Intent.EXTRA_EMAIL, company);
+                                    intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton(Constants.RATE_APP, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+                                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                                    // To count with Play market backstack, After pressing back button,
+                                    // to taken back to our application, we need to add following flags to intent.
+                                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                                            Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                                            Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                                    try {
+                                        startActivity(goToMarket);
+                                    } catch (ActivityNotFoundException e) {
+                                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                                Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+                                    }
+                                    Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setIcon(R.drawable.alphabets)
+                            .setCancelable(true)
+                            .create().show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                }
+                else if (item.getItemId() == R.id.aboutUsID)
+                {
+                    startActivity(new Intent(ChooseCourseActivity.this,AboutusActivity.class));
+                    finish();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.disclaimerID) {
+                    dialog.setTitle("Disclaimer")
+                            .setMessage("-- This is a FREE app."
+                                    +"\n-- \"10 Days Course\" has been designed to help people learn \"Basic Spoken " +
+                                    "Kannada\". This does not guarantee the complete learning of Kannada language.\n"
+                                    +   "-- Translations given at some places in the app are not in pure Kannada."
+                                    + "\n-- We have used English words at many places to keep the learning simple and appealing.\n" +
+                                    "This attempt should not be mistaken as disrespect to Kannada language." +
+                                    "\n-- Individual names used in the app are used " +
+                                    "for illustration purposes ONLY. " +
+                                    "If anybody's name is matching with the names used in the app, it's " +
+                                    "purely coincidental." +
+                                    "\n-- HithAM Creations is not responsible for any damage caused due to misuse of this " +
+                                    "application. The app is published for the sole purpose of helping people learn " +
+                                    "spoken Kannada only.")
+                            .setIcon(R.drawable.ic_error_black_24dp)
+                            .setCancelable(true)
+                            .setPositiveButton(null,null)
+                            .setNegativeButton(null,null)
+                            .create().show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    return true;
+                }
+                else if(item.getItemId() == R.id.thumbRuleID)
+                {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    dialog.setTitle(Constants.THUMB_RULE)
+                            .setMessage("-- Always try to translate given English sentences to your mother tongue first and " +
+                                    "then to Kannada. \n--This helps you understand and learn kannada faster!" )
+                            .setCancelable(true)
+                            .setPositiveButton(null,null)
+                            .setNegativeButton(null,null)
+                            .setIcon(R.drawable.ic_thumb_up_black_24dp)
+                            .create().show();
+                    return true;
+                }
+                else if (item.getItemId() == R.id.facebookID)
+                {
+                    Intent facebookAppIntent;
+                    try {
+                        facebookAppIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/918533634976014"));
+                        startActivity(facebookAppIntent);
+                    } catch (ActivityNotFoundException e) {
+                        facebookAppIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://facebook.com/learnkannada.kannadakali"));
+                        startActivity(facebookAppIntent);
+                    }
+                    return true;
+                }
+                else
+                    return onOptionsItemSelected(item);
+            }
+        });
+
+        View headerview = navigationView.getHeaderView(0);
+        TextView version = (TextView) headerview.findViewById(R.id.versionID);
+        try {
+            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
+            String currentVersion = "v"+packageInfo.versionName;
+            version.setText(currentVersion);
+        } catch (PackageManager.NameNotFoundException e) {
+            version.setText("Smartapp");
+            e.printStackTrace();
+        }
 
         dayCourse = (Button) findViewById(R.id.dayCourseID);
         flexiCourse = (Button) findViewById(R.id.comfortCourseID);
@@ -93,6 +267,15 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
+        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+            drawerLayout.closeDrawer(GravityCompat.START);
+        else
+            super.onBackPressed();
     }
 
     /**
@@ -233,7 +416,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         mediaPlayer.start();
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_feedback, menu);
         return super.onCreateOptionsMenu(menu);
@@ -242,7 +425,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        /*if (item.getItemId() == R.id.feedbackID) {
+        *//*if (item.getItemId() == R.id.feedbackID) {
             //Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_LONG).show();
             StringBuilder body = new StringBuilder();
             body.append("Hello Team HithAM, \n \n");
@@ -257,15 +440,15 @@ public class ChooseCourseActivity extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_TEXT, body.toString());
             startActivity(intent);
             return true;
-        }*/
-       /* else if (item.getItemId() == R.id.settingsID)
+        }*//*
+       *//* else if (item.getItemId() == R.id.settingsID)
         {
             infoBuilder.setTitle("Settings");
             LayoutInflater inflater = this.getLayoutInflater();
             View dialogView = inflater.inflate(R.layout.settings_dialog, null);
             infoBuilder.setView(dialogView);
             infoBuilder.create().show();
-        }*/
+        }*//*
         if (item.getItemId() == R.id.rateID) {
             Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
             Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
@@ -280,6 +463,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW,
                         Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
             }
+            Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
         } else if (item.getItemId() == R.id.shareAppID) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
@@ -339,6 +523,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                               startActivity(new Intent(Intent.ACTION_VIEW,
                                       Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
                           }
+                          Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
                       }
                   })
                   .setIcon(R.drawable.alphabets)
@@ -383,76 +568,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     .create().show();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    /*private class NotificationReceivedHandler implements OneSignal.NotificationReceivedHandler{
-
-        @Override
-        public void notificationReceived(OSNotification notification) {
-            JSONObject data = notification.payload.additionalData;
-            String notificationID = notification.payload.notificationID;
-            String customKey;
-
-            Log.i("OneSignalExample", "NotificationID received: " + notificationID);
-
-            if(notification.payload.launchURL!=null)
-                if(notification.payload.launchURL.equals(""))
-                    payLoad = notification.payload.launchURL;
-
-            if (data != null) {
-                customKey = data.optString("customkey", null);
-                if (customKey != null)
-                    Log.i("OneSignalExample", "customkey set with value: " + customKey);
-            }
-        }
-    }
-
-    private class NotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
-        @Override
-        public void notificationOpened(final OSNotificationOpenResult result) {
-            OSNotificationAction.ActionType actionType = result.action.type;
-            JSONObject data = result.notification.payload.additionalData;
-
-            String customKey;
-
-            if(data!=null)
-            {
-                customKey = data.optString("customKey",null);
-                if(customKey!=null)
-                    Log.i("OneSignalExample", "customkey set with value: " + customKey);
-            }
-
-            if(payLoad!=null)
-            {
-                Uri uri = Uri.parse(payLoad);
-                Intent i = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(i);
-            }
-
-            else {
-                Intent intent = new Intent(getApplicationContext(), ChooseCourseActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-
-            if(actionType == OSNotificationAction.ActionType.ActionTaken)
-            {
-                Log.i("OneSignalExample", "Button pressed with id: " + result.action.actionID);
-                Integer id = getResources().getIdentifier(result.action.actionID,"drawable",getPackageName());
-                if(id>0)
-                {
-                    Log.i("OneSignalExample","Found resource!");
-                    if(result.action.actionID.equals("mic"))
-                    {
-                        Log.i("OneSignalExample","Called promptSpeechInput");
-                        promptSpeechInput();
-                    }
-                }
-                else
-                    Log.i("OneSignalExample","No luck!");
-
-            }
-            //Log.i("OneSignalExample","Key: " + result.action.actionID + " customKey: " + data.optString("customKey",null));
-        }
     }*/
+
 }

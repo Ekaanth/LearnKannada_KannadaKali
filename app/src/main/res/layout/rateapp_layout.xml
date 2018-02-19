@@ -66,8 +66,8 @@
 
                     <Button
                         android:id="@+id/neverAskButtonID"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
                         android:layout_margin="5dp"
                         android:background="#e93131"
                         android:foreground="?android:attr/selectableItemBackground"
@@ -77,8 +77,8 @@
 
                     <Button
                         android:id="@+id/remindMeLaterID"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
                         android:layout_margin="5dp"
                         android:background="#e9be14"
                         android:foreground="?android:attr/selectableItemBackground"
@@ -87,8 +87,8 @@
 
                     <Button
                         android:id="@+id/rateNowID"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
                         android:layout_margin="5dp"
                         android:background="#5fdc2a"
                         android:foreground="?android:attr/selectableItemBackground"

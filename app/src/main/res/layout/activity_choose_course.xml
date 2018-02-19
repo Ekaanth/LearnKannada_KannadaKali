@@ -1,66 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="app.learnkannada.com.learnkannadakannadakali.FlexiCourseHomeActivity">
-
-    <ImageView
-        android:id="@+id/homepage_logoID"
-        android:layout_width="200dp"
-        android:layout_height="140dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/newlogo" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.learnkannada.com.learnkannadakannadakali.FlexiCourseHomeActivity">
 
 
-<LinearLayout
-    android:layout_below="@+id/homepage_logoID"
-    android:layout_marginTop="40dp"
-    android:orientation="vertical"
-    android:layout_centerHorizontal="true"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <Button
-        android:background="@drawable/buttonshape"
-        android:textColor="@color/colorPrimary"
-        android:id="@+id/dayCourseID"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:text="10 Days Course"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBarID"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <Button
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonshape"
-        android:textColor="@color/colorPrimary"
-        android:id="@+id/comfortCourseID"
-        android:text="Flexi Course"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
-<ImageView
-    android:id="@+id/micID"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="20dp"
-    android:src="@drawable/mic"
-    android:layout_width="50dp"
-    android:layout_height="80dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-<TextView
-    android:id="@+id/micWordID"
-    android:text="@string/micWord"
-    android:layout_above="@id/micID"
-    android:layout_centerHorizontal="true"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/homepage_logoID"
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/newlogo" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/dayCourseID"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:text="10 Days Course"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/comfortCourseID"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonshape"
+                    android:text="Flexi Course"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/micWordID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/micWord" />
+
+            <ImageView
+                android:id="@+id/micID"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/mic" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
