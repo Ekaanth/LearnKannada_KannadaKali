@@ -16,8 +16,8 @@ android {
         applicationId "app.learnkannada.com.learnkannadakannadakali"
         minSdkVersion 17
         targetSdkVersion 25
-        versionCode 9
-        versionName "1.7"
+        versionCode 10
+        versionName '1.81'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [onesignal_app_id               : "711bfe0e-3445-43ae-85dd-5e9567ebb444",
                                 // Project number pulled from dashboard, local value is ignored.

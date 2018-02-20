@@ -1912,6 +1912,7 @@
 
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="REQUEST_WHATSAPP_FORUM">Whatsapp forum joining request</string>
 
 
 </resources>

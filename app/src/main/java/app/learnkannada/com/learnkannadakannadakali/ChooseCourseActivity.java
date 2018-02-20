@@ -114,10 +114,9 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
                     }
-                    Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please review us on Play-Store", Toast.LENGTH_SHORT).show();
                     return true;
-                }
-                else if (item.getItemId() == R.id.shareAppID) {
+                } else if (item.getItemId() == R.id.shareAppID) {
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
@@ -131,9 +130,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                     startActivity(sendIntent);
                     return true;
-                }
-                else if (item.getItemId() == R.id.aboutAppID)
-                {
+                } else if (item.getItemId() == R.id.aboutAppID) {
                     dialog.setTitle("About the app")
                             .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
                                     "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
@@ -174,7 +171,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                         startActivity(new Intent(Intent.ACTION_VIEW,
                                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
                                     }
-                                    Toast.makeText(getApplicationContext(),"Please review us on Play-Store",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Please review us on Play-Store", Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .setIcon(R.drawable.alphabets)
@@ -182,19 +179,16 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
-                }
-                else if (item.getItemId() == R.id.aboutUsID)
-                {
-                    startActivity(new Intent(ChooseCourseActivity.this,AboutusActivity.class));
+                } else if (item.getItemId() == R.id.aboutUsID) {
+                    startActivity(new Intent(ChooseCourseActivity.this, AboutusActivity.class));
                     finish();
                     return true;
-                }
-                else if (item.getItemId() == R.id.disclaimerID) {
+                } else if (item.getItemId() == R.id.disclaimerID) {
                     dialog.setTitle("Disclaimer")
                             .setMessage("-- This is a FREE app."
-                                    +"\n-- \"10 Days Course\" has been designed to help people learn \"Basic Spoken " +
+                                    + "\n-- \"10 Days Course\" has been designed to help people learn \"Basic Spoken " +
                                     "Kannada\". This does not guarantee the complete learning of Kannada language.\n"
-                                    +   "-- Translations given at some places in the app are not in pure Kannada."
+                                    + "-- Translations given at some places in the app are not in pure Kannada."
                                     + "\n-- We have used English words at many places to keep the learning simple and appealing.\n" +
                                     "This attempt should not be mistaken as disrespect to Kannada language." +
                                     "\n-- Individual names used in the app are used " +
@@ -206,27 +200,23 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     "spoken Kannada only.")
                             .setIcon(R.drawable.ic_error_black_24dp)
                             .setCancelable(true)
-                            .setPositiveButton(null,null)
-                            .setNegativeButton(null,null)
+                            .setPositiveButton(null, null)
+                            .setNegativeButton(null, null)
                             .create().show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
-                }
-                else if(item.getItemId() == R.id.thumbRuleID)
-                {
+                } else if (item.getItemId() == R.id.thumbRuleID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     dialog.setTitle(Constants.THUMB_RULE)
                             .setMessage("-- Always try to translate given English sentences to your mother tongue first and " +
-                                    "then to Kannada. \n--This helps you understand and learn kannada faster!" )
+                                    "then to Kannada. \n--This helps you understand and learn kannada faster!")
                             .setCancelable(true)
-                            .setPositiveButton(null,null)
-                            .setNegativeButton(null,null)
+                            .setPositiveButton(null, null)
+                            .setNegativeButton(null, null)
                             .setIcon(R.drawable.ic_thumb_up_black_24dp)
                             .create().show();
                     return true;
-                }
-                else if (item.getItemId() == R.id.facebookID)
-                {
+                } else if (item.getItemId() == R.id.facebookID) {
                     Intent facebookAppIntent;
                     try {
                         facebookAppIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/918533634976014"));
@@ -235,10 +225,35 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         facebookAppIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://facebook.com/learnkannada.kannadakali"));
                         startActivity(facebookAppIntent);
                     }
-                    Toast.makeText(getApplicationContext(),"Please follow and share our page",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please follow and share our page", Toast.LENGTH_LONG).show();
                     return true;
-                }
-                else
+                } else if (item.getItemId() == R.id.whatsappID) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    builder.setTitle("Join Whatsapp forum")
+                            .setMessage("Are you sure to join Whatsapp Forum?")
+                            .setIcon(R.drawable.whatsapp)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    StringBuilder body = new StringBuilder();
+                                    body.append("Hello Team HithAM, \n \n");
+                                    body.append("I would like to join the whatsapp forum. Request you to please send me the required link.\n\n");
+                                    body.append("\n Regards, \n");
+                                    body.append(getResources().getString(R.string.KANNADA_KALI_USER));
+                                    String company[] = {Constants.HITHAM_EMAIL};
+                                    Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.REQUEST_WHATSAPP_FORUM));
+                                    intent.putExtra(Intent.EXTRA_EMAIL, company);
+                                    intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton("Cancel", null)
+                            .setCancelable(false)
+                            .create().show();
+
+                    return true;
+                } else
                     return onOptionsItemSelected(item);
             }
         });
@@ -246,8 +261,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
         View headerview = navigationView.getHeaderView(0);
         TextView version = (TextView) headerview.findViewById(R.id.versionID);
         try {
-            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(),0);
-            String currentVersion = "v"+packageInfo.versionName;
+            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            String currentVersion = "v" + packageInfo.versionName;
             version.setText(currentVersion);
         } catch (PackageManager.NameNotFoundException e) {
             version.setText("Smartapp");
@@ -299,7 +314,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
-        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+        if (drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
         else
             super.onBackPressed();
@@ -313,7 +328,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Try saying \"" + mergedFinalArray.get(randomInt) + "\"" );
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Try saying \"" + mergedFinalArray.get(randomInt) + "\"");
 
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
@@ -331,13 +346,14 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case REQ_CODE_SPEECH_INPUT: {
-                if (resultCode == RESULT_OK && null != data) {
+                if (resultCode == RESULT_OK && data != null) {
 
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     //Toast.makeText(getApplicationContext(),result.get(0),Toast.LENGTH_LONG).show();
                     handleSpokenWords(result.get(0));
-                }
+                } else if (resultCode == RecognizerIntent.RESULT_NETWORK_ERROR)
+                    Toast.makeText(getApplicationContext(), "Network Error\nTry again later", Toast.LENGTH_SHORT).show();
                 break;
             }
 
@@ -352,7 +368,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
         //playing found music file
         if (FindResource.rawResourceAvailable(getApplicationContext(), spokenString))
-            AudioPlayer.playAudio(getApplicationContext(),spokenString);
+            AudioPlayer.playAudio(getApplicationContext(), spokenString);
         else {
             final String[] splitWords = s.split(" ");
             for (int j = 0; j < splitWords.length; j++) {
@@ -360,7 +376,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                     final int finalJ = j;
                     infoBuilder.setTitle(R.string.too_young)
-                            .setMessage("\n"+"I can give you different example for "+"\n\"" + splitWords[j].toUpperCase()
+                            .setMessage("\n" + "I can give you different example for " + "\n\"" + splitWords[j].toUpperCase()
                                     + "\"\n")
                             .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
                                 @Override

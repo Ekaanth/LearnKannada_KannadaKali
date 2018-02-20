@@ -61,6 +61,13 @@
                 app:showAsAction="collapseActionView"
                 android:orderInCategory="100"
                 />
+
+            <item
+                android:title="Join Forum"
+                android:id="@+id/whatsappID"
+                android:icon="@drawable/whatsapp"
+                android:orderInCategory="100"
+                app:showAsAction="collapseActionView"/>
         </menu>
     </item>
 
