@@ -245,14 +245,10 @@
         <item>For Us</item>
         <item>Mine</item>
         <item>Ours</item>
-        <item>You(Singular)</item>
-        <item>You(Plural)</item>
-        <item>Your(Singular)</item>
-        <item>Your(Plural)</item>
-        <item>For You(Singular)</item>
-        <item>For You(Plural)</item>
-        <item>Yours(Singular)</item>
-        <item>Yours(Plural)</item>
+        <item>You</item>
+        <item>Your</item>
+        <item>For You</item>
+        <item>Yours</item>
         <item>He</item>
         <item>She</item>
         <item>They</item>
@@ -280,14 +276,10 @@
         <item>namage</item>
         <item>nannadu</item>
         <item>nammadu</item>
-        <item>neenu</item>
-        <item>neevu</item>
-        <item>ninna</item>
-        <item>nimma</item>
-        <item>ninage</item>
-        <item>nimage</item>
-        <item>ninnadu</item>
-        <item>nimmadu</item>
+        <item>neenu(s)/neevu(p)</item>
+        <item>ninna(s)/nimma(p)</item>
+        <item>ninage(s)/nimage(p)</item>
+        <item>ninnadu(s)/nimmadu(p)</item>
         <item>avanu</item>
         <item>avaLu</item>
         <item>avaru</item>
@@ -1861,7 +1853,7 @@
     <string name="voicesBehind"><u>Voices behind the app</u></string>
     <string name="title_ganesh">Ganesha R</string>
     <string name="about_ganesh">\tSoftware Engineer by profession, bike rider by passion. Listen to him as auto driver and a friend under conversations category.</string>
-    <string name="title_Bharghavi">Bharghavi</string>
+    <string name="title_Bharghavi">Bhargavi</string>
     <string name="contact_HithAM">Connect with <font color="#FFF20F08">H</font>ith<font color="#FFFFB300">AM</font></string>
     <string name="about_bharghavi">\t Software Engineer by profession, classical musician by passion. She would love to dance and play sports! Listen to her voice as owner in owner-maid conversations.</string>
     <string name="title_samraddha">Samraddha</string>

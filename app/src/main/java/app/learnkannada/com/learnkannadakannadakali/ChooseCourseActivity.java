@@ -28,11 +28,13 @@ import com.onesignal.OneSignal;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 
 import animation.AnimateVisibility;
 import constants.Constants;
 import utils.AudioPlayer;
 import utils.FindResource;
+import utils.StringArrayUtils;
 
 public class ChooseCourseActivity extends AppCompatActivity {
 
@@ -46,6 +48,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private AlertDialog.Builder dialog;
 
     private ActionBarDrawerToggle toggle;
+    private String[][] arrayOfArrays = null;
+    private ArrayList<String> mergedFinalArray = null;
+    private int allItemsLength = 0;
+    private Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,27 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 /*.setNotificationReceivedHandler(new NotificationReceivedHandler())*/
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
+
+        arrayOfArrays = new String[][]{getResources().getStringArray(R.array.back_to_schoolEng_array),
+                getResources().getStringArray(R.array.vegetablesEng_array),
+                getResources().getStringArray(R.array.fruitsEng_array),
+                getResources().getStringArray(R.array.beginnerEng_array),
+                getResources().getStringArray(R.array.daysEng_array),
+                getResources().getStringArray(R.array.timeEng_array),
+                getResources().getStringArray(R.array.greetingsEng_array),
+                getResources().getStringArray(R.array.directionsEng_array),
+                getResources().getStringArray(R.array.relationshipsEng_array),
+                getResources().getStringArray(R.array.colorsEng_array),
+                getResources().getStringArray(R.array.body_partsEng_array),
+                getResources().getStringArray(R.array.present_eng),
+                getResources().getStringArray(R.array.presentCont_eng),
+                getResources().getStringArray(R.array.past_eng),
+                getResources().getStringArray(R.array.pastCont_eng),
+                getResources().getStringArray(R.array.future_eng),
+                getResources().getStringArray(R.array.futureCont_eng),
+                getResources().getStringArray(R.array.randomVerbs)};
+        mergedFinalArray = StringArrayUtils.appendArrays(arrayOfArrays);
+        allItemsLength = mergedFinalArray.size();
 
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutID);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -282,10 +309,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
      * Showing google speech input dialog
      */
     private void promptSpeechInput() {
+        int randomInt = random.nextInt(allItemsLength);
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.speech_prompt));
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Try saying \"" + mergedFinalArray.get(randomInt) + "\"" );
 
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
@@ -317,8 +345,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
     }
 
     private void handleSpokenWords(String s) {
-        /*if( s.equals(Constants.DO)||s.equals(Constants.THIS))
-            s=s+"_";*/
+        //Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
         final String spokenString = FindResource.processStringName(s).replaceAll(" ", "_")
                 .toLowerCase();
         String spokenStringEx = spokenString + Constants._EX;
