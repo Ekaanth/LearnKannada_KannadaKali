@@ -16,7 +16,7 @@ import app.learnkannada.com.learnkannadakannadakali.R;
 
 public class ReferFriends {
 
-    private final static int DAYS_UNTIL_PROMPT = 3;
+    private final static int DAYS_UNTIL_PROMPT = 5;
     private final static int LAUNCHES_UNTIL_PROMPT = 11;
 
     private static long launch_count = 0, date_firstLaunch = 0;

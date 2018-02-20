@@ -37,6 +37,7 @@ public class ExampleActivity extends AppCompatActivity {
         String name = i.getStringExtra("name");
         String kName = i.getStringExtra("kName");
 
+
         wordInEng.setText(name);
         wordInKan.setText(kName);
 
@@ -49,7 +50,12 @@ public class ExampleActivity extends AppCompatActivity {
         String exampleText = name.replaceAll(" ", "_").replaceAll("\\?","")
                 .replaceAll("\\(","_").replaceAll("\\)","")+ "_ex";
 
-        example.setText(getResources().getIdentifier(exampleText.toLowerCase(),"string",getPackageName()));
+        try {
+            example.setText(getResources().getIdentifier(exampleText.toLowerCase(), "string", getPackageName()));
+        }catch(Exception e)
+        {
+            throw new IllegalStateException("\nERROR! Example Text NOT FOUND for the word " + name.toUpperCase(),e);
+        }
         //exampleKan.setText(getResources().getIdentifier(nameInKan,"string",getPackageName()));
 
         //spokenWord to keep the name of relevant mp3 file

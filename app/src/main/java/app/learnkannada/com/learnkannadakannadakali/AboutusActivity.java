@@ -27,7 +27,7 @@ public class AboutusActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getActionBar().setTitle("About Us");
+        getSupportActionBar().setTitle("About us");
 
         connectHere = (TextView) findViewById(R.id.connectHereID);
         builder = new AlertDialog.Builder(this);

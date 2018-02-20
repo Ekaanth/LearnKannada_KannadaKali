@@ -31,6 +31,9 @@ public class RandomMagicActivity extends AppCompatActivity {
     private Button randomVerb;
     private TextView presentWord, pastWord, futureWord, pastContWord, presentContWord, futureContWord, rootVerbEng, rootVerbKan;
 
+    private int randomInt = 0;
+    private boolean firstTimePlay = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,20 +65,32 @@ public class RandomMagicActivity extends AppCompatActivity {
 
         String[] randomVerbs = getResources().getStringArray(R.array.randomVerbs);
         String[] randomVerbsKan = getResources().getStringArray(R.array.randomVerbs_kan);
+        String[] pastVerbsEng = getResources().getStringArray(R.array.past_eng);
         String[] pastVerbs = getResources().getStringArray(R.array.past_kan);
-        String[] presentVerbs = getResources().getStringArray(R.array.present_kan);
+        String[] presentVerbsEng = getResources().getStringArray(R.array.present_eng);
+        final String[] presentVerbs = getResources().getStringArray(R.array.present_kan);
+        String[] futureVerbsEng = getResources().getStringArray(R.array.future_eng);
         String[] futureVerbs = getResources().getStringArray(R.array.future_kan);
+        String[] pastContVerbsEng = getResources().getStringArray(R.array.pastCont_eng);
         String[] pastContVerbs = getResources().getStringArray(R.array.pastCont_kan);
+        String[] presentContVerbsEng = getResources().getStringArray(R.array.presentCont_eng);
         final String[] presentContVerbs = getResources().getStringArray(R.array.presentCont_kan);
+        String[] futureContVerbsEng = getResources().getStringArray(R.array.futureCont_eng);
         final String[] futureContVerbs = getResources().getStringArray(R.array.futureCont_kan);
 
         final List<String> randomVerbsList = new ArrayList<>(Arrays.asList(randomVerbs));
         final List<String> randomVerbsList_kan = new ArrayList<>(Arrays.asList(randomVerbsKan));
+        final List<String> pastVerbsListEng = new ArrayList<>(Arrays.asList(pastVerbsEng));
         final List<String> pastVerbsList = new ArrayList<>(Arrays.asList(pastVerbs));
+        final List<String> presentVerbsListEng = new ArrayList<>(Arrays.asList(presentVerbsEng));
         final List<String> presentVerbsList = new ArrayList<>(Arrays.asList(presentVerbs));
+        final List<String> futureVerbsListEng = new ArrayList<>(Arrays.asList(futureVerbsEng));
         final List<String> futureVerbsList = new ArrayList<>(Arrays.asList(futureVerbs));
+        final List<String> pastContVerbsListEng = new ArrayList<>(Arrays.asList(pastContVerbsEng));
         final List<String> pastContVerbsList = new ArrayList<>(Arrays.asList(pastContVerbs));
+        final List<String> presentContVerbsListEng = new ArrayList<>(Arrays.asList(presentContVerbsEng));
         final List<String> presentContVerbsList = new ArrayList<>(Arrays.asList(presentContVerbs));
+        final List<String> futureContVerbsListEng = new ArrayList<>(Arrays.asList(futureContVerbsEng));
         final List<String> futureContVerbsList = new ArrayList<>(Arrays.asList(futureContVerbs));
 
         final Random random = new Random();
@@ -83,7 +98,24 @@ public class RandomMagicActivity extends AppCompatActivity {
         randomVerb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (randomVerbsList.size() != 0) {
+                if (randomVerbsList.size() != 1) {
+
+                    if (!firstTimePlay) {
+                        randomVerbsList.remove(randomInt);
+                        randomVerbsList_kan.remove(randomInt);
+                        pastVerbsList.remove(randomInt);
+                        pastVerbsListEng.remove(randomInt);
+                        presentVerbsList.remove(randomInt);
+                        presentVerbsListEng.remove(randomInt);
+                        futureVerbsList.remove(randomInt);
+                        futureVerbsListEng.remove(randomInt);
+                        pastContVerbsListEng.remove(randomInt);
+                        pastContVerbsList.remove(randomInt);
+                        presentContVerbsListEng.remove(randomInt);
+                        presentContVerbsList.remove(randomInt);
+                        futureContVerbsListEng.remove(randomInt);
+                        futureContVerbsList.remove(randomInt);
+                    }
 
                     //below structure is to help in future if animation needs to be done in order.
                     //if we need things to get animated one after the other, then duration sent may have
@@ -103,7 +135,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     animateAfterDelay(200 + 100, presentContCard);
                     animateAfterDelay(200 + 100, futureContCard);*/
 
-                    int randomInt = random.nextInt(randomVerbsList.size());
+                    randomInt = random.nextInt(randomVerbsList.size());
                     AnimateVisibility.animateVisible(rootVerbCard);
                     //Toast.makeText(getApplicationContext(),randomVerbs[randomInt],Toast.LENGTH_SHORT).show();
                     rootVerbEng.setText(randomVerbsList.get(randomInt));
@@ -114,15 +146,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     pastContWord.setText(pastContVerbsList.get(randomInt));
                     presentContWord.setText(presentContVerbsList.get(randomInt));
                     futureContWord.setText(futureContVerbsList.get(randomInt));
-
-                    randomVerbsList.remove(randomInt);
-                    randomVerbsList_kan.remove(randomInt);
-                    pastVerbsList.remove(randomInt);
-                    presentVerbsList.remove(randomInt);
-                    futureVerbsList.remove(randomInt);
-                    pastContVerbsList.remove(randomInt);
-                    presentContVerbsList.remove(randomInt);
-                    futureContVerbsList.remove(randomInt);
+                    firstTimePlay = false;
 
                 } else {
                     builder.setTitle("Congratulations!")
@@ -149,79 +173,79 @@ public class RandomMagicActivity extends AppCompatActivity {
                 presentCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = presentWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = presentVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 pastCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = pastWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = pastVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 futureCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = futureWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = futureVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 pastContcard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = pastContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = pastContVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 presentContCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = presentContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = presentContVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 futureContCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = futureContWord.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = futureContVerbsListEng.get(randomInt).replaceAll(" ", "_").toLowerCase();
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 rootVerbCard.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String resourceName = rootVerbEng.getText().toString().replaceAll(" ","_").toLowerCase();
-                        if(resourceName.equals("do"))
-                            resourceName+="_";
-                        if(FindResource.rawResourceAvailable(getApplicationContext(),resourceName))
-                            AudioPlayer.playAudio(getApplicationContext(),resourceName);
+                        String resourceName = rootVerbEng.getText().toString().replaceAll(" ", "_").toLowerCase();
+                        /*if (resourceName.equals("do"))
+                            resourceName += "_";*/
+                        if (FindResource.rawResourceAvailable(getApplicationContext(), resourceName))
+                            AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
-                            Toast.makeText(getApplicationContext(),resourceName,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -252,18 +276,14 @@ public class RandomMagicActivity extends AppCompatActivity {
                     .setMessage(R.string.randomMagicDialogMessage)
                     .setPositiveButton("Cool", null)
                     .create().show();
-        }
-        else if(item.getItemId() == R.id.randomMagicDisclaimer)
-        {
+        } else if (item.getItemId() == R.id.randomMagicDisclaimer) {
             builder.setTitle(Constants.DISCLAIMER)
                     .setMessage("All the verbs written here are with respect to \"First Person\" only." +
                             "\nThey get changed a little for Second and Third person (coming soon).")
                     .setIcon(R.drawable.ic_error_black_24dp)
-                    .setPositiveButton("Ok",null)
+                    .setPositiveButton("Ok", null)
                     .create().show();
-        }
-        else if (item.getItemId() == R.id.randomMagicSuggestVerbID)
-        {
+        } else if (item.getItemId() == R.id.randomMagicSuggestVerbID) {
             StringBuilder body = new StringBuilder();
             body.append("Hello Team HithAM, \n \n");
             body.append("I think it would be helpful if you can add the below verb(s) and it\'s tenses to this section\n\n");
@@ -276,9 +296,7 @@ public class RandomMagicActivity extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_EMAIL, company);
             intent.putExtra(Intent.EXTRA_TEXT, body.toString());
             startActivity(intent);
-        }
-        else if(item.getItemId() == android.R.id.home)
-        {
+        } else if (item.getItemId() == android.R.id.home) {
             onBackPressed();
             return true;
         }

@@ -1715,6 +1715,17 @@
         <item>mucchu (ಮುಚ್ಚು)</item>
     </string-array>
 
+    <string-array name="past_eng">
+        <item>learned</item>
+        <item>did</item>
+        <item>ate</item>
+        <item>drunk</item>
+        <item>listened</item>
+        <item>ran</item>
+        <item>slept</item>
+        <item>closed</item>
+    </string-array>
+
     <string-array name="past_kan">
         <item>kalithe</item>
         <item>maaDide</item>
@@ -1724,6 +1735,17 @@
         <item>ODide</item>
         <item>malagide</item>
         <item>mucchide</item>
+    </string-array>
+
+    <string-array name="present_eng">
+        <item>Learn</item>
+        <item>Do</item>
+        <item>Eat</item>
+        <item>Drink</item>
+        <item>Listen</item>
+        <item>Run</item>
+        <item>Sleep</item>
+        <item>Close</item>
     </string-array>
 
     <string-array name="present_kan">
@@ -1737,6 +1759,17 @@
         <item>mucchu</item>
     </string-array>
 
+    <string-array name="future_eng">
+        <item>will learn</item>
+        <item>will do</item>
+        <item>will eat</item>
+        <item>will drink</item>
+        <item>will listen</item>
+        <item>will run</item>
+        <item>will sleep</item>
+        <item>will close</item>
+    </string-array>
+
     <string-array name="future_kan">
         <item>kalithini</item>
         <item>maaDthini</item>
@@ -1746,6 +1779,17 @@
         <item>ODtini</item>
         <item>malagtini</item>
         <item>mucchtini</item>
+    </string-array>
+
+    <string-array name="pastCont_eng">
+        <item>was learning</item>
+        <item>was doing</item>
+        <item>was eating</item>
+        <item>was drinking</item>
+        <item>was listening</item>
+        <item>was running</item>
+        <item>was sleeping</item>
+        <item>was closing</item>
     </string-array>
 
     <string-array name="pastCont_kan">
@@ -1759,6 +1803,17 @@
         <item>mucchuthaa idde</item>
     </string-array>
 
+    <string-array name="presentCont_eng">
+        <item>learning</item>
+        <item>doing</item>
+        <item>eating</item>
+        <item>drinking</item>
+        <item>listening</item>
+        <item>running</item>
+        <item>sleeping</item>
+        <item>closing</item>
+    </string-array>
+
     <string-array name="presentCont_kan">
         <item>kaliyuthaa idini</item>
         <item>maaDuthaa idini</item>
@@ -1768,6 +1823,17 @@
         <item>ODuthaa idini</item>
         <item>malaguthaa idini</item>
         <item>mucchuthaa idini</item>
+    </string-array>
+
+    <string-array name="futureCont_eng">
+        <item>will be learning</item>
+        <item>will be doing</item>
+        <item>will be eating</item>
+        <item>will be drinking</item>
+        <item>will be listening</item>
+        <item>will be running</item>
+        <item>will be sleeping</item>
+        <item>will be closing</item>
     </string-array>
 
     <string-array name="futureCont_kan">

@@ -23,11 +23,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.learnkannada.com.learnkannadakannadakali.AntonymTopFragment;
 import constants.Constants;
 import utils.AudioPlayer;
 import app.learnkannada.com.learnkannadakannadakali.CategoryContentActivity;
-import app.learnkannada.com.learnkannadakannadakali.AntonymsActivity;
 import app.learnkannada.com.learnkannadakannadakali.DayActivity;
 import app.learnkannada.com.learnkannadakannadakali.R;
 import utils.FindResource;
@@ -166,9 +164,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     if(mCategory.equals(Constants.ALPHABETS))
                     {
                         View view = LayoutInflater.from(context).inflate(R.layout.layout_letterwriting,null);
-                        Integer resID = v.getContext().getResources().getIdentifier("ka_"+ audioResourceFinder(name),"drawable",context.getPackageName());
+                        Integer resID = v.getContext().getResources().getIdentifier("ka_"+ FindResource.processStringName(name),"drawable",context.getPackageName());
                         Glide.with(v.getContext()).load(resID).into((ImageView) view.findViewById(R.id.lw_iconID));
-                        //Toast.makeText(context,"ka_" + audioResourceFinder(name) + " " + FindResource.rawResourceAvailable(context,"ka_" + audioResourceFinder(name)),Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context,"ka_" + processStringName(name) + " " + FindResource.rawResourceAvailable(context,"ka_" + processStringName(name)),Toast.LENGTH_SHORT).show();
                         Button letter = (Button) view.findViewById(R.id.lw_textID);
                         ImageView speaker = (ImageView) view.findViewById(R.id.lw_speakerID);
                         letter.setText(name);
@@ -302,37 +300,19 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     private void playOffline(int position) throws IOException {
         String voiceId = null;
         if (mCategory.equals(Constants.ALPHABETS)) {
-            voiceId = audioResourceFinder(mFilteredList.get(position));
+            voiceId = FindResource.processStringName(mFilteredList.get(position));
         } else {
             voiceId = mFilteredList.get(position).replaceAll(" ", "_").replaceAll("\\?", "")
                     .replaceAll("\\(", "_").replaceAll("\\)", "")
                     .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
         }
-        AudioPlayer.playAudio(context, voiceId);
-    }
-
-    private String audioResourceFinder(String s) {
-        if (s.equals("Nya"))
-            return ("nya_");
-        else if (s.equals("Cha"))
-            return ("cha_");
-        else if (s.equals("Ta"))
-            return ("ta_");
-        else if (s.equals("Tha"))
-            return ("tha_");
-        else if (s.equals("Da"))
-            return ("da_");
-        else if (s.equals("Na"))
-            return ("na_");
-        else if (s.equals("Dha"))
-            return ("dha_");
-        else if (s.equals("La"))
-            return ("la_");
-        else if (s.equals("Sha"))
-            return ("sha_");
+        if(FindResource.rawResourceAvailable(context,voiceId))
+            AudioPlayer.playAudio(context, voiceId);
         else
-            return s;
-
+        {
+            Toast.makeText(context,voiceId,Toast.LENGTH_SHORT).show();
+            throw new IOException("\n ERROR! Audio file not found for " + voiceId);
+        }
     }
 
     @Override
