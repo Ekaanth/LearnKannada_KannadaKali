@@ -6,7 +6,6 @@
 
     <!-- *******************************Flexi course menu STARTS here *******************************-->
     <string-array name="flexi_words_array">
-        <item>Alphabets</item>
         <item>Beginner</item>
         <item>Numbers</item>
         <item>Greetings</item>
@@ -24,7 +23,6 @@
 
     <!-- *******************************Flexi course WORDS in KANNADA STARTS here *******************************-->
     <string-array name="flexi_words_kanArray">
-        <item>AksharamaalegaLu</item>
         <item>harikaara</item>
         <item>sankyegaLu</item>
         <item>shubhaashayagaLu</item>
@@ -1676,13 +1674,13 @@
     <string name="randomMagicDialogMessage">"This feature helps you learn most frequently used verbs in kannada and it\'s tenses. \n\nHow to use?\nJust click on the \"CLICK HERE\" button and voila! you will be shown a new verb with it\'s past, present and future tenses.
     \nClick on any of the cards to listen to the audio message!</string>
     <string name="missing_in_voc">Missing in my Vocabulary!</string>
-    <string name="too_young">Oops! I am too young for sentences. But wait!</string>
+    <string name="too_young_but">Oops! I am too young for sentences. But wait!</string>
+    <string name="too_young">Oops! I am too young for sentences.</string>
     <string name="SHOW_ME">Show me</string>
     <string name="sorry_idk_that_yet">Sorry! I don\'t know that yet.</string>
     <string name="KANNADA_KALI_USER">Kannada Kali User</string>
     <string name="WANTS_TO_CONTACT">Kannada Kali user wants to cantact you</string>
     <string name="WOULD_YOU_LIKE_TO_CHECK">Would you like to check it?</string>
-
 
     <!--The below section contains contents of Random Magic Feature -->
     <string-array name="randomVerbs">
@@ -1694,6 +1692,9 @@
         <item>Run</item>
         <item>Sleep</item>
         <item>Close</item>
+        <item>Speak</item>
+        <item>Play</item>
+        <item>Thought</item>
     </string-array>
 
     <string-array name="randomVerbs_kan">
@@ -1705,17 +1706,23 @@
         <item>ODu(ಓಡು)</item>
         <item>malagu (ಮಲಗು)</item>
         <item>mucchu (ಮುಚ್ಚು)</item>
+        <item>maathaaDu (ಮಾತಾಡು)</item>
+        <item>aaDu (ಆಡು)</item>
+        <item>Yochane (ಯೋಚಿಸು)</item>
     </string-array>
 
     <string-array name="past_eng">
-        <item>learned</item>
-        <item>did</item>
-        <item>ate</item>
-        <item>drunk</item>
-        <item>listened</item>
-        <item>ran</item>
-        <item>slept</item>
-        <item>closed</item>
+        <item>Learned</item>
+        <item>Did</item>
+        <item>Ate</item>
+        <item>Drunk</item>
+        <item>Listened</item>
+        <item>Ran</item>
+        <item>Slept</item>
+        <item>Closed</item>
+        <item>Spoke</item>
+        <item>Palyed</item>
+        <item>Thought</item>
     </string-array>
 
     <string-array name="past_kan">
@@ -1727,6 +1734,9 @@
         <item>ODide</item>
         <item>malagide</item>
         <item>mucchide</item>
+        <item>maathaaDide</item>
+        <item>aaDide</item>
+        <item>yochiside</item>
     </string-array>
 
     <string-array name="present_eng">
@@ -1738,6 +1748,9 @@
         <item>Run</item>
         <item>Sleep</item>
         <item>Close</item>
+        <item>Speak</item>
+        <item>Play</item>
+        <item>Think</item>
     </string-array>
 
     <string-array name="present_kan">
@@ -1749,6 +1762,9 @@
         <item>ODu</item>
         <item>malagu</item>
         <item>mucchu</item>
+        <item>maathaaDu</item>
+        <item>aaDu</item>
+        <item>yochisu</item>
     </string-array>
 
     <string-array name="future_eng">
@@ -1760,6 +1776,9 @@
         <item>will run</item>
         <item>will sleep</item>
         <item>will close</item>
+        <item>will speak</item>
+        <item>will play</item>
+        <item>will think</item>
     </string-array>
 
     <string-array name="future_kan">
@@ -1771,6 +1790,9 @@
         <item>ODtini</item>
         <item>malagtini</item>
         <item>mucchtini</item>
+        <item>maathaadthini</item>
+        <item>aaDthini</item>
+        <item>yochisthini</item>
     </string-array>
 
     <string-array name="pastCont_eng">
@@ -1782,6 +1804,9 @@
         <item>was running</item>
         <item>was sleeping</item>
         <item>was closing</item>
+        <item>was speaking</item>
+        <item>was playing</item>
+        <item>was thinking</item>
     </string-array>
 
     <string-array name="pastCont_kan">
@@ -1793,6 +1818,9 @@
         <item>ODuthaa idde</item>
         <item>malaguthaa idde</item>
         <item>mucchuthaa idde</item>
+        <item>maathaaDuthaa idde</item>
+        <item>aaDthaa idde</item>
+        <item>yochisthaa idde</item>
     </string-array>
 
     <string-array name="presentCont_eng">
@@ -1804,6 +1832,9 @@
         <item>running</item>
         <item>sleeping</item>
         <item>closing</item>
+        <item>speaking</item>
+        <item>playing</item>
+        <item>thinking</item>
     </string-array>
 
     <string-array name="presentCont_kan">
@@ -1815,6 +1846,9 @@
         <item>ODuthaa idini</item>
         <item>malaguthaa idini</item>
         <item>mucchuthaa idini</item>
+        <item>maathaaDuthaa idini</item>
+        <item>aaDthaa idini</item>
+        <item>yochisthaa idini</item>
     </string-array>
 
     <string-array name="futureCont_eng">
@@ -1826,6 +1860,9 @@
         <item>will be running</item>
         <item>will be sleeping</item>
         <item>will be closing</item>
+        <item>will be speaking</item>
+        <item>will be playing</item>
+        <item>will be thinking</item>
     </string-array>
 
     <string-array name="futureCont_kan">
@@ -1837,6 +1874,9 @@
         <item>ODuthaa irtini</item>
         <item>malaguthaa irtini</item>
         <item>mucchuthaa irtini</item>
+        <item>maathaaDuthaa irtini</item>
+        <item>aaDthaa irtini</item>
+        <item>yochisthaa irtini</item>
     </string-array>
 
     <!-- About Us Text STARTS HERE -->
@@ -1873,6 +1913,43 @@
         <item>will sleep</item>
         <item>Done?</item>
         <item>Finished?</item>
+        <item>Above</item>
+        <item>Presence</item>
+        <item>Abundance</item>
+        <item>Accept</item>
+        <item>Active</item>
+        <item>Positive</item>
+        <item>After</item>
+        <item>Alike</item>
+        <item>Question</item>
+        <item>Good</item>
+        <item>For</item>
+        <item>Sleep</item>
+        <item>Amateur</item>
+        <item>Man</item>
+        <item>Boy</item>
+        <item>Son</item>
+        <item>Love</item>
+        <item>Front</item>
+        <item>Begin</item>
+        <item>Birth</item>
+        <item>Build</item>
+        <item>Happy</item>
+        <item>Accurate</item>
+        <item>Beautiful</item>
+        <item>Day</item>
+        <item>Rich</item>
+        <item>Up</item>
+        <item>Left</item>
+        <item>My</item>
+        <item>I</item>
+        <item>Together</item>
+        <item>Praise</item>
+        <item>Near</item>
+        <item>Common</item>
+        <item>Enter</item>
+        <item>First</item>
+        <item>Healthy</item>
     </string-array>
 
     <string-array name="nWords_array_Eng">
@@ -1884,6 +1961,43 @@
         <item>will not sleep</item>
         <item>Not Done</item>
         <item>Not Finished</item>
+        <item>Below</item>
+        <item>Absence</item>
+        <item>Lack</item>
+        <item>Reject</item>
+        <item>Lazy</item>
+        <item>Negative</item>
+        <item>Before</item>
+        <item>Different</item>
+        <item>Answer</item>
+        <item>Bad</item>
+        <item>Against</item>
+        <item>Wake Up</item>
+        <item>Professional</item>
+        <item>Woman</item>
+        <item>Girl</item>
+        <item>Daughter</item>
+        <item>Hate</item>
+        <item>Back</item>
+        <item>End</item>
+        <item>Death</item>
+        <item>Destroy</item>
+        <item>SAd</item>
+        <item>Inaccurate</item>
+        <item>Ugly</item>
+        <item>Bad</item>
+        <item>Poor</item>
+        <item>Down</item>
+        <item>Right</item>
+        <item>Your</item>
+        <item>You</item>
+        <item>Apart</item>
+        <item>Blame</item>
+        <item>Far</item>
+        <item>Rare</item>
+        <item>Exit</item>
+        <item>Last</item>
+        <item>Unhealthy</item>
     </string-array>
 
     <string-array name="pWords_array_kan">
@@ -1895,6 +2009,43 @@
         <item>malagthini</item>
         <item>aaytha?</item>
         <item>mugitha?</item>
+        <item>mEle</item>
+        <item>upasthiti</item>
+        <item>hEraLa</item>
+        <item>sweekarisu</item>
+        <item>sakriya</item>
+        <item>sakaaratmaka</item>
+        <item>nantara</item>
+        <item>samaana</item>
+        <item>prashne</item>
+        <item>oLLeya</item>
+        <item>para</item>
+        <item>malagu</item>
+        <item>havyaasi</item>
+        <item>ganDasu</item>
+        <item>huDuga</item>
+        <item>maga</item>
+        <item>preethi</item>
+        <item>munde</item>
+        <item>praarambha</item>
+        <item>huTTu</item>
+        <item>kaTTu</item>
+        <item>santoSha</item>
+        <item>nikharavaada</item>
+        <item>sundara</item>
+        <item>hagalu</item>
+        <item>shreemantha</item>
+        <item>mEle</item>
+        <item>eDagaDe</item>
+        <item>nanna</item>
+        <item>naanu</item>
+        <item>jote</item>
+        <item>shlaaGhane</item>
+        <item>hattira</item>
+        <item>saamaanya</item>
+        <item>oLage</item>
+        <item>modalu</item>
+        <item>aarOgyakara</item>
     </string-array>
 
     <string-array name="nWords_array_kan">
@@ -1906,6 +2057,43 @@
         <item>malgalla</item>
         <item>aagilla</item>
         <item>mugidilla</item>
+        <item>keLage</item>
+        <item>anupasthiti</item>
+        <item>korate</item>
+        <item>neraakarisu</item>
+        <item>sOmaari</item>
+        <item>nakaaratmaka</item>
+        <item>modalu</item>
+        <item>bere</item>
+        <item>uttara</item>
+        <item>keTTa</item>
+        <item>viruddha</item>
+        <item>eddeLu</item>
+        <item>vruttipara</item>
+        <item>henDasu</item>
+        <item>huDugi</item>
+        <item>magaLu</item>
+        <item>dwESha</item>
+        <item>hinde</item>
+        <item>muktaaya</item>
+        <item>saavu</item>
+        <item>keDuvu</item>
+        <item>duhkha</item>
+        <item>tappaada</item>
+        <item>kuruupi</item>
+        <item>raatri</item>
+        <item>baDava</item>
+        <item>keLage</item>
+        <item>balagaDe</item>
+        <item>ninna</item>
+        <item>neenu</item>
+        <item>duura</item>
+        <item>duuru</item>
+        <item>duura</item>
+        <item>viraLa</item>
+        <item>horage</item>
+        <item>kone</item>
+        <item>anaarOgyakara</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
 

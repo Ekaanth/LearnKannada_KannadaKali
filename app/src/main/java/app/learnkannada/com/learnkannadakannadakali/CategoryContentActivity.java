@@ -47,7 +47,7 @@ public class CategoryContentActivity extends AppCompatActivity {
 
         //setting Action bar title
         String actionBarTitle = category.substring(0,1).toUpperCase()+category.substring(1,category.length());
-        getSupportActionBar().setTitle(actionBarTitle);
+        getSupportActionBar().setTitle(actionBarTitle.replace("_"," "));
 
         Resources res = getResources();
         String[] listValues = null, listValuesInKan = null;

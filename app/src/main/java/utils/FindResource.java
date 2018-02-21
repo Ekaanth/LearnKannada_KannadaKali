@@ -46,4 +46,17 @@ public class FindResource {
         }
 
     }
+
+    //method intoruced to fix audio player issue when numerics are searched by user
+    public static boolean isNumber(String s)
+    {
+        try
+        {
+            Integer.parseInt(s);
+            return true;
+        }catch (Exception e)
+        {
+            return false;
+        }
+    }
 }

@@ -375,7 +375,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 if (FindResource.rawResourceAvailable(getApplicationContext(), splitWords[j] + "_ex")) {
                     //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                     final int finalJ = j;
-                    infoBuilder.setTitle(R.string.too_young)
+                    infoBuilder.setTitle(R.string.too_young_but)
                             .setMessage("\n" + "I can give you different example for " + "\n\"" + splitWords[j].toUpperCase()
                                     + "\"\n")
                             .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
