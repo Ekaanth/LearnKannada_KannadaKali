@@ -584,6 +584,7 @@
         <item>Tooth</item>
         <item>Elbow</item>
         <item>Knee</item>
+        <item>Stomach</item>
     </string-array>
     <!-- ******************************* Category Body Parts (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
@@ -605,6 +606,7 @@
         <item>hallu</item>
         <item>moNakai</item>
         <item>moNakaalu</item>
+        <item>hoTTe</item>
     </string-array>
     <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
 
@@ -629,6 +631,8 @@
         <item>Rank</item>
         <item>Row</item>
         <item>Drama</item>
+        <item>Low</item>
+        <item>Social</item>
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
@@ -652,6 +656,8 @@
         <item>darje</item>
         <item>saalu</item>
         <item>naataka</item>
+        <item>kaDime</item>
+        <item>samaaja</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
@@ -757,9 +763,10 @@
         <item>Which?</item>
         <item>Whom?</item>
         <item>Whose?</item>
+        <item>When?</item>
+        <item>Who?</item>
     </string-array>
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
-
     <!-- *******************************Day 2 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day2_content_kannada">
         <item>avanu</item>
@@ -782,9 +789,10 @@
         <item>yaavudu?</item>
         <item>yaarige?</item>
         <item>yaaradu?</item>
+        <item>yaavaaga?</item>
+        <item>yaaru?</item>
     </string-array>
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
-
     <!-- *******************************Examples Texts for Day 2 STARTS here *******************************-->
     <string name="he_ex"><b><font color="#f20f08">Eng</font></b> : <i>He</i> is a cricket player\n<b><font color="#ffb300">Kan</font></b> : <i>Avanu</i> obba cricket aatagaara</string>
     <string name="she_ex"><b><font color="#f20f08">Eng</font></b> : <i>She</i> is a good girl\n<b><font color="#ffb300">Kan</font></b> : <i>AvaLu</i> oLLe hudugi</string>
@@ -806,6 +814,8 @@
     <string name="which_ex"><b><font color="#f20f08">Eng</font></b> : <i>Which</i> is your bag?\n<b><font color="#ffb300">Kan</font></b> : ninna cheela(bag) <i>yaavudu</i>?</string>
     <string name="whom_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whom</i> to give this?\n<b><font color="#ffb300">Kan</font></b> : idu <i>yaarige</i> kodabeku?</string>
     <string name="whose_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whose</i> pen is this?\n<b><font color="#ffb300">Kan</font></b> : ee pen <i>yaaradu</i>?</string>
+    <string name="when_ex"><b><font color="#f20f08">Eng</font></b> : <i>When</i> did you come to the office?\n<b><font color="#ffb300">Kan</font></b> : neenu kachEri(office)ge <i>yaavaaga</i> bande?</string>
+    <string name="who_ex"><b><font color="#f20f08">Eng</font></b> : <i>Who</i> are you?\n<b><font color="#ffb300">Kan</font></b> : neenu <i>yaaru</i>?</string>
     <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
@@ -1155,6 +1165,8 @@
         <item>Grandmother</item>
         <item>Grandson</item>
         <item>Granddaughter</item>
+        <item>Husband</item>
+        <item>Wife</item>
     </string-array>
     <!-- *******************************Day 7 content (ENGLISH) ENDS here *******************************-->
     <!-- *******************************Day 7 content (KANNADA) STARTS here *******************************-->
@@ -1175,6 +1187,8 @@
         <item>ajji</item>
         <item>mommaga</item>
         <item>mommagaLu</item>
+        <item>Ganda</item>
+        <item>henDati</item>
     </string-array>
     <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
 
@@ -1712,17 +1726,17 @@
     </string-array>
 
     <string-array name="past_eng">
-        <item>Learned</item>
-        <item>Did</item>
-        <item>Ate</item>
-        <item>Drunk</item>
-        <item>Listened</item>
-        <item>Ran</item>
-        <item>Slept</item>
-        <item>Closed</item>
-        <item>Spoke</item>
-        <item>Palyed</item>
-        <item>Thought</item>
+        <item>learned</item>
+        <item>did</item>
+        <item>ate</item>
+        <item>drunk</item>
+        <item>listened</item>
+        <item>ran</item>
+        <item>slept</item>
+        <item>closed</item>
+        <item>spoke</item>
+        <item>played</item>
+        <item>thought</item>
     </string-array>
 
     <string-array name="past_kan">
@@ -1740,17 +1754,17 @@
     </string-array>
 
     <string-array name="present_eng">
-        <item>Learn</item>
-        <item>Do</item>
-        <item>Eat</item>
-        <item>Drink</item>
-        <item>Listen</item>
-        <item>Run</item>
-        <item>Sleep</item>
-        <item>Close</item>
-        <item>Speak</item>
-        <item>Play</item>
-        <item>Think</item>
+        <item>learn</item>
+        <item>do</item>
+        <item>eat</item>
+        <item>drink</item>
+        <item>listen</item>
+        <item>run</item>
+        <item>sleep</item>
+        <item>close</item>
+        <item>speak</item>
+        <item>play</item>
+        <item>think</item>
     </string-array>
 
     <string-array name="present_kan">
@@ -1949,7 +1963,9 @@
         <item>Common</item>
         <item>Enter</item>
         <item>First</item>
-        <item>Healthy</item>
+        <item>Health</item>
+        <item>Angel</item>
+        <item>Ask</item>
     </string-array>
 
     <string-array name="nWords_array_Eng">
@@ -1963,7 +1979,7 @@
         <item>Not Finished</item>
         <item>Below</item>
         <item>Absence</item>
-        <item>Lack</item>
+        <item>Rare</item>
         <item>Reject</item>
         <item>Lazy</item>
         <item>Negative</item>
@@ -1982,7 +1998,7 @@
         <item>End</item>
         <item>Death</item>
         <item>Destroy</item>
-        <item>SAd</item>
+        <item>Sad</item>
         <item>Inaccurate</item>
         <item>Ugly</item>
         <item>Bad</item>
@@ -1994,21 +2010,23 @@
         <item>Apart</item>
         <item>Blame</item>
         <item>Far</item>
-        <item>Rare</item>
+        <item>Uncommon</item>
         <item>Exit</item>
         <item>Last</item>
-        <item>Unhealthy</item>
+        <item>Illness</item>
+        <item>Demon</item>
+        <item>Answer</item>
     </string-array>
 
     <string-array name="pWords_array_kan">
-        <item>thinthini</item>
+        <item>tinthini</item>
         <item>bartini</item>
         <item>maadtini</item>
         <item>kuDithini</item>
         <item>kodthini</item>
         <item>malagthini</item>
-        <item>aaytha?</item>
-        <item>mugitha?</item>
+        <item>aayta?</item>
+        <item>mugita?</item>
         <item>mEle</item>
         <item>upasthiti</item>
         <item>hEraLa</item>
@@ -2025,7 +2043,7 @@
         <item>ganDasu</item>
         <item>huDuga</item>
         <item>maga</item>
-        <item>preethi</item>
+        <item>preeti</item>
         <item>munde</item>
         <item>praarambha</item>
         <item>huTTu</item>
@@ -2045,22 +2063,24 @@
         <item>saamaanya</item>
         <item>oLage</item>
         <item>modalu</item>
-        <item>aarOgyakara</item>
+        <item>aarOgya</item>
+        <item>sura</item>
+        <item>kelu</item>
     </string-array>
 
     <string-array name="nWords_array_kan">
-        <item>thinnalla</item>
+        <item>tinnalla</item>
         <item>baralla</item>
         <item>maadalla</item>
         <item>kuDiyalla</item>
-        <item>kodalla</item>
+        <item>koDalla</item>
         <item>malgalla</item>
         <item>aagilla</item>
-        <item>mugidilla</item>
+        <item>mugdilla</item>
         <item>keLage</item>
         <item>anupasthiti</item>
-        <item>korate</item>
-        <item>neraakarisu</item>
+        <item>viraLa</item>
+        <item>niraakarisu</item>
         <item>sOmaari</item>
         <item>nakaaratmaka</item>
         <item>modalu</item>
@@ -2070,7 +2090,7 @@
         <item>viruddha</item>
         <item>eddeLu</item>
         <item>vruttipara</item>
-        <item>henDasu</item>
+        <item>hengasu</item>
         <item>huDugi</item>
         <item>magaLu</item>
         <item>dwESha</item>
@@ -2080,20 +2100,22 @@
         <item>keDuvu</item>
         <item>duhkha</item>
         <item>tappaada</item>
-        <item>kuruupi</item>
+        <item>kuroopi</item>
         <item>raatri</item>
         <item>baDava</item>
         <item>keLage</item>
         <item>balagaDe</item>
         <item>ninna</item>
         <item>neenu</item>
-        <item>duura</item>
-        <item>duuru</item>
-        <item>duura</item>
-        <item>viraLa</item>
+        <item>doora</item>
+        <item>dooru</item>
+        <item>doora</item>
+        <item>asaamaanya</item>
         <item>horage</item>
         <item>kone</item>
-        <item>anaarOgyakara</item>
+        <item>anaarOgya</item>
+        <item>asura</item>
+        <item>uttarisu</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
 
