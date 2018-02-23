@@ -1,10 +1,7 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
-import android.animation.AnimatorInflater;
-import android.animation.StateListAnimator;
 import android.app.Fragment;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
@@ -12,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
@@ -93,9 +88,9 @@ public class AntonymTopFragment extends Fragment{
             happy.setVisibility(View.INVISIBLE);
             sad.setVisibility(View.INVISIBLE);
         }
-        engWord.setText(wordEng);
+        engWord.setText(wordEng.replace("_"," "));
         kanWord.setText(wordKan);
-        engAntonym.setText(antonymEng);
+        engAntonym.setText(antonymEng.replace("_"," "));
         kanAntonym.setText(antonymKan);
         engWord.setVisibility(View.VISIBLE);
         kanWord.setVisibility(View.VISIBLE);

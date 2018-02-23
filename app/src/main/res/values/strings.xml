@@ -1754,7 +1754,7 @@
         <item>malagu (ಮಲಗು)</item>
         <item>mucchu (ಮುಚ್ಚು)</item>
         <item>maathaaDu (ಮಾತಾಡು)</item>
-        <item>aaDu (ಆಡು)</item>
+        <item>aaTa (ಆಟ)</item>
         <item>yOchane (ಯೋಚನೆ)</item>
         <item>hELu</item>
     </string-array>
@@ -2013,6 +2013,7 @@
         <item>Angel</item>
         <item>Ask</item>
         <item>Demand</item>
+        <item>Clear</item>
     </string-array>
 
     <string-array name="nWords_array_Eng">
@@ -2048,12 +2049,12 @@
         <item>Sad</item>
         <item>Inaccurate</item>
         <item>Ugly</item>
-        <item>Bad</item>
+        <item>Night</item>
         <item>Poor</item>
         <item>Down</item>
         <item>Right</item>
-        <item>Your</item>
-        <item>You</item>
+        <item>Your_</item>
+        <item>You_</item>
         <item>Apart</item>
         <item>Blame</item>
         <item>Far</item>
@@ -2064,6 +2065,7 @@
         <item>Demon</item>
         <item>Answer</item>
         <item>Scarcity</item>
+        <item>Unclear</item>
     </string-array>
 
     <string-array name="pWords_array_kan">
@@ -2099,7 +2101,7 @@
         <item>santoSha</item>
         <item>nikharavaada</item>
         <item>sundara</item>
-        <item>hagalu</item>
+        <item>dina</item>
         <item>shreemantha</item>
         <item>mEle</item>
         <item>eDagaDe</item>
@@ -2115,6 +2117,7 @@
         <item>sura</item>
         <item>kelu</item>
         <item>bEDike</item>
+        <item>spashTa</item>
     </string-array>
 
     <string-array name="nWords_array_kan">
@@ -2134,7 +2137,7 @@
         <item>nakaaratmaka</item>
         <item>modalu</item>
         <item>bere</item>
-        <item>uttara</item>
+        <item>uttarisu</item>
         <item>keTTa</item>
         <item>viruddha</item>
         <item>eddeLu</item>
@@ -2166,6 +2169,7 @@
         <item>asura</item>
         <item>uttarisu</item>
         <item>korate</item>
+        <item>aspashTa</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
 
