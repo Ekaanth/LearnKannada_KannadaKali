@@ -284,18 +284,34 @@ public class RandomMagicActivity extends AppCompatActivity {
                     .setPositiveButton("Ok", null)
                     .create().show();
         } else if (item.getItemId() == R.id.randomMagicSuggestVerbID) {
-            StringBuilder body = new StringBuilder();
-            body.append("Hello Team HithAM, \n \n");
-            body.append("I think it would be helpful if you can add the below verb(s) and it\'s tenses to this section\n\n");
-            body.append("/* verbs here */ \n");
-            body.append("\n Regards, \n");
-            body.append("Kannada Kali User");
-            String company[] = {Constants.HITHAM_EMAIL};
-            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-            intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
-            intent.putExtra(Intent.EXTRA_EMAIL, company);
-            intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-            startActivity(intent);
+            builder.setTitle("Suggest Verbs")
+                    .setMessage("Are you sure to suggest verbs?")
+                    .setIcon(R.drawable.random)
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            StringBuilder body = new StringBuilder();
+                            body.append("Hello Team HithAM, \n \n");
+                            body.append("I think it would be helpful if you can add the below verb(s) and it\'s tenses to this section\n\n");
+                            body.append("/* verbs here */ \n");
+                            body.append("\n Regards, \n");
+                            body.append("Kannada Kali User");
+                            String company[] = {Constants.HITHAM_EMAIL};
+                            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
+                            intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
+                            intent.putExtra(Intent.EXTRA_EMAIL, company);
+                            intent.putExtra(Intent.EXTRA_TEXT, body.toString());
+                            if(intent.resolveActivity(getPackageManager())!=null)
+                            {
+                                Toast.makeText(getApplicationContext(),R.string.FRAMING_EMAIL,Toast.LENGTH_LONG).show();
+                                startActivity(intent);
+                            }
+                        }
+                    })
+                    .setNegativeButton("Cancel",null)
+                    .show();
+            return true;
         } else if (item.getItemId() == android.R.id.home) {
             onBackPressed();
             return true;

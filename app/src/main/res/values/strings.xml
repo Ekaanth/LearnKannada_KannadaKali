@@ -2176,6 +2176,8 @@
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <string name="REQUEST_WHATSAPP_FORUM">Whatsapp forum joining request</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="FRAMING_EMAIL">Framing email for you...</string>
 
 
 </resources>

@@ -41,20 +41,6 @@
         <menu>
 
             <item
-                android:icon="@drawable/alphabets"
-                android:id="@+id/aboutAppID"
-                android:orderInCategory="100"
-                android:title="About app"
-                app:showAsAction="collapseActionView" />
-
-            <item
-                android:icon="@drawable/idea"
-                android:id="@+id/aboutUsID"
-                android:orderInCategory="100"
-                android:title="About Us"
-                app:showAsAction="collapseActionView" />
-
-            <item
                 android:icon="@drawable/facebook"
                 android:id="@+id/facebookID"
                 android:title="Follow us"
@@ -68,6 +54,28 @@
                 android:icon="@drawable/whatsapp"
                 android:orderInCategory="100"
                 app:showAsAction="collapseActionView"/>
+
+            <item
+                android:title="@string/subscribe"
+                android:id="@+id/youtubeID"
+                android:orderInCategory="100"
+                android:icon="@drawable/youtube"
+                app:showAsAction="collapseActionView"/>
+
+            <item
+                android:icon="@drawable/alphabets"
+                android:id="@+id/aboutAppID"
+                android:orderInCategory="100"
+                android:title="About app"
+                app:showAsAction="collapseActionView" />
+
+            <item
+                android:icon="@drawable/idea"
+                android:id="@+id/aboutUsID"
+                android:orderInCategory="100"
+                android:title="About Us"
+                app:showAsAction="collapseActionView" />
+
         </menu>
     </item>
 

@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ShareCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -43,7 +44,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private Button dayCourse, flexiCourse;
     private ImageView mic;
 
-    private MediaPlayer mediaPlayer;
     private AlertDialog.Builder builder, infoBuilder, infoProvider;
     private AlertDialog.Builder dialog;
 
@@ -96,7 +96,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigationID);
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.navigationID);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -119,7 +119,25 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     return true;
                 } else if (item.getItemId() == R.id.shareAppID)
                 {
-                    Intent sendIntent = new Intent();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    String mimeType = "text/plain";
+                    String shareText = "Hey there, \n\n Check out this nifty app which can help you ace spoken " +
+                            "Kannada in just 10 days. Get Instant translation to any english word using \"Instant " +
+                            "Word Translation\" feature. \nYou can even have a chat with the developers and discuss on your ideas " +
+                            "in making this app better and better. Why don\'t you give it a try?" +
+                            "\n\nDownload Kannada Kali app now!\n" +
+                            Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())
+                            + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc");
+                    String title = "Sharing is Caring...";
+
+                    ShareCompat.IntentBuilder.from(ChooseCourseActivity.this)
+                            .setChooserTitle(title)
+                            .setType(mimeType)
+                            .setText(shareText)
+                            .startChooser();
+                    Toast.makeText(getApplicationContext(),"Thanks for the love",Toast.LENGTH_SHORT).show();
+                    return true;
+                    /*Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
                             "Kannada in just 10 days. Get Instant translation to any english word using \"Instant " +
@@ -132,7 +150,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                     if(sendIntent.resolveActivity(getPackageManager())!=null)
                         startActivity(sendIntent);
-                    return true;
+                    return true;*/
                 } else if (item.getItemId() == R.id.aboutAppID)
                 {
                     dialog.setTitle("About the app")
@@ -157,7 +175,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                     if(intent.resolveActivity(getPackageManager())!=null)
+                                    {
+                                        Toast.makeText(getApplicationContext(),R.string.FRAMING_EMAIL,Toast.LENGTH_SHORT).show();
                                         startActivity(intent);
+                                    }
                                 }
                             })
                             .setNegativeButton(Constants.RATE_APP, new DialogInterface.OnClickListener() {
@@ -251,7 +272,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                     if(intent.resolveActivity(getPackageManager())!=null)
+                                    {
+                                        Toast.makeText(getApplicationContext(),R.string.FRAMING_EMAIL,Toast.LENGTH_SHORT).show();
                                         startActivity(intent);
+                                    }
                                 }
                             })
                             .setNegativeButton("Cancel", null)
@@ -259,7 +283,26 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
 
                     return true;
-                } else
+                }
+                else if(item.getItemId() == R.id.youtubeID)
+                {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    Uri uri = Uri.parse("https://www.youtube.com/channel/UCizTKN-4GkCI1SrdiNFcweg");
+                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                    if(intent.resolveActivity(getPackageManager())!=null)
+                    {
+                        Toast.makeText(getApplicationContext(),"Taking you there...",Toast.LENGTH_LONG).show();
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Please search for \n\"Hitham Creations\" on youtube",Toast.LENGTH_SHORT).show();
+                        throw new NullPointerException("No apps found to open youtube channel link");
+                    }
+
+                    return true;
+                }
+                else
                     return onOptionsItemSelected(item);
             }
         });

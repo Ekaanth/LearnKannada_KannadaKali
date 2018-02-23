@@ -15,9 +15,10 @@
         app:showAsAction="collapseActionView"/>
 
     <item
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
         android:id="@+id/randomMagicSuggestVerbID"
         android:orderInCategory="100"
         android:title="Suggest Verb(s)"
-        app:showAsAction="collapseActionView"/>
+        app:showAsAction="ifRoom"/>
 
 </menu>
