@@ -260,7 +260,6 @@
         <item>That</item>
         <item>There</item>
         <item>Here</item>
-        <item>Want</item>
     </string-array>
     <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
 
@@ -292,7 +291,6 @@
         <item>adu</item>
         <item>alli</item>
         <item>illi</item>
-        <item>bEku</item>
     </string-array>
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
@@ -673,6 +671,7 @@
         <item>Clear</item>
         <item>Great</item>
         <item>Low</item>
+        <item>Want</item>
     </string-array>
     <!-- ******************************* Category Misc (English) Ends here *******************************-->
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
@@ -686,6 +685,7 @@
         <item>spashTa</item>
         <item>mahaan</item>
         <item>kaDime</item>
+        <item>bEku</item>
     </string-array>
 
     <!-- ******************************* Category Misc (Kannada) Ends here *******************************-->

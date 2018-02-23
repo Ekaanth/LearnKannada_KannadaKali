@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -16,7 +16,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -102,6 +101,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.rateID)
                 {
+                    drawerLayout.closeDrawer(GravityCompat.START);
                     Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                     // To count with Play market backstack, After pressing back button,
@@ -243,6 +243,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
                     return true;
                 } else if (item.getItemId() == R.id.facebookID) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
                     Intent facebookAppIntent;
                     try {
                         facebookAppIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/918533634976014"));
@@ -460,8 +461,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.WANTS_TO_CONTACT));
                                 intent.putExtra(Intent.EXTRA_EMAIL, company);
                                 intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                if(intent.resolveActivity(getPackageManager())!=null)
+                                if(intent.resolveActivity(getPackageManager())!=null) {
+                                    Toast.makeText(getApplicationContext(),R.string.FRAMING_EMAIL,Toast.LENGTH_SHORT).show();
                                     startActivity(intent);
+                                }
                             }
                         })
                         .setIcon(R.drawable.idea).setCancelable(true).create().show();

@@ -3,15 +3,13 @@ package app.learnkannada.com.learnkannadakannadakali;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
+import android.widget.Toast;
 
 import constants.Constants;
 
@@ -50,7 +48,10 @@ public class AboutusActivity extends AppCompatActivity {
                                 intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.WANTS_TO_CONTACT));
                                 intent.putExtra(Intent.EXTRA_EMAIL, company);
                                 intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                startActivity(intent);
+                                if(intent.resolveActivity(getPackageManager())!=null) {
+                                    Toast.makeText(getApplicationContext(),R.string.FRAMING_EMAIL,Toast.LENGTH_SHORT).show();
+                                    startActivity(intent);
+                                }
                             }
                         })
                         .setNegativeButton("Cancel",null)
