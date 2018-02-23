@@ -637,8 +637,6 @@
         <item>Rank</item>
         <item>Row</item>
         <item>Drama</item>
-        <item>Low</item>
-        <item></item>
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
@@ -662,7 +660,6 @@
         <item>darje</item>
         <item>saalu</item>
         <item>naataka</item>
-        <item>kaDime</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
     <!-- ******************************* Category Misc (English) starts here *******************************-->
@@ -675,6 +672,7 @@
         <item>Look</item>
         <item>Clear</item>
         <item>Great</item>
+        <item>Low</item>
     </string-array>
     <!-- ******************************* Category Misc (English) Ends here *******************************-->
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
@@ -687,6 +685,7 @@
         <item>nodu</item>
         <item>spashTa</item>
         <item>mahaan</item>
+        <item>kaDime</item>
     </string-array>
 
     <!-- ******************************* Category Misc (Kannada) Ends here *******************************-->
@@ -910,7 +909,7 @@
 
     <!--*******************************Examples Te_for for Day 3 STARTS here *******************************-->
     <string name="hi_hello_ex"><b><font color="#f20f08">Eng</font></b> : <i>Hi</i>! How are you?\n<b><font color="#ffb300">Kan</font></b> : <i>namaskaara</i>! hege iddera (hEgidira)?</string>
-    <string name="welcome_ex"><b><font color="#f20f08">Eng</font></b> : <i>Welcome</i>to the dance programme.\n<b><font color="#ffb300">Kan</font></b> : nrutya kaaryakramakke suswaagata.</string>
+    <string name="welcome_ex"><b><font color="#f20f08">Eng</font></b> : <i>Welcome</i> to the dance programme.\n<b><font color="#ffb300">Kan</font></b> : nrutya kaaryakramakke suswaagata.</string>
     <string name="good_morning_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Morning</i>! Had breakfast?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhodaya</i>! thindi ayta?</string>
     <string name="good_evening_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Evening</i>! Had coffee?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhasanje</i>! coffee ayta?</string>
     <string name="good_night_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Night</i>! Have a tight sleep\n<b><font color="#ffb300">Kan</font></b> : <i>Shubharaatri</i>! nidde(sleep) channagi madi</string>
@@ -2132,7 +2131,7 @@
         <item>keLage</item>
         <item>anupasthiti</item>
         <item>viraLa</item>
-        <item>niraakarisu</item>
+        <item>tiraskarisu</item>
         <item>sOmaari</item>
         <item>nakaaratmaka</item>
         <item>modalu</item>
