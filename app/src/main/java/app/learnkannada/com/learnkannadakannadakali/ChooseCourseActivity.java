@@ -100,7 +100,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.rateID) {
+                if (item.getItemId() == R.id.rateID)
+                {
                     Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                     // To count with Play market backstack, After pressing back button,
@@ -114,9 +115,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
                     }
-                    Toast.makeText(getApplicationContext(), "Please review us on Play-Store", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please review us in Play-Store", Toast.LENGTH_SHORT).show();
                     return true;
-                } else if (item.getItemId() == R.id.shareAppID) {
+                } else if (item.getItemId() == R.id.shareAppID)
+                {
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
@@ -128,12 +130,14 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
                     sendIntent.setType("text/plain");
                     sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                    startActivity(sendIntent);
+                    if(sendIntent.resolveActivity(getPackageManager())!=null)
+                        startActivity(sendIntent);
                     return true;
-                } else if (item.getItemId() == R.id.aboutAppID) {
+                } else if (item.getItemId() == R.id.aboutAppID)
+                {
                     dialog.setTitle("About the app")
                             .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
-                                    "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
+                                    "\n-- The app is exclusively developed _for people who want to learn \"Spoken Kannada\"" +
                                     " on the go.\n" +
                                     "-- We are working really hard to add more and more exciting features to the app." +
                                     "\n-- We request all the users to spend some time on the app and let us know your expectations." +
@@ -152,7 +156,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                    startActivity(intent);
+                                    if(intent.resolveActivity(getPackageManager())!=null)
+                                        startActivity(intent);
                                 }
                             })
                             .setNegativeButton(Constants.RATE_APP, new DialogInterface.OnClickListener() {
@@ -192,11 +197,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     + "\n-- We have used English words at many places to keep the learning simple and appealing.\n" +
                                     "This attempt should not be mistaken as disrespect to Kannada language." +
                                     "\n-- Individual names used in the app are used " +
-                                    "for illustration purposes ONLY. " +
+                                    "_for illustration purposes ONLY. " +
                                     "If anybody's name is matching with the names used in the app, it's " +
                                     "purely coincidental." +
-                                    "\n-- HithAM Creations is not responsible for any damage caused due to misuse of this " +
-                                    "application. The app is published for the sole purpose of helping people learn " +
+                                    "\n-- HithAM Creations is not responsible _for any damage caused due to misuse of this " +
+                                    "application. The app is published _for the sole purpose of helping people learn " +
                                     "spoken Kannada only.")
                             .setIcon(R.drawable.ic_error_black_24dp)
                             .setCancelable(true)
@@ -245,7 +250,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.REQUEST_WHATSAPP_FORUM));
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                    startActivity(intent);
+                                    if(intent.resolveActivity(getPackageManager())!=null)
+                                        startActivity(intent);
                                 }
                             })
                             .setNegativeButton("Cancel", null)
@@ -376,7 +382,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                     final int finalJ = j;
                     infoBuilder.setTitle(R.string.too_young_but)
-                            .setMessage("\n" + "I can give you different example for " + "\n\"" + splitWords[j].toUpperCase()
+                            .setMessage("\n" + "I can give you different example _for " + "\n\"" + splitWords[j].toUpperCase()
                                     + "\"\n")
                             .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
                                 @Override
@@ -396,7 +402,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
             if (splitWords.length > 1)
                 Toast.makeText(getApplicationContext(), R.string.too_young, Toast.LENGTH_LONG).show();
             else {
-                //Toast.makeText(getApplicationContext(),"Sorry! I don't know that yet.", Toast.LENGTH_LONG).show();
                 infoProvider.setTitle(R.string.sorry_idk_that_yet)
                         .setMessage(" Would you like to add \"" + spokenString.toUpperCase() + "\" to my vocabulary?")
                         .setPositiveButton("ADD", new DialogInterface.OnClickListener() {
@@ -412,14 +417,15 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.WANTS_TO_CONTACT));
                                 intent.putExtra(Intent.EXTRA_EMAIL, company);
                                 intent.putExtra(Intent.EXTRA_TEXT, body.toString());
-                                startActivity(intent);
+                                if(intent.resolveActivity(getPackageManager())!=null)
+                                    startActivity(intent);
                             }
                         })
                         .setIcon(R.drawable.idea).setCancelable(true).create().show();
             }
         }
         if (FindResource.rawResourceAvailable(getApplicationContext(), spokenStringEx)) {
-            builder.setTitle("Yay! Example found for \"" + spokenString.replaceAll("_", " ") + "\"")
+            builder.setTitle("Yay! Example found _for \"" + spokenString.replaceAll("_", " ") + "\"")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -430,28 +436,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    //Toast.makeText(getApplicationContext(),"No Problem!",Toast.LENGTH_LONG).show();
                 }
             }).setMessage(R.string.WOULD_YOU_LIKE_TO_CHECK)
                     .create().show();
 
-            //Toast.makeText(getApplicationContext(),"Found",Toast.LENGTH_LONG).show();
         }
     }
-
-    /*private void playOffline(String name) throws IOException {
-        // Toast.makeText(context,"playing...",Toast.LENGTH_SHORT).show();
-        mediaPlayer = new MediaPlayer();
-        Integer id = getResources().getIdentifier(name.toLowerCase(), "raw", getPackageName());
-        //Toast.makeText(getApplicationContext(),"Playing " + name + ".mp3 file...", Toast.LENGTH_SHORT).show();
-        //Toast.makeText(getApplicationContext(),id,Toast.LENGTH_SHORT).show();
-        try {
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), id);
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), R.string.missing_in_voc, Toast.LENGTH_LONG).show();
-        }
-
-        mediaPlayer.start();
-    }*/
 
 }

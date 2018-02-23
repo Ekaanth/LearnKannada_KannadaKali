@@ -260,6 +260,7 @@
         <item>That</item>
         <item>There</item>
         <item>Here</item>
+        <item>Want</item>
     </string-array>
     <!-- *******************************Category Beginner (ENGLISH) ENDS here *******************************-->
 
@@ -291,12 +292,14 @@
         <item>adu</item>
         <item>alli</item>
         <item>illi</item>
+        <item>bEku</item>
     </string-array>
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Greetings (ENGLISH) STARTS here *******************************-->
     <string-array name="greetingsEng_array">
         <item>Hi(Hello)</item>
+        <item>Welcome</item>
         <item>Good Morning</item>
         <item>Good Evening</item>
         <item>Good Night</item>
@@ -308,6 +311,7 @@
     <!-- *******************************Category Greetings (KANNADA) STARTS here *******************************-->
     <string-array name="greetingsKan_array">
         <item>namaskaara</item>
+        <item>suswaagata</item>
         <item>shubhOdaya</item>
         <item>shubhasanje</item>
         <item>shubharaatri</item>
@@ -338,7 +342,7 @@
 
     <!-- *******************************Category Days (KANNADA) STARTS here *******************************-->
     <string-array name="daysKan_array">
-        <item>somavaara</item>
+        <item>sOmavaara</item>
         <item>mangaLavaara</item>
         <item>budhavaara</item>
         <item>guruvaara</item>
@@ -506,6 +510,7 @@
         <item>Drumstick</item>
         <item>Bottle gourd</item>
         <item>Carrot</item>
+        <item>Pumpkin</item>
     </string-array>
     <!-- ******************************* Category Vegetables (ENGLISH) ENDS here *******************************-->
 
@@ -532,6 +537,7 @@
         <item>nuggekaayi</item>
         <item>sorekaayi</item>
         <item>gajjari</item>
+        <item>kumbaLakaayi</item>
     </string-array>
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
 
@@ -632,7 +638,7 @@
         <item>Row</item>
         <item>Drama</item>
         <item>Low</item>
-        <item>Social</item>
+        <item></item>
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
@@ -657,9 +663,33 @@
         <item>saalu</item>
         <item>naataka</item>
         <item>kaDime</item>
-        <item>samaaja</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
+    <!-- ******************************* Category Misc (English) starts here *******************************-->
+    <string-array name= "miscEng_array">
+        <item>God</item>
+        <item>Food</item>
+        <item>Water</item>
+        <item>Social</item>
+        <item>Review</item>
+        <item>Look</item>
+        <item>Clear</item>
+        <item>Great</item>
+    </string-array>
+    <!-- ******************************* Category Misc (English) Ends here *******************************-->
+    <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
+    <string-array name= "miscKan_array">
+        <item>dEvaru</item>
+        <item>aahaara</item>
+        <item>neeru</item>
+        <item>samaaja</item>
+        <item>vimarshe</item>
+        <item>nodu</item>
+        <item>spashTa</item>
+        <item>mahaan</item>
+    </string-array>
+
+    <!-- ******************************* Category Misc (Kannada) Ends here *******************************-->
 
     <!-- Days Array Starts here -->
     <string-array name="days_array">
@@ -721,7 +751,7 @@
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 1 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 1 STARTS here *******************************-->
     <string name="learn_ex"><b><font color="#f20f08">Eng</font></b> : <i>Learn</i> Kannada.\n<b><font color="#ffb300">Kan</font></b> : Kannada <i>kali</i> .</string>
     <string name="i_ex"><b><font color="#f20f08">Eng</font></b> : <i>I</i> am Saraswathi.\n<b><font color="#ffb300">Kan</font></b> : <i>Naanu</i> Saraswathi.</string>
     <string name="we_ex"><b><font color="#f20f08">Eng</font></b> : <i>We</i> are Indians.\n<b><font color="#ffb300">Kan</font></b> : <i>Naavu</i> bhaaratheeyaru.</string>
@@ -739,7 +769,7 @@
     <string name="for_you_plural_ex"><b><font color="#f20f08">Eng</font></b> : These books are <i>for you</i>.\n<b><font color="#ffb300">Kan</font></b> : ee pusthakagalu <i>nimage</i>.</string>
     <string name="yours_singular_ex"><b><font color="#f20f08">Eng</font></b> : This phone is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee phone <i>ninnadu</i>.</string>
     <string name="yours_plural_ex"><b><font color="#f20f08">Eng</font></b> : This place is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee jaaga <i>nimmadu</i>.</string>
-    <!-- *******************************Examples Texts for Day 1 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 1 ENDS here *******************************-->
 
     <!-- *******************************Day 2 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day2_content">
@@ -793,7 +823,7 @@
         <item>yaaru?</item>
     </string-array>
     <!-- *******************************Day 2 content (ENGLISH) ENDS here *******************************-->
-    <!-- *******************************Examples Texts for Day 2 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 2 STARTS here *******************************-->
     <string name="he_ex"><b><font color="#f20f08">Eng</font></b> : <i>He</i> is a cricket player\n<b><font color="#ffb300">Kan</font></b> : <i>Avanu</i> obba cricket aatagaara</string>
     <string name="she_ex"><b><font color="#f20f08">Eng</font></b> : <i>She</i> is a good girl\n<b><font color="#ffb300">Kan</font></b> : <i>AvaLu</i> oLLe hudugi</string>
     <string name="they_ex"><b><font color="#f20f08">Eng</font></b> : <i>They</i> are cricket player(s)\n<b><font color="#ffb300">Kan</font></b> : <i>Avaru</i> cricket aatagaara(ru)</string>
@@ -816,11 +846,12 @@
     <string name="whose_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whose</i> pen is this?\n<b><font color="#ffb300">Kan</font></b> : ee pen <i>yaaradu</i>?</string>
     <string name="when_ex"><b><font color="#f20f08">Eng</font></b> : <i>When</i> did you come to the office?\n<b><font color="#ffb300">Kan</font></b> : neenu kachEri(office)ge <i>yaavaaga</i> bande?</string>
     <string name="who_ex"><b><font color="#f20f08">Eng</font></b> : <i>Who</i> are you?\n<b><font color="#ffb300">Kan</font></b> : neenu <i>yaaru</i>?</string>
-    <!-- *******************************Examples Texts for Day 2 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day3_content">
         <item>Hi(Hello)</item>
+        <item>Welcome</item>
         <item>Good Morning</item>
         <item>Good Evening</item>
         <item>Good Night</item>
@@ -850,6 +881,7 @@
     <!-- *******************************Day 3 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day3_content_kannada">
         <item>namaskaara</item>
+        <item>suswaagata</item>
         <item>shubhOdaya</item>
         <item>shubhasanje</item>
         <item>shubharaatri</item>
@@ -876,9 +908,9 @@
     </string-array>
     <!--*******************************Day 3 content (KANNADA) ENDS here *******************************-->
 
-    <!--*******************************Examples Texts for Day 3 STARTS here *******************************-->
-    <!-- TAG = GREETINGS -->
-    <string name="hi_hello_ex"><b><font color="#f20f08">Eng</font></b> : <i>Hi</i>! How are you?\n<b><font color="#ffb300">Kan</font></b> : namaskaara! hege iddera (hEgidira)?</string>
+    <!--*******************************Examples Te_for for Day 3 STARTS here *******************************-->
+    <string name="hi_hello_ex"><b><font color="#f20f08">Eng</font></b> : <i>Hi</i>! How are you?\n<b><font color="#ffb300">Kan</font></b> : <i>namaskaara</i>! hege iddera (hEgidira)?</string>
+    <string name="welcome_ex"><b><font color="#f20f08">Eng</font></b> : <i>Welcome</i>to the dance programme.\n<b><font color="#ffb300">Kan</font></b> : nrutya kaaryakramakke suswaagata.</string>
     <string name="good_morning_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Morning</i>! Had breakfast?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhodaya</i>! thindi ayta?</string>
     <string name="good_evening_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Evening</i>! Had coffee?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhasanje</i>! coffee ayta?</string>
     <string name="good_night_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Night</i>! Have a tight sleep\n<b><font color="#ffb300">Kan</font></b> : <i>Shubharaatri</i>! nidde(sleep) channagi madi</string>
@@ -902,7 +934,7 @@
     <string name="morning_ex"><b><font color="#f20f08">Eng</font></b> :  I woke up at 7.30am in the <i>morning</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu ivattu <i>beLigge</i> Elu vare gantege edde</string>
     <string name="afternoon_ex"><b><font color="#f20f08">Eng</font></b> : I had lunch at 1:15<i>pm</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu <i>madhyaana</i> ondu kaalige uta madide</string>
     <string name="evening_ex"><b><font color="#f20f08">Eng</font></b> : We will have coffee at 4:45 pm\n<b><font color="#ffb300">Kan</font></b> : naavu naalku mukkalige coffee kudiyona</string>
-    <!-- *******************************Examples Texts for Day 3 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day4_content">
@@ -960,7 +992,7 @@
     </string-array>
     <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 4 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 4 STARTS here *******************************-->
     <string name="will_eat_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will eat</i> fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu <i>thinthini</i> (Fruit - haNNu)</string>
     <string name="will_not_eat_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will not eat</i> fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu <i>thinnalla</i></string>
     <string name="will_come_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will come</i> in evening\n<b><font color="#ffb300">Kan</font></b> : naanu evening(sanje) <i>barthini</i></string>
@@ -986,7 +1018,7 @@
         <b><font color="#ffb300">Kan</font></b> : neenu bhaaratheeyana? - <i>Haudu</i>\n neenu adige bhaTTana? - <i>Illa</i></string>
     <string name="correct_or_incorrect_ex"><b><font color="#f20f08">Eng</font></b> : That is <i>correct</i>, This is <i>incorrect</i>\n
         <b><font color="#ffb300">Kan</font></b> : adu <i>sari</i>, idu <i>thappu</i></string>
-    <!-- *******************************Examples Texts for Day 4 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 4 ENDS here *******************************-->
 
     <!-- *******************************Day 5 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day5_content">
@@ -1047,7 +1079,7 @@
     </string-array>
     <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 5 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 5 STARTS here *******************************-->
     <string name="beautiful_ex"><b><font color="#f20f08">Eng</font></b> : You look very <i>beautiful</i>\n<b><font color="#ffb300">Kan</font></b> : neevu thumba <i>sundara</i>vaagi kaaNutha ideera</string>
     <string name="good_ex"><b><font color="#f20f08">Eng</font></b> : He is very <i>good</i> man\n<b><font color="#ffb300">Kan</font></b> : avanu thumba <i>oLLe</i> manushya</string>
     <string name="bad_ex"><b><font color="#f20f08">Eng</font></b> : He is a <i>bad</i> boy\n<b><font color="#ffb300">Kan</font></b> : avanu obba <i>keTTa</i> huduga</string>
@@ -1073,7 +1105,7 @@
     <string name="last_ex"><b><font color="#f20f08">Eng</font></b> : That was my <i>last</i> mistake\n<b><font color="#ffb300">Kan</font></b> : adu nanna <i>kone</i>ya thappu</string>
     <string name="difficult_ex"><b><font color="#f20f08">Eng</font></b> : That work is <i>difficult</i>\n<b><font color="#ffb300">Kan</font></b> : aa kelasa <i>kashTa</i></string>
     <string name="easy_ex"><b><font color="#f20f08">Eng</font></b> : This work is <i>easy</i>!\n<b><font color="#ffb300">Kan</font></b> : ee kelasa <i>sulabha</i>!</string>
-    <!-- *******************************Examples Texts for Day 5 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 5 ENDS here *******************************-->
 
     <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day6_content">
@@ -1124,7 +1156,7 @@
     </string-array>
     <!-- *******************************Day 6 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 6 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 6 STARTS here *******************************-->
     <string name="up_ex"><b><font color="#f20f08">Eng</font></b> : please get <i>up</i>\n<b><font color="#ffb300">Kan</font></b> : dayaviTTu <i>mEle</i> ELi</string>
     <string name="down_ex"><b><font color="#f20f08">Eng</font></b> : Please come <i>down</i>\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU <i>keLage</i> banni</string>
     <string name="left_ex"><b><font color="#f20f08">Eng</font></b> : Go front and go <i>left</i>\n<b><font color="#ffb300">Kan</font></b> : munde hogi matthu <i>eDagaDe</i> hogi</string>
@@ -1145,7 +1177,7 @@
     <string name="in_ex"><b><font color="#f20f08">Eng</font></b> : Please come <i>in</i>!\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU <i>oLage</i> banni</string>
     <string name="near_ex"><b><font color="#f20f08">Eng</font></b> : My house is <i>near</i> to your house\n<b><font color="#ffb300">Kan</font></b> : Nanna mane nimma manege <i>hatthira</i> ide</string>
     <string name="far_ex"><b><font color="#f20f08">Eng</font></b> : Electronic City is very <i>far</i> from Vijayanagar\n<b><font color="#ffb300">Kan</font></b> : Electronic City VijayaNagar inda thumba <i>doora</i></string>
-    <!-- *******************************Examples Texts for Day 6 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 6 ENDS here *******************************-->
 
     <!-- *******************************Day 7 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day7_content">
@@ -1192,7 +1224,7 @@
     </string-array>
     <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 7 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 7 STARTS here *******************************-->
     <string name="family_ex"><b><font color="#f20f08">Eng</font></b> : I love my <i>family</i> a lot\n<b><font color="#ffb300">Kan</font></b> : naanu nanna <i>kuTumba</i>vannu thumba ishTa paduthEne</string>
     <string name="mother_ex"><b><font color="#f20f08">Eng</font></b> : My <i>mother</i> cooks very well\n<b><font color="#ffb300">Kan</font></b> : nanna <i>amma</i> thumba channagi adige maaduthaare</string>
     <string name="father_ex"><b><font color="#f20f08">Eng</font></b> : My <i>father</i> is a doctor\n<b><font color="#ffb300">Kan</font></b> : nanna <i>appa</i> obba doctor</string>
@@ -1211,7 +1243,7 @@
     <string name="granddaughter_ex"><b><font color="#f20f08">Eng</font></b> : My <i>grand daughter</i> is studying M.Sc\n<b><font color="#ffb300">Kan</font></b> : nanna <i>mommagaLu</i> M.Sc Odutha idaaLe</string>
     <string name="cook_ex"><b><font color="#f20f08">Eng</font></b> : My mother <i>cook</i>s very well\n<b><font color="#ffb300">Kan</font></b> : nanna amma thumba channagi <i>aDige</i> maaduthaare</string>
     <string name="water_ex"><b><font color="#f20f08">Eng</font></b> : I want <i>water</i>\n<b><font color="#ffb300">Kan</font></b> : nanage <i>neeru</i> bEku</string>
-    <!-- *******************************Examples Texts for Day 7 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 7 ENDS here *******************************-->
 
     <!-- *******************************Day 8 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day8_content">
@@ -1274,9 +1306,9 @@
     </string-array>
     <!-- *******************************Day 8 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Texts for Day 8 STARTS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 8 STARTS here *******************************-->
     <!--EXAMPLES TO BE DISABLED FOR DAY 8 AS IT HAS ONLY NUMBERS-->
-    <!-- *******************************Examples Texts for Day 8 ENDS here *******************************-->
+    <!-- *******************************Examples Te_for for Day 8 ENDS here *******************************-->
 
     <!-- *******************************Day 9 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day9_content">
@@ -1708,7 +1740,8 @@
         <item>Close</item>
         <item>Speak</item>
         <item>Play</item>
-        <item>Thought</item>
+        <item>Think_</item>
+        <item>Tell</item>
     </string-array>
 
     <string-array name="randomVerbs_kan">
@@ -1722,7 +1755,8 @@
         <item>mucchu (ಮುಚ್ಚು)</item>
         <item>maathaaDu (ಮಾತಾಡು)</item>
         <item>aaDu (ಆಡು)</item>
-        <item>Yochane (ಯೋಚಿಸು)</item>
+        <item>yOchane (ಯೋಚಿಸು)</item>
+        <item>hELu</item>
     </string-array>
 
     <string-array name="past_eng">
@@ -1737,6 +1771,7 @@
         <item>spoke</item>
         <item>played</item>
         <item>thought</item>
+        <item>told</item>
     </string-array>
 
     <string-array name="past_kan">
@@ -1751,6 +1786,7 @@
         <item>maathaaDide</item>
         <item>aaDide</item>
         <item>yochiside</item>
+        <item>hELide</item>
     </string-array>
 
     <string-array name="present_eng">
@@ -1765,6 +1801,7 @@
         <item>speak</item>
         <item>play</item>
         <item>think</item>
+        <item>tell</item>
     </string-array>
 
     <string-array name="present_kan">
@@ -1779,6 +1816,7 @@
         <item>maathaaDu</item>
         <item>aaDu</item>
         <item>yochisu</item>
+        <item>hELu</item>
     </string-array>
 
     <string-array name="future_eng">
@@ -1793,6 +1831,7 @@
         <item>will speak</item>
         <item>will play</item>
         <item>will think</item>
+        <item>will tell</item>
     </string-array>
 
     <string-array name="future_kan">
@@ -1807,6 +1846,7 @@
         <item>maathaadthini</item>
         <item>aaDthini</item>
         <item>yochisthini</item>
+        <item>hELthini</item>
     </string-array>
 
     <string-array name="pastCont_eng">
@@ -1821,20 +1861,22 @@
         <item>was speaking</item>
         <item>was playing</item>
         <item>was thinking</item>
+        <item>was telling</item>
     </string-array>
 
     <string-array name="pastCont_kan">
-        <item>kaliyuthaa idde</item>
-        <item>maaDuthaa idde</item>
-        <item>thinnuthaa idde</item>
-        <item>kuDiyuthaa idde</item>
-        <item>keLuthaa idde</item>
-        <item>ODuthaa idde</item>
-        <item>malaguthaa idde</item>
-        <item>mucchuthaa idde</item>
-        <item>maathaaDuthaa idde</item>
+        <item>kaliyutthaa idde</item>
+        <item>maaDutthaa idde</item>
+        <item>thinnutthaa idde</item>
+        <item>kuDiyutthaa idde</item>
+        <item>keLutthaa idde</item>
+        <item>ODutthaa idde</item>
+        <item>malagutthaa idde</item>
+        <item>mucchutthaa idde</item>
+        <item>maathaaDutthaa idde</item>
         <item>aaDthaa idde</item>
         <item>yochisthaa idde</item>
+        <item>hELthaa idde</item>
     </string-array>
 
     <string-array name="presentCont_eng">
@@ -1849,6 +1891,7 @@
         <item>speaking</item>
         <item>playing</item>
         <item>thinking</item>
+        <item>telling</item>
     </string-array>
 
     <string-array name="presentCont_kan">
@@ -1863,6 +1906,7 @@
         <item>maathaaDuthaa idini</item>
         <item>aaDthaa idini</item>
         <item>yochisthaa idini</item>
+        <item>hElthaa idini</item>
     </string-array>
 
     <string-array name="futureCont_eng">
@@ -1877,6 +1921,7 @@
         <item>will be speaking</item>
         <item>will be playing</item>
         <item>will be thinking</item>
+        <item>will be telling</item>
     </string-array>
 
     <string-array name="futureCont_kan">
@@ -1891,6 +1936,7 @@
         <item>maathaaDuthaa irtini</item>
         <item>aaDthaa irtini</item>
         <item>yochisthaa irtini</item>
+        <item>hELthaa irtini</item>
     </string-array>
 
     <!-- About Us Text STARTS HERE -->
@@ -1966,6 +2012,7 @@
         <item>Health</item>
         <item>Angel</item>
         <item>Ask</item>
+        <item>Demand</item>
     </string-array>
 
     <string-array name="nWords_array_Eng">
@@ -2016,6 +2063,7 @@
         <item>Illness</item>
         <item>Demon</item>
         <item>Answer</item>
+        <item>Scarcity</item>
     </string-array>
 
     <string-array name="pWords_array_kan">
@@ -2066,6 +2114,7 @@
         <item>aarOgya</item>
         <item>sura</item>
         <item>kelu</item>
+        <item>bEDike</item>
     </string-array>
 
     <string-array name="nWords_array_kan">
@@ -2116,6 +2165,7 @@
         <item>anaarOgya</item>
         <item>asura</item>
         <item>uttarisu</item>
+        <item>korate</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
 

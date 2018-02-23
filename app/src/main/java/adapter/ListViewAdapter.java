@@ -106,7 +106,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName, "drawable", context.getPackageName()));
             holder.imageView2.setVisibility(View.INVISIBLE);
 
-            //setOnClickListener code starts here for flexi course->Words
+            //setOnClickListener code starts here _for flexi course->Words
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -124,7 +124,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.imageView2.setVisibility(View.INVISIBLE);
             //holder.textInEng.setPaddingRelative(20,60,0,0);
 
-            //setOnClickListener code starts here for flexi course->Conversations
+            //setOnClickListener code starts here _for flexi course->Conversations
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -279,7 +279,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 }
             });
         }
-        //separate condition for Day 9 and 10 to set exampleButton invisible for these as these are conversations
+        //separate condition _for Day 9 and 10 to set exampleButton invisible _for these as these are conversations
         else if (mCategory.equals(Constants.DAY89_10)) {
             holder.exampleButton.setVisibility(View.INVISIBLE);
             holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -311,7 +311,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         else
         {
             Toast.makeText(context,voiceId,Toast.LENGTH_SHORT).show();
-            throw new IOException("\n ERROR! Audio file not found for " + voiceId);
+            throw new IOException("\n ERROR! Audio file not found _for " + voiceId);
         }
     }
 
@@ -372,7 +372,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                             kanFilteredList.add(kanString);
                         }
                     }
-                   /* for (String tempString : values) {
+                   /* _for (String tempString : values) {
                         if (tempString.toLowerCase().contains(charString))
                             filteredList.add(tempString);
                     }*/

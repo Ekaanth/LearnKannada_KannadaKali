@@ -138,7 +138,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                     randomInt = random.nextInt(randomVerbsList.size());
                     AnimateVisibility.animateVisible(rootVerbCard);
                     //Toast.makeText(getApplicationContext(),randomVerbs[randomInt],Toast.LENGTH_SHORT).show();
-                    rootVerbEng.setText(randomVerbsList.get(randomInt));
+                    rootVerbEng.setText(randomVerbsList.get(randomInt).replace("_"," "));
                     rootVerbKan.setText(randomVerbsList_kan.get(randomInt));
                     pastWord.setText(pastVerbsList.get(randomInt));
                     presentWord.setText(presentVerbsList.get(randomInt));
@@ -151,7 +151,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 } else {
                     builder.setTitle("Congratulations!")
                             .setMessage("You have successfully learned all the available " +
-                                    "verbs. \n\nStay tuned for more!")
+                                    "verbs. \n\nStay tuned _for more!")
                             .setPositiveButton("Start over", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -279,7 +279,7 @@ public class RandomMagicActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.randomMagicDisclaimer) {
             builder.setTitle(Constants.DISCLAIMER)
                     .setMessage("All the verbs written here are with respect to \"First Person\" only." +
-                            "\nThey get changed a little for Second and Third person (coming soon).")
+                            "\nThey get changed a little _for Second and Third person (coming soon).")
                     .setIcon(R.drawable.ic_error_black_24dp)
                     .setPositiveButton("Ok", null)
                     .create().show();
