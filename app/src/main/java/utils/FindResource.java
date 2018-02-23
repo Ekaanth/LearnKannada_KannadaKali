@@ -41,7 +41,7 @@ public class FindResource {
                 return ("la_");
             case "Sha":
                 return ("sha_");
-            case "for":
+            case "For":
                 return ("for_");
             default:
                 return s;
