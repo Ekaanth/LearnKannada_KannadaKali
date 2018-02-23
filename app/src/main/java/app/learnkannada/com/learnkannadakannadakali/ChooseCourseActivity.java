@@ -426,7 +426,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"Found " + splitWords[j] + " at " + j, Toast.LENGTH_LONG).show();
                     final int finalJ = j;
                     infoBuilder.setTitle(R.string.too_young_but)
-                            .setMessage("\n" + "I can give you different example _for " + "\n\"" + splitWords[j].toUpperCase()
+                            .setMessage("\n" + "I can give you different example for " + "\n\"" + splitWords[j].toUpperCase()
                                     + "\"\n")
                             .setPositiveButton(R.string.SHOW_ME, new DialogInterface.OnClickListener() {
                                 @Override
@@ -471,7 +471,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
         }
         if (FindResource.rawResourceAvailable(getApplicationContext(), spokenStringEx)) {
-            builder.setTitle("Yay! Example found _for \"" + spokenString.replaceAll("_", " ") + "\"")
+            builder.setTitle("Yay! Example found for \"" + spokenString.replaceAll("_", " ") + "\"")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
