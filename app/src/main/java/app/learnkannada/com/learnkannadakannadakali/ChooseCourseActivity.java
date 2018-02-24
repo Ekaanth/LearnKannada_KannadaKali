@@ -115,7 +115,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
                     }
-                    Toast.makeText(getApplicationContext(), "Please review us in Play-Store", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please review us on Play-Store", Toast.LENGTH_SHORT).show();
                     return true;
                 } else if (item.getItemId() == R.id.shareAppID)
                 {
@@ -168,10 +168,10 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     body.append("I have used your app \"Kannada Kali\"\n\n");
                                     body.append("********Please fill in your feedback/grievances here********\n");
                                     body.append("\n Regards, \n");
-                                    body.append(R.string.KANNADA_KALI_USER);
+                                    body.append("Kannada Kali User");
                                     String company[] = {Constants.HITHAM_EMAIL};
                                     Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                                    intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
+                                    intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali - Feedback");
                                     intent.putExtra(Intent.EXTRA_EMAIL, company);
                                     intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                                     if(intent.resolveActivity(getPackageManager())!=null)

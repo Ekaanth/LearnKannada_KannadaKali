@@ -299,7 +299,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                             body.append("Kannada Kali User");
                             String company[] = {Constants.HITHAM_EMAIL};
                             Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
-                            intent.putExtra(Intent.EXTRA_SUBJECT, R.string.WANTS_TO_CONTACT);
+                            intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali - Suggest Verbs");
                             intent.putExtra(Intent.EXTRA_EMAIL, company);
                             intent.putExtra(Intent.EXTRA_TEXT, body.toString());
                             if(intent.resolveActivity(getPackageManager())!=null)
