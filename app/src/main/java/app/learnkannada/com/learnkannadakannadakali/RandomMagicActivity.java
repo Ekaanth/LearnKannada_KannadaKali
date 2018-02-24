@@ -151,7 +151,7 @@ public class RandomMagicActivity extends AppCompatActivity {
                 } else {
                     builder.setTitle("Congratulations!")
                             .setMessage("You have successfully learned all the available " +
-                                    "verbs. \n\nStay tuned _for more!")
+                                    "verbs. \n\nStay tuned for more!")
                             .setPositiveButton("Start over", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -279,7 +279,7 @@ public class RandomMagicActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.randomMagicDisclaimer) {
             builder.setTitle(Constants.DISCLAIMER)
                     .setMessage("All the verbs written here are with respect to \"First Person\" only." +
-                            "\nThey get changed a little _for Second and Third person (coming soon).")
+                            "\nThey get changed a little for Second and Third person (coming soon).")
                     .setIcon(R.drawable.ic_error_black_24dp)
                     .setPositiveButton("Ok", null)
                     .create().show();

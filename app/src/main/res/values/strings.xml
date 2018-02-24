@@ -635,6 +635,7 @@
         <item>Rank</item>
         <item>Row</item>
         <item>Drama</item>
+        <item>Game</item>
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
@@ -654,10 +655,11 @@
         <item>bhaaShe</item>
         <item>gaNitha</item>
         <item>vignaana</item>
-        <item>aata</item>
+        <item>aaDu</item>
         <item>darje</item>
         <item>saalu</item>
         <item>naataka</item>
+        <item>aaTa</item>
     </string-array>
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
     <!-- ******************************* Category Misc (English) starts here *******************************-->
@@ -1051,7 +1053,7 @@
     <!-- *******************************Day 5 content (KANNADA) STARTS here *******************************-->
     <string-array name="Day5_content_kannada">
         <item>sundara</item>
-        <item>oLLe</item>
+        <item>oLLeya</item>
         <item>keTTa</item>
         <item>doDDa</item>
         <item>saNNa</item>
@@ -1067,7 +1069,7 @@
         <item>keLu</item>
         <item>Odu</item>
         <item>bari</item>
-        <item>maathu</item>
+        <item>maathaaDu</item>
         <item>saaku</item>
         <item>nillu</item>
         <item>shuru</item>
@@ -1738,7 +1740,7 @@
         <item>Sleep</item>
         <item>Close</item>
         <item>Talk</item>
-        <item>Play_</item>
+        <item>Play</item>
         <item>Think_</item>
         <item>Tell</item>
     </string-array>
@@ -1753,7 +1755,7 @@
         <item>malagu (ಮಲಗು)</item>
         <item>mucchu (ಮುಚ್ಚು)</item>
         <item>maathaaDu (ಮಾತಾಡು)</item>
-        <item>aaTa (ಆಟ)</item>
+        <item>aaDu (ಆಡು)</item>
         <item>yOchane (ಯೋಚನೆ)</item>
         <item>hELu</item>
     </string-array>
