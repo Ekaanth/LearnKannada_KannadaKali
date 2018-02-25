@@ -434,6 +434,8 @@
         <item>Grandmother</item>
         <item>Grandson</item>
         <item>Granddaughter</item>
+        <item>Husband</item>
+        <item>Wife</item>
     </string-array>
     <!-- ******************************* Category Relationships (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Category Relationships (KANNADA) STARTS here *******************************-->
@@ -454,6 +456,8 @@
         <item>ajji</item>
         <item>mommaga</item>
         <item>mommagaLu</item>
+        <item>ganDa</item>
+        <item>henDati</item>
     </string-array>
     <!-- ******************************* Category Relationships (KANNADA) ENDS here *******************************-->
 
@@ -1069,7 +1073,7 @@
         <item>keLu</item>
         <item>Odu</item>
         <item>bari</item>
-        <item>maathaaDu</item>
+        <item>maathu</item>
         <item>saaku</item>
         <item>nillu</item>
         <item>shuru</item>
@@ -1220,7 +1224,7 @@
         <item>ajji</item>
         <item>mommaga</item>
         <item>mommagaLu</item>
-        <item>Ganda</item>
+        <item>ganDa</item>
         <item>henDati</item>
     </string-array>
     <!-- *******************************Day 7 content (KANNADA) ENDS here *******************************-->
@@ -1244,6 +1248,8 @@
     <string name="granddaughter_ex"><b><font color="#f20f08">Eng</font></b> : My <i>grand daughter</i> is studying M.Sc\n<b><font color="#ffb300">Kan</font></b> : nanna <i>mommagaLu</i> M.Sc Odutha idaaLe</string>
     <string name="cook_ex"><b><font color="#f20f08">Eng</font></b> : My mother <i>cook</i>s very well\n<b><font color="#ffb300">Kan</font></b> : nanna amma thumba channagi <i>aDige</i> maaduthaare</string>
     <string name="water_ex"><b><font color="#f20f08">Eng</font></b> : I want <i>water</i>\n<b><font color="#ffb300">Kan</font></b> : nanage <i>neeru</i> bEku</string>
+    <string name="husband_ex"><b><font color="#f20f08">Eng</font></b> : He is my <i>husband</i>\n<b><font color="#ffb300">Kan</font></b> : avanu nanna <i>ganDa</i></string>
+    <string name="wife_ex"><b><font color="#f20f08">Eng</font></b> : She is my <i>wife</i>\n<b><font color="#ffb300">Kan</font></b> : avalu nanna <i>henDati</i></string>
     <!-- *******************************Examples Te_for for Day 7 ENDS here *******************************-->
 
     <!-- *******************************Day 8 content (ENGLISH) STARTS here *******************************-->
@@ -1739,7 +1745,7 @@
         <item>Run</item>
         <item>Sleep</item>
         <item>Close</item>
-        <item>Talk</item>
+        <item>Talk_</item>
         <item>Play</item>
         <item>Think_</item>
         <item>Tell</item>
@@ -1799,7 +1805,7 @@
         <item>run</item>
         <item>sleep</item>
         <item>close</item>
-        <item>talk</item>
+        <item>talk_</item>
         <item>play</item>
         <item>think</item>
         <item>tell</item>
