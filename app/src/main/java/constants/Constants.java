@@ -52,4 +52,5 @@ public class Constants {
     public static final String ALPHABETS = "alphabets";
     public static final String ANTONYMS= "Antonyms";
     public static final String FROM_ADAPTER ="from-adapter" ;
+    public static final String SINGLE_LINE_STAR = "**********************************\n";
 }

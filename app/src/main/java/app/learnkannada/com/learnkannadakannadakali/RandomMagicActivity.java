@@ -2,6 +2,8 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,13 +37,21 @@ public class RandomMagicActivity extends AppCompatActivity {
     private int randomInt = 0;
     private boolean firstTimePlay = true;
 
+    private String CURRENT_VERSION;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_magic);
 
-        getSupportActionBar().setTitle(Constants.RANDOM_MAGIC);
+        try {
+            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            CURRENT_VERSION = "v" + packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
+        getSupportActionBar().setTitle(Constants.RANDOM_MAGIC);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -284,19 +295,36 @@ public class RandomMagicActivity extends AppCompatActivity {
                     .setPositiveButton("Ok", null)
                     .create().show();
         } else if (item.getItemId() == R.id.randomMagicSuggestVerbID) {
+            View view = getLayoutInflater().inflate(R.layout.layout_suggestions,null);
+            final EditText suggestion1 = (EditText) view.findViewById(R.id.suggestion1ID);
+            final EditText suggestion2 = (EditText) view.findViewById(R.id.suggestion2ID);
+            final EditText suggestion3 = (EditText) view.findViewById(R.id.suggestion3ID);
             builder.setTitle("Suggest Verbs")
-                    .setMessage("Are you sure to suggest verbs?")
                     .setIcon(R.drawable.random)
+                    .setView(view)
                     .setCancelable(false)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Suggest", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            String suggestionOne = suggestion1.getText().toString();
+                            String suggestionTwo = suggestion2.getText().toString();
+                            String suggestionThree = suggestion3.getText().toString();
+                            if(suggestionOne.isEmpty()&&suggestionTwo.isEmpty()&&suggestionThree.isEmpty())
+                            {
+                                Toast.makeText(getApplicationContext(),"No verbs entered!",Toast.LENGTH_SHORT).show();
+                                return;
+                            }
                             StringBuilder body = new StringBuilder();
                             body.append("Hello Team HithAM, \n \n");
                             body.append("I think it would be helpful if you can add the below verb(s) and it\'s tenses to this section\n\n");
-                            body.append("/* verbs here */ \n");
+                            body.append(Constants.SINGLE_LINE_STAR);
+                            body.append(suggestionOne+ "\n"
+                            + suggestionTwo + "\n"
+                            + suggestionThree + "\n\n");
+                            body.append(Constants.SINGLE_LINE_STAR);
                             body.append("\n Regards, \n");
                             body.append("Kannada Kali User");
+                            body.append("\n\nSent from my Kannada Kali " + CURRENT_VERSION);
                             String company[] = {Constants.HITHAM_EMAIL};
                             Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
                             intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali - Suggest Verbs");

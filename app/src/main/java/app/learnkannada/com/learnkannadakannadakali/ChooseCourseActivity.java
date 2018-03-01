@@ -52,10 +52,19 @@ public class ChooseCourseActivity extends AppCompatActivity {
     private int allItemsLength = 0;
     private Random random = new Random();
 
+    private String CURRENT_VERSION;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_navigation_drawer);
+
+        try {
+            PackageInfo packageInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+            CURRENT_VERSION = "v" + packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         //getSupportActionBar().setTitle(Constants.KANNADA_KALI);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolBarID);
@@ -169,6 +178,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     body.append("********Please fill in your feedback/grievances here********\n");
                                     body.append("\n Regards, \n");
                                     body.append("Kannada Kali User");
+                                    body.append("\n\nSent from my Kannada Kali " + CURRENT_VERSION);
                                     String company[] = {Constants.HITHAM_EMAIL};
                                     Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
                                     intent.putExtra(Intent.EXTRA_SUBJECT, "Kannada Kali - Feedback");
@@ -267,6 +277,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     body.append("I would like to join the whatsapp forum. Request you to please send me the required link.\n\n");
                                     body.append("\n Regards, \n");
                                     body.append(getResources().getString(R.string.KANNADA_KALI_USER));
+                                    body.append("\n\nSent from my Kannada Kali " + CURRENT_VERSION);
                                     String company[] = {Constants.HITHAM_EMAIL};
                                     Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
                                     intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.REQUEST_WHATSAPP_FORUM));
@@ -456,6 +467,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                 body.append("I found that the word \"" + spokenString.toUpperCase() + "\" is missing in your app vocabulary and it would be helpful to all if this word is added to it.\n\n");
                                 body.append("\n Regards, \n");
                                 body.append(getResources().getString(R.string.KANNADA_KALI_USER));
+                                body.append("\n\nSent from my Kannada Kali " + CURRENT_VERSION);
                                 String company[] = {Constants.HITHAM_EMAIL};
                                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "", null));
                                 intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.WANTS_TO_CONTACT));
