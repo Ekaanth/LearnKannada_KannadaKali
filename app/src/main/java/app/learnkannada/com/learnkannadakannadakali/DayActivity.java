@@ -1,5 +1,6 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v4.view.MenuItemCompat;
@@ -66,26 +67,31 @@ public class DayActivity extends AppCompatActivity {
         else
             getSupportActionBar().setTitle(day);
 
-        List<String> input = new ArrayList<>();
-        List<String> kanInput = new ArrayList<>();
+        List<String> engInputList = new ArrayList<>();
+        List<String> kanInputList = new ArrayList<>();
+        List<String> kanScriptsList = new ArrayList<>();
 
-        String[] listValues = null, listValuesInKan = null;
+        String[] listValues = null, listValuesInKan = null, listValuesInKanScript = null;
 
         String englishArray = day.replaceAll(" ","")+Constants._CONTENT;
         String kannadaArray = day.replaceAll(" ","")+Constants._CONTENT_KANNADA;
+        String kannadaScriptsArray = day.replaceAll(" ","") + Constants._CONTENT_INKANNADA;
         listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,Constants.ARRAY,getPackageName()));
         listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,Constants.ARRAY,getPackageName()));
+        listValuesInKanScript = getResources().getStringArray(getResources().getIdentifier(kannadaScriptsArray, Constants.ARRAY, getPackageName()));
+
 
         for (int i = 0; i < listValues.length; i++) {
-            input.add(listValues[i]);
-            kanInput.add(listValuesInKan[i]);
+            engInputList.add(listValues[i]);
+            kanInputList.add(listValuesInKan[i]);
+            kanScriptsList.add(listValuesInKanScript[i]);
         }
 
         //below condition is to disable example button _for particular cases
         if(day.equals(Constants.DAY9) || day.equals(Constants.DAY10) || day.equals(Constants.DAY8) || !day.contains(Constants.DAY))
-            adapter = new ListViewAdapter(getApplicationContext(),input, Constants.DAY89_10, kanInput);
+            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAY89_10, kanInputList);
         else
-            adapter = new ListViewAdapter(getApplicationContext(),input, Constants.DAYCOURSE, kanInput);
+            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAYCOURSE, kanInputList, kanScriptsList);
         recyclerView.setAdapter(adapter);
 
     }

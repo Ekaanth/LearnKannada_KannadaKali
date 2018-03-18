@@ -32,10 +32,12 @@ import utils.FindResource;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
 
-    private List<String> values, kanValues, mFilteredList, mFilteredKanList;
+    private List<String> values, kanValues, mFilteredList, mFilteredKanList, mKanScripts;
     private Context context;
     private String mCategory;
     private AlertDialog.Builder letterWriter;
+
+    private int lastClickedItem = 0, oldClickedItem = 0;
 
     /**
      * Provide a suitable constructor (depends on the kind of dataset)
@@ -49,6 +51,17 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         mCategory = category;
         kanValues = kanInput;
         letterWriter = new AlertDialog.Builder(context);
+    }
+
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput, List<String> kanScripts){
+        context = mContext;
+        values = myDataset;
+        mFilteredKanList = kanInput;
+        mFilteredList = myDataset;
+        mCategory = category;
+        kanValues = kanInput;
+        letterWriter = new AlertDialog.Builder(context);
+        mKanScripts = kanScripts;
     }
 
     public void add(int position, String item) {
@@ -227,9 +240,14 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         else if (mCategory.equals(Constants.DAYCOURSE)) {
+            holder.textInKannada.setText(mKanScripts.get(position));
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    oldClickedItem = lastClickedItem;
+                    lastClickedItem = position;
+                    notifyItemChanged(oldClickedItem);
+                    notifyItemChanged(lastClickedItem);
                     //Toast.makeText(context,name + "_t_" + position, Toast.LENGTH_LONG).show();
                     try {
                         playOffline(position);
@@ -238,7 +256,18 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 }
             });
-
+            if(lastClickedItem==position)
+            {
+                holder.exampleButton.setVisibility(View.VISIBLE);
+                holder.textInKannada.setVisibility(View.VISIBLE);
+                holder.divider.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                holder.exampleButton.setVisibility(View.GONE);
+                holder.textInKannada.setVisibility(View.GONE);
+                holder.divider.setVisibility(View.GONE);
+            }
             holder.exampleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -281,7 +310,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         }
         //separate condition _for Day 9 and 10 to set exampleButton invisible _for these as these are conversations
         else if (mCategory.equals(Constants.DAY89_10)) {
-            holder.exampleButton.setVisibility(View.INVISIBLE);
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -394,10 +422,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textInEng, textInKan, size;
+        TextView textInEng, textInKan, size, textInKannada;
         ImageView imageView1, imageView2;
         Button exampleButton;
-        View layout;
+        View layout, divider;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -408,7 +436,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             if (mCategory.equals(Constants.HOMECOURSE))
                 size = (TextView) layout.findViewById(R.id.sizeID);
             if (mCategory.equals(Constants.DAYCOURSE))
+            {
                 exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
+                textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
+                divider = layout.findViewById(R.id.dividerID);
+            }
             if (mCategory.equals(Constants.FLEXI_WORDS) || mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
                 imageView1 = (ImageView) layout.findViewById(R.id.imageID);
                 imageView2 = (ImageView) layout.findViewById(R.id.speakerID);

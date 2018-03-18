@@ -35,6 +35,7 @@ public class Constants {
     public static final String DIRECTIONS = "directions";
     public static final String _CONTENT = "_content";
     public static final String _CONTENT_KANNADA = "_content_kannada";
+    public static final String _CONTENT_INKANNADA = "_content_Inkannada";
     public static final String DAYCOURSE = "dayCourse";
     public static final String DAY9 = "Day 9";
     public static final String DAY10 = "Day 10";

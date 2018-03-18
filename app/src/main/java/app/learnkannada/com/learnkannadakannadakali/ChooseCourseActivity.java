@@ -17,6 +17,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -146,20 +147,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .startChooser();
                     Toast.makeText(getApplicationContext(),"Thanks for the love",Toast.LENGTH_SHORT).show();
                     return true;
-                    /*Intent sendIntent = new Intent();
-                    sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, ("Hey there, \n\n Check out this nifty app which can help you ace spoken " +
-                            "Kannada in just 10 days. Get Instant translation to any english word using \"Instant " +
-                            "Word Translation\" feature. \nYou can even have a chat with the developers and discuss on your ideas " +
-                            "in making this app better and better. Why don\'t you give it a try?" +
-                            "\n\nDownload Kannada Kali app now!\n" +
-                            Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())
-                            + "\n\nTrailer here:\n" + Uri.parse("https://www.youtube.com/watch?v=dTOBnFx4Kvc")));
-                    sendIntent.setType("text/plain");
-                    sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                    if(sendIntent.resolveActivity(getPackageManager())!=null)
-                        startActivity(sendIntent);
-                    return true;*/
                 } else if (item.getItemId() == R.id.aboutAppID)
                 {
                     dialog.setTitle("About the app")
@@ -419,6 +406,24 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
 
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Log_ChooseCourse","onPause()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Log_ChooseCourse","onResume");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("Log_ChooseCourse","onStart");
     }
 
     private void handleSpokenWords(String s) {
