@@ -223,6 +223,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 });
                 break;
+
             //Constants.FLEXI_CONVERSATIONS will be received when user clicks on "Conversations" section in FLEXI COURSE
             case Constants.FLEXI_CONVERSATIONS:
                 //extracting name and finding appropriate image
