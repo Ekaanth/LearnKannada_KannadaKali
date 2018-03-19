@@ -30,13 +30,14 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_weight="0.9"
-                    android:layout_width="wrap_content"
-                    android:paddingLeft="7dp"
+                    android:layout_width="0dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="2dp"
                     android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/textID"
-                        android:text="Test Text"
+                        android:text="@string/app_name"
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
@@ -44,7 +45,7 @@
 
                     <TextView
                         android:id="@+id/textInKanID"
-                        android:text="description"
+                        android:text="@string/neverAsk"
                         android:paddingTop="3dp"
                         android:textSize="17sp"
                         android:layout_width="wrap_content"
@@ -56,8 +57,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/speaker"
-                    android:layout_gravity="center_vertical"
-                    />
+                    android:layout_gravity="center_vertical"/>
 
             </LinearLayout>
 
@@ -80,7 +80,7 @@
                 android:layout_marginTop="2dp"
                 android:textColor="@color/card_materialYellow"
                 android:textStyle="bold"
-                android:text="ಕನ್ನಡವೇ ಸತ್ಯ, ಕನ್ನಡವೇ ನಿತ್ಯ"
+                android:text="@string/kannadaText"
                 android:visibility="gone" />
 
         </LinearLayout>

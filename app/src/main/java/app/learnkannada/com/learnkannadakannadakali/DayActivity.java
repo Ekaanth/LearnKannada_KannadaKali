@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -89,9 +90,11 @@ public class DayActivity extends AppCompatActivity {
 
         //below condition is to disable example button _for particular cases
         if(day.equals(Constants.DAY9) || day.equals(Constants.DAY10) || day.equals(Constants.DAY8) || !day.contains(Constants.DAY))
-            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAY89_10, kanInputList);
+            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAY89_10, kanInputList, kanScriptsList);
         else
             adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAYCOURSE, kanInputList, kanScriptsList);
+
+        Log.d("DayActivityLog","Calling adapter with category " + Constants.DAY89_10);
         recyclerView.setAdapter(adapter);
 
     }

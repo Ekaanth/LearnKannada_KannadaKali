@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +84,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 v = inflater.inflate(R.layout.row_layout_day, parent, false);
                 break;
             }
-            case Constants.HOMECOURSE: {
+            case Constants.TENDAYSCOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
 
@@ -112,6 +113,19 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String name = mFilteredList.get(position);
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
+
+        switch (mCategory)
+        {
+            case Constants.TENDAYSCOURSE: break;
+            case Constants.DAYCOURSE: break;
+            case Constants.DAY89_10: break;
+            case Constants.FLEXI_WORDS: break;
+            case Constants.FLEXI_CONVERSATIONS: break;
+            case Constants.ANTONYMS: break;
+            case Constants.ALPHABETS: break;
+            default: break;
+
+        }
 
         if (mCategory.equals(Constants.FLEXI_WORDS)) {
             //holder.textInKan.setVisibility(View.INVISIBLE);
@@ -161,14 +175,14 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
 
-        if (!mCategory.equals(Constants.HOMECOURSE )&& !mCategory.equals(Constants.ANTONYMS)) {
+        if (!mCategory.equals(Constants.TENDAYSCOURSE )&& !mCategory.equals(Constants.ANTONYMS)) {
             holder.textInKan.setText(mFilteredKanList.get(position));
         }
 
         //onClickListener code begins
         if (!mCategory.equals(Constants.ANTONYMS)&&
                 !mCategory.equals(Constants.DAYCOURSE) &&
-                !mCategory.equals(Constants.HOMECOURSE) &&
+                !mCategory.equals(Constants.TENDAYSCOURSE) &&
                 !mCategory.equals(Constants.FLEXI_WORDS) &&
                 !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
@@ -200,11 +214,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    //playOnline(position);
                 }
             });
         }
-        else if (mCategory.equals(Constants.HOMECOURSE)) {
+        else if (mCategory.equals(Constants.TENDAYSCOURSE)) {
             switch (name) {
                 case "Day 1":
                 case "Day 2":
@@ -309,10 +322,15 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             });
         }
         //separate condition _for Day 9 and 10 to set exampleButton invisible _for these as these are conversations
-        else if (mCategory.equals(Constants.DAY89_10)) {
+        /*else if (mCategory.equals(Constants.DAY89_10)) {
+            Log.d("adapterlogs","DAY89_10 Category");
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    oldClickedItem = lastClickedItem;
+                    lastClickedItem = position;
+                    notifyItemChanged(lastClickedItem);
+                    notifyItemChanged(oldClickedItem);
                     //Toast.makeText(context,name + "__" + position, Toast.LENGTH_LONG).show();
                     try {
                         playOffline(position);
@@ -321,7 +339,20 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 }
             });
-        }
+
+            if(lastClickedItem==position)
+            {
+                holder.exampleButton.setVisibility(View.VISIBLE);
+                holder.textInKannada.setVisibility(View.VISIBLE);
+                holder.divider.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                holder.exampleButton.setVisibility(View.GONE);
+                holder.textInKannada.setVisibility(View.GONE);
+                holder.divider.setVisibility(View.GONE);
+            }
+        }*/
 
     }
 
@@ -430,12 +461,58 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         ViewHolder(View itemView) {
             super(itemView);
             layout = itemView;
-            textInEng = (TextView) layout.findViewById(R.id.textID);
-            if(!mCategory.equals(Constants.ANTONYMS))
+
+            switch (mCategory)
+            {
+                case Constants.TENDAYSCOURSE:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    size = (TextView) layout.findViewById(R.id.sizeID);
+                    break;
+                case Constants.DAYCOURSE:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
+                    textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
+                    divider = layout.findViewById(R.id.dividerID);
+                    break;
+                case Constants.DAY89_10:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
+                    textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
+                    divider = layout.findViewById(R.id.dividerID);
+                    break;
+                case Constants.FLEXI_WORDS:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    imageView1 = (ImageView) layout.findViewById(R.id.imageID);
+                    imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
+                    break;
+                case Constants.FLEXI_CONVERSATIONS:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    imageView1 = (ImageView) layout.findViewById(R.id.imageID);
+                    imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
+                    break;
+                case Constants.ANTONYMS:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    break;
+                case Constants.ALPHABETS:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    break;
+                default:
+                    textInEng = (TextView) layout.findViewById(R.id.textID);
+                    textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    break;
+
+            }
+
+            /*if(!mCategory.equals(Constants.ANTONYMS))
                 textInKan = (TextView) layout.findViewById(R.id.textInKanID);
-            if (mCategory.equals(Constants.HOMECOURSE))
+            if (mCategory.equals(Constants.TENDAYSCOURSE))
                 size = (TextView) layout.findViewById(R.id.sizeID);
-            if (mCategory.equals(Constants.DAYCOURSE))
+            if (mCategory.equals(Constants.DAYCOURSE) || mCategory.equals(Constants.DAY89_10))
             {
                 exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
                 textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
@@ -444,7 +521,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             if (mCategory.equals(Constants.FLEXI_WORDS) || mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
                 imageView1 = (ImageView) layout.findViewById(R.id.imageID);
                 imageView2 = (ImageView) layout.findViewById(R.id.speakerID);
-            }
+            }*/
 
         }
     }

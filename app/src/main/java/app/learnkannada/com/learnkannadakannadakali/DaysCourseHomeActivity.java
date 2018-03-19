@@ -2,6 +2,7 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,8 +27,9 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
 
@@ -40,7 +42,7 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
 
-        String listValues[]=null;
+        String listValues[] = null;
 
         Resources res = getResources();
 
@@ -52,7 +54,7 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
             kanInput.add("Dummy");
         }
 
-        adapter = new ListViewAdapter(getApplicationContext(),input, Constants.HOMECOURSE, kanInput);
+        adapter = new ListViewAdapter(getApplicationContext(), input, Constants.TENDAYSCOURSE, kanInput);
         recyclerView.setAdapter(adapter);
 
 
@@ -60,12 +62,10 @@ public class DaysCourseHomeActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == android.R.id.home)
-        {
+        if (item.getItemId() == android.R.id.home) {
             onBackPressed();
-            return  true;
-        }
-        else
+            return true;
+        } else
             return super.onOptionsItemSelected(item);
     }
 

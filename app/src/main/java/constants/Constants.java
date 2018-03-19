@@ -43,7 +43,7 @@ public class Constants {
     public static final String DAY = "Day";
     public static final String DAY89_10 = "day89_10Course";
     public static final String TENDAYSCOURSE = "10 Days Course";
-    public static final String HOMECOURSE = "homeCourse";
+    //public static final String HOMECOURSE = "homeCourse";
     public static final String FLEXI_COURSE = "Flexi Course";
     public static final String RANDOM_MAGIC = "Random Magic";
     public static final String DISCLAIMER = "Disclaimer";
