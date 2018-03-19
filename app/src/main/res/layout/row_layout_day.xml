@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#736d6d"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="2dp"/>
 

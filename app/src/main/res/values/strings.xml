@@ -1958,6 +1958,24 @@
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Conversation with a new Maid (KANNADA) STARTS here *******************************-->
+    <string-array name="anewmaid_content_Inkannada">
+        <item>ಹೊಸ ಕೆಲಸದವರ ಜೊತೆ ಮಾತುಕತೆ</item>
+        <item>ಮಾಲೀಕರು: ನಿಮ್ಮ ಹೆಸರು ಏನು?</item>
+        <item>ಕೆಲಸದವರು: ನನ್ನ ಹೆಸರು ಚಂದ್ರಮ್ಮ</item>
+        <item>ಮಾಲೀಕರು: ನೀವು ಎಲ್ಲಿಯವರು? </item>
+        <item>ಕೆಲಸದವರು: ನಾನು ಬೆಂಗಳೂರಿನವಳು</item>
+        <item>ಮಾಲೀಕರು: ಸರಿ. ಒಂದು ತಿಂಗಳಿಗೆ ಎಷ್ಟು ದುಡ್ಡು ತಗೋತೀರ?</item>
+        <item>ಕೆಲಸದವರು: ಕೇವಲ ಎರಡು ಸಾವಿರ ಮೇಡಂ.</item>
+        <item>ಮಾಲೀಕರು: ಅದು ತುಂಬಾ ಜಾಸ್ತಿ ಆಯಿತು.</item>
+        <item>ಕೆಲಸದವರು: ಇಲ್ಲ ಮೇಡಂ. ನಾನು ಇನ್ನು ೪ ಮನೆಗಳಲ್ಲಿ ಕೆಲಸ ಮಾಡ್ತೀನಿ. ಅಲ್ಲಿ ಕೂಡ ಅಷ್ಟೇ ದುಡ್ಡು ತಗೋತೀನಿ</item>
+        <item>ಮಾಲೀಕರು: ಕಮ್ಮಿ ಮಾಡಕ್ಕೆ ಆಗಲ್ವಾ?</item>
+        <item>ಕೆಲಸದವರು: ನಾವು ಈ ದುಡ್ಡಲ್ಲಿ ಜೀವನ ಮಾಡಬೇಕು. ದಯವಿಟ್ಟು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಿ</item>
+        <item>ಮಾಲೀಕರು: ಸರಿ ಸರಿ. ಮುಂದಿನ ತಿಂಗಳು ೧ನೇ ತಾರೀಖಿನಿಂದ ಬಾ.</item>
+        <item>ಕೆಲಸದವರು: ಖಂಡಿತ. ಧನ್ಯವಾದಗಳು ಮೇಡಂ</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
+
     <!-- ******************************* Conversation with a regular Maid (ENGLISH) STARTS here *******************************-->
     <string-array name="aregularmaid_content">
         <item>Conversation with a regular Maid</item>
@@ -1993,6 +2011,24 @@
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Conversation with a regular Maid (KANNADA) STARTS here *******************************-->
+    <string-array name="aregularmaid_content_Inkannada">
+        <item>ನಿಯಮಿತ ಕೆಲಸದವರ ಜೊತೆ ಮಾತುಕತೆ</item>
+        <item>ಮಾಲೀಕರು: ಇವತ್ತು ಯಾಕೆ ಲೇಟ್ ಆಗಿ ಬಂದೆ?</item>
+        <item>ಕೆಲಸದವರು: ಇನ್ನೊಂದು ಮನೆಯಲ್ಲಿ ಟೈಮ್ ಆಯಿತು ಮೇಡಂ.</item>
+        <item>ಮಾಲೀಕರು: ಲೇಟ್ ಆಗಿ ಬಂದಾಗ ಏನೋ ಒಂದು ಕಾರಣ ಹೇಳ್ತೀಯ.</item>
+        <item>ಕೆಲಸದವರು: ಕ್ಷಮಿಸಿ ಮೇಡಂ. ಹಾಗೇನು ಇಲ್ಲ.</item>
+        <item>ಮಾಲೀಕರು: ಮತ್ತೆ ಇದನ್ನ ಮತ್ತೂಮ್ಮೆ ಮಾಡಬೇಡ.</item>
+        <item>ಕೆಲಸದವರು: ಸರಿ ಮೇಡಂ.</item>
+        <item>ಮಾಲೀಕರು: ನಾಳೆ ಹಬ್ಬ ಇದೆ. ಬೇಗ ಬಾ.</item>
+        <item>ಕೆಲಸದವರು: ಇಲ್ಲ ಮೇಡಂ ಆಗಲ್ಲ, ನಮ್ಮ ಮನೆಯಲ್ಲೂ ಪೂಜೆ ಇದೆ.</item>
+        <item>ಮಾಲೀಕರು: ಸರಿ. ಈ ತಿಂಗಳಿನ ಸಂಬಳ ತಗೋ.</item>
+        <item>ಕೆಲಸದವರು: ಧನ್ಯವಾದಗಳು ಮೇಡಂ. ಹಬ್ಬದ ಬೋನಸ್ ಕೊಡ್ತೀರ?</item>
+        <item>ಮಾಲೀಕರು: ಎಕ್ಸ್ಟ್ರಾ ದುಡ್ಡು ಕೊಡಲ್ಲ. ಹಬ್ಬಕ್ಕೆ ಸೀರೆ ಕೊಡ್ತೀನಿ.</item>
+        <item>ಕೆಲಸದವರು: ಸರಿ ಮೇಡಂ. ಧನ್ಯವಾದಗಳು. ನಾಳೆ ಸಿಗೋಣ.</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
+
     <!-- ******************************* Conversation with a friend (ENGLISH) STARTS here *******************************-->
     <string-array name="afriend_content">
         <item>Introduce Yourself</item>
@@ -2016,23 +2052,23 @@
     <!-- ******************************* Conversation with a friend (ENGLISH) ENDS here *******************************-->
     <!-- ******************************* Conversation with a friend (KANNADA) STARTS here *******************************-->
     <string-array name="afriend_content_kannada">
-        <item>nimma parichaya maadikoLLi</item>
-        <item>Pooja: Hi Ganesh, hEgiddeera?</item>
-        <item>Ganesh: Hi Pooja, chennagi ideeni. Neevu?</item>
-        <item>Pooja: naanu saha(too) channagi ideeni</item>
-        <item>Ganesh: neevu Enu madutheera?</item>
-        <item>Pooja: naanu obba Software engineer. neevu?</item>
-        <item>Ganesh: naanu hardware engineer</item>
-        <item>Pooja: oLLeyadu. nimma ooru yaavudu?</item>
-        <item>Ganesh: nanna ooru Sirigere, holalkere hatthira. nimmadu?</item>
-        <item>Pooja: nanna ooru Mysuru.</item>
-        <item>Ganesh: Nice. Bengalurinalli elli iddeera?</item>
-        <item>Pooja: Vijayanagar. Neevu?</item>
-        <item>Ganesh: Sanjayanagara</item>
-        <item>Pooja: ok. Nimmannu BhEti(meet) maadi khushi aaythu</item>
-        <item>Ganesh: nanagu kooda. Matte sigONa</item>
-        <item>Pooja: khanditha. Bye</item>
-        <item>Ganesh: Bye</item>
+        <item>ನಿಮ್ಮ ಪರಿಚಯ ಮಾಡಿಕೊಳ್ಳಿ</item>
+        <item>ಪೂಜಾ: ಹಾಯ್ ಗಣೇಶ್, ಹೇಗಿದ್ದೀರಾ?</item>
+        <item>ಗಣೇಶ್: ಹಾಯ್ ಪೂಜಾ, ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ. ನೀವು?</item>
+        <item>ಪೂಜಾ: ನಾನು ಸಹ ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ.</item>
+        <item>ಗಣೇಶ್: ನೀವು ಏನು ಮಾಡುತ್ತೀರಾ?</item>
+        <item>ಪೂಜಾ: ನಾನು ಒಬ್ಬ ಸಾಫ್ಟ್ವೇರ್ ಇಂಜಿನಿಯರ್. ನೀವು?</item>
+        <item>ಗಣೇಶ್: ನಾನು ಹಾರ್ಡ್ ವೇರ್ ಇಂಜಿನಿಯರ್.</item>
+        <item>ಪೂಜಾ: ಒಳ್ಳೆಯದು. ನಿಮ್ಮ ಊರು ಯಾವುದು?</item>
+        <item>ಗಣೇಶ್: ನನ್ನ ಊರು ಸಿರಿಗೆರೆ, ಹೊಳಲ್ಕೆರೆ ಹತ್ತಿರ. ನಿಮ್ಮದು?</item>
+        <item>ಪೂಜಾ: ನನ್ನ ಊರು ಮೈಸೂರು.</item>
+        <item>ಗಣೇಶ್: ನೈಸ್. ಬೆಂಗಳೂರಿನಲ್ಲಿ ಎಲ್ಲಿ ಇದ್ದೀರಾ?</item>
+        <item>ಪೂಜಾ: ವಿಜಯನಗರ. ನೀವು?</item>
+        <item>ಗಣೇಶ್: ಸಂಜಯನಗರ.</item>
+        <item>ಪೂಜಾ: ಓಕೆ. ನಿಮ್ಮನ್ನು ಭೇಟಿ ಮಾಡಿ ಖುಷಿ ಆಯಿತು.</item>
+        <item>ಗಣೇಶ್: ನನಗೂ ಕೂಡ. ಮತ್ತೆ ಸಿಗೋಣ</item>
+        <item>ಪೂಜಾ: ಖಂಡಿತ. ಬೈ</item>
+        <item>ಗಣೇಶ್: ಬೈ</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
@@ -2075,6 +2111,25 @@
     </string-array>
     <!-- ******************************* Conversation with Auto Driver (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Conversation with Auto Driver (KANNADA) STARTS here *******************************-->
+    <string-array name="autocabdriver_content_Inkannada">
+        <item>ಆಟೋ ಡ್ರೈವರ್ ಜೊತೆ ಮಾತುಕತೆ</item>
+        <item>ಪೂಜಾ: ವಿಜಯನಗರ ಗೆ ಬರ್ತೀರ?</item>
+        <item>ಡ್ರೈವರ್: ಹು, ದಯವಿಟ್ಟು ಹತ್ತಿ</item>
+        <item>ಪೂಜಾ: ಎಷ್ಟು?</item>
+        <item>ಡ್ರೈವರ್: ೨೫೦ ರುಪೀಸ್ ಆಗತ್ತೆ.</item>
+        <item>ಪೂಜಾ: ತುಂಬಾ ಜಾಸ್ತಿ ಆಯಿತು. ೧೫೦ ರುಪೀಸ್ ಗೆ ಬರ್ತೀರ?</item>
+        <item>ಡ್ರೈವರ್: ಆಗಲ್ಲ ಮೇಡಂ. ಹೋಗ್ಲಿ ೨೦೦ ರುಪೀಸ್ ಕೊಡಿ.</item>
+        <item>ಪೂಜಾ: ಸರಿ.</item>
+        <item>ಡ್ರೈವರ್: ಮೇಡಂ, ವಿಜಯನಗರ ಬಂತು.</item>
+        <item>ಪೂಜಾ: ಧನ್ಯವಾದಗಳು. ದಯವಿಟ್ಟು ಈ ೫೦೦ ರುಪೀಸ್ ತಗೋಳಿ, ಚಿಲ್ಲರೆ ಕೊಡಿ</item>
+        <item>ಡ್ರೈವರ್: ಚಿಲ್ಲರೆ ಇಲ್ಲ. ಸಾರೀ ಮೇಡಂ.</item>
+        <item>ಪೂಜಾ: paytm ಇದೆಯಾ?</item>
+        <item>ಡ್ರೈವರ್: ಇದೆ. ದಯವಿಟ್ಟು paytm ಗೆ ಕಳುಹಿಸಿ</item>
+        <item>ಪೂಜಾ: ಧನ್ಯವಾದಗಳು. ಕಳುಹಿಸಿದ್ದೀನಿ.</item>
+        <item>ಡ್ರೈವರ್: thank you ಮೇಡಂ</item>
+    </string-array>
+    <!-- ******************************* Conversation with Auto Driver (KANNADA) ENDS here *******************************-->
     <!-- ******************************* Conversation with a bus conductor (ENGLISH) STARTS here *******************************-->
     <string-array name="busconductor_content">
         <item>Conversation with bus conductor</item>
@@ -2107,6 +2162,24 @@
         <item>Passenger: dhanyavadagaLu sir.</item>
     </string-array>
     <!-- ******************************* Conversation with bus conductor(KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with bus conductor (KANNADA) STARTS here *******************************-->
+    <string-array name="busconductor_content_Inkannada">
+        <item>ಬಸ್ ನಿರ್ವಾಹಕರ ಜೊತೆ ಮಾತುಕತೆ</item>
+        <item>ಪ್ರಯಾಣಿಕ: ಸರ್, ವೈಟ್ ಫೀಲ್ಡ್ ಗೆ ಒಂದು ಟಿಕೆಟ್ ಕೊಡಿ</item>
+        <item>ನಿರ್ವಾಹಕರು: ಇಪ್ಪತ್ತ ಮೂರು ರುಪಾಯಿ ಕೊಡಿ</item>
+        <item>ಪ್ರಯಾಣಿಕ: ಈ ಐವತ್ತು ರುಪಾಯಿ ತಗೋಳಿ</item>
+        <item>ನಿರ್ವಾಹಕರು: ಚಿಲ್ಲರೆ ಕೊಡಿ ಮೇಡಂ</item>
+        <item>ಪ್ರಯಾಣಿಕ: ಚಿಲ್ಲರೆ ಇಲ್ಲ ಸರ್.</item>
+        <item>ನಿರ್ವಾಹಕರು: ಸರಿ. ಈ ಇಪತ್ತು ರುಪಾಯಿ ತಗೋಳಿ. ಏಳು ರುಪಾಯಿ ಆಮೇಲೆ ಕೇಳಿ.</item>
+        <item>ಪ್ರಯಾಣಿಕ: ಸರಿ. ದಯವಿಟ್ಟು ವೈಟ್ ಫೀಲ್ಡ್ ಸ್ಟಾಪ್ ಬಂದಾಗ ಹೇಳಿ. ನಾನು ಬೆಂಗಳೂರಿಗೆ ಹೊಸಬಳು.</item>
+        <item>ನಿರ್ವಾಹಕರು: ಖಂಡಿತ. </item>
+        <item>ಪ್ರಯಾಣಿಕ: ಸರ್, ಏಳು ರುಪಾಯಿ ಚಿಲ್ಲರೆ ಕೊಡಿ.</item>
+        <item>ನಿರ್ವಾಹಕರು: ಖಂಡಿತ. ತಗೋಳಿ</item>
+        <item>ಪ್ರಯಾಣಿಕ: ಧನ್ಯವಾದಗಳು ಸರ್.</item>
+    </string-array>
+    <!-- ******************************* Conversation with bus conductor(KANNADA) ENDS here *******************************-->
+
 
     <!-- ******************************* Conversation with vendor (ENGLISH) STARTS here *******************************-->
     <string-array name="vendor_content">
@@ -2161,6 +2234,33 @@
     </string-array>
     <!-- ******************************* Conversation with vendor (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Conversation with vendor (KANNADA) STARTS here *******************************-->
+    <string-array name="vendor_content_Inkannada">
+        <item>ತರಕಾರಿ ಕೊಳ್ಳುವಿಕೆ</item>
+        <item>ಗ್ರಾಹಕ: ನಮಸ್ಕಾರ ಸರ್. ಶುಭೋದಯ</item>
+        <item>ಮಾರಾಟಗಾರ: ಶುಭೋದಯ ಸರ್. ಹೇಗಿದ್ದೀರ?</item>
+        <item>ಗ್ರಾಹಕ: ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ ಸರ್.</item>
+        <item>ಮಾರಾಟಗಾರ: ಒಳ್ಳೆಯದು. ಏನ್ ಬೇಕು ಸರ್?</item>
+        <item>ಗ್ರಾಹಕ: ಆಲೂಗಡ್ಡೆಗೆ ಎಷ್ಟು?</item>
+        <item>ಮಾರಾಟಗಾರ: ನಲವತ್ತು ರುಪಾಯಿ ಒಂದು ಕಿಲೋ ಗೆ ಸರ್.</item>
+        <item>ಗ್ರಾಹಕ: ಇದಕ್ಕಿಂತ ಒಳ್ಳೆಯದು ಇಲ್ವಾ?</item>
+        <item>ಮಾರಾಟಗಾರ: ಇದು ಒಳ್ಳೆಯದೇ ಸರ್, ತಗೋಳಿ</item>
+        <item>ಗ್ರಾಹಕ: ಸರಿ. ಅರ್ದ ಕಿಲೋ ಕೊಡಿ.</item>
+        <item>ಮಾರಾಟಗಾರ: ಸರಿ. ಮತ್ತೇನು ಸರ್?</item>
+        <item>ಗ್ರಾಹಕ: ಐದು ರುಪಾಯಿಗೆ ಕೊತ್ತಂಬರಿ ಸೊಪ್ಪು ಕೊಡಿ.</item>
+        <item>ಮಾರಾಟಗಾರ: ಕೊತ್ತಂಬರಿ ದುಬಾರಿ ಸರ್, ಐದು ರುಪಾಯಿಗೆ ಬರಲ್ಲ. ೧೦ ರುಪಾಯಿ ಗೆ ಕೊಡ್ಲಾ?</item>
+        <item>ಗ್ರಾಹಕ: ಸರಿ ಕೊಡಿ. ಇನ್ನೇನು ಮಾಡಕ್ಕೆ ಆಗತ್ತೆ?</item>
+        <item>ಮಾರಾಟಗಾರ: ಸರಿ ಸರ್. ತೆಂಗಿನಕಾಯಿ ತಗೋಳಿ ಸರ್. ತುಂಬಾ ಚೆನ್ನಾಗಿ ಇದೆ.</item>
+        <item>ಗ್ರಾಹಕ: ಈಗ ಅವಶ್ಯಕತೆ ಇಲ್ಲ. ಹಸಿರು ಮೆಣಸಿನಕಾಯಿ ಎಷ್ಟು?</item>
+        <item>ಮಾರಾಟಗಾರ: ಅರವತ್ತು ರುಪಾಯಿಗೆ ಕಿಲೋಗೆ ಸರ್. ಎಷ್ಟು ಕೊಡಲಿ?</item>
+        <item>ಗ್ರಾಹಕ: ಕಾಲು ಕೇಜಿ ಕೊಡಿ.</item>
+        <item>ಮಾರಾಟಗಾರ: ಸರಿ ಸರ್. ನಲವತ್ತ ಐದು ರುಪಾಯಿ ಆಯಿತು, ಇನ್ನೇನು ಬೇಕು ಸರ್?</item>
+        <item>ಗ್ರಾಹಕ: ಅಷ್ಟೇ ಸಾಕು. ಈ ಐವತ್ತು ರುಪಾಯಿ ತಗೋಳಿ.</item>
+        <item>ಮಾರಾಟಗಾರ: ಧನ್ಯವಾದಗಳು ಸರ್. ಈ ಐದು ರುಪಾಯಿ ಚಿಲ್ಲರೆ ತಗೋಳಿ.</item>
+        <item>ಗ್ರಾಹಕ: ಧನ್ಯವಾದಗಳು ಸರ್.</item>
+    </string-array>
+    <!-- ******************************* Conversation with vendor (KANNADA) ENDS here *******************************-->
+
     <!-- ******************************* Conversation with delivery boy (ENGLISH) STARTS here *******************************-->
     <string-array name="deliveryboy_content">
         <item>Conversation with delivery boy</item>
@@ -2192,6 +2292,22 @@
     </string-array>
     <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
 
+    <!-- ******************************* Conversation with delivery boy (KANNADA) STARTS here *******************************-->
+    <string-array name="deliveryboy_content_Inkannada">
+        <item>ವಿತರಣೆ ಹುಡುಗನ ಜೊತೆ ಮಾತುಕತೆ</item>
+        <item>ವಿ.ಹು: ನಮಸ್ಕಾರ ಮೇಡಂ. ನಾನು ಪಿಜ್ಜಾ ಭಟ್ ಇಂದ ಕಾಲ್ ಮಾಡ್ತಾ ಇದ್ದೀನಿ.</item>
+        <item>ಗ್ರಾಹಕ: ಎಸ್ ಸರ್. ಹೇಳಿ.</item>
+        <item>ವಿ.ಹು: ನಾನು DMart ಹತ್ತಿರ ಇದ್ದೀನಿ. ನಾನು ಎಲ್ಲಿಗೆ ಬರಬೇಕು?</item>
+        <item>ಗ್ರಾಹಕ: ಮುಂದೆ ಬನ್ನಿ ಅರ್ಧ ಕಿಲೋ ಮೀಟರ್ ಮತ್ತೆ ಗಣೇಶ ದೇವಸ್ತಾನ ಹತ್ತಿರ ಲೆಫ್ಟ್ ತಗೋಳಿ.</item>
+        <item>ವಿ.ಹು: ಸರಿ ಮೇಡಂ. ನಾನು ಹತ್ತು ನಿಮಿಷದಲ್ಲಿ ಬರ್ತೀನಿ.</item>
+        <item>ಗ್ರಾಹಕ: ಸರಿ ಸರ್.</item>
+        <item>ವಿ.ಹು: ನಮಸ್ಕಾರ ಮೇಡಂ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಪಿಜ್ಜಾ ತಗೋಳಿ. ಬಿಸಿ ಇದೆಯಾ ಚೆಕ್ ಮಾಡಿ.</item>
+        <item>ಗ್ರಾಹಕ: ಬಿಸಿ ಇದೆ, ಧನ್ಯವಾದಗಳು. ಮತ್ತೆ ನಾನು ಇದಕ್ಕೆ ಆನ್ ಲೈನ್ ಅಲ್ಲಿ ಆಗಲೇ ಪಾವತಿ ಮಾಡಿದೀನಿ</item>
+        <item>ವಿ.ಹು: ಹೌದು ಮೇಡಂ. ಪಿಜ್ಜಾ ಭಟ್ ಇಂದ ಖರೀದಿಸಿದಕ್ಕೆ ಧನ್ಯವಾದಗಳು. ಪಿಜ್ಜಾ ಎಂಜಾಯ್ ಮಾಡಿ.</item>
+        <item>ಗ್ರಾಹಕ: ಖಂಡಿತ. ಧನ್ಯವಾದಗಳು</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
+
     <!-- ******************************* Conversation to ask directions (ENGLISH) STARTS here *******************************-->
     <string-array name="askdirections_content">
         <item>Harshitha is in Mekhri circle and she wants directions to Manyatha tech park.</item>
@@ -2199,7 +2315,7 @@
         <item>Helper: Hi madam, Go straight till hebbal flyover and take narrow road on the left.</item>
         <item>Harshitha: Sure, after that?</item>
         <item>Helper: Dont take any diversions, keep right and you will join outer ring road.</item>
-        <item>Harshitha: Sure. I think its a few kilometers further straight from there right?</item>
+        <item>Harshitha: Sure. I think its afew kilometers further straight from there right?</item>
         <item>Helper: Exactly. You will get manyatha tech park on the right side after veerannapalya flyover.</item>
         <item>Harshitha: Thank you so much sir. </item>
         <item>Helper: No problem.</item>
@@ -2216,6 +2332,20 @@
         <item>Helper: Exactly, manyatha tech park balagaDe siggate veerannapalya flyover adamEle.</item>
         <item>Harshitha: thumba dhanyavaadagaLu sir.</item>
         <item>Helper: thondare illa.</item>
+    </string-array>
+    <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
+
+    <!-- ******************************* Conversation with delivery boy (KANNADA) STARTS here *******************************-->
+    <string-array name="askdirections_content_Inkannada">
+        <item>ಹರ್ಷಿತಾ ಮೇಖ್ರಿ ವೃತ್ತದಲ್ಲಿ ಇದ್ದಾಳೆ. ಅವಳಿಗೆ ಮಾನ್ಯತಾ ಟೆಕ್ ಪಾರ್ಕ್ ಗೆ ಹೋಗಲು ದಾರಿ ತಿಳಿಯಬೇಕು</item>
+        <item>ಹರ್ಷಿತಾ: ನಮಸ್ಕಾರ ಸರ್, ಮಾನ್ಯತಾ ಟೆಕ್ ಪಾರ್ಕ್ ಗೆ ಹೇಗೆ ಹೋಗಬೇಕು?</item>
+        <item>ಸಹಾಯಕ: ನಮಸ್ಕಾರ ಮೇಡಂ, ನೇರ ಹೋಗಿ ಹೆಬ್ಬಾಳ ಫ್ಲೈ-ಓವರ್ ಸಿಗತ್ತೆ, ಮತ್ತೆ ಎಡಗಡೆ ಅಲ್ಲಿ ಇರೋ ಚಿಕ್ಕ ರೋಡ್ ತಗೋಳಿ</item>
+        <item>ಹರ್ಷಿತಾ: ಖಂಡಿತ, ಆಮೇಲೆ</item>
+        <item>ಸಹಾಯಕ: ಎಲ್ಲೂ ಕೂಡ ತಿರುವು ತಗೋಬೇಡಿ ಬಲಗಡೆ ಇರಿ, ಔಟರ್ ರಿಂಗ್ ರೋಡ್ ಸೇರಿಕೊಳ್ಳುತ್ತೀರ</item>
+        <item>ಹರ್ಷಿತಾ: ಖಂಡಿತ. ಅಲ್ಲಿಂದ ಸ್ವಲ್ಪ ಕಿಲೋ ಮೀಟರ್ಸ್ ಮುಂದೆ ಅನ್ಸತ್ತೆ ಅಲ್ವಾ?</item>
+        <item>ಸಹಾಯಕ: Exactly, ಮಾನ್ಯತಾ ಟೆಕ್ ಪಾರ್ಕ್ ಬಲಗಡೆ ಸಿಗತ್ತೆ ವೀರಣ್ಣಪಾಳ್ಯ ಫ್ಲೈ-ಓವರ್ ಆದಮೇಲೆ.</item>
+        <item>ಹರ್ಷಿತಾ: ತುಂಬಾ ಧನ್ಯವಾದಗಳು ಸರ್.</item>
+        <item>ಸಹಾಯಕ: ತೊಂದರೆ ಇಲ್ಲ.</item>
     </string-array>
     <!-- ******************************* Conversation with delivery boy (KANNADA) ENDS here *******************************-->
 
@@ -2318,6 +2448,22 @@
         <item>hELide</item>
     </string-array>
 
+    <string-array name="past_Inkan">
+        <item>ಕಲಿತೆ</item>
+        <item>ಮಾಡಿದೆ</item>
+        <item>ತಿಂದೆ</item>
+        <item>ಕುಡಿದೆ</item>
+        <item>ಕೇಳಿದೆ</item>
+        <item>ಓದಿದೆ</item>
+        <item>ಮಲಗಿದೆ</item>
+        <item>ಮುಚ್ಚಿದೆ</item>
+        <item>ಮಾತಾಡಿದೆ</item>
+        <item>ಆಡಿದೆ</item>
+        <item>ಯೋಚಿಸಿದೆ</item>
+        <item>ಹೇಳಿದೆ</item>
+    </string-array>
+
+
     <string-array name="present_eng">
         <item>learn</item>
         <item>do</item>
@@ -2346,6 +2492,21 @@
         <item>aaDu</item>
         <item>yochisu</item>
         <item>hELu</item>
+    </string-array>
+
+    <string-array name="present_Inkan">
+        <item>ಕಲಿ</item>
+        <item>ಮಾಡು</item>
+        <item>ತಿನ್ನು</item>
+        <item>ಕುಡಿ</item>
+        <item>ಕೇಳು</item>
+        <item>ಓದು</item>
+        <item>ಮಲಗು</item>
+        <item>ಮುಚ್ಚು</item>
+        <item>ಮಾತಾಡು</item>
+        <item>ಆಡು</item>
+        <item>ಯೋಚಿಸು</item>
+        <item>ಹೇಳು</item>
     </string-array>
 
     <string-array name="future_eng">
@@ -2378,6 +2539,21 @@
         <item>hELthini</item>
     </string-array>
 
+    <string-array name="future_Inkan">
+        <item>ಕಲಿತೀನಿ</item>
+        <item>ಮಾಡ್ತೀನಿ</item>
+        <item>ತಿಂತೀನಿ</item>
+        <item>ಕುಡಿತೀನಿ</item>
+        <item>ಕೇಳ್ತೀನಿ</item>
+        <item>ಓದ್ತೀನಿ</item>
+        <item>ಮಲಗ್ತೀನಿ</item>
+        <item>ಮುಚ್ತೀನಿ</item>
+        <item>ಮಾತಾಡ್ತೀನಿ</item>
+        <item>ಆಡ್ತೀನಿ</item>
+        <item>ಯೋಚಿಸಿತೀನಿ</item>
+        <item>ಹೇಳ್ತೀನಿ</item>
+    </string-array>
+
     <string-array name="pastCont_eng">
         <item>was learning</item>
         <item>was doing</item>
@@ -2406,6 +2582,21 @@
         <item>aaDthaa idde</item>
         <item>yochisthaa idde</item>
         <item>hELthaa idde</item>
+    </string-array>
+
+    <string-array name="pastCont_Inkan">
+        <item>ಕಲಿಯುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಮಾಡುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ತಿನ್ನುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಕುಡಿಯುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಕೇಳುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಓದುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಮಲಗುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಮುಚ್ಚುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಮಾತಾಡುತ್ತಾ ಇದ್ದೆ</item>
+        <item>ಆಡ್ತಾ ಇದ್ದೆ</item>
+        <item>ಯೋಚಿಸ್ತಾ ಇದ್ದೆ</item>
+        <item>ಹೇಳ್ತಾ ಇದ್ದೆ</item>
     </string-array>
 
     <string-array name="presentCont_eng">
@@ -2438,6 +2629,21 @@
         <item>hElthaa idini</item>
     </string-array>
 
+    <string-array name="presentCont_Inkan">
+        <item>ಕಲಿಯುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಮಾಡುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ತಿನ್ನುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಕುಡಿಯುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಕೇಳುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಓದುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಮಲಗುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಮುಚ್ಚುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಮಾತಾಡುತ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಆಡ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಯೋಚಿಸ್ತಾ ಇದ್ದೀನಿ</item>
+        <item>ಹೇಳ್ತಾ ಇದ್ದೀನಿ</item>
+    </string-array>
+
     <string-array name="futureCont_eng">
         <item>will be learning</item>
         <item>will be doing</item>
@@ -2466,6 +2672,21 @@
         <item>aaDthaa irtini</item>
         <item>yochisthaa irtini</item>
         <item>hELthaa irtini</item>
+    </string-array>
+
+    <string-array name="futureCont_Inkan">
+        <item>ಕಲಿಯುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಮಾಡುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ತಿನ್ನುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಕುಡಿಯುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಕೇಳುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಓದುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಮಲಗುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಮುಚ್ಚುತ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಮಾತಾಡ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಆಡ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಯೋಚಿಸ್ತಾ ಇರ್ತೀನಿ</item>
+        <item>ಹೇಳ್ತಾ ಇರ್ತೀನಿ</item>
     </string-array>
 
     <!-- About Us Text STARTS HERE -->
@@ -2649,6 +2870,58 @@
         <item>spashTa</item>
     </string-array>
 
+    <string-array name="pWords_array_Inkan">
+        <item>ತಿಂತೀನಿ</item>
+        <item>ಬರ್ತೀನಿ</item>
+        <item>ಮಾಡ್ತೀನಿ</item>
+        <item>ಕುಡಿತೀನಿ</item>
+        <item>ಕೊಡ್ತೀನಿ</item>
+        <item>ಮಲಗ್ತೀನಿ</item>
+        <item>ಆಯ್ತಾ?</item>
+        <item>ಮುಗಿತಾ?</item>
+        <item>ಮೇಲೆ</item>
+        <item>ಉಪಸ್ತಿತಿ</item>
+        <item>ಹೇರಳ</item>
+        <item>ಸ್ವೀಕರಿಸು</item>
+        <item>ಸಕ್ರಿಯ</item>
+        <item>ಸಕಾರಾತ್ಮಕ</item>
+        <item>ನಂತರ</item>
+        <item>ಸಮಾನ</item>
+        <item>ಪ್ರಶ್ನೆ</item>
+        <item>ಒಳ್ಳೆಯ</item>
+        <item>ಪರ</item>
+        <item>ಮಲಗು</item>
+        <item>ಹವ್ಯಾಸಿ</item>
+        <item>ಗಂಡಸು</item>
+        <item>ಹುಡುಗ</item>
+        <item>ಮಗ</item>
+        <item>ಪ್ರೀತಿ</item>
+        <item>ಮುಂದೆ</item>
+        <item>ಪ್ರಾರಂಭ</item>
+        <item>ಹುಟ್ಟು</item>
+        <item>ಕಟ್ಟು</item>
+        <item>ಸಂತೋಷ</item>
+        <item>ನಿಖರವಾದ</item>
+        <item>ಸುಂದರ</item>
+        <item>ದಿನ/ಹಗಲು</item>
+        <item>ಶ್ರೀಮಂತ</item>
+        <item>ಮೇಲೆ</item>
+        <item>ಎಡಗಡೆ</item>
+        <item>ನನ್ನ</item>
+        <item>ನಾನು</item>
+        <item>ಜೊತೆ</item>
+        <item>ಶ್ಲಾಘನೆ</item>
+        <item>ಹತ್ತಿರ</item>
+        <item>ಸಾಮಾನ್ಯ</item>
+        <item>ಒಳಗೆ</item>
+        <item>ಮೊದಲು</item>
+        <item>ಆರೋಗ್ಯ</item>
+        <item>ಸುರ</item>
+        <item>ಕೇಳು</item>
+        <item>ಬೇಡಿಕೆ</item>
+        <item>ಸ್ಪಷ್ಟ</item>
+    </string-array>
+
     <string-array name="nWords_array_kan">
         <item>tinnalla</item>
         <item>baralla</item>
@@ -2699,6 +2972,58 @@
         <item>uttarisu</item>
         <item>korate</item>
         <item>aspashTa</item>
+    </string-array>
+
+    <string-array name="nWords_array_Inkan">
+        <item>ತಿನ್ನಲ್ಲ</item>
+        <item>ಬರಲ್ಲ</item>
+        <item>ಮಾಡಲ್ಲ</item>
+        <item>ಕುಡಿಯಲ್ಲ</item>
+        <item>ಕೊಡಲ್ಲ</item>
+        <item>ಮಲಗಲ್ಲ</item>
+        <item>ಆಗಿಲ್ಲ</item>
+        <item>ಮುಗಿದಿಲ್ಲ</item>
+        <item>ಕೆಳಗೆ</item>
+        <item>ಅನುಪಸ್ಥಿತಿ</item>
+        <item>ವಿರಳ</item>
+        <item>ತಿರಸ್ಕರಿಸು</item>
+        <item>ಸೋಮಾರಿ</item>
+        <item>ನಕಾರಾತ್ಮಕ</item>
+        <item>ಮೊದಲು</item>
+        <item>ಬೇರೆ</item>
+        <item>ಉತ್ತರ</item>
+        <item>ಕೆಟ್ಟ</item>
+        <item>ವಿರುದ್ಧ</item>
+        <item>ಎದ್ದೇಳು</item>
+        <item>ವೃತ್ತಿಪರ</item>
+        <item>ಹೆಂಗಸು</item>
+        <item>ಹುಡುಗಿ</item>
+        <item>ಮಗಳು</item>
+        <item>ದ್ವೇಷ</item>
+        <item>ಹಿಂದೆ</item>
+        <item>ಮುಕ್ತಾಯ</item>
+        <item>ಸಾವು</item>
+        <item>ಕೆಡುವು</item>
+        <item>ದುಃಖ</item>
+        <item>ತಪಾದ</item>
+        <item>ಕುರೂಪಿ</item>
+        <item>ರಾತ್ರಿ</item>
+        <item>ಬಡವ</item>
+        <item>ಕೆಳಗೆ</item>
+        <item>ಬಲಗಡೆ</item>
+        <item>ನಿನ್ನ</item>
+        <item>ನೀನು</item>
+        <item>ದೂರ</item>
+        <item>ದೂರು</item>
+        <item>ದೂರ</item>
+        <item>ಅಸಮಾನ್ಯ</item>
+        <item>ಹೊರಗೆ</item>
+        <item>ಕೊನೆ</item>
+        <item>ಅನಾರೋಗ್ಯ</item>
+        <item>ಅಸುರ</item>
+        <item>ಉತ್ತರಿಸು</item>
+        <item>ಕೊರತೆ</item>
+        <item>ಅಸ್ಪಷ್ಟ</item>
     </string-array>
     <!-- ************************* Antonyms Section ENDS HERE ************************* -->
 
