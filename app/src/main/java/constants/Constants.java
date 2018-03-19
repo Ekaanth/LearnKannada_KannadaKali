@@ -36,7 +36,7 @@ public class Constants {
     public static final String _CONTENT = "_content";
     public static final String _CONTENT_KANNADA = "_content_kannada";
     public static final String _CONTENT_INKANNADA = "_content_Inkannada";
-    public static final String DAYCOURSE = "dayCourse";
+    public static final String INDIVIDUAL_DAY_CONTENT = "dayCourse";
     public static final String DAY9 = "Day 9";
     public static final String DAY10 = "Day 10";
     public static final String DAY8 = "Day 8";
@@ -54,4 +54,7 @@ public class Constants {
     public static final String ANTONYMS= "Antonyms";
     public static final String FROM_ADAPTER ="from-adapter" ;
     public static final String SINGLE_LINE_STAR = "**********************************\n";
+    public static final String NUMBERS = "Numbers";
+    public static final String CONV_WITH_FRIEND = "Conversation with a friend";
+    public static final String CONV_WITH_DRIVER = "Conversation with auto/cab driver";
 }

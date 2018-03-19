@@ -1,8 +1,6 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -92,7 +90,7 @@ public class DayActivity extends AppCompatActivity {
         if(day.equals(Constants.DAY9) || day.equals(Constants.DAY10) || day.equals(Constants.DAY8) || !day.contains(Constants.DAY))
             adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAY89_10, kanInputList, kanScriptsList);
         else
-            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAYCOURSE, kanInputList, kanScriptsList);
+            adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.INDIVIDUAL_DAY_CONTENT, kanInputList, kanScriptsList);
 
         Log.d("DayActivityLog","Calling adapter with category " + Constants.DAY89_10);
         recyclerView.setAdapter(adapter);

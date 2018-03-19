@@ -42,6 +42,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     /**
      * Provide a suitable constructor (depends on the kind of dataset)
+     *
      * @param mContext Context to be supplied
      */
     public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput) {
@@ -54,7 +55,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         letterWriter = new AlertDialog.Builder(context);
     }
 
-    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput, List<String> kanScripts){
+    public ListViewAdapter(Context mContext, List<String> myDataset, String category, List<String> kanInput, List<String> kanScripts) {
         context = mContext;
         values = myDataset;
         mFilteredKanList = kanInput;
@@ -78,32 +79,45 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
+        Log.d("AdapterLogs", "Section: onCreateViewHolder \n Category: " + mCategory);
         switch (mCategory) {
-            case Constants.DAYCOURSE: {
+            //Constants.INVIDUAL_DAY_CONTENT will be received  when user clicks on Day 1 to Day 7 in 10 days course
+            case Constants.INDIVIDUAL_DAY_CONTENT: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_day, parent, false);
                 break;
             }
+            //Constants.TENDAYSCOURSE will be received when user clicks on 10 days course on Home page
             case Constants.TENDAYSCOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 v = inflater.inflate(R.layout.row_layout_course, parent, false);
 
                 break;
             }
-            case Constants.ANTONYMS:{
+            //Constants.ANTONYMS will be received when user clicks on Antonyms section in FLEXI COURSE
+            case Constants.ANTONYMS: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                v = inflater.inflate(R.layout.row_layout_minimal,parent,false);
+                v = inflater.inflate(R.layout.row_layout_minimal, parent, false);
                 break;
             }
-            default:
-                if (mCategory.equals(Constants.FLEXI_WORDS) || mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
-                    LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                    v = inflater.inflate(R.layout.row_layout_image, parent, false);
-                } else {
-                    LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                    v = inflater.inflate(R.layout.row_layout, parent, false);
-                }
+            //Constants.FLEXI_WORDS will be received when user clicks on "Words" section inside FLEXI COURSE
+            case Constants.FLEXI_WORDS: {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_image, parent, false);
                 break;
+            }
+            //Constants.FLEXI_CONVERSATIONS will be received when user clicks on "Conversations" section inside FLEXI COURSE
+            case Constants.FLEXI_CONVERSATIONS: {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_image, parent, false);
+                break;
+            }
+            //Default row_layout will be inflated.
+            default: {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout, parent, false);
+            }
+            break;
         }
         return new ViewHolder(v);
     }
@@ -114,20 +128,151 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
 
-        switch (mCategory)
-        {
-            case Constants.TENDAYSCOURSE: break;
-            case Constants.DAYCOURSE: break;
-            case Constants.DAY89_10: break;
-            case Constants.FLEXI_WORDS: break;
-            case Constants.FLEXI_CONVERSATIONS: break;
-            case Constants.ANTONYMS: break;
-            case Constants.ALPHABETS: break;
-            default: break;
+        switch (mCategory) {
+            //Constants.TENDAYSCOURSE will be received when user clicks on 10 Days Course on home page
+            case Constants.TENDAYSCOURSE:
+                String mname = name.replaceAll(" ", "") + "_content";
+                switch (name) {
+                    case "Day 8":
+                        holder.size.setText(Constants.NUMBERS);
+                        break;
+                    case "Day 9":
+                        holder.size.setText(Constants.CONV_WITH_FRIEND);
+                        break;
+                    case "Day 10":
+                        holder.size.setText(Constants.CONV_WITH_DRIVER);
+                        break;
+                    default:
+                        int n = context.getResources().getStringArray(context.getResources().getIdentifier(mname, "array", context.getPackageName())).length;
+                        String displaySize = n + " words";
+                        holder.size.setText(displaySize);
+                        break;
+                }
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(context, DayActivity.class);
+                        i.putExtra(Constants.POSITION, name);
+                        v.getContext().startActivity(i);
+                    }
+                });
+                break;
+            //Constants.TENDAYSCOURSE will be received when user clicks on Day 1 to Day 7 inside 10 days course
+            case Constants.INDIVIDUAL_DAY_CONTENT:
+                holder.textInKannada.setText(mKanScripts.get(position));
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        oldClickedItem = lastClickedItem;
+                        lastClickedItem = position;
+                        notifyItemChanged(oldClickedItem);
+                        notifyItemChanged(lastClickedItem);
+                        try {
+                            playOffline(position);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                if (lastClickedItem == position) {
+                    holder.exampleButton.setVisibility(View.VISIBLE);
+                    holder.textInKannada.setVisibility(View.VISIBLE);
+                    holder.divider.setVisibility(View.VISIBLE);
+                } else {
+                    holder.exampleButton.setVisibility(View.GONE);
+                    holder.textInKannada.setVisibility(View.GONE);
+                    holder.divider.setVisibility(View.GONE);
+                }
+                holder.exampleButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        displayExampleDialog(v, name, kName);
+                    }
+                });
+                break;
+            //Constants.DAY89_10 will be received when user clicks on Day 8 to Day 10 inside 10 days course
+            case Constants.DAY89_10:
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        try {
+                            playOffline(position);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                break;
+            //Constants.FLEXI_WORDS will be received when user clicks on "Words" section in FLEXI COURSE
+            case Constants.FLEXI_WORDS:
+                //extracting name and finding appropriate image
+                String imageName = name.toLowerCase().replaceAll(" ", "");
+                holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName, "drawable", context.getPackageName()));
+                //setting speaker icon invisible as it is not required for displaying words categories.
+                holder.imageView2.setVisibility(View.INVISIBLE);
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(context, CategoryContentActivity.class);
+                        i.putExtra(Constants.FROM, Constants.FLEXI);
+                        i.putExtra(Constants.CATEGORY, name.toLowerCase().replaceAll(" ", "_"));
+                        v.getContext().startActivity(i);
+                    }
+                });
+                break;
+            //Constants.FLEXI_CONVERSATIONS will be received when user clicks on "Conversations" section in FLEXI COURSE
+            case Constants.FLEXI_CONVERSATIONS:
+                //extracting name and finding appropriate image
+                final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
+                        .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-", "");
+                holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
+                //setting speaker icon invisible as it is not required for displaying words categories.
+                holder.imageView2.setVisibility(View.INVISIBLE);
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(context, DayActivity.class);
+                        i.putExtra(Constants.POSITION, conversationName);
+                        v.getContext().startActivity(i);
+                    }
+                });
+                break;
+            //Constants.ANTONYMS will be received when user "Antonyms" section in FLEXI COURSE
+            case Constants.ANTONYMS:
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Constants.FROM_ADAPTER);
+                        intent.putExtra(Constants.WORDS, name);
+                        intent.putExtra(Constants.ANTONYMS, kName);
+                        LocalBroadcastManager.getInstance(v.getContext()).sendBroadcast(intent);
+                    }
+                });
+                break;
+            //default block for all other categories.
+            default:
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (mCategory.equals(Constants.ALPHABETS))
+                            showAlphabetsDialog(view, name, position);
+                        try {
+                            playOffline(position);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                break;
 
         }
 
-        if (mCategory.equals(Constants.FLEXI_WORDS)) {
+        /*if (mCategory.equals(Constants.FLEXI_WORDS)) {
             //holder.textInKan.setVisibility(View.INVISIBLE);
             String imageName = name.toLowerCase().replaceAll(" ", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(imageName, "drawable", context.getPackageName()));
@@ -143,8 +288,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        }
-        else if (mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
+        } else*/ /*if (mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             final String conversationName = name.toLowerCase().replaceAll(" ", "").replaceAll("conversationwith", "")
                     .replaceAll("/", "").replaceAll("conversationto", "").replaceAll("-", "");
             holder.imageView1.setImageResource(context.getResources().getIdentifier(conversationName, "drawable", context.getPackageName()));
@@ -160,38 +304,35 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        }
-
-        else if(mCategory.equals(Constants.ANTONYMS))
-        {
+        } else*/ /*if (mCategory.equals(Constants.ANTONYMS)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Constants.FROM_ADAPTER);
-                    intent.putExtra(Constants.WORDS,name);
-                    intent.putExtra(Constants.ANTONYMS,kName);
+                    intent.putExtra(Constants.WORDS, name);
+                    intent.putExtra(Constants.ANTONYMS, kName);
                     LocalBroadcastManager.getInstance(v.getContext()).sendBroadcast(intent);
                 }
             });
-        }
+        }*/
 
-        if (!mCategory.equals(Constants.TENDAYSCOURSE )&& !mCategory.equals(Constants.ANTONYMS)) {
+       /* if (!mCategory.equals(Constants.TENDAYSCOURSE) && !mCategory.equals(Constants.ANTONYMS)) {
             holder.textInKan.setText(mFilteredKanList.get(position));
-        }
+        }*/
 
         //onClickListener code begins
-        if (!mCategory.equals(Constants.ANTONYMS)&&
-                !mCategory.equals(Constants.DAYCOURSE) &&
+        /*if (!mCategory.equals(Constants.ANTONYMS) &&
+                !mCategory.equals(Constants.INDIVIDUAL_DAY_CONTENT) &&
                 !mCategory.equals(Constants.TENDAYSCOURSE) &&
                 !mCategory.equals(Constants.FLEXI_WORDS) &&
                 !mCategory.equals(Constants.FLEXI_CONVERSATIONS)) {
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(mCategory.equals(Constants.ALPHABETS))
-                    {
-                        View view = LayoutInflater.from(context).inflate(R.layout.layout_letterwriting,null);
-                        Integer resID = v.getContext().getResources().getIdentifier("ka_"+ FindResource.processStringName(name),"drawable",context.getPackageName());
+                    Toast.makeText(context,"Clicked on old alpha",Toast.LENGTH_SHORT).show();
+                   *//* if (mCategory.equals(Constants.ALPHABETS)) {
+                        View view = LayoutInflater.from(context).inflate(R.layout.layout_letterwriting, null);
+                        Integer resID = v.getContext().getResources().getIdentifier("ka_" + FindResource.processStringName(name), "drawable", context.getPackageName());
                         Glide.with(v.getContext()).load(resID).into((ImageView) view.findViewById(R.id.lw_iconID));
                         //Toast.makeText(context,"ka_" + processStringName(name) + " " + FindResource.rawResourceAvailable(context,"ka_" + processStringName(name)),Toast.LENGTH_SHORT).show();
                         Button letter = (Button) view.findViewById(R.id.lw_textID);
@@ -208,7 +349,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                             }
                         });
                         letterWriter.setView(view).create().show();
-                    }
+                    }*//*
                     try {
                         playOffline(position);
                     } catch (IOException e) {
@@ -216,8 +357,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 }
             });
-        }
-        else if (mCategory.equals(Constants.TENDAYSCOURSE)) {
+        }*/ /*else if (mCategory.equals(Constants.TENDAYSCOURSE)) {
             switch (name) {
                 case "Day 1":
                 case "Day 2":
@@ -251,8 +391,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     v.getContext().startActivity(i);
                 }
             });
-        }
-        else if (mCategory.equals(Constants.DAYCOURSE)) {
+        }*/ /*else if (mCategory.equals(Constants.INDIVIDUAL_DAY_CONTENT)) {
             holder.textInKannada.setText(mKanScripts.get(position));
             holder.layout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -269,14 +408,11 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 }
             });
-            if(lastClickedItem==position)
-            {
+            if (lastClickedItem == position) {
                 holder.exampleButton.setVisibility(View.VISIBLE);
                 holder.textInKannada.setVisibility(View.VISIBLE);
                 holder.divider.setVisibility(View.VISIBLE);
-            }
-            else
-            {
+            } else {
                 holder.exampleButton.setVisibility(View.GONE);
                 holder.textInKannada.setVisibility(View.GONE);
                 holder.divider.setVisibility(View.GONE);
@@ -284,29 +420,29 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             holder.exampleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /*Intent i = new Intent(context, ExampleActivity.class);
+                    *//*Intent i = new Intent(context, ExampleActivity.class);
                     i.putExtra(Constants.NAME, name);
                     i.putExtra(Constants.KNAME, kName);
-                    v.getContext().startActivity(i);*/
+                    v.getContext().startActivity(i);*//*
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
                     AlertDialog dialog = builder.create();
-                    View view = LayoutInflater.from(v.getContext()).inflate(R.layout.layout_example_popup,null);
+                    View view = LayoutInflater.from(v.getContext()).inflate(R.layout.layout_example_popup, null);
                     TextView english = (TextView) view.findViewById(R.id.pu_wordInEngID);
                     TextView kannada = (TextView) view.findViewById(R.id.pu_wordInKanID);
                     ImageView speaker = (ImageView) view.findViewById(R.id.pu_speakerID);
                     TextView example = (TextView) view.findViewById(R.id.pu_exampleText);
                     english.setText(name);
                     kannada.setText(kName);
-                    String exampleText = name.replaceAll(" ", "_").replaceAll("\\?","")
-                            .replaceAll("\\(","_").replaceAll("\\)","")+ "_ex";
-                    final String spokenWord = name.replaceAll(" ", "_").replaceAll("\\?","").toLowerCase()
-                            .replaceAll("\\(","_")
-                            .replaceAll("\\)","")+ "_ex";
-                    example.setText(context.getResources().getIdentifier(exampleText.toLowerCase(),"string",context.getPackageName()));
+                    String exampleText = name.replaceAll(" ", "_").replaceAll("\\?", "")
+                            .replaceAll("\\(", "_").replaceAll("\\)", "") + "_ex";
+                    final String spokenWord = name.replaceAll(" ", "_").replaceAll("\\?", "").toLowerCase()
+                            .replaceAll("\\(", "_")
+                            .replaceAll("\\)", "") + "_ex";
+                    example.setText(context.getResources().getIdentifier(exampleText.toLowerCase(), "string", context.getPackageName()));
                     speaker.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            AudioPlayer.playAudio(context,spokenWord);
+                            AudioPlayer.playAudio(context, spokenWord);
                         }
                     });
                     dialog.setView(view);
@@ -314,13 +450,13 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                         @Override
                         public void onCancel(DialogInterface dialogInterface) {
-                            if(AudioPlayer.mediaPlayer!=null && AudioPlayer.mediaPlayer.isPlaying())
+                            if (AudioPlayer.mediaPlayer != null && AudioPlayer.mediaPlayer.isPlaying())
                                 AudioPlayer.stopAudio();
                         }
                     });
                 }
             });
-        }
+        }*/
         //separate condition _for Day 9 and 10 to set exampleButton invisible _for these as these are conversations
         /*else if (mCategory.equals(Constants.DAY89_10)) {
             Log.d("adapterlogs","DAY89_10 Category");
@@ -356,6 +492,59 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
 
     }
 
+    private void showAlphabetsDialog(View v, String name, final int position) {
+        View view = LayoutInflater.from(context).inflate(R.layout.layout_letterwriting, null);
+        Integer resID = v.getContext().getResources().getIdentifier("ka_" + FindResource.processStringName(name), "drawable", context.getPackageName());
+        Glide.with(v.getContext()).load(resID).into((ImageView) view.findViewById(R.id.lw_iconID));
+        Button letter = (Button) view.findViewById(R.id.lw_textID);
+        ImageView speaker = (ImageView) view.findViewById(R.id.lw_speakerID);
+        letter.setText(name);
+        speaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    playOffline(position);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        letterWriter.setView(view).create().show();
+    }
+
+    private void displayExampleDialog(View v, String name, String kName) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+        AlertDialog dialog = builder.create();
+        View view = LayoutInflater.from(v.getContext()).inflate(R.layout.layout_example_popup, null);
+        TextView english = (TextView) view.findViewById(R.id.pu_wordInEngID);
+        TextView kannada = (TextView) view.findViewById(R.id.pu_wordInKanID);
+        ImageView speaker = (ImageView) view.findViewById(R.id.pu_speakerID);
+        TextView example = (TextView) view.findViewById(R.id.pu_exampleText);
+        english.setText(name);
+        kannada.setText(kName);
+        String exampleText = name.replaceAll(" ", "_").replaceAll("\\?", "")
+                .replaceAll("\\(", "_").replaceAll("\\)", "") + "_ex";
+        final String spokenWord = name.replaceAll(" ", "_").replaceAll("\\?", "").toLowerCase()
+                .replaceAll("\\(", "_")
+                .replaceAll("\\)", "") + "_ex";
+        example.setText(context.getResources().getIdentifier(exampleText.toLowerCase(), "string", context.getPackageName()));
+        speaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioPlayer.playAudio(context, spokenWord);
+            }
+        });
+        dialog.setView(view);
+        dialog.show();
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                if (AudioPlayer.mediaPlayer != null && AudioPlayer.mediaPlayer.isPlaying())
+                    AudioPlayer.stopAudio();
+            }
+        });
+    }
+
     private void playOffline(int position) throws IOException {
         String voiceId = null;
         if (mCategory.equals(Constants.ALPHABETS)) {
@@ -365,11 +554,10 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     .replaceAll("\\(", "_").replaceAll("\\)", "")
                     .replaceAll(":", "").replaceAll(",", "").replaceAll("\\.", "");
         }
-        if(FindResource.rawResourceAvailable(context,voiceId))
+        if (FindResource.rawResourceAvailable(context, voiceId))
             AudioPlayer.playAudio(context, voiceId);
-        else
-        {
-            Toast.makeText(context,voiceId,Toast.LENGTH_SHORT).show();
+        else {
+            Toast.makeText(context, voiceId, Toast.LENGTH_SHORT).show();
             throw new IOException("\n ERROR! Audio file not found _for " + voiceId);
         }
     }
@@ -462,13 +650,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
             super(itemView);
             layout = itemView;
 
-            switch (mCategory)
-            {
+            switch (mCategory) {
                 case Constants.TENDAYSCOURSE:
                     textInEng = (TextView) layout.findViewById(R.id.textID);
                     size = (TextView) layout.findViewById(R.id.sizeID);
                     break;
-                case Constants.DAYCOURSE:
+                case Constants.INDIVIDUAL_DAY_CONTENT:
                     textInEng = (TextView) layout.findViewById(R.id.textID);
                     textInKan = (TextView) layout.findViewById(R.id.textInKanID);
                     exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
@@ -512,7 +699,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 textInKan = (TextView) layout.findViewById(R.id.textInKanID);
             if (mCategory.equals(Constants.TENDAYSCOURSE))
                 size = (TextView) layout.findViewById(R.id.sizeID);
-            if (mCategory.equals(Constants.DAYCOURSE) || mCategory.equals(Constants.DAY89_10))
+            if (mCategory.equals(Constants.INDIVIDUAL_DAY_CONTENT) || mCategory.equals(Constants.DAY89_10))
             {
                 exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
                 textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
