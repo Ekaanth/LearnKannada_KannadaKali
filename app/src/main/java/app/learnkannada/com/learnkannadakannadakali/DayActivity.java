@@ -86,7 +86,7 @@ public class DayActivity extends AppCompatActivity {
             kanScriptsList.add(listValuesInKanScript[i]);
         }
 
-        //below condition is to disable example button _for particular cases
+        //below condition is to disable example button for particular cases
         if(day.equals(Constants.DAY9) || day.equals(Constants.DAY10) || day.equals(Constants.DAY8) || !day.contains(Constants.DAY))
             adapter = new ListViewAdapter(getApplicationContext(),engInputList, Constants.DAY89_10, kanInputList, kanScriptsList);
         else

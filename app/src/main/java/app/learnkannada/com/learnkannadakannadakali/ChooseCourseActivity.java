@@ -151,7 +151,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 {
                     dialog.setTitle("About the app")
                             .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
-                                    "\n-- The app is exclusively developed _for people who want to learn \"Spoken Kannada\"" +
+                                    "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
                                     " on the go.\n" +
                                     "-- We are working really hard to add more and more exciting features to the app." +
                                     "\n-- We request all the users to spend some time on the app and let us know your expectations." +
@@ -215,11 +215,11 @@ public class ChooseCourseActivity extends AppCompatActivity {
                                     + "\n-- We have used English words at many places to keep the learning simple and appealing.\n" +
                                     "This attempt should not be mistaken as disrespect to Kannada language." +
                                     "\n-- Individual names used in the app are used " +
-                                    "_for illustration purposes ONLY. " +
+                                    "for illustration purposes ONLY. " +
                                     "If anybody's name is matching with the names used in the app, it's " +
                                     "purely coincidental." +
-                                    "\n-- HithAM Creations is not responsible _for any damage caused due to misuse of this " +
-                                    "application. The app is published _for the sole purpose of helping people learn " +
+                                    "\n-- HithAM Creations is not responsible for any damage caused due to misuse of this " +
+                                    "application. The app is published for the sole purpose of helping people learn " +
                                     "spoken Kannada only.")
                             .setIcon(R.drawable.ic_error_black_24dp)
                             .setCancelable(true)

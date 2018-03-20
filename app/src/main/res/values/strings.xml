@@ -1047,7 +1047,7 @@
     </string-array>
     <!-- *******************************Day 1 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Te_for for Day 1 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 1 STARTS here *******************************-->
     <string name="learn_ex"><b><font color="#f20f08">Eng</font></b> : <i>Learn</i> Kannada.\n<b><font color="#ffb300">Kan</font></b> : Kannada <i>kali</i> \n\n ಕನ್ನಡ ಕಲಿ </string>
     <string name="i_ex"><b><font color="#f20f08">Eng</font></b> : <i>I</i> am Saraswathi.\n<b><font color="#ffb300">Kan</font></b> : <i>Naanu</i> Saraswathi. \n\n ನಾನು ಸರಸ್ವತಿ</string>
     <string name="we_ex"><b><font color="#f20f08">Eng</font></b> : <i>We</i> are Indians.\n<b><font color="#ffb300">Kan</font></b> : <i>Naavu</i> bhaaratheeyaru.\n\n ನಾವು ಭಾರತೀಯರು</string>
@@ -1065,7 +1065,7 @@
     <string name="for_you_plural_ex"><b><font color="#f20f08">Eng</font></b> : These books are <i>for you</i>.\n<b><font color="#ffb300">Kan</font></b> : ee pusthakagalu <i>nimage</i>.\n\n ಈ ಪುಸ್ತಕಗಳು ನಿಮಗೆ</string>
     <string name="yours_singular_ex"><b><font color="#f20f08">Eng</font></b> : This phone is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee phone <i>ninnadu</i>.\n\n ಈ ಫೋನ್ ನಿನ್ನದು</string>
     <string name="yours_plural_ex"><b><font color="#f20f08">Eng</font></b> : This place is <i>yours</i>.\n<b><font color="#ffb300">Kan</font></b> : ee jaaga <i>nimmadu</i>.\n\n ಈ ಜಾಗ ನಿಮ್ಮದು</string>
-    <!-- *******************************Examples Te_for for Day 1 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 1 ENDS here *******************************-->
 
     <!-- *******************************Day 2 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day2_content">
@@ -1147,7 +1147,7 @@
     </string-array>
     <!-- *******************************Day 2 content (Kannada) ENDS here *******************************-->
 
-    <!-- *******************************Examples Te_for for Day 2 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 2 STARTS here *******************************-->
     <string name="he_ex"><b><font color="#f20f08">Eng</font></b> : <i>He</i> is a cricket player\n<b><font color="#ffb300">Kan</font></b> : <i>Avanu</i> obba cricket aatagaara \n\n ಅವನು ಒಬ್ಬ ಕ್ರಿಕೆಟ್ ಆಟಗಾರ</string>
     <string name="she_ex"><b><font color="#f20f08">Eng</font></b> : <i>She</i> is a good girl\n<b><font color="#ffb300">Kan</font></b> : <i>AvaLu</i> oLLe hudugi\n\n ಅವಳು ಒಳ್ಳೆ ಹುಡುಗಿ</string>
     <string name="they_ex"><b><font color="#f20f08">Eng</font></b> : <i>They</i> are cricket player(s)\n<b><font color="#ffb300">Kan</font></b> : <i>Avaru</i> cricket aatagaara(ru)\n\n ಅವರು ಕ್ರಿಕೆಟ್ ಆಟಗಾರ(ರು)</string>
@@ -1170,7 +1170,7 @@
     <string name="whose_ex"><b><font color="#f20f08">Eng</font></b> : <i>Whose</i> pen is this?\n<b><font color="#ffb300">Kan</font></b> : ee pen <i>yaaradu</i>?\n\n ಈ ಪೆನ್ ಯಾರದು?</string>
     <string name="when_ex"><b><font color="#f20f08">Eng</font></b> : <i>When</i> did you come to the office?\n<b><font color="#ffb300">Kan</font></b> : neenu kachEri(office)ge <i>yaavaaga </i> bande?\n\n ನೀನು ಕಚೇರಿಗೆ ಯಾವಾಗ ಬಂದೆ?</string>
     <string name="who_ex"><b><font color="#f20f08">Eng</font></b> : <i>Who</i> are you?\n<b><font color="#ffb300">Kan</font></b> : neenu <i>yaaru</i>?\n\n ನೀನು ಯಾರು?</string>
-    <!-- *******************************Examples Te_for for Day 2 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 2 ENDS here *******************************-->
 
     <!-- *******************************Day 3 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day3_content">
@@ -1262,7 +1262,7 @@
     </string-array>
     <!--*******************************Day 3 content (KANNADA) ENDS here *******************************-->
 
-    <!--*******************************Examples Te_for for Day 3 STARTS here *******************************-->
+    <!--*******************************Examples for Day 3 STARTS here *******************************-->
     <string name="hi_hello_ex"><b><font color="#f20f08">Eng</font></b> : <i>Hi</i>! How are you?\n<b><font color="#ffb300">Kan</font></b> : <i>namaskaara</i>! hege iddera (hEgidira)?\n\n ನಮಸ್ಕಾರ! ಹೇಗೆ ಇದ್ದೀರಾ/ ಹೇಗಿದ್ದೀರ?</string>
     <string name="welcome_ex"><b><font color="#f20f08">Eng</font></b> : <i>Welcome</i> to the dance programme.\n<b><font color="#ffb300">Kan</font></b> : nrutya kaaryakramakke suswaagata.\n\n ನೃತ್ಯ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಸುಸ್ವಾಗತ</string>
     <string name="good_morning_ex"><b><font color="#f20f08">Eng</font></b> : <i>Good Morning</i>! Had breakfast?\n<b><font color="#ffb300">Kan</font></b> : <i>Shubhodaya</i>! thindi ayta?\n\n ಶುಭೋದಯ! ತಿಂಡಿ ಆಯ್ತಾ?</string>
@@ -1288,7 +1288,7 @@
     <string name="morning_ex"><b><font color="#f20f08">Eng</font></b> :  I woke up at 7.30am in the <i>morning</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu ivattu <i>beLigge</i> Elu vare gantege edde\n\n ನಾನು ಇವತ್ತು ಬೆಳಿಗ್ಗೆ ಏಳು ವರೆಗೆ ಎದ್ದೆ</string>
     <string name="afternoon_ex"><b><font color="#f20f08">Eng</font></b> : I had lunch at 1:15<i>pm</i> today\n<b><font color="#ffb300">Kan</font></b> : naanu <i>madhyaana</i> ondu kaalige uta madide\n\n ನಾನು ಮಧ್ಯಾನ ಒಂದು ಕಾಲಿಗೆ ಊಟ ಮಾಡಿದೆ</string>
     <string name="evening_ex"><b><font color="#f20f08">Eng</font></b> : We will have coffee at 4:45 pm\n<b><font color="#ffb300">Kan</font></b> : naavu naalku mukkalige coffee kudiyona\n\n ನಾವು ನಾಲ್ಕು ಮುಕ್ಕಾಲಿಗೆ ಕಾಫಿ ಕುಡಿಯೋಣ</string>
-    <!-- *******************************Examples Te_for for Day 3 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 3 ENDS here *******************************-->
 
     <!-- *******************************Day 4 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day4_content">
@@ -1374,7 +1374,7 @@
     </string-array>
     <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->-
 
-    <!-- *******************************Examples Te_for for Day 4 STARTS here *******************************-->
+    <!-- *******************************Examples for Day 4 STARTS here *******************************-->
     <string name="will_eat_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will eat</i> fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu <i>thinthini</i> (Fruit - haNNu)\n\n ನಾನು ಹಣ್ಣುಗಳನ್ನು ತಿಂತೀನಿ</string>
     <string name="will_not_eat_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will not eat</i> fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu <i>thinnalla</i>\n\n ನಾನು ಹಣ್ಣುಗಳನ್ನು ತಿನ್ನಲ್ಲ</string>
     <string name="will_come_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will come</i> in evening\n<b><font color="#ffb300">Kan</font></b> : naanu evening(sanje) <i>barthini</i>\n\n ನಾನು ಸಂಜೆ ಬರ್ತೀನಿ</string>
@@ -1400,7 +1400,7 @@
         <b><font color="#ffb300">Kan</font></b> : neenu bhaaratheeyana? - <i>Haudu</i>\n neenu adige bhaTTana? - <i>Illa</i>\n\n ನೀನು ಭಾರತೀಯನ? ಹೌದು, ನೀನು ಅಡಿಗೆ ಭಟ್ಟನ? ಇಲ್ಲ</string>
     <string name="correct_or_incorrect_ex"><b><font color="#f20f08">Eng</font></b> : That is <i>correct</i>, This is <i>incorrect</i>\n
         <b><font color="#ffb300">Kan</font></b> : adu <i>sari</i>, idu <i>thappu</i>\n\n ಅದು ಸರಿ ಇದು ತಪ್ಪು</string>
-    <!-- *******************************Examples Te_for for Day 4 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 4 ENDS here *******************************-->
 
     <!-- *******************************Day 5 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day5_content">
@@ -1489,7 +1489,7 @@
         <item>ಕಷ್ಟ</item>
     </string-array>
     <!-- *******************************Day 5 content (KANNADA) ENDS here *******************************-->
-    <!-- *******************************Examples Te_for for Day 5 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 5 STARTS here *******************************-->
     <string name="beautiful_ex"><b><font color="#f20f08">Eng</font></b> : You look very <i>beautiful</i>\n<b><font color="#ffb300">Kan</font></b> : neevu thumba <i>sundara</i>vaagi kaaNutha ideera\n\n ನೀವು ತುಂಬಾ ಸುಂದರವಾಗಿ ಕಾಣುತ್ತಾ ಇದ್ದೀರಾ</string>
     <string name="good_ex"><b><font color="#f20f08">Eng</font></b> : He is very <i>good</i> man\n<b><font color="#ffb300">Kan</font></b> : avanu thumba <i>oLLe</i> manushya\n\n ಅವನು ತುಂಬಾ ಒಳ್ಳೆ ಮನುಷ್ಯ</string>
     <string name="bad_ex"><b><font color="#f20f08">Eng</font></b> : He is a <i>bad</i> boy\n<b><font color="#ffb300">Kan</font></b> : avanu obba <i>keTTa</i> huduga\n\n ಅವನು ಒಬ್ಬ ಕೆಟ್ಟ ಹುಡುಗ</string>
@@ -1515,7 +1515,7 @@
     <string name="last_ex"><b><font color="#f20f08">Eng</font></b> : That was my <i>last</i> mistake\n<b><font color="#ffb300">Kan</font></b> : adu nanna <i>kone</i>ya thappu\n\n ಅದು ನನ್ನ ಕೊನೆಯ ತಪ್ಪು</string>
     <string name="difficult_ex"><b><font color="#f20f08">Eng</font></b> : That work is <i>difficult</i>\n<b><font color="#ffb300">Kan</font></b> : aa kelasa <i>kashTa</i>\n\n ಆ ಕೆಲಸ ಕಷ್ಟ</string>
     <string name="easy_ex"><b><font color="#f20f08">Eng</font></b> : This work is <i>easy</i>!\n<b><font color="#ffb300">Kan</font></b> : ee kelasa <i>sulabha</i>!\n\n ಈ ಕೆಲಸ ಸುಲಭ!</string>
-    <!-- *******************************Examples Te_for for Day 5 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 5 ENDS here *******************************-->
 
     <!-- *******************************Day 6 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day6_content">
@@ -1590,7 +1590,7 @@
     </string-array>
     <!-- *******************************Day 6 content (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Te_for for Day 6 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 6 STARTS here *******************************-->
     <string name="up_ex"><b><font color="#f20f08">Eng</font></b> : please get <i>up</i>\n<b><font color="#ffb300">Kan</font></b> : dayaviTTu <i>mEle</i> ELi ದಯವಿಟ್ಟು ಮೇಲೆ ಏಳಿ</string>
     <string name="down_ex"><b><font color="#f20f08">Eng</font></b> : Please come <i>down</i>\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU <i>keLage</i> banni ದಯವಿಟ್ಟು ಕೆಳಗೆ ಬನ್ನಿ</string>
     <string name="left_ex"><b><font color="#f20f08">Eng</font></b> : Go front and go <i>left</i>\n<b><font color="#ffb300">Kan</font></b> : munde hogi matthu <i>eDagaDe</i> hogi ಮುಂದೆ ಹೋಗಿ ಮತ್ತು ಎಡಗಡೆ ಹೋಗಿ</string>
@@ -1611,7 +1611,7 @@
     <string name="in_ex"><b><font color="#f20f08">Eng</font></b> : Please come <i>in</i>!\n<b><font color="#ffb300">Kan</font></b> : dayaviTTU <i>oLage</i> banni ದಯವಿಟ್ಟು ಒಳಗೆ ಬನ್ನಿ</string>
     <string name="near_ex"><b><font color="#f20f08">Eng</font></b> : My house is <i>near</i> to your house\n<b><font color="#ffb300">Kan</font></b> : Nanna mane nimma manege <i>hatthira</i> ide ನನ್ನ ಮನೆ ನಿಮ್ಮ ಮನೆಗೆ ಹತ್ತಿರ</string>
     <string name="far_ex"><b><font color="#f20f08">Eng</font></b> : Electronic City is very <i>far</i> from Vijayanagar\n<b><font color="#ffb300">Kan</font></b> : Electronic City VijayaNagar inda thumba <i>doora</i> ಇಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ ವಿಜಯನಗರಗೆ ತುಂಬಾ ದೂರ</string>
-    <!-- *******************************Examples Te_for for Day 6 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 6 ENDS here *******************************-->
 
     <!-- *******************************Day 7 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day7_content">
@@ -1680,7 +1680,7 @@
     </string-array>
     <!-- ******************************* Category Relationships (KANNADA) ENDS here *******************************-->
 
-    <!-- *******************************Examples Te_for for Day 7 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 7 STARTS here *******************************-->
     <string name="family_ex"><b><font color="#f20f08">Eng</font></b> : I love my <i>family</i> a lot\n<b><font color="#ffb300">Kan</font></b> : naanu nanna <i>kuTumba</i>vannu thumba ishTa paduthEne\n\n ನಾನು ನನ್ನ ಕುಟುಂಬವನ್ನು ತುಂಬಾ ಇಷ್ಟ ಪಡುತ್ತೇನೆ</string>
     <string name="mother_ex"><b><font color="#f20f08">Eng</font></b> : My <i>mother</i> cooks very well\n<b><font color="#ffb300">Kan</font></b> : nanna <i>amma</i> thumba channagi adige maaduthaare\n\n ನನ್ನ ಅಮ್ಮ ತುಂಬಾ ಚೆನ್ನಾಗಿ ಅಡಿಗೆ ಮಾಡುತ್ತಾರೆ</string>
     <string name="father_ex"><b><font color="#f20f08">Eng</font></b> : My <i>father</i> is a doctor\n<b><font color="#ffb300">Kan</font></b> : nanna <i>appa</i> obba doctor\n\n ನನ್ನ ಅಪ್ಪ ಒಬ್ಬ ಡಾಕ್ಟರ</string>
@@ -1701,7 +1701,7 @@
     <string name="water_ex"><b><font color="#f20f08">Eng</font></b> : I want <i>water</i>\n<b><font color="#ffb300">Kan</font></b> : nanage <i>neeru</i> bEku\n\n ನನಗೆ ನೀರು ಬೇಕು</string>
     <string name="husband_ex"><b><font color="#f20f08">Eng</font></b> : He is my <i>husband</i>\n<b><font color="#ffb300">Kan</font></b> : avanu nanna <i>ganDa</i>\n\n ಅವನು ನನ್ನ ಗಂಡ</string>
     <string name="wife_ex"><b><font color="#f20f08">Eng</font></b> : She is my <i>wife</i>\n<b><font color="#ffb300">Kan</font></b> : avalu nanna <i>henDati</i>\n\n ಅವಳು ನನ್ನ ಹೆಂಡತಿ</string>
-    <!-- *******************************Examples Te_for for Day 7 ENDS here *******************************-->
+    <!-- *******************************Examples for for Day 7 ENDS here *******************************-->
 
     <!-- *******************************Day 8 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day8_content">
@@ -1793,9 +1793,9 @@
         <item>ಒಂದು ಕೋಟಿ - ೧,೦೦,೦೦,೦೦೦</item>
     </string-array>
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
-    <!-- *******************************Examples Te_for for Day 8 STARTS here *******************************-->
+    <!-- *******************************Examples for for Day 8 STARTS here *******************************-->
     <!--EXAMPLES TO BE DISABLED FOR DAY 8 AS IT HAS ONLY NUMBERS-->
-    <!-- *******************************Examples Te_for for Day 8 ENDS here *******************************-->
+    <!-- *******************************Examples for Day 8 ENDS here *******************************-->
 
     <!-- *******************************Day 9 content (ENGLISH) STARTS here *******************************-->
     <string-array name="Day9_content">

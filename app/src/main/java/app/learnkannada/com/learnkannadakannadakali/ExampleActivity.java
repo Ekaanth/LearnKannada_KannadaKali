@@ -54,7 +54,7 @@ public class ExampleActivity extends AppCompatActivity {
             example.setText(getResources().getIdentifier(exampleText.toLowerCase(), "string", getPackageName()));
         }catch(Exception e)
         {
-            throw new IllegalStateException("\nERROR! Example Text NOT FOUND _for the word " + name.toUpperCase(),e);
+            throw new IllegalStateException("\nERROR! Example Text NOT FOUND for the word " + name.toUpperCase(),e);
         }
         //exampleKan.setText(getResources().getIdentifier(nameInKan,"string",getPackageName()));
 

@@ -11,11 +11,11 @@ import android.view.ViewAnimationUtils;
 
 public class AnimateVisibility {
     public static void animateInvisible(final View myView) {
-// get the center _for the clipping circle
+// get the center for the clipping circle
         int cx = myView.getWidth() / 2;
         int cy = myView.getHeight() / 2;
 
-// get the initial radius _for the clipping circle
+// get the initial radius for the clipping circle
         float initialRadius = (float) Math.hypot(cx, cy);
 
 // create the animation (the final radius is zero)
@@ -38,14 +38,14 @@ public class AnimateVisibility {
 
     public static void animateVisible(final View myView) {
 
-// get the center _for the clipping circle
+// get the center for the clipping circle
         int cx = myView.getWidth() / 2;
         int cy = myView.getHeight() / 2;
 
-// get the final radius _for the clipping circle
+// get the final radius for the clipping circle
         float finalRadius = (float) Math.hypot(cx, cy);
 
-// create the animator _for this view (the start radius is zero)
+// create the animator for this view (the start radius is zero)
         Animator anim =
                 null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
