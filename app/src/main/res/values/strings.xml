@@ -2050,8 +2050,27 @@
         <item>Ganesh: Bye</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (ENGLISH) ENDS here *******************************-->
-    <!-- ******************************* Conversation with a friend (KANNADA) STARTS here *******************************-->
     <string-array name="afriend_content_kannada">
+        <item>nimma parichaya maadikoLLi</item>
+        <item>Pooja: Hi Ganesh, hEgiddeera?</item>
+        <item>Ganesh: Hi Pooja, chennagi ideeni. Neevu?</item>
+        <item>Pooja: naanu saha(too) channagi ideeni</item>
+        <item>Ganesh: neevu Enu madutheera?</item>
+        <item>Pooja: naanu obba Software engineer. neevu?</item>
+        <item>Ganesh: naanu hardware engineer</item>
+        <item>Pooja: oLLeyadu. nimma ooru yaavudu?</item>
+        <item>Ganesh: nanna ooru Sirigere, holalkere hatthira. nimmadu?</item>
+        <item>Pooja: nanna ooru Mysuru.</item>
+        <item>Ganesh: Nice. Bengalurinalli elli ideera?</item>
+        <item>Pooja: Vijayanagar. Neevu?</item>
+        <item>Ganesh: Sanjayanagara</item>
+        <item>Pooja: ok. Nimmannu BhEti(meet) maadi khushi aaythu</item>
+        <item>Ganesh: nanagu kooda. Matte sigONa</item>
+        <item>Pooja: khanditha. Bye</item>
+        <item>Ganesh: Bye</item>
+    </string-array>
+    <!-- ******************************* Conversation with a friend (KANNADA) STARTS here *******************************-->
+    <string-array name="afriend_content_Inkannada">
         <item>ನಿಮ್ಮ ಪರಿಚಯ ಮಾಡಿಕೊಳ್ಳಿ</item>
         <item>ಪೂಜಾ: ಹಾಯ್ ಗಣೇಶ್, ಹೇಗಿದ್ದೀರಾ?</item>
         <item>ಗಣೇಶ್: ಹಾಯ್ ಪೂಜಾ, ಚೆನ್ನಾಗಿ ಇದ್ದೀನಿ. ನೀವು?</item>
@@ -2071,7 +2090,6 @@
         <item>ಗಣೇಶ್: ಬೈ</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
-
     <!-- *******************************Conversation with Audo driver STARTS here *******************************-->
     <string-array name="autocabdriver_content">
         <item>Conversation with Auto Driver</item>

@@ -87,6 +87,12 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 v = inflater.inflate(R.layout.row_layout_day, parent, false);
                 break;
             }
+            case Constants.DAY89_10:{
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout_day, parent, false);
+                break;
+            }
+
             //Constants.TENDAYSCOURSE will be received when user clicks on 10 days course on Home page
             case Constants.TENDAYSCOURSE: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -127,6 +133,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         final String name = mFilteredList.get(position);
         final String kName = mFilteredKanList.get(position);
         holder.textInEng.setText(name);
+
 
         switch (mCategory) {
             //Constants.TENDAYSCOURSE will be received when user clicks on 10 Days Course on home page
@@ -193,17 +200,30 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 break;
             //Constants.DAY89_10 will be received when user clicks on Day 8 to Day 10 inside 10 days course
             case Constants.DAY89_10:
+                holder.exampleButton.setVisibility(View.GONE);
+                holder.textInKannada.setText(mKanScripts.get(position));
                 holder.textInKan.setText(mFilteredKanList.get(position));
                 holder.layout.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
+                    public void onClick(View v) {
+                        oldClickedItem = lastClickedItem;
+                        lastClickedItem = position;
+                        notifyItemChanged(oldClickedItem);
+                        notifyItemChanged(lastClickedItem);
                         try {
                             playOffline(position);
-                        } catch (Exception e) {
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }
                 });
+                if (lastClickedItem == position) {
+                    holder.textInKannada.setVisibility(View.VISIBLE);
+                    holder.divider.setVisibility(View.VISIBLE);
+                } else {
+                    holder.textInKannada.setVisibility(View.GONE);
+                    holder.divider.setVisibility(View.GONE);
+                }
                 break;
             //Constants.FLEXI_WORDS will be received when user clicks on "Words" section in FLEXI COURSE
             case Constants.FLEXI_WORDS:
@@ -647,7 +667,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
         Button exampleButton;
         View layout, divider;
 
-        ViewHolder(View itemView) {
+        ViewHolder(View itemView)
+        {
             super(itemView);
             layout = itemView;
 

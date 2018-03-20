@@ -42,7 +42,7 @@
                             android:layout_height="64dp"
                             android:background="@drawable/circle_yellow"
                             android:padding="10dp"
-                            android:src="@drawable/alphabets" />
+                            android:src="@drawable/ic_onesignal_large_icon_default" />
 
                         <TextView
                             android:layout_width="wrap_content"
