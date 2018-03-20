@@ -1,16 +1,14 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.Intent;
-import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +39,7 @@ public class CategoryContentActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
         List<String> kanInput = new ArrayList<>();
+        List<String> kanScriptsList = new ArrayList<>();
 
         Intent intent = getIntent();
         String category = intent.getStringExtra(Constants.CATEGORY);
@@ -49,18 +48,28 @@ public class CategoryContentActivity extends AppCompatActivity {
         String actionBarTitle = category.substring(0,1).toUpperCase()+category.substring(1,category.length());
         getSupportActionBar().setTitle(actionBarTitle.replace("_"," "));
 
-        Resources res = getResources();
-        String[] listValues = null, listValuesInKan = null;
-
-       listValues = getResources().getStringArray(getResources().getIdentifier(category+Constants.ENG_ARRAY,Constants.ARRAY,getPackageName()));
-       listValuesInKan = res.getStringArray(getResources().getIdentifier(category+Constants.KAN_ARRAY,Constants.ARRAY,getPackageName()));
+        String[] listValues = null , listValuesInKan = null , listValuesInKanScript = null;
+        String englishArray = category.replaceAll(" ","")+Constants._CONTENT;
+        String kannadaArray = category.replaceAll(" ","")+Constants._CONTENT_KANNADA;
+        String kannadaScriptsArray = category.replaceAll(" ","") + Constants._CONTENT_INKANNADA;
+        listValues = getResources().getStringArray(getResources().getIdentifier(englishArray,Constants.ARRAY,getPackageName()));
+        listValuesInKan = getResources().getStringArray(getResources().getIdentifier(kannadaArray,Constants.ARRAY,getPackageName()));
+        if(!category.equals(Constants.ALPHABETS))
+        {
+            listValuesInKanScript = getResources().getStringArray(getResources().getIdentifier(kannadaScriptsArray,Constants.ARRAY,getPackageName()));
+        }
 
         for (int i = 0; i < listValues.length; i++) {
             input.add(listValues[i]);
             kanInput.add(listValuesInKan[i]);
+            if(!category.equals(Constants.ALPHABETS))
+                kanScriptsList.add(listValuesInKanScript[i]);
         }
 
-        adapter = new ListViewAdapter(this, input, category, kanInput);
+        if(!category.equals(Constants.ALPHABETS))
+            adapter = new ListViewAdapter(this, input, category, kanInput, kanScriptsList);
+        else
+            adapter = new ListViewAdapter(this, input, category, kanInput);
         recyclerView.setAdapter(adapter);
     }
 

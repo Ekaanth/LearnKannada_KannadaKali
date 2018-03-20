@@ -118,10 +118,15 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 v = inflater.inflate(R.layout.row_layout_image, parent, false);
                 break;
             }
+            case Constants.ALPHABETS: {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                v = inflater.inflate(R.layout.row_layout, parent, false);
+                break;
+            }
             //Default row_layout will be inflated.
             default: {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                v = inflater.inflate(R.layout.row_layout, parent, false);
+                v = inflater.inflate(R.layout.row_layout_day, parent, false);
             }
             break;
         }
@@ -274,14 +279,13 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     }
                 });
                 break;
-            //default block for all other categories.
-            default:
+
+            case Constants.ALPHABETS:
                 holder.textInKan.setText(mFilteredKanList.get(position));
                 holder.layout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (mCategory.equals(Constants.ALPHABETS))
-                            showAlphabetsDialog(view, name, position);
+                        showAlphabetsDialog(view, name, position);
                         try {
                             playOffline(position);
                         } catch (IOException e) {
@@ -289,6 +293,33 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                         }
                     }
                 });
+                break;
+            //default block for all other categories.
+            default:
+                holder.exampleButton.setVisibility(View.GONE);
+                holder.textInKannada.setText(mKanScripts.get(position));
+                holder.textInKan.setText(mFilteredKanList.get(position));
+                holder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        oldClickedItem = lastClickedItem;
+                        lastClickedItem = position;
+                        notifyItemChanged(oldClickedItem);
+                        notifyItemChanged(lastClickedItem);
+                        try {
+                            playOffline(position);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                if (lastClickedItem == position) {
+                    holder.textInKannada.setVisibility(View.VISIBLE);
+                    holder.divider.setVisibility(View.VISIBLE);
+                } else {
+                    holder.textInKannada.setVisibility(View.GONE);
+                    holder.divider.setVisibility(View.GONE);
+                }
                 break;
 
         }
@@ -713,6 +744,9 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                 default:
                     textInEng = (TextView) layout.findViewById(R.id.textID);
                     textInKan = (TextView) layout.findViewById(R.id.textInKanID);
+                    exampleButton = (Button) layout.findViewById(R.id.exampleButtonID);
+                    textInKannada = (TextView) layout.findViewById(R.id.textInKannadaId);
+                    divider = layout.findViewById(R.id.dividerID);
                     break;
 
             }

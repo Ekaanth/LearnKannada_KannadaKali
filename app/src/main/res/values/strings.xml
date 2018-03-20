@@ -65,7 +65,7 @@
     <!-- *******************************flexi Conversations menu ENDS here here *******************************-->
 
     <!-- *******************************Category Numbers (ENGLISH) STARTS here *******************************-->
-    <string-array name="numbersEng_array">
+    <string-array name="numbers_content">
         <item>One</item>
         <item>Two</item>
         <item>Three</item>
@@ -96,7 +96,7 @@
     <!-- *******************************Category Numbers (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Numbers (KANNADA) STARTS here *******************************-->
-    <string-array name="numbersKan_array">
+    <string-array name="numbers_content_kannada">
         <item>ondu</item>
         <item>eradu</item>
         <item>mooru</item>
@@ -127,7 +127,7 @@
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Numbers (KANNADA) STARTS here *******************************-->
-    <string-array name="numbersInKan_array">
+    <string-array name="numbers_content_Inkannada">
         <item>ಒಂದು - ೧</item>
         <item>ಎರಡು - ೨</item>
         <item>ಮೂರು - ೩</item>
@@ -158,7 +158,7 @@
     <!-- *******************************Category Numbers (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Alphabets (ENGLISH) STARTS here *******************************-->
-    <string-array name="alphabetsEng_array">
+    <string-array name="alphabets_content">
         <item>a</item>
         <item>aa</item>
         <item>e</item>
@@ -211,7 +211,7 @@
     </string-array>
     <!-- *******************************Category Alphabets (ENGLISH) ENDS here *******************************-->
     <!-- *******************************Category Alphabets (Kannada) STARTS here *******************************-->
-    <string-array name="alphabetsKan_array">
+    <string-array name="alphabets_content_kannada">
         <item>ಅ</item>
         <item>ಆ</item>
         <item>ಇ</item>
@@ -265,7 +265,7 @@
     <!-- *******************************Category Alphabets (Kannada) ENDS here *******************************-->
 
     <!-- *******************************Category Beginner (ENGLISH) STARTS here *******************************-->
-    <string-array name="beginnerEng_array">
+    <string-array name="beginner_content">
         <item>I</item>
         <item>We</item>
         <item>My</item>
@@ -296,7 +296,7 @@
 
 
     <!-- *******************************Category Beginner (KANNADA) STARTS here *******************************-->
-    <string-array name="beginnerKan_array">
+    <string-array name="beginner_content_kannada">
         <item>naanu</item>
         <item>naavu</item>
         <item>nanna</item>
@@ -326,7 +326,7 @@
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Beginner (KANNADA) STARTS here *******************************-->
-    <string-array name="beginnerInKan_array">
+    <string-array name="beginner_content_Inkannada">
         <item>ನಾನು</item>
         <item>ನಾವು</item>
         <item>ನನ್ನ</item>
@@ -356,7 +356,7 @@
     <!-- *******************************Category Beginner (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Greetings (ENGLISH) STARTS here *******************************-->
-    <string-array name="greetingsEng_array">
+    <string-array name="greetings_content">
         <item>Hi(Hello)</item>
         <item>Welcome</item>
         <item>Good Morning</item>
@@ -368,7 +368,7 @@
     <!-- *******************************Category Greetings (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Greetings (ಕನ್ನಡ) STARTS here *******************************-->
-    <string-array name="greetings_array">
+    <string-array name="greetings_content_Inkannada">
         <item>ನಮಸ್ಕಾರ</item>
         <item>ಸುಸ್ವಾಗತ</item>
         <item>ಶುಭೋದಯ</item>
@@ -380,7 +380,7 @@
     <!-- *******************************Category Greetings (ಕನ್ನಡ) ENDS here *******************************-->
 
     <!-- *******************************Category Greetings (KANNADA) STARTS here *******************************-->
-    <string-array name="greetingsKan_array">
+    <string-array name="greetings_content_kannada">
         <item>namaskaara</item>
         <item>suswaagata</item>
         <item>shubhOdaya</item>
@@ -392,7 +392,7 @@
     <!-- *******************************Category Greetings (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Days (ENGLISH) STARTS here *******************************-->
-    <string-array name="daysEng_array">
+    <string-array name="days_content">
         <item>Monday</item>
         <item>Tuesday</item>
         <item>Wednesday</item>
@@ -412,7 +412,7 @@
     <!-- *******************************Category Days (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Days (KANNADA) STARTS here *******************************-->
-    <string-array name="daysKan_array">
+    <string-array name="days_content_kannada">
         <item>sOmavaara</item>
         <item>mangaLavaara</item>
         <item>budhavaara</item>
@@ -432,7 +432,7 @@
     <!-- *******************************Category Days (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Days (KANNADA) STARTS here *******************************-->
-    <string-array name="daysInKan_array">
+    <string-array name="days_content_Inkannada">
         <item>ಸೋಮವಾರ</item>
         <item>ಮಂಗಳವಾರ</item>
         <item>ಬುಧವಾರ</item>
@@ -452,7 +452,7 @@
     <!-- *******************************Category Days (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Time (ENGLISH) STARTS here *******************************-->
-    <string-array name="timeEng_array">
+    <string-array name="time_content">
         <item>Morning</item>
         <item>Afternoon</item>
         <item>Evening</item>
@@ -464,7 +464,7 @@
     <!-- *******************************Category Time (ENGLISH) ENDS here *******************************-->
 
     <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
-    <string-array name="timeKan_array">
+    <string-array name="time_content_kannada">
         <item>beligge</item>
         <item>madhyaana</item>
         <item>sanje</item>
@@ -475,7 +475,7 @@
     </string-array>
 
     <!-- *******************************Category Time (KANNADA) STARTS here *******************************-->
-    <string-array name="timeInKan_array">
+    <string-array name="time_content_Inkannada">
         <item>ಬೆಳಿಗ್ಗೆ</item>
         <item>ಮಧ್ಯಾನ</item>
         <item>ಸಂಜೆ</item>
@@ -486,7 +486,7 @@
     </string-array>
 
     <!-- *******************************Category Directions (ENGLISH) STARTS here *******************************-->
-    <string-array name="directionsEng_array">
+    <string-array name="directions_content">
         <item>Up</item>
         <item>Down</item>
         <item>Left</item>
@@ -504,7 +504,7 @@
     <!-- ******************************* Category Directions (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Directions (KANNADA) STARTS here *******************************-->
-    <string-array name="directionsKan_array">
+    <string-array name="directions_content_kannada">
         <item>mEle</item>
         <item>keLage</item>
         <item>eDagaDe</item>
@@ -522,7 +522,7 @@
     <!-- ******************************* Category Directions (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Directions (KANNADA) STARTS here *******************************-->
-    <string-array name="directionsInKan_array">
+    <string-array name="directions_content_Inkannada">
         <item>ಮೇಲೆ</item>
         <item>ಕೆಳಗೆ</item>
         <item>ಎಡಗಡೆ</item>
@@ -540,7 +540,7 @@
     <!-- ******************************* Category Directions (KANNADA) ENDS here *******************************-->
 
     <!-- *******************************Category Relationships (ENGLISH) STARTS here *******************************-->
-    <string-array name="relationshipsEng_array">
+    <string-array name="relationships_content">
         <item>Family</item>
         <item>Mother</item>
         <item>Father</item>
@@ -563,7 +563,7 @@
     <!-- ******************************* Category Relationships (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Relationships (KANNADA) STARTS here *******************************-->
-    <string-array name="relationshipsKan_array">
+    <string-array name="relationships_content_kannada">
         <item>kuTumba</item>
         <item>amma</item>
         <item>appa</item>
@@ -586,7 +586,7 @@
     <!-- ******************************* Category Relationships (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Relationships (KANNADA) STARTS here *******************************-->
-    <string-array name="relationshipsInKan_array">
+    <string-array name="relationships_content_Inkannada">
         <item>ಕುಟುಂಬ</item>
         <item>ಅಮ್ಮ</item>
         <item>ಅಪ್ಪ</item>
@@ -609,7 +609,7 @@
     <!-- ******************************* Category Relationships (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Colors (ENGLISH) STARTS here *******************************-->
-    <string-array name="colorsEng_array">
+    <string-array name="colors_content">
         <item>color(s)</item>
         <item>Black</item>
         <item>White</item>
@@ -623,7 +623,7 @@
     <!-- ******************************* Category Colors (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Colors (KANNADA) STARTS here *******************************-->
-    <string-array name="colorsKan_array">
+    <string-array name="colors_content_kannada">
         <item>baNNa(galu)</item>
         <item>kappu</item>
         <item>biLi</item>
@@ -637,7 +637,7 @@
     <!-- ******************************* Category Colors (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Colors (KANNADA) STARTS here *******************************-->
-    <string-array name="colorsInKan_array">
+    <string-array name="colors_content_Inkannada">
         <item>ಬಣ್ಣ(ಗಳು)</item>
         <item>ಕಪ್ಪು</item>
         <item>ಬಿಳಿ</item>
@@ -651,7 +651,7 @@
     <!-- ******************************* Category Colors (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Vegetables (ENGLISH) STARTS here *******************************-->
-    <string-array name="vegetablesEng_array">
+    <string-array name="vegetables_content">
         <item>Vegetable(s)</item>
         <item>Onion</item>
         <item>Ladies Finger</item>
@@ -678,7 +678,7 @@
     <!-- ******************************* Category Vegetables (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Vegetables (KANNADA) STARTS here *******************************-->
-    <string-array name="vegetablesKan_array">
+    <string-array name="vegetables_content_kannada">
         <item>tarakaari(gaLu)</item>
         <item>eeruLLi</item>
         <item>benDekaayi</item>
@@ -705,7 +705,7 @@
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Vegetables (KANNADA) STARTS here *******************************-->
-    <string-array name="vegetablesInKan_array">
+    <string-array name="vegetables_content_Inkannada">
         <item>ತರಕಾರಿ(ಗಳು)</item>
         <item>ಈರುಳ್ಳಿ</item>
         <item>ಬೆಂಡೆಕಾಯಿ</item>
@@ -732,7 +732,7 @@
     <!-- ******************************* Category Vegetables (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Fruits (ENGLISH) STARTS here *******************************-->
-    <string-array name="fruitsEng_array">
+    <string-array name="fruits_content">
         <item>Fruits</item>
         <item>Banana</item>
         <item>Apple</item>
@@ -747,7 +747,7 @@
     <!-- ******************************* Category Fruits (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Fruits (KANNADA) STARTS here *******************************-->
-    <string-array name="fruitsKan_array">
+    <string-array name="fruits_content_kannada">
         <item>haNNugaLu</item>
         <item>baale haNNu</item>
         <item>sEbu</item>
@@ -762,7 +762,7 @@
     <!-- ******************************* Category Fruits (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Fruits (KANNADA) STARTS here *******************************-->
-    <string-array name="fruitsInKan_array">
+    <string-array name="fruits_content_Inkannada">
         <item>ಹಣ್ಣುಗಳು</item>
         <item>ಬಾಳೇಹಣ್ಣು</item>
         <item>ಸೇಬು</item>
@@ -777,7 +777,7 @@
     <!-- ******************************* Category Fruits (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Body Parts (ENGLISH) STARTS here *******************************-->
-    <string-array name="body_partsEng_array">
+    <string-array name="body_parts_content">
         <item>Eye(s)</item>
         <item>Ear(s)</item>
         <item>Hand(s)</item>
@@ -800,7 +800,7 @@
     <!-- ******************************* Category Body Parts (ENGLISH) ENDS here *******************************-->
 
     <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
-    <string-array name="body_partsKan_array">
+    <string-array name="body_parts_content_kannada">
         <item>kannu(galu)</item>
         <item>kivi(galu)</item>
         <item>kai(galu)</item>
@@ -823,7 +823,7 @@
     <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
-    <string-array name="body_partsInKan_array">
+    <string-array name="body_partsy_content_Inkannada">
         <item>ಕಣ್ಣು(ಗಳು)</item>
         <item>ಕಿವಿ(ಗಳು)</item>
         <item>ಕೈ(ಗಳು)</item>
@@ -846,7 +846,7 @@
     <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Back to School (ENGLISH) Starts here *******************************-->
-    <string-array name="back_to_schoolEng_array">
+    <string-array name="back_to_school_content">
         <item>School</item>
         <item>Learn</item>
         <item>Lesson</item>
@@ -870,7 +870,7 @@
     </string-array>
     <!-- ******************************* Category Back to School (ENGLISH) Ends here *******************************-->
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
-    <string-array name="back_to_schoolKan_array">
+    <string-array name="back_to_school_content_kannada">
         <item>shaale</item>
         <item>kali</item>
         <item>paaTHa</item>
@@ -895,7 +895,7 @@
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
     <!-- ******************************* Category Back to School (KANNADA) STARTS here *******************************-->
-    <string-array name="back_to_schoolInKan_array">
+    <string-array name="back_to_school_content_Inkannada">
         <item>ಶಾಲೆ</item>
         <item>ಕಲಿ</item>
         <item>ಪಾಠ</item>
@@ -920,7 +920,7 @@
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
     <!-- ******************************* Category Misc (English) starts here *******************************-->
-    <string-array name= "miscEng_array">
+    <string-array name= "misc_content">
         <item>God</item>
         <item>Food</item>
         <item>Water</item>
@@ -934,7 +934,7 @@
     </string-array>
     <!-- ******************************* Category Misc (English) Ends here *******************************-->
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
-    <string-array name= "miscKan_array">
+    <string-array name= "misc_content_kannada">
         <item>dEvaru</item>
         <item>aahaara</item>
         <item>neeru</item>
@@ -950,7 +950,7 @@
     <!-- ******************************* Category Misc (Kannada) Ends here *******************************-->
 
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
-    <string-array name= "miscInKan_array">
+    <string-array name= "misc_content_Inkannada">
         <item>ದೇವರು</item>
         <item>ಆಹಾರ</item>
         <item>ನೀರು</item>
@@ -1954,7 +1954,7 @@
         <item>Owner: kammi madakke agalwa?</item>
         <item>Maid: Naavu ee duddalli jeevana madabeku. Dayavittu artha madikolli</item>
         <item>Owner: sari sari. mundina thingaLu 1st inda ba.</item>
-        <item>Maid: Khanditha. dhanyavada madam.</item>
+        <item>Maid: Khanditha. dhanyavaada madam.</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
@@ -1972,7 +1972,7 @@
         <item>ಮಾಲೀಕರು: ಕಮ್ಮಿ ಮಾಡಕ್ಕೆ ಆಗಲ್ವಾ?</item>
         <item>ಕೆಲಸದವರು: ನಾವು ಈ ದುಡ್ಡಲ್ಲಿ ಜೀವನ ಮಾಡಬೇಕು. ದಯವಿಟ್ಟು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಿ</item>
         <item>ಮಾಲೀಕರು: ಸರಿ ಸರಿ. ಮುಂದಿನ ತಿಂಗಳು ೧ನೇ ತಾರೀಖಿನಿಂದ ಬಾ.</item>
-        <item>ಕೆಲಸದವರು: ಖಂಡಿತ. ಧನ್ಯವಾದಗಳು ಮೇಡಂ</item>
+        <item>ಕೆಲಸದವರು: ಖಂಡಿತ. ಧನ್ಯವಾದ ಮೇಡಂ</item>
     </string-array>
     <!-- ******************************* Conversation with a friend (KANNADA) ENDS here *******************************-->
 
@@ -2005,7 +2005,7 @@
         <item>Owner: Naale habba ide. bEga baa.</item>
         <item>Maid: illa madam. aagalla. namma maneloo pooje ide.</item>
         <item>Owner: sari. ee thingalina sambaLa thogo.</item>
-        <item>Maid: dhanyavada madam. habba da bonus koDtira?</item>
+        <item>Maid: dhanyavaada madam. habba da bonus koDtira?</item>
         <item>Owner: extra duDDu koDalla. Habbakke hosa seere koDtini.</item>
         <item>Maid: sari madam, dhanyavaadagaLu. naale sigoNa.</item>
     </string-array>
@@ -2023,7 +2023,7 @@
         <item>ಮಾಲೀಕರು: ನಾಳೆ ಹಬ್ಬ ಇದೆ. ಬೇಗ ಬಾ.</item>
         <item>ಕೆಲಸದವರು: ಇಲ್ಲ ಮೇಡಂ ಆಗಲ್ಲ, ನಮ್ಮ ಮನೆಯಲ್ಲೂ ಪೂಜೆ ಇದೆ.</item>
         <item>ಮಾಲೀಕರು: ಸರಿ. ಈ ತಿಂಗಳಿನ ಸಂಬಳ ತಗೋ.</item>
-        <item>ಕೆಲಸದವರು: ಧನ್ಯವಾದಗಳು ಮೇಡಂ. ಹಬ್ಬದ ಬೋನಸ್ ಕೊಡ್ತೀರ?</item>
+        <item>ಕೆಲಸದವರು: ಧನ್ಯವಾದ ಮೇಡಂ. ಹಬ್ಬದ ಬೋನಸ್ ಕೊಡ್ತೀರ?</item>
         <item>ಮಾಲೀಕರು: ಎಕ್ಸ್ಟ್ರಾ ದುಡ್ಡು ಕೊಡಲ್ಲ. ಹಬ್ಬಕ್ಕೆ ಸೀರೆ ಕೊಡ್ತೀನಿ.</item>
         <item>ಕೆಲಸದವರು: ಸರಿ ಮೇಡಂ. ಧನ್ಯವಾದಗಳು. ನಾಳೆ ಸಿಗೋಣ.</item>
     </string-array>
