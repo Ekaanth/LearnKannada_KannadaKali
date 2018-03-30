@@ -9,8 +9,10 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/fa_pCardID"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
         android:background="@drawable/ic_sentiment_very_dissatisfied_black_24dp"
         app:cardBackgroundColor="#ffee"
@@ -80,8 +82,10 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/fa_nCardID"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
         app:cardBackgroundColor="#ffee"
         app:cardCornerRadius="20dp">

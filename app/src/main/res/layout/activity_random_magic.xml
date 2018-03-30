@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/yellow"
     android:layout_height="match_parent"
     tools:context="app.learnkannada.com.learnkannadakannadakali.RandomMagicActivity">
 
@@ -22,434 +23,437 @@
                 android:id="@+id/randomVerbID"
                 android:layout_width="120dp"
                 android:layout_height="35dp"
-                android:background="@drawable/buttonshape"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshape_red"
                 android:text="Click here"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.CardView
+                android:id="@+id/rootVerbID"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                app:contentPadding="10dp"
+                android:layout_below="@id/randomVerbID"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/orange_800"
+                app:cardCornerRadius="10dp">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/rootVerbID"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/card_materialYellow"
-                    app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Root Verb"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/rootVerbEngID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - Eng"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Root Verb"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/rootVerbKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Kan"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="4dp"
-                            android:background="@color/card_background" />
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/rootVerbEngID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Eng"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            android:id="@+id/rootVerbKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.CardView
+                android:id="@+id/pastID"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/purple_600"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/pastID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/purple_600"
-                    app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Past Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/pastWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - past"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Past Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="4dp"
-                            android:background="@color/card_background" />
-
-                        <TextView
-                            android:id="@+id/pastWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - past"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/pastWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/presentID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/card_pink"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                    <TextView
+                        android:id="@+id/pastWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - Kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Present Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
+                </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="4dp"
-                            android:background="@color/card_background" />
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            android:id="@+id/presentWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - present"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/presentWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/futureID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/blue_700"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Future Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="4dp"
-                            android:background="@color/card_background" />
-
-                        <TextView
-                            android:id="@+id/futureWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Future"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/futureWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.CardView
+                android:id="@+id/presentID"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_below="@id/randomVerbID"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/card_pink"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/pastContinuousID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/red_600"
-                    app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Present Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/presentWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - present"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="30dp"
-                            android:gravity="center"
-                            android:text="Past Cont Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/presentWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/card_background" />
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/pastContWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - past cont"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            android:id="@+id/pastContWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/futureID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/randomVerbID"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/blue_700"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Future Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/presentContinuousID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/card_green"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/futureWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - Future"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="30dp"
-                            android:gravity="center"
-                            android:text="Present Cont Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/futureWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/card_background" />
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/presentContWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - pres cont"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            android:id="@+id/presentContWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/pastContinuousID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/randomVerbID"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/red_600"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Past Cont Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/futureContinuousID"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/randomVerbID"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/orange_800"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/pastContWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:text="Verb - past cont"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="30dp"
-                            android:gravity="center"
-                            android:text="Future Cont Tense"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/pastContWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/card_background" />
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/futureContWordID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Fut Cont"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
 
-                        <TextView
-                            android:id="@+id/futureContWordInKanID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Verb - Kan"
-                            android:textColor="@color/textColor_light"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:visibility="gone" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/presentContinuousID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/randomVerbID"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/card_green"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
 
-                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Present Cont Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/presentContWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - pres cont"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/presentContWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/futureContinuousID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/randomVerbID"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/orange_800"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Future Cont Tense"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/card_background" />
+
+                    <TextView
+                        android:id="@+id/futureContWordID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Fut Cont"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/futureContWordInKanID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Verb - Kan"
+                        android:textColor="@color/textColor_light"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>
