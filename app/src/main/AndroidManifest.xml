@@ -16,12 +16,12 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".CategoriesActivity"
@@ -45,13 +45,13 @@
         <activity
             android:name=".ChooseCourseActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DayActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".AntonymsActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ExampleActivity"
             android:screenOrientation="portrait" />
@@ -71,6 +71,8 @@
         <activity
             android:name=".AboutusActivity"
             android:hardwareAccelerated="false" />
+        <activity android:name=".QuizHomeActivity" />
+        <activity android:name=".QuizActivity"></activity>
     </application>
 
 </manifest>

@@ -920,7 +920,7 @@
     <!-- ******************************* Category Back to School (KANNADA) Ends here *******************************-->
 
     <!-- ******************************* Category Misc (English) starts here *******************************-->
-    <string-array name= "misc_content">
+    <string-array name="misc_content">
         <item>God</item>
         <item>Food</item>
         <item>Water</item>
@@ -934,7 +934,7 @@
     </string-array>
     <!-- ******************************* Category Misc (English) Ends here *******************************-->
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
-    <string-array name= "misc_content_kannada">
+    <string-array name="misc_content_kannada">
         <item>dEvaru</item>
         <item>aahaara</item>
         <item>neeru</item>
@@ -950,7 +950,7 @@
     <!-- ******************************* Category Misc (Kannada) Ends here *******************************-->
 
     <!-- ******************************* Category Misc (Kannada) Starts here *******************************-->
-    <string-array name= "misc_content_Inkannada">
+    <string-array name="misc_content_Inkannada">
         <item>ದೇವರು</item>
         <item>ಆಹಾರ</item>
         <item>ನೀರು</item>
@@ -1372,7 +1372,8 @@
         <item>ಹೌದು ಅಥವಾ ಇಲ್ಲ</item>
         <item>ಸರಿ ಅಥವಾ ತಪ್ಪು</item>
     </string-array>
-    <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->-
+    <!-- *******************************Day 4 content (KANNADA) ENDS here *******************************-->
+    -
 
     <!-- *******************************Examples for Day 4 STARTS here *******************************-->
     <string name="will_eat_ex"><b><font color="#f20f08">Eng</font></b> : I <i>will eat</i> fruits\n<b><font color="#ffb300">Kan</font></b> : naanu haNNugaLu <i>thinthini</i> (Fruit - haNNu)\n\n ನಾನು ಹಣ್ಣುಗಳನ್ನು ತಿಂತೀನಿ</string>

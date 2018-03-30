@@ -41,7 +41,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
 
-    private Button dayCourse, flexiCourse;
+    private Button dayCourse, flexiCourse, quizCourse;
     private ImageView mic;
 
     private AlertDialog.Builder builder, infoBuilder, infoProvider;
@@ -320,6 +320,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         dayCourse = (Button) findViewById(R.id.dayCourseID);
         flexiCourse = (Button) findViewById(R.id.comfortCourseID);
         mic = (ImageView) findViewById(R.id.micID);
+        quizCourse = (Button) findViewById(R.id.quizCourseID);
 
         builder = new AlertDialog.Builder(this);
         infoBuilder = new AlertDialog.Builder(this);
@@ -330,9 +331,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
         dayCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(ChooseCourseActivity.this,CategoryContentActivity.class);
-                /*intent.putExtra("category","dayCours");
-                intent.putExtra("from","dayCourse");*/
                 startActivity(new Intent(ChooseCourseActivity.this, DaysCourseHomeActivity.class));
                 finish();
                 AnimateVisibility.animateInvisible(flexiCourse);
@@ -346,6 +344,13 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 startActivity(new Intent(ChooseCourseActivity.this, FlexiCourseHomeActivity.class));
                 finish();
                 AnimateVisibility.animateInvisible(dayCourse);
+            }
+        });
+
+        quizCourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ChooseCourseActivity.this, QuizHomeActivity.class));
             }
         });
 
