@@ -32,7 +32,9 @@ public class RandomMagicActivity extends AppCompatActivity {
     private AlertDialog.Builder builder;
     private CardView rootVerbCard, presentCard, pastCard, futureCard, pastContcard, presentContCard, futureContCard;
     private Button randomVerb;
-    private TextView presentWord, pastWord, futureWord, pastContWord, presentContWord, futureContWord, rootVerbEng, rootVerbKan;
+    private TextView presentWord, pastWord, futureWord, pastContWord, presentContWord, futureContWord,
+            rootVerbEng, rootVerbKan, presentWordInKan, pastWordInKan, futureWordInKan, pastContWordInKan,
+            presentContWordInKan, futureContWordInKan;
 
     private int randomInt = 0;
     private boolean firstTimePlay = true;
@@ -74,6 +76,14 @@ public class RandomMagicActivity extends AppCompatActivity {
         futureCard = (CardView) findViewById(R.id.futureID);
         futureContCard = (CardView) findViewById(R.id.futureContinuousID);
 
+        //kan script
+        pastWordInKan = (TextView) findViewById(R.id.pastWordInKanID);
+        presentWordInKan = (TextView) findViewById(R.id.presentWordInKanID);
+        futureWordInKan = (TextView) findViewById(R.id.futureWordInKanID);
+        pastContWordInKan = (TextView) findViewById(R.id.pastContWordInKanID);
+        presentContWordInKan = (TextView) findViewById(R.id.presentContWordInKanID);
+        futureContWordInKan = (TextView) findViewById(R.id.futureContWordInKanID);
+
         String[] randomVerbs = getResources().getStringArray(R.array.randomVerbs);
         String[] randomVerbsKan = getResources().getStringArray(R.array.randomVerbs_kan);
         String[] pastVerbsEng = getResources().getStringArray(R.array.past_eng);
@@ -89,6 +99,14 @@ public class RandomMagicActivity extends AppCompatActivity {
         String[] futureContVerbsEng = getResources().getStringArray(R.array.futureCont_eng);
         final String[] futureContVerbs = getResources().getStringArray(R.array.futureCont_kan);
 
+        //kannada scripts extraction
+        String[] pastVerbsInkan = getResources().getStringArray(R.array.past_Inkan);
+        final String[] presentVerbsInKan = getResources().getStringArray(R.array.present_Inkan);
+        final String[] futureVerbsInKan = getResources().getStringArray(R.array.future_Inkan);
+        String[] pastContVerbsInKan = getResources().getStringArray(R.array.pastCont_Inkan);
+        String[] presentContVerbsInKan = getResources().getStringArray(R.array.presentCont_Inkan);
+        String[] futureContVerbsInKan = getResources().getStringArray(R.array.futureCont_Inkan);
+
         final List<String> randomVerbsList = new ArrayList<>(Arrays.asList(randomVerbs));
         final List<String> randomVerbsList_kan = new ArrayList<>(Arrays.asList(randomVerbsKan));
         final List<String> pastVerbsListEng = new ArrayList<>(Arrays.asList(pastVerbsEng));
@@ -103,6 +121,14 @@ public class RandomMagicActivity extends AppCompatActivity {
         final List<String> presentContVerbsList = new ArrayList<>(Arrays.asList(presentContVerbs));
         final List<String> futureContVerbsListEng = new ArrayList<>(Arrays.asList(futureContVerbsEng));
         final List<String> futureContVerbsList = new ArrayList<>(Arrays.asList(futureContVerbs));
+
+        //Kan Scripts extraction
+        final List<String> pastVerbsListInKan = new ArrayList<>(Arrays.asList(pastVerbsInkan));
+        final List<String> presentVerbsListInKan = new ArrayList<>(Arrays.asList(presentVerbsInKan));
+        final List<String> futureVerbsListInKan = new ArrayList<>(Arrays.asList(futureVerbsInKan));
+        final List<String> pastContVerbsListInKan = new ArrayList<>(Arrays.asList(pastContVerbsInKan));
+        final List<String> presentContVerbsListInKan = new ArrayList<>(Arrays.asList(presentContVerbsInKan));
+        final List<String> futureContVerbsListInKan = new ArrayList<>(Arrays.asList(futureContVerbsInKan));
 
         final Random random = new Random();
 
@@ -126,6 +152,14 @@ public class RandomMagicActivity extends AppCompatActivity {
                         presentContVerbsList.remove(randomInt);
                         futureContVerbsListEng.remove(randomInt);
                         futureContVerbsList.remove(randomInt);
+
+                        //kan scripts
+                        pastVerbsListInKan.remove(randomInt);
+                        presentVerbsListInKan.remove(randomInt);
+                        futureContVerbsListInKan.remove(randomInt);
+                        futureVerbsListInKan.remove(randomInt);
+                        pastContVerbsListInKan.remove(randomInt);
+                        presentContVerbsListInKan.remove(randomInt);
                     }
 
                     //below structure is to help in future if animation needs to be done in order.
@@ -157,6 +191,13 @@ public class RandomMagicActivity extends AppCompatActivity {
                     pastContWord.setText(pastContVerbsList.get(randomInt));
                     presentContWord.setText(presentContVerbsList.get(randomInt));
                     futureContWord.setText(futureContVerbsList.get(randomInt));
+
+                    pastContWordInKan.setText(pastContVerbsListInKan.get(randomInt));
+                    presentContWordInKan.setText(presentContVerbsListInKan.get(randomInt));
+                    futureContWordInKan.setText(futureContVerbsListInKan.get(randomInt));
+                    pastWordInKan.setText(pastVerbsListInKan.get(randomInt));
+                    presentWordInKan.setText(presentVerbsListInKan.get(randomInt));
+                    futureWordInKan.setText(futureVerbsListInKan.get(randomInt));
                     firstTimePlay = false;
 
                 } else {
@@ -189,6 +230,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        presentWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(presentWordInKan);
                     }
                 });
 
@@ -200,6 +243,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        pastWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(pastWordInKan);
                     }
                 });
 
@@ -211,6 +256,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        futureWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(futureWordInKan);
                     }
                 });
 
@@ -222,6 +269,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        pastContWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(pastContWordInKan);
                     }
                 });
 
@@ -233,6 +282,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        presentContWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(presentContWordInKan);
                     }
                 });
 
@@ -244,6 +295,8 @@ public class RandomMagicActivity extends AppCompatActivity {
                             AudioPlayer.playAudio(getApplicationContext(), resourceName);
                         else
                             Toast.makeText(getApplicationContext(), resourceName, Toast.LENGTH_SHORT).show();
+                        futureContWordInKan.setVisibility(View.VISIBLE);
+                        AnimateVisibility.animateVisible(futureContWordInKan);
                     }
                 });
 

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import animation.AnimateVisibility;
 import utils.AudioPlayer;
 import utils.FindResource;
 
@@ -22,7 +23,7 @@ import utils.FindResource;
 
 public class AntonymTopFragment extends Fragment{
 
-    private TextView engWord, kanWord, engAntonym,kanAntonym;
+    private TextView engWord, kanWord, engAntonym,kanAntonym, wordInKan, antonymInKan;
     private CardView pCard, nCard;
     private ImageView happy, sad;
     private boolean clicked = false;
@@ -49,6 +50,8 @@ public class AntonymTopFragment extends Fragment{
         kanAntonym = (TextView)view.findViewById(R.id.antonym_kan_two);
         happy = (ImageView) view.findViewById(R.id.happyID);
         sad = (ImageView) view.findViewById(R.id.sadID);
+        wordInKan = (TextView) view.findViewById(R.id.antonym_Inkan_one);
+        antonymInKan = (TextView) view.findViewById(R.id.antonym_Inkan_two);
 
         pCard = (CardView) view.findViewById(R.id.fa_pCardID);
         nCard = (CardView) view.findViewById(R.id.fa_nCardID);
@@ -60,6 +63,8 @@ public class AntonymTopFragment extends Fragment{
                 String engVoice = engWord.getText().toString().replaceAll(" ","_").replaceAll("\\?","").trim();
                 if(FindResource.rawResourceAvailable(view.getContext(),engVoice))
                     AudioPlayer.playAudio(view.getContext(),engVoice);
+                wordInKan.setVisibility(View.VISIBLE);
+                AnimateVisibility.animateVisible(wordInKan);
             }
         });
 
@@ -70,6 +75,8 @@ public class AntonymTopFragment extends Fragment{
                 String engVoice = engAntonym.getText().toString().replaceAll(" ","_").replaceAll("\\?","").trim();
                 if(FindResource.rawResourceAvailable(view.getContext(),engVoice))
                     AudioPlayer.playAudio(view.getContext(),engVoice);
+                antonymInKan.setVisibility(View.VISIBLE);
+                AnimateVisibility.animateVisible(antonymInKan);
             }
         });
 
@@ -77,11 +84,13 @@ public class AntonymTopFragment extends Fragment{
         kanWord.setVisibility(View.INVISIBLE);
         engAntonym.setVisibility(View.INVISIBLE);
         kanAntonym.setVisibility(View.INVISIBLE);
+        wordInKan.setVisibility(View.GONE);
+        antonymInKan.setVisibility(View.GONE);
         return view;
 
     }
 
-    public void updateValues(final String wordEng, final String antonymEng, String wordKan, String antonymKan){
+    public void updateValues(final String wordEng, final String antonymEng, String wordKan, String antonymKan, String wordInKan, String antonymInKan){
         setColors();
         if(!clicked)
         {
@@ -92,10 +101,14 @@ public class AntonymTopFragment extends Fragment{
         kanWord.setText(wordKan);
         engAntonym.setText(antonymEng.replace("_"," "));
         kanAntonym.setText(antonymKan);
+        this.wordInKan.setText(wordInKan);
+        this.antonymInKan.setText(antonymInKan);
         engWord.setVisibility(View.VISIBLE);
         kanWord.setVisibility(View.VISIBLE);
         engAntonym.setVisibility(View.VISIBLE);
         kanAntonym.setVisibility(View.VISIBLE);
+        this.wordInKan.setVisibility(View.GONE);
+        this.antonymInKan.setVisibility(View.GONE);
         clicked = true;
         /*leftSpeaker.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,7 @@
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
         android:background="@drawable/ic_sentiment_very_dissatisfied_black_24dp"
         app:cardBackgroundColor="#ffee"
-        app:cardCornerRadius="40dp">
+        app:cardCornerRadius="20dp">
 
         <ImageView
             android:id="@+id/happyID"
@@ -41,12 +41,26 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFEE" />
+
             <TextView
                 android:id="@+id/antonym_kan_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/antonym_Inkan_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:textColor="@color/textColor_light"
                 android:textSize="17sp" />
 
@@ -70,7 +84,7 @@
         android:layout_height="140dp"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
         app:cardBackgroundColor="#ffee"
-        app:cardCornerRadius="40dp">
+        app:cardCornerRadius="20dp">
 
         <ImageView
             android:id="@+id/sadID"
@@ -97,12 +111,26 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFEE" />
+
             <TextView
                 android:id="@+id/antonym_kan_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textColor_light"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/antonym_Inkan_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:textColor="@color/textColor_light"
                 android:textSize="17sp" />
 

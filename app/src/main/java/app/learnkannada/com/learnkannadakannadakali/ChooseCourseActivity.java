@@ -109,8 +109,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.rateID)
-                {
+                if (item.getItemId() == R.id.rateID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
@@ -127,8 +126,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     }
                     Toast.makeText(getApplicationContext(), "Please review us on Play-Store", Toast.LENGTH_SHORT).show();
                     return true;
-                } else if (item.getItemId() == R.id.shareAppID)
-                {
+                }
+                else if (item.getItemId() == R.id.shareAppID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     String mimeType = "text/plain";
                     String shareText = "Hey there, \n\n Check out this nifty app which can help you ace spoken " +
@@ -147,8 +146,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .startChooser();
                     Toast.makeText(getApplicationContext(),"Thanks for the love",Toast.LENGTH_SHORT).show();
                     return true;
-                } else if (item.getItemId() == R.id.aboutAppID)
-                {
+                }
+                else if (item.getItemId() == R.id.aboutAppID) {
                     dialog.setTitle("About the app")
                             .setMessage("-- Kannada Kali app is being developed by \"HithAM Creations\", a team of two passionate developers." +
                                     "\n-- The app is exclusively developed for people who want to learn \"Spoken Kannada\"" +
@@ -202,11 +201,13 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
-                } else if (item.getItemId() == R.id.aboutUsID) {
+                }
+                else if (item.getItemId() == R.id.aboutUsID) {
                     startActivity(new Intent(ChooseCourseActivity.this, AboutusActivity.class));
                     finish();
                     return true;
-                } else if (item.getItemId() == R.id.disclaimerID) {
+                }
+                else if (item.getItemId() == R.id.disclaimerID) {
                     dialog.setTitle("Disclaimer")
                             .setMessage("-- This is a FREE app."
                                     + "\n-- \"10 Days Course\" has been designed to help people learn \"Basic Spoken " +
@@ -228,7 +229,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     return true;
-                } else if (item.getItemId() == R.id.thumbRuleID) {
+                }
+                else if (item.getItemId() == R.id.thumbRuleID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     dialog.setTitle(Constants.THUMB_RULE)
                             .setMessage("-- Always try to translate given English sentences to your mother tongue first and " +
@@ -239,7 +241,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .setIcon(R.drawable.ic_thumb_up_black_24dp)
                             .create().show();
                     return true;
-                } else if (item.getItemId() == R.id.facebookID) {
+                }
+                else if (item.getItemId() == R.id.facebookID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     Intent facebookAppIntent;
                     try {
@@ -251,7 +254,8 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     }
                     Toast.makeText(getApplicationContext(), "Please follow and share our page", Toast.LENGTH_LONG).show();
                     return true;
-                } else if (item.getItemId() == R.id.whatsappID) {
+                }
+                else if (item.getItemId() == R.id.whatsappID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     builder.setTitle("Join Whatsapp forum")
                             .setMessage("Are you sure to join Whatsapp Forum?")
@@ -283,8 +287,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
 
                     return true;
                 }
-                else if(item.getItemId() == R.id.youtubeID)
-                {
+                else if(item.getItemId() == R.id.youtubeID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     Uri uri = Uri.parse("https://www.youtube.com/channel/UCizTKN-4GkCI1SrdiNFcweg");
                     Intent intent = new Intent(Intent.ACTION_VIEW,uri);
@@ -334,16 +337,17 @@ public class ChooseCourseActivity extends AppCompatActivity {
                 startActivity(new Intent(ChooseCourseActivity.this, DaysCourseHomeActivity.class));
                 finish();
                 AnimateVisibility.animateInvisible(flexiCourse);
+                AnimateVisibility.animateInvisible(quizCourse);
             }
         });
 
         flexiCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(),"Coming soon...",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(ChooseCourseActivity.this, FlexiCourseHomeActivity.class));
                 finish();
                 AnimateVisibility.animateInvisible(dayCourse);
+                AnimateVisibility.animateInvisible(quizCourse);
             }
         });
 
@@ -351,13 +355,15 @@ public class ChooseCourseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ChooseCourseActivity.this, QuizHomeActivity.class));
+                finish();
+                AnimateVisibility.animateInvisible(flexiCourse);
+                AnimateVisibility.animateInvisible(dayCourse);
             }
         });
 
         mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getApplicationContext(),"Mic",Toast.LENGTH_SHORT).show();
                 promptSpeechInput();
             }
         });
@@ -411,24 +417,6 @@ public class ChooseCourseActivity extends AppCompatActivity {
             }
 
         }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("Log_ChooseCourse","onPause()");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("Log_ChooseCourse","onResume");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("Log_ChooseCourse","onStart");
     }
 
     private void handleSpokenWords(String s) {

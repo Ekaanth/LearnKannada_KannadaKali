@@ -34,15 +34,20 @@ public class AntonymsActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String wordEng = intent.getStringExtra(Constants.WORDS);
             String antonymEng = intent.getStringExtra(Constants.ANTONYMS);
-            String wordKan, antonymKan;
+            String wordKan, antonymKan, wordInkan, antonymInKan;
 
             String[] wordKanArray = getResources().getStringArray(R.array.pWords_array_kan);
             String[] antonymKanArray = getResources().getStringArray(R.array.nWords_array_kan);
+            String[] wordInKanArray = getResources().getStringArray(R.array.pWords_array_Inkan);
+            String[] antonymInKanArray = getResources().getStringArray(R.array.nWords_array_Inkan);
+
             wordKan = wordKanArray[word.indexOf(wordEng)];
             antonymKan = antonymKanArray[antonym.indexOf(antonymEng)];
+            wordInkan = wordInKanArray[word.indexOf(wordEng)];
+            antonymInKan = antonymInKanArray[antonym.indexOf(antonymEng)];
 
             AntonymTopFragment fr = (AntonymTopFragment) getFragmentManager().findFragmentById(R.id.fr_id);
-            fr.updateValues(wordEng, antonymEng, wordKan, antonymKan);
+            fr.updateValues(wordEng, antonymEng, wordKan, antonymKan, wordInkan, antonymInKan);
         }
     };
     private ListViewAdapter adapter;
