@@ -2,9 +2,12 @@ package app.learnkannada.com.learnkannadakannadakali;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -34,6 +37,13 @@ public class QuizHomeActivity extends AppCompatActivity {
         intermedProgressTextView = (TextView) findViewById(R.id.intermedProgressTextID);
         diffProgressBar = (ProgressBar) findViewById(R.id.diffProgressBarID);
         diffProgressTextView = (TextView) findViewById(R.id.diffProgressTextID);
+
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar!=null)
+        {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle("Quizzes");
+        }
 
         loadProgress();
 
@@ -91,5 +101,15 @@ public class QuizHomeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         loadProgress();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home)
+        {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

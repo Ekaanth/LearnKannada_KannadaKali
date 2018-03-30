@@ -9,11 +9,13 @@ import android.graphics.PorterDuff;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -69,6 +71,13 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
 
         //initializing all the views
         initViews();
+
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar!=null)
+        {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle("Quiz");
+        }
 
         //checking and updating nextButton status
         setNextButtonStatus(nextButton.isEnabled());
@@ -419,4 +428,34 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onSaveInstanceState(outState);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home)
+        {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(questionsAttended!=listOfQuestions.size())
+        {
+            builder = new AlertDialog.Builder(this);
+            builder.setTitle("Warning")
+                    .setMessage("Your quiz progress will be discarded!")
+                    .setPositiveButton("Continue",null)
+                    .setNegativeButton("No Problem", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            QuizActivity.super.onBackPressed();
+                        }
+                    })
+                    .setIcon(R.drawable.ic_error_black_24dp)
+                    .create().show();
+            return;
+        }
+        super.onBackPressed();
+    }
 }

@@ -71,8 +71,12 @@
         <activity
             android:name=".AboutusActivity"
             android:hardwareAccelerated="false" />
-        <activity android:name=".QuizHomeActivity" />
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizHomeActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ChooseCourseActivity"/>
+        <activity android:name=".QuizActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".QuizHomeActivity"></activity>
     </application>
 
 </manifest>
