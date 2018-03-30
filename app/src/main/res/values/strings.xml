@@ -823,7 +823,7 @@
     <!-- ******************************* Category Body Parts (KANNADA) ENDS here *******************************-->
 
     <!-- ******************************* Category Body Parts (KANNADA) STARTS here *******************************-->
-    <string-array name="body_partsy_content_Inkannada">
+    <string-array name="body_parts_content_Inkannada">
         <item>ಕಣ್ಣು(ಗಳು)</item>
         <item>ಕಿವಿ(ಗಳು)</item>
         <item>ಕೈ(ಗಳು)</item>

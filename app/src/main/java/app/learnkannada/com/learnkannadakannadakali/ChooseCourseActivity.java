@@ -255,7 +255,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please follow and share our page", Toast.LENGTH_LONG).show();
                     return true;
                 }
-                else if (item.getItemId() == R.id.whatsappID) {
+                /*else if (item.getItemId() == R.id.whatsappID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     builder.setTitle("Join Whatsapp forum")
                             .setMessage("Are you sure to join Whatsapp Forum?")
@@ -286,7 +286,7 @@ public class ChooseCourseActivity extends AppCompatActivity {
                             .create().show();
 
                     return true;
-                }
+                }*/
                 else if(item.getItemId() == R.id.youtubeID) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     Uri uri = Uri.parse("https://www.youtube.com/channel/UCizTKN-4GkCI1SrdiNFcweg");

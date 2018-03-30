@@ -48,12 +48,12 @@
                 android:orderInCategory="100"
                 />
 
-            <item
+            <!--<item
                 android:title="Join Forum"
                 android:id="@+id/whatsappID"
                 android:icon="@drawable/whatsapp"
                 android:orderInCategory="100"
-                app:showAsAction="collapseActionView"/>
+                app:showAsAction="collapseActionView"/>-->
 
             <item
                 android:title="@string/subscribe"

@@ -103,7 +103,7 @@ public class RandomMagicActivity extends AppCompatActivity {
         String[] pastVerbsInkan = getResources().getStringArray(R.array.past_Inkan);
         final String[] presentVerbsInKan = getResources().getStringArray(R.array.present_Inkan);
         final String[] futureVerbsInKan = getResources().getStringArray(R.array.future_Inkan);
-        String[] pastContVerbsInKan = getResources().getStringArray(R.array.pastCont_Inkan);
+        final String[] pastContVerbsInKan = getResources().getStringArray(R.array.pastCont_Inkan);
         String[] presentContVerbsInKan = getResources().getStringArray(R.array.presentCont_Inkan);
         String[] futureContVerbsInKan = getResources().getStringArray(R.array.futureCont_Inkan);
 
@@ -135,6 +135,9 @@ public class RandomMagicActivity extends AppCompatActivity {
         randomVerb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                removeKannadaScripts();
+
                 if (randomVerbsList.size() != 1) {
 
                     if (!firstTimePlay) {
@@ -324,6 +327,15 @@ public class RandomMagicActivity extends AppCompatActivity {
             }*/
         });
 
+    }
+
+    private void removeKannadaScripts() {
+        pastWordInKan.setVisibility(View.GONE);
+        presentWordInKan.setVisibility(View.GONE);
+        futureWordInKan.setVisibility(View.GONE);
+        pastContWordInKan.setVisibility(View.GONE);
+        presentContWordInKan.setVisibility(View.GONE);
+        futureContWordInKan.setVisibility(View.GONE);
     }
 
     @Override
