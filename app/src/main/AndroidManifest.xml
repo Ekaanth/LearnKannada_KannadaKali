@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.learnkannada.com.learnkannadakannadakali">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <!-- Example: Sets all OneSignal notification's accent color to Green by default. -->
     <!-- Color format is in ARGB. -->
     <meta-data
