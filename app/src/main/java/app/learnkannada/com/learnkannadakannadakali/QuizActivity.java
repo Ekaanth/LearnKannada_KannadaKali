@@ -1,23 +1,32 @@
 package app.learnkannada.com.learnkannadakannadakali;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,9 +35,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import app.learnkannada.com.learnkannadakannadakali.model.Question;
@@ -41,14 +53,14 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
     private static final String LEVEL_DIFFICULT = "difficult";
     private static final String LEVEL = "level";
 
-    private static final String CURRENT_INDEX_KEY = "current-index",
-            CORRECT_ANSWERS_COUNT = "correct-answers";
+    private static final String CURRENT_INDEX_KEY = "current-index", CORRECT_ANSWERS_COUNT = "correct-answers";
     private static final String PREF_EASY = "pref-level-easy";
     private static final String PREF_EASY_SETS_COMPLETED = "pref-easy-sets-completed";
     private static final String PREF_INTERMED_SETS_COMPLETED = "pref-intermed-sets-completed";
     private static final String PREF_DIFF_SETS_COMPLETED = "pref-diff-sets-completed";
     private static final String LEVEL_KEY = "level-key";
     private static final String PREF_SET_KEY = "set-key";
+    private static final String THIS_ACTIVITY = "QuizActivity.class";
 
     private CardView optionOneCard, optionTwoCard, optionThreeCard, optionFourCard;
     private TextView optionOneTextView, optionTwoTextView, optionThreeTextView, optionFourTextView, questionTextView;
@@ -57,9 +69,12 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
     private AlertDialog.Builder builder;
     private SharedPreferences levelPrefs;
 
-    private boolean chosenAnswer = false;
+    final Bundle loaderBundle = new Bundle();
+    final LoaderManager loaderManager = getSupportLoaderManager();
+    private boolean chosenAnswer = false, dataLoaded = false;
     private int questionsAttended = 0, questionsAnsweredCorrect = 0;
-    private List<Question> listOfQuestions;
+    public static List<Question> listOfQuestions;
+    private static ArrayList<String> listOfAnswers;
     private int questionsSetCompleted = 0;
     private String level;
 
@@ -85,8 +100,8 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         if (savedInstanceState != null) {
             questionsAttended = savedInstanceState.getInt(CURRENT_INDEX_KEY);
             questionsAnsweredCorrect = savedInstanceState.getInt(CORRECT_ANSWERS_COUNT);
-            Log.d("QuizActivity.class", "CURRENT INDEX " + questionsAttended + " is received in onCreate()");
-            Log.d("QuizActivity.class", "CORRECT ANSWERS COUNT " + questionsAnsweredCorrect +
+            Log.d(THIS_ACTIVITY, "CURRENT INDEX " + questionsAttended + " is received in onCreate()");
+            Log.d(THIS_ACTIVITY, "CORRECT ANSWERS COUNT " + questionsAnsweredCorrect +
                     "is received in onCreate()");
         }
 
@@ -127,7 +142,6 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         questionsSetCompleted = levelPrefs.getInt(PREF_SET_KEY, 0);
 
         //below section is triggering the Loader to load data.
-        final LoaderManager loaderManager = getSupportLoaderManager();
         Loader<String> quizFileLoader = loaderManager.getLoader(QUIZ_LOADER_ID);
 
         if (quizFileLoader == null) {
@@ -141,7 +155,10 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         optionOneCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(questionsAttended==listOfQuestions.size())
+                    return;
                 chosenAnswer = checkAndValidateAnswer(optionOneTextView.getText().toString(), questionsAttended);
+                listOfAnswers.add(questionsAttended, optionOneTextView.getText().toString());
                 updateCardColors(optionOneCard);
             }
         });
@@ -149,15 +166,21 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         optionTwoCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(questionsAttended==listOfQuestions.size())
+                    return;
                 chosenAnswer = checkAndValidateAnswer(optionTwoTextView.getText().toString(), questionsAttended);
                 updateCardColors(optionTwoCard);
+                listOfAnswers.add(questionsAttended, optionTwoTextView.getText().toString());
             }
         });
 
         optionThreeCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(questionsAttended==listOfQuestions.size())
+                    return;
                 chosenAnswer = checkAndValidateAnswer(optionThreeTextView.getText().toString(), questionsAttended);
+                listOfAnswers.add(questionsAttended, optionThreeTextView.getText().toString());
                 updateCardColors(optionThreeCard);
             }
         });
@@ -165,7 +188,10 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         optionFourCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(questionsAttended==listOfQuestions.size())
+                    return;
                 chosenAnswer = checkAndValidateAnswer(optionFourTextView.getText().toString(), questionsAttended);
+                listOfAnswers.add(questionsAttended, optionFourTextView.getText().toString());
                 updateCardColors(optionFourCard);
             }
         });
@@ -178,34 +204,7 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
                 Toast.makeText(getApplicationContext(), "Answered Correct: " + questionsAnsweredCorrect, Toast.LENGTH_SHORT).show();
                 questionsAttended++;
                 if (questionsAttended == listOfQuestions.size()) {
-                    questionsSetCompleted++;
-                    builder.setTitle("Quiz completed!")
-                            .setMessage("You have answered " + questionsAnsweredCorrect +
-                                    " right! Congratulations!")
-                            .setNegativeButton("Thanks!", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    startActivity(new Intent(QuizActivity.this, QuizHomeActivity.class));
-                                }
-                            });
-                    if (questionsSetCompleted != 3)
-                        builder.setPositiveButton("Try new set", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                startNewSet(loaderManager, loaderBundle);
-                            }
-                        });
-                    else
-                        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                startActivity(new Intent(QuizActivity.this, QuizHomeActivity.class));
-                            }
-                        });
-                    builder.create().show();
-                    SharedPreferences.Editor editor = levelPrefs.edit();
-                    editor.putInt(PREF_SET_KEY, questionsSetCompleted);
-                    editor.apply();
+                    showResultDialog((questionsAnsweredCorrect * 100) / listOfQuestions.size());
                     return;
                 }
                 updateCount();
@@ -217,12 +216,221 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
 
     }
 
+    private void showResultDialog(int score) {
+        View view= LayoutInflater.from(getApplicationContext()).inflate(R.layout.quiz_result_dialogue,null);
+        TextView resultHeader = (TextView) view.findViewById(R.id.resultHeaderID);
+        TextView result = (TextView) view.findViewById(R.id.resultTextID);
+        ImageView tryAgain= (ImageView) view.findViewById(R.id.quizAgainID);
+        ImageView tryNext = (ImageView) view.findViewById(R.id.quizNextID);
+        Button exitQuiz = (Button) view.findViewById(R.id.quizExitID);
+        ImageView shareQuiz = (ImageView) view.findViewById(R.id.quizShareID);
+        ImageView reviewQuiz = (ImageView) view.findViewById(R.id.reviewQuizID);
+        TextView shareText = (TextView) view.findViewById(R.id.shareTextID);
+        TextView reviewText = (TextView) view.findViewById(R.id.reviewTextID);
+        TextView retryText = (TextView) view.findViewById(R.id.retryTextID);
+        TextView tryNextText= (TextView) view.findViewById(R.id.tryNextTextID);
+        ProgressBar resultProgressBar = (ProgressBar) view.findViewById(R.id.resultprogressBarID);
+
+        result.setText(score + "%");
+        resultProgressBar.setIndeterminate(false);
+        resultProgressBar.setMax(100);
+        resultProgressBar.setProgress(score);
+
+        if (score <= 50) {
+            resultHeader.setText("Too bad..Please try again");
+            tryNext.setVisibility(View.GONE);
+            tryNextText.setVisibility(View.GONE);
+            tryAgain.setVisibility(View.VISIBLE);
+            retryText.setVisibility(View.VISIBLE);
+        }
+        else if(score>50 && score<80 )
+        {
+            resultHeader.setText("Not bad! You can do better....");
+            tryNext.setVisibility(View.VISIBLE);
+            tryNextText.setVisibility(View.VISIBLE);
+            tryAgain.setVisibility(View.VISIBLE);
+            retryText.setVisibility(View.VISIBLE);
+        }
+        else if(score>=80 && score!=100)
+        {
+            resultHeader.setText("Well Done! Almost there...");
+            tryNext.setVisibility(View.VISIBLE);
+            tryNextText.setVisibility(View.VISIBLE);
+            tryAgain.setVisibility(View.VISIBLE);
+            retryText.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            resultHeader.setText("You aced it!!..");
+            tryNext.setVisibility(View.VISIBLE);
+            tryNextText.setVisibility(View.VISIBLE);
+            tryAgain.setVisibility(View.GONE);
+            retryText.setVisibility(View.GONE);
+            reviewQuiz.setVisibility(View.GONE);
+            reviewText.setVisibility(View.GONE);
+        }
+        Toast.makeText(view.getContext(), questionsSetCompleted + "", Toast.LENGTH_SHORT).show();
+        if (questionsSetCompleted == 2) {
+            if (score == 100) {
+                tryAgain.setVisibility(View.GONE);
+                retryText.setVisibility(View.GONE);
+                tryNext.setVisibility(View.GONE);
+                tryNextText.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                tryNext.setVisibility(View.GONE);
+                tryNextText.setVisibility(View.GONE);
+            }
+        }
+        final AlertDialog alertDialog;
+        builder.setView(view).setCancelable(false);
+        alertDialog = builder.create();
+        alertDialog.show();
+
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = levelPrefs.edit();
+                editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                editor.apply();
+                setNextButtonStatus(false);
+                alertDialog.dismiss();
+                startNewSet(loaderManager, loaderBundle);
+
+
+            }
+        });
+        tryNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questionsSetCompleted++;
+                SharedPreferences.Editor editor = levelPrefs.edit();
+                editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                editor.apply();
+                setNextButtonStatus(false);
+                Toast.makeText(view.getContext(), questionsSetCompleted + "", Toast.LENGTH_SHORT).show();
+                alertDialog.dismiss();
+                startNewSet(loaderManager, loaderBundle);
+            }
+        });
+        exitQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(((questionsAnsweredCorrect*100)/listOfQuestions.size())>50)
+                    questionsSetCompleted++;
+                alertDialog.dismiss();
+                SharedPreferences.Editor editor = levelPrefs.edit();
+                editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                editor.apply();
+                setNextButtonStatus(false);
+                Intent i = new Intent(view.getContext(), QuizHomeActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        reviewQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+                int marks = (questionsAnsweredCorrect * 100) / listOfQuestions.size();
+                setNextButtonStatus(false);
+                Intent i = new Intent(QuizActivity.this, ReviewActivity.class);
+                i.putStringArrayListExtra("chosenAnswerslist", listOfAnswers);
+                i.putExtra("score", marks);
+                startActivityForResult(i, 2);
+            }
+        });
+
+        shareQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shareResult((questionsAnsweredCorrect * 100) / listOfQuestions.size());
+            }
+        });
+
+    }
+
+    private void shareResult(int result) {
+        View certificateView = getLayoutInflater().inflate(R.layout.layout_certificate, null);
+        TextView userNameTextView = (TextView) certificateView.findViewById(R.id.userNameTextView);
+        String userName = getString(R.string.user_name, "Mr");
+        userNameTextView.setText(userName);
+        String certBody = getString(R.string.certificateText, "EASY", result + "%");
+        TextView certBodyTextView = (TextView) certificateView.findViewById(R.id.certificateBodyTextView);
+        certBodyTextView.setText(certBody);
+        Bitmap screenShotBitMap = getScreenShot(certificateView);
+        String currentTimeStamp = (String) DateFormat.format("MMddyyhhmmss", new Date().getTime());
+        storeAndShare(screenShotBitMap, "LearnKannadaSmartapp_" + currentTimeStamp + ".jpg", getString(R.string.resultShareBody));
+    }
+
+    private Bitmap getScreenShot(View view) {
+        Log.d(THIS_ACTIVITY, "getScreenShot()");
+        View screenView = view.getRootView();
+        screenView.setDrawingCacheEnabled(true);
+        screenView.buildDrawingCache();
+        Bitmap bitmap;
+        if (screenView.getDrawingCache() != null)
+            bitmap = Bitmap.createBitmap(screenView.getDrawingCache());
+        else
+            bitmap = loadLargeBitmapFromView(screenView);
+        screenView.setDrawingCacheEnabled(false);
+        return bitmap;
+    }
+
+    public static Bitmap loadLargeBitmapFromView(View v) {
+        int spec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        v.measure(spec, spec);
+        v.layout(0, 0, v.getMeasuredWidth(), v.getMeasuredHeight());
+        Bitmap b = Bitmap.createBitmap(v.getMeasuredWidth(), v.getMeasuredHeight(), Bitmap.Config.RGB_565);
+        Canvas c = new Canvas(b);
+        v.draw(c);
+        return b;
+    }
+
+    public void storeAndShare(Bitmap bm, String fileName, String message) {
+        Log.d(THIS_ACTIVITY, "storeAndShare()");
+        final String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/QuizAppScreenshots";
+        File dir = new File(dirPath);
+        if (!dir.exists())
+            dir.mkdirs();
+        File file = new File(dirPath, fileName);
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bm.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+            shareImage(file, message);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void shareImage(File file, String message) {
+        Log.d(THIS_ACTIVITY, "shareImage()");
+        Uri uri = Uri.fromFile(file);
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.setType("image/*");
+
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Share Screenshot Title");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, message);
+        intent.putExtra(Intent.EXTRA_STREAM, uri);
+        try {
+            startActivity(Intent.createChooser(intent, "Share Screenshot"));
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(QuizActivity.this, "No App Available", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
     private void startNewSet(LoaderManager loaderManager, Bundle savedInstanceState) {
         resetCardColors();
         listOfQuestions = new ArrayList<>();
         questionsAttended = 0;
         questionsAnsweredCorrect = 0;
         questionsSetCompleted = levelPrefs.getInt(PREF_SET_KEY, 0);
+        dataLoaded = false;
         loaderManager.restartLoader(QUIZ_LOADER_ID, savedInstanceState, QuizActivity.this);
     }
 
@@ -345,7 +553,8 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
                 super.onStartLoading();
                 if (bundle == null)
                     return;
-                forceLoad();
+                if (!dataLoaded)
+                    forceLoad();
             }
         };
     }
@@ -386,11 +595,11 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 Log.v("QuizActivity.class", "Finished loading quiz data to ArrayList");
             }
-
+            listOfAnswers = new ArrayList<>(listOfQuestions.size());
             //setting first question values to cards textViews.
             loadQuestionToCards(questionsAttended);
             updateCount();
-
+            dataLoaded = true;
             Log.v("QuizActivity.class", "Finished setting first question on UI");
 
         } catch (JSONException e) {
@@ -426,6 +635,54 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         outState.putInt(CORRECT_ANSWERS_COUNT, currentCorrectAnswersGiven);
 
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        int score = data.getIntExtra("score", 0);
+
+        if (requestCode == 2 && resultCode == 2) {
+
+            String action = data.getStringExtra("action");
+
+            if (action.equalsIgnoreCase("exit")) {
+                if (score > 50)
+                    questionsSetCompleted++;
+                SharedPreferences.Editor editor = levelPrefs.edit();
+                editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                editor.apply();
+                setNextButtonStatus(false);
+                Intent i = new Intent(QuizActivity.this, QuizHomeActivity.class);
+                startActivity(i);
+                finish();
+            } else if (action.equalsIgnoreCase("tryAgain")) {
+                SharedPreferences.Editor editor = levelPrefs.edit();
+                editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                editor.apply();
+                setNextButtonStatus(false);
+                startNewSet(loaderManager, loaderBundle);
+            } else if (action.equalsIgnoreCase("tryNext")) {
+                if (questionsSetCompleted == 2) {
+                    questionsSetCompleted++;
+                    Toast.makeText(this, "You have completed all the sets.", Toast.LENGTH_SHORT).show();
+                    SharedPreferences.Editor editor = levelPrefs.edit();
+                    editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                    editor.apply();
+                    setNextButtonStatus(false);
+                    Intent i = new Intent(QuizActivity.this, QuizHomeActivity.class);
+                    startActivity(i);
+                    finish();
+                } else {
+                    questionsSetCompleted++;
+                    SharedPreferences.Editor editor = levelPrefs.edit();
+                    editor.putInt(PREF_SET_KEY, questionsSetCompleted);
+                    editor.apply();
+                    setNextButtonStatus(false);
+                    startNewSet(loaderManager, loaderBundle);
+                }
+            }
+        }
     }
 
     @Override

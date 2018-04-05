@@ -31,7 +31,7 @@ import app.learnkannada.com.learnkannadakannadakali.DayActivity;
 import app.learnkannada.com.learnkannadakannadakali.R;
 import utils.FindResource;
 
-public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable {
+public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> implements Filterable{
 
     private List<String> values, kanValues, mFilteredList, mFilteredKanList, mKanScripts;
     private Context context;
@@ -321,7 +321,6 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHo
                     holder.divider.setVisibility(View.GONE);
                 }
                 break;
-
         }
 
         /*if (mCategory.equals(Constants.FLEXI_WORDS)) {

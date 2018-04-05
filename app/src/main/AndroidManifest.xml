@@ -38,6 +38,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -70,14 +71,14 @@
         <activity
             android:name=".AboutusActivity"
             android:hardwareAccelerated="false" />
-
-        <activity android:name=".QuizHomeActivity"
+        <activity
+            android:name=".QuizHomeActivity"
             android:launchMode="singleTop" />
-
-        <activity android:name=".QuizActivity"
+        <activity
+            android:name=".QuizActivity"
             android:launchMode="singleTop"
-            android:parentActivityName=".QuizHomeActivity"/>
-
+            android:parentActivityName=".QuizHomeActivity" />
+        <activity android:name=".ReviewActivity"></activity>
     </application>
 
 </manifest>
