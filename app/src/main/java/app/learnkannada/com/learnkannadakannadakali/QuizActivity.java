@@ -17,6 +17,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -380,6 +381,7 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         TextView certBodyTextView = (TextView) certificateView.findViewById(R.id.certificateBodyTextView);
         certBodyTextView.setText(certBody);
         Bitmap screenShotBitMap = getScreenShot(certificateView);
+        Log.v(THIS_ACTIVITY,"bitmap created");
         String currentTimeStamp = (String) DateFormat.format("MMddyyhhmmss", new Date().getTime());
         storeAndShare(screenShotBitMap, "LearnKannadaSmartapp_" + currentTimeStamp + ".jpg", getString(R.string.resultShareBody));
     }
@@ -428,7 +430,9 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private void shareImage(File file, String message) {
         Log.d(THIS_ACTIVITY, "shareImage()");
-        Uri uri = Uri.fromFile(file);
+        Uri uri = FileProvider.getUriForFile(QuizActivity.this,
+                BuildConfig.APPLICATION_ID + ".provider",
+                file);
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);
         intent.setType("image/*");
