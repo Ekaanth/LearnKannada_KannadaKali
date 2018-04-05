@@ -223,6 +223,7 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     private void showResultDialog(int score) {
+        //TODO increment before triggering this dialog and decrement in places required
         View view= LayoutInflater.from(getApplicationContext()).inflate(R.layout.quiz_result_dialogue,null);
         TextView resultHeader = (TextView) view.findViewById(R.id.resultHeaderID);
         TextView result = (TextView) view.findViewById(R.id.resultTextID);
@@ -231,7 +232,6 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         Button exitQuiz = (Button) view.findViewById(R.id.quizExitID);
         ImageView shareQuiz = (ImageView) view.findViewById(R.id.quizShareID);
         ImageView reviewQuiz = (ImageView) view.findViewById(R.id.reviewQuizID);
-        TextView shareText = (TextView) view.findViewById(R.id.shareTextID);
         TextView reviewText = (TextView) view.findViewById(R.id.reviewTextID);
         TextView retryText = (TextView) view.findViewById(R.id.retryTextID);
         TextView tryNextText= (TextView) view.findViewById(R.id.tryNextTextID);
@@ -243,6 +243,7 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
         resultProgressBar.setProgress(score);
 
         if (score <= 50) {
+            //TODO reframe strings used in below conditions and use it from strings.xml
             resultHeader.setText("Too bad..Please try again");
             tryNext.setVisibility(View.GONE);
             tryNextText.setVisibility(View.GONE);
@@ -275,13 +276,13 @@ public class QuizActivity extends AppCompatActivity implements LoaderManager.Loa
             reviewQuiz.setVisibility(View.GONE);
             reviewText.setVisibility(View.GONE);
         }
-        Toast.makeText(view.getContext(), questionsSetCompleted + "", Toast.LENGTH_SHORT).show();
         if (questionsSetCompleted == 2) {
+            //TODO need to replace hardcoded value in the above condition
             if (score == 100) {
                 tryAgain.setVisibility(View.GONE);
                 retryText.setVisibility(View.GONE);
                 tryNext.setVisibility(View.GONE);
-                tryNextText.setVisibility(View.VISIBLE);
+                tryNextText.setVisibility(View.GONE);
             }
             else
             {

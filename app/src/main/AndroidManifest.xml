@@ -82,15 +82,19 @@
 
         <activity
             android:name=".AboutusActivity"
+            android:screenOrientation="portrait"
             android:hardwareAccelerated="false" />
         <activity
             android:name=".QuizHomeActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop" />
         <activity
             android:name=".QuizActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:parentActivityName=".QuizHomeActivity" />
-        <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".ReviewActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

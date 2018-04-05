@@ -57,4 +57,8 @@ public class Constants {
     public static final String NUMBERS = "Numbers";
     public static final String CONV_WITH_FRIEND = "Conversation with a friend";
     public static final String CONV_WITH_DRIVER = "Conversation with auto/cab driver";
+    public static final String LEVEL = "level";
+    public static final String LEVEL_EASY = "easy";
+    public static final String LEVEL_INTERMED = "intermediate";
+    public static final String LEVEL_DIFF = "difficult";
 }
